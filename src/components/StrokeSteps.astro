@@ -1,0 +1,43 @@
+---
+import { getLang, t } from '../i18n';
+// Các ô nhỏ minh hoạ từng bước: nét đã viết màu đậm, nét đang viết màu đỏ.
+// Tham chiếu tới path đã khai báo trong StrokeOrder (cùng trang) qua <use>.
+interface Props { char: string; count: number }
+const { char, count } = Astro.props;
+const id = `s${char.codePointAt(0)!.toString(16)}`;
+const lang = getLang(Astro);
+---
+<ol class="steps grid grid-cols-[repeat(auto-fill,minmax(4.5rem,1fr))] gap-2">
+  {Array.from({ length: count }, (_, step) => (
+    <li class="relative rounded-lg border border-line bg-surface">
+      <span class="absolute top-1 left-1.5 text-[10px] text-fg-muted tabular-nums">{step + 1}</span>
+      <svg viewBox="0 0 109 109" class="block size-full" role="img" aria-label={`${t(lang, 'jamo.strokeOrder')} ${step + 1}`}>
+        <path class="guide" d="M54.5 0v109M0 54.5h109" />
+        {Array.from({ length: step + 1 }, (_, i) => (
+          <use href={`#${id}-${i}`} class={i === step ? 'now' : 'done'} />
+        ))}
+      </svg>
+    </li>
+  ))}
+</ol>
+
+<style>
+  .steps .guide {
+    fill: none;
+    stroke: var(--color-line);
+    stroke-dasharray: 2 2;
+    stroke-width: 0.6;
+  }
+  .steps use {
+    fill: none;
+    stroke-width: 4;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  .steps .done {
+    stroke: var(--color-fg);
+  }
+  .steps .now {
+    stroke: var(--color-brand);
+  }
+</style>

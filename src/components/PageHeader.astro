@@ -1,0 +1,48 @@
+---
+import { publicPath } from '../lib/text';
+import { getLang, localize, t } from '../i18n';
+interface Crumb { label: string; href?: string }
+/** titleLang: ngôn ngữ của tiêu đề khi khác ngôn ngữ trang (từ tiếng Hàn: "ko"). */
+interface Props { title: string; crumbs?: Crumb[]; lead?: string; titleLang?: string }
+const { title, crumbs = [], lead, titleLang } = Astro.props;
+const lang = getLang(Astro);
+const home = { label: t(lang, 'common.home'), href: localize('/', lang) };
+
+// Breadcrumb cho máy tìm kiếm; mục cuối (trang hiện tại) dùng URL của trang.
+const breadcrumbLd = crumbs.length
+  ? {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [home, ...crumbs]
+        // Mục không có link (như "Công cụ") bị bỏ, trừ mục cuối là trang hiện tại.
+        .filter((c, i, all) => c.href || i === all.length - 1)
+        .map((c, i) => ({
+          '@type': 'ListItem',
+          position: i + 1,
+          name: c.label,
+          item: new URL(c.href ?? publicPath(Astro.url.pathname), Astro.site).href,
+        })),
+    }
+  : null;
+---
+{breadcrumbLd && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} />}
+<header class="border-b border-line">
+  <div class="container-page py-10 md:py-14">
+    {crumbs.length > 0 && (
+      <nav aria-label="Breadcrumb" class="mb-4 text-sm text-fg-muted">
+        <ol class="flex flex-wrap items-center gap-1.5">
+          <li><a href={home.href} class="hover:text-brand">{home.label}</a></li>
+          {crumbs.map((c) => (
+            <li class="flex items-center gap-1.5">
+              <span aria-hidden="true">/</span>
+              {c.href ? <a href={c.href} class="hover:text-brand">{c.label}</a> : <span aria-current="page">{c.label}</span>}
+            </li>
+          ))}
+        </ol>
+      </nav>
+    )}
+    <h1 lang={titleLang} class="text-3xl font-bold md:text-4xl">{title}</h1>
+    {lead && <p class="mt-4 max-w-2xl text-lg text-fg-muted">{lead}</p>}
+    <slot />
+  </div>
+</header>

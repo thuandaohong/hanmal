@@ -1,0 +1,51 @@
+---
+import { getLang, t as tr } from '../i18n';
+const lang = getLang(Astro);
+const options = [
+  { value: 'light', label: tr(lang, 'theme.light'), icon: 'M12 3v2m0 14v2m9-9h-2M5 12H3m15.364-6.364-1.414 1.414M7.05 16.95l-1.414 1.414m12.728 0-1.414-1.414M7.05 7.05 5.636 5.636M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z' },
+  { value: 'dark', label: tr(lang, 'theme.dark'), icon: 'M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z' },
+  { value: 'system', label: tr(lang, 'theme.system'), icon: 'M4 5h16v10H4zM8 19h8m-4-4v4' },
+];
+---
+<div class="theme-toggle inline-flex items-center gap-0.5 rounded-full border border-line p-1" role="radiogroup" aria-label={tr(lang, 'theme.label')}>
+  {options.map((o) => (
+    <button
+      type="button"
+      role="radio"
+      data-theme-value={o.value}
+      aria-label={o.label}
+      title={o.label}
+      class="grid size-8 place-items-center rounded-full text-fg-muted transition hover:text-fg aria-checked:bg-bg-muted aria-checked:text-fg"
+    >
+      <svg viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d={o.icon} />
+      </svg>
+    </button>
+  ))}
+</div>
+
+<script>
+  const KEY = 'theme';
+  const media = window.matchMedia('(prefers-color-scheme: dark)');
+
+  function read(): string {
+    try { return localStorage.getItem(KEY) || 'system'; } catch { return 'system'; }
+  }
+  function apply(pref: string) {
+    const dark = pref === 'dark' || (pref === 'system' && media.matches);
+    document.documentElement.classList.toggle('dark', dark);
+    document.querySelectorAll<HTMLButtonElement>('[data-theme-value]').forEach((b) => {
+      b.setAttribute('aria-checked', String(b.dataset.themeValue === pref));
+    });
+  }
+
+  document.querySelectorAll<HTMLButtonElement>('[data-theme-value]').forEach((b) => {
+    b.addEventListener('click', () => {
+      const pref = b.dataset.themeValue!;
+      try { localStorage.setItem(KEY, pref); } catch {}
+      apply(pref);
+    });
+  });
+  media.addEventListener('change', () => apply(read()));
+  apply(read());
+</script>

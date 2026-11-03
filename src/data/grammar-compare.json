@@ -1,0 +1,4019 @@
+[
+ {
+  "slug": "eun-neun-vs-i-ga",
+  "pair": [
+   "eun-neun",
+   "i-ga"
+  ],
+  "text": {
+   "vi": {
+    "summary": "은/는 đánh dấu chủ đề (điều đang được nói tới, thường là thông tin đã biết hoặc để đối chiếu), còn 이/가 đánh dấu chủ ngữ và làm nổi bật thông tin mới, chính xác là \"ai/cái gì\".",
+    "points": [
+     "Giới thiệu bản thân, nói chân lý chung, định nghĩa: dùng 은/는 (저는 학생이에요, 고래는 포유류예요).",
+     "Trả lời câu hỏi \"ai/cái gì\" và với từ để hỏi 누가, 뭐가, 어디가: dùng 이/가, vì đó là tiêu điểm thông tin.",
+     "Muốn đối chiếu hai thứ (A thì…, còn B thì…): dùng 은/는 cho cả hai vế.",
+     "Trong mệnh đề phụ, mệnh đề định ngữ (제가 만든 케이크): chủ ngữ thường dùng 이/가, không dùng 은/는.",
+     "Với 있다/없다, 되다, 아니다 và khi mô tả hiện tượng vừa thấy (비가 와요): thường dùng 이/가."
+    ]
+   },
+   "en": {
+    "summary": "은/는 marks the topic — what the sentence is about, often known information or something being contrasted — while 이/가 marks the grammatical subject and puts the focus on new information, i.e. exactly who or what.",
+    "points": [
+     "Self-introductions, general truths and definitions take 은/는 (저는 학생이에요).",
+     "Question words like 누가, 뭐가 and their answers take 이/가, because they are the new, focused information.",
+     "Use 은/는 to contrast two things: 'A is …, but B is …'.",
+     "Inside subordinate and relative clauses (제가 만든 케이크 'the cake I made'), the subject normally takes 이/가, not 은/는.",
+     "With 있다/없다, 되다, 아니다, and when describing something you just noticed (비가 와요 'It's raining'), 이/가 is the default."
+    ]
+   },
+   "ja": {
+    "summary": "은/는 は話題（すでに分かっていること・対比するもの）を示し、이/가 は主語を示して「誰が・何が」という新しい情報に焦点を当てます。日本語の「は」と「が」にかなり近い使い分けです。",
+    "points": [
+     "自己紹介・一般的な真理・定義には 은/는 を使います（저는 학생이에요）。",
+     "疑問詞 누가・뭐가 と、その答えには 이/가 を使います。新情報だからです。",
+     "「Aは～だが、Bは～だ」と対比するときは 은/는 を使います。",
+     "従属節や連体修飾節の中の主語（제가 만든 케이크「私が作ったケーキ」）は 이/가 が基本です。",
+     "있다/없다、되다、아니다 や、目の前の出来事の描写（비가 와요「雨が降っています」）では 이/가 が自然です。"
+    ]
+   },
+   "id": {
+    "summary": "은/는 menandai topik (hal yang sedang dibicarakan, biasanya info yang sudah diketahui atau untuk membandingkan), sedangkan 이/가 menandai subjek dan menyorot informasi baru, yaitu \"siapa/apa\" tepatnya.",
+    "points": [
+     "Untuk memperkenalkan diri, kebenaran umum, dan definisi, pakai 은/는 (저는 학생이에요).",
+     "Kata tanya 누가, 뭐가 dan jawabannya memakai 이/가 karena itulah informasi baru yang ditonjolkan.",
+     "Untuk membandingkan (A sih begini, tapi B begitu), pakai 은/는.",
+     "Di dalam anak kalimat dan klausa pewatas (제가 만든 케이크 'kue yang saya buat'), subjek biasanya memakai 이/가, bukan 은/는.",
+     "Dengan 있다/없다, 되다, 아니다, serta saat menggambarkan hal yang baru terlihat (비가 와요 'Hujan turun'), biasanya pakai 이/가."
+    ]
+   }
+  },
+  "examples": [
+   {
+    "ko": "저는 베트남 사람이에요.",
+    "use": "eun-neun",
+    "tr": {
+     "vi": "Tôi là người Việt Nam.",
+     "en": "I'm Vietnamese.",
+     "ja": "私はベトナム人です。",
+     "id": "Saya orang Vietnam."
+    }
+   },
+   {
+    "ko": "누가 왔어요? — 민수가 왔어요.",
+    "use": "i-ga",
+    "tr": {
+     "vi": "Ai đến vậy? — Minsu đến.",
+     "en": "Who came? — Minsu did.",
+     "ja": "誰が来ましたか。— ミンスが来ました。",
+     "id": "Siapa yang datang? — Minsu yang datang."
+    }
+   },
+   {
+    "ko": "사과는 좋아하지만 배는 안 좋아해요.",
+    "use": "eun-neun",
+    "tr": {
+     "vi": "Táo thì tôi thích, còn lê thì không.",
+     "en": "I like apples, but not pears.",
+     "ja": "りんごは好きですが、梨は好きじゃありません。",
+     "id": "Kalau apel saya suka, tapi pir tidak."
+    }
+   },
+   {
+    "ko": "이건 제가 만든 케이크예요.",
+    "use": "i-ga",
+    "tr": {
+     "vi": "Đây là cái bánh do tôi làm.",
+     "en": "This is the cake I made.",
+     "ja": "これは私が作ったケーキです。",
+     "id": "Ini kue yang saya buat."
+    }
+   },
+   {
+    "ko": "어, 밖에 비가 와요.",
+    "use": "i-ga",
+    "tr": {
+     "vi": "Ơ, ngoài trời đang mưa kìa.",
+     "en": "Oh, it's raining outside.",
+     "ja": "あ、外で雨が降っています。",
+     "id": "Eh, di luar hujan."
+    }
+   }
+  ]
+ },
+ {
+  "slug": "e-vs-eseo",
+  "pair": [
+   "e",
+   "eseo"
+  ],
+  "text": {
+   "vi": {
+    "summary": "에 chỉ điểm đến, nơi tồn tại hoặc thời điểm; 에서 chỉ nơi diễn ra hành động, hoặc điểm xuất phát (\"từ\").",
+    "points": [
+     "Với động từ di chuyển 가다/오다/다니다: dùng 에 cho đích đến (학교에 가요).",
+     "Với 있다/없다 (có/ở): dùng 에 (책상 위에 있어요).",
+     "Với các hành động diễn ra tại một nơi (공부하다, 먹다, 일하다…): dùng 에서 (도서관에서 공부해요).",
+     "\"Từ đâu\": dùng 에서 (부산에서 왔어요).",
+     "살다 dùng được cả hai: 서울에 살아요 = 서울에서 살아요."
+    ]
+   },
+   "en": {
+    "summary": "에 marks a destination, the place where something exists, or a point in time; 에서 marks the place where an action happens, or a starting point ('from').",
+    "points": [
+     "With movement verbs 가다/오다/다니다, use 에 for the destination (학교에 가요).",
+     "With 있다/없다 (to be somewhere / to have), use 에 (책상 위에 있어요).",
+     "For activities done at a place (study, eat, work…), use 에서 (도서관에서 공부해요).",
+     "For 'from (a place)', use 에서 (부산에서 왔어요).",
+     "살다 'to live' works with both: 서울에 살아요 = 서울에서 살아요."
+    ]
+   },
+   "ja": {
+    "summary": "에 は到着点・存在の場所・時点（「に」）、에서 は動作が行われる場所や出発点（「で」「から」）を表します。",
+    "points": [
+     "가다/오다/다니다 などの移動動詞の行き先は 에 です（학교에 가요）。",
+     "있다/없다（ある・いる）の場所は 에 です（책상 위에 있어요）。",
+     "勉強する・食べる・働くなど、その場で行う動作の場所は 에서 です（도서관에서 공부해요）。",
+     "「～から（来た）」も 에서 です（부산에서 왔어요）。",
+     "살다（住む）はどちらも使えます：서울에 살아요 = 서울에서 살아요。"
+    ]
+   },
+   "id": {
+    "summary": "에 menandai tujuan, tempat keberadaan, atau waktu; 에서 menandai tempat terjadinya kegiatan atau titik asal (\"dari\").",
+    "points": [
+     "Dengan kata kerja gerak 가다/오다/다니다, tujuan memakai 에 (학교에 가요).",
+     "Dengan 있다/없다 (ada/berada), pakai 에 (책상 위에 있어요).",
+     "Untuk kegiatan yang dilakukan di suatu tempat (belajar, makan, bekerja…), pakai 에서 (도서관에서 공부해요).",
+     "Untuk \"dari (tempat)\", pakai 에서 (부산에서 왔어요).",
+     "살다 'tinggal' bisa dengan keduanya: 서울에 살아요 = 서울에서 살아요."
+    ]
+   }
+  },
+  "examples": [
+   {
+    "ko": "내일 도서관에 가요.",
+    "use": "e",
+    "tr": {
+     "vi": "Ngày mai tôi đi thư viện.",
+     "en": "I'm going to the library tomorrow.",
+     "ja": "明日、図書館に行きます。",
+     "id": "Besok saya pergi ke perpustakaan."
+    }
+   },
+   {
+    "ko": "도서관에서 친구랑 공부해요.",
+    "use": "eseo",
+    "tr": {
+     "vi": "Tôi học cùng bạn ở thư viện.",
+     "en": "I study with a friend at the library.",
+     "ja": "図書館で友達と勉強します。",
+     "id": "Saya belajar bersama teman di perpustakaan."
+    }
+   },
+   {
+    "ko": "* 도서관에 공부해요.",
+    "use": "e",
+    "tr": {
+     "vi": "Tôi học ở thư viện. [Sai: học là hành động diễn ra tại chỗ, phải dùng 'eseo' thay cho 'e']",
+     "en": "I study at the library. [Wrong: studying is an activity done at a place, so it needs the 'eseo' particle, not 'e']",
+     "ja": "図書館で勉強します。［誤り：その場で行う動作なので「e」ではなく「eseo」を使う］",
+     "id": "Saya belajar di perpustakaan. [Salah: belajar adalah kegiatan di suatu tempat, jadi pakai partikel 'eseo', bukan 'e']"
+    }
+   },
+   {
+    "ko": "고양이가 소파 위에 있어요.",
+    "use": "e",
+    "tr": {
+     "vi": "Con mèo ở trên ghế sofa.",
+     "en": "The cat is on the sofa.",
+     "ja": "猫がソファの上にいます。",
+     "id": "Kucingnya ada di atas sofa."
+    }
+   },
+   {
+    "ko": "저는 하노이에서 왔어요.",
+    "use": "eseo",
+    "tr": {
+     "vi": "Tôi đến từ Hà Nội.",
+     "en": "I'm from Hanoi.",
+     "ja": "私はハノイから来ました。",
+     "id": "Saya datang dari Hanoi."
+    }
+   },
+   {
+    "ko": "지금 서울에 살아요. / 지금 서울에서 살아요.",
+    "use": "both",
+    "tr": {
+     "vi": "Bây giờ tôi sống ở Seoul.",
+     "en": "I live in Seoul now.",
+     "ja": "今、ソウルに住んでいます。",
+     "id": "Sekarang saya tinggal di Seoul."
+    }
+   }
+  ]
+ },
+ {
+  "slug": "e-vs-ege-hante",
+  "pair": [
+   "e",
+   "ege-hante"
+  ],
+  "text": {
+   "vi": {
+    "summary": "Cả hai đều có nghĩa \"cho/tới\" ai đó, nhưng 에 dùng cho vật, nơi chốn, tổ chức; còn 에게/한테/께 dùng cho người và động vật.",
+    "points": [
+     "Người, động vật → 에게 (văn viết, trang trọng hơn) hoặc 한테 (văn nói).",
+     "Người cần kính trọng (ông bà, thầy cô) → 께.",
+     "Cây cối, đồ vật, nơi chốn, công ty, cơ quan → 에 (꽃에 물을 줘요, 회사에 전화해요).",
+     "Hay gặp với 주다, 보내다, 전화하다, 말하다, 묻다."
+    ]
+   },
+   "en": {
+    "summary": "Both can mean 'to' a recipient, but 에 is for things, places and organisations, while 에게/한테/께 are for people and animals.",
+    "points": [
+     "People and animals take 에게 (written/neutral) or 한테 (spoken).",
+     "Someone you honour (grandparents, teachers) takes 께.",
+     "Plants, objects, places, companies and institutions take 에 (꽃에 물을 줘요, 회사에 전화해요).",
+     "Typical verbs: 주다 give, 보내다 send, 전화하다 call, 말하다 tell, 묻다 ask."
+    ]
+   },
+   "ja": {
+    "summary": "どちらも「～に（与える・送る）」ですが、에 は物・場所・組織に、에게/한테/께 は人や動物に使います。",
+    "points": [
+     "人・動物には 에게（書き言葉寄り）か 한테（話し言葉）を使います。",
+     "目上の人（祖父母・先生など）には尊敬の 께 を使います。",
+     "植物・物・場所・会社・機関には 에 を使います（꽃에 물을 줘요、회사에 전화해요）。",
+     "주다・보내다・전화하다・말하다・묻다 などの動詞とよく一緒に使われます。"
+    ]
+   },
+   "id": {
+    "summary": "Keduanya bisa berarti \"kepada\", tetapi 에 dipakai untuk benda, tempat, dan organisasi, sedangkan 에게/한테/께 untuk orang dan hewan.",
+    "points": [
+     "Orang dan hewan: 에게 (tulisan/netral) atau 한테 (lisan).",
+     "Orang yang dihormati (kakek-nenek, guru): 께.",
+     "Tanaman, benda, tempat, perusahaan, instansi: 에 (꽃에 물을 줘요, 회사에 전화해요).",
+     "Sering muncul dengan 주다, 보내다, 전화하다, 말하다, 묻다."
+    ]
+   }
+  },
+  "examples": [
+   {
+    "ko": "친구한테 선물을 줬어요.",
+    "use": "ege-hante",
+    "tr": {
+     "vi": "Tôi đã tặng quà cho bạn.",
+     "en": "I gave my friend a present.",
+     "ja": "友達にプレゼントをあげました。",
+     "id": "Saya memberi hadiah kepada teman."
+    }
+   },
+   {
+    "ko": "아침마다 꽃에 물을 줘요.",
+    "use": "e",
+    "tr": {
+     "vi": "Sáng nào tôi cũng tưới nước cho hoa.",
+     "en": "I water the flowers every morning.",
+     "ja": "毎朝、花に水をやります。",
+     "id": "Setiap pagi saya menyiram bunga."
+    }
+   },
+   {
+    "ko": "회사에 전화해서 물어보세요.",
+    "use": "e",
+    "tr": {
+     "vi": "Hãy gọi điện cho công ty để hỏi.",
+     "en": "Call the company and ask.",
+     "ja": "会社に電話して聞いてみてください。",
+     "id": "Silakan telepon ke perusahaan dan tanyakan."
+    }
+   },
+   {
+    "ko": "할머니께 편지를 썼어요.",
+    "use": "ege-hante",
+    "tr": {
+     "vi": "Tôi đã viết thư cho bà.",
+     "en": "I wrote a letter to my grandmother.",
+     "ja": "祖母に手紙を書きました。",
+     "id": "Saya menulis surat untuk nenek."
+    }
+   },
+   {
+    "ko": "* 동생에 문자를 보냈어요.",
+    "use": "e",
+    "tr": {
+     "vi": "Tôi đã nhắn tin cho em. [Sai: người nhận là người nên phải dùng 'ege/hante', không dùng 'e']",
+     "en": "I texted my younger sibling. [Wrong: the recipient is a person, so use 'ege/hante', not 'e']",
+     "ja": "弟（妹）にメッセージを送りました。［誤り：相手が人なので「e」ではなく「ege/hante」を使う］",
+     "id": "Saya mengirim pesan ke adik. [Salah: penerimanya orang, jadi pakai 'ege/hante', bukan 'e']"
+    }
+   }
+  ]
+ },
+ {
+  "slug": "e-vs-euro",
+  "pair": [
+   "e",
+   "euro"
+  ],
+  "text": {
+   "vi": {
+    "summary": "Với động từ di chuyển, 에 nhấn vào điểm đến cụ thể, còn (으)로 nhấn vào hướng đi (\"về phía\"). Ngoài ra (으)로 còn chỉ phương tiện, cách thức, sự thay đổi; 에 chỉ nơi tồn tại và thời gian.",
+    "points": [
+     "학교에 가요 = đi đến trường (đích); 학교로 가요 = đi về phía trường (hướng). Thường thay thế được cho nhau.",
+     "Chỉ hướng như 오른쪽, 위, 앞: tự nhiên hơn với (으)로 (오른쪽으로 가세요).",
+     "Phương tiện, công cụ, chất liệu: chỉ dùng (으)로 (지하철로 와요, 펜으로 써요).",
+     "Thời gian và nơi tồn tại (있다/없다): chỉ dùng 에, không dùng (으)로.",
+     "Danh từ kết thúc bằng nguyên âm hoặc ㄹ dùng 로, còn lại dùng 으로."
+    ]
+   },
+   "en": {
+    "summary": "With movement verbs, 에 focuses on the destination point, while (으)로 focuses on the direction ('towards'). (으)로 also marks means, tools and change; 에 also marks location of existence and time.",
+    "points": [
+     "학교에 가요 = go to school (destination); 학교로 가요 = head towards school (direction). Often interchangeable.",
+     "Directions like 오른쪽, 위, 앞 sound most natural with (으)로 (오른쪽으로 가세요).",
+     "Means, tools and materials take only (으)로 (지하철로 와요 'come by subway', 펜으로 써요).",
+     "Time and location of existence (있다/없다) take only 에, never (으)로.",
+     "Use 로 after a vowel or ㄹ, 으로 after other consonants."
+    ]
+   },
+   "ja": {
+    "summary": "移動動詞と使うとき、에 は到着点、(으)로 は方向（「～へ」）に重点があります。さらに (으)로 は手段・道具・変化を、에 は存在の場所や時間を表します。",
+    "points": [
+     "학교에 가요 は「学校に行く（到着点）」、학교로 가요 は「学校へ向かう（方向）」。多くの場合入れ替え可能です。",
+     "오른쪽・위・앞 など方向を表す語には (으)로 が自然です（오른쪽으로 가세요）。",
+     "手段・道具・材料は (으)로 だけです（지하철로 와요「地下鉄で来ます」、펜으로 써요）。",
+     "時間や存在の場所（있다/없다）には 에 だけを使い、(으)로 は使えません。",
+     "母音または ㄹ で終わる名詞には 로、それ以外の子音には 으로 を付けます。"
+    ]
+   },
+   "id": {
+    "summary": "Dengan kata kerja gerak, 에 menekankan titik tujuan, sedangkan (으)로 menekankan arah (\"menuju\"). Selain itu (으)로 menandai alat, sarana, dan perubahan; 에 menandai tempat keberadaan dan waktu.",
+    "points": [
+     "학교에 가요 = pergi ke sekolah (tujuan); 학교로 가요 = pergi menuju sekolah (arah). Sering bisa saling ganti.",
+     "Kata arah seperti 오른쪽, 위, 앞 lebih alami dengan (으)로 (오른쪽으로 가세요).",
+     "Sarana, alat, dan bahan hanya memakai (으)로 (지하철로 와요 'datang naik kereta bawah tanah', 펜으로 써요).",
+     "Waktu dan tempat keberadaan (있다/없다) hanya memakai 에, tidak bisa (으)로.",
+     "Setelah vokal atau ㄹ pakai 로, setelah konsonan lain pakai 으로."
+    ]
+   }
+  },
+  "examples": [
+   {
+    "ko": "지금 회사에 가요. / 지금 회사로 가요.",
+    "use": "both",
+    "tr": {
+     "vi": "Bây giờ tôi đi đến công ty.",
+     "en": "I'm heading to the office now.",
+     "ja": "今、会社に（へ）行きます。",
+     "id": "Sekarang saya pergi ke kantor."
+    }
+   },
+   {
+    "ko": "사거리에서 오른쪽으로 가세요.",
+    "use": "euro",
+    "tr": {
+     "vi": "Đến ngã tư thì rẽ phải.",
+     "en": "Turn right at the intersection.",
+     "ja": "交差点で右へ行ってください。",
+     "id": "Di perempatan, belok ke kanan."
+    }
+   },
+   {
+    "ko": "저는 매일 지하철로 출근해요.",
+    "use": "euro",
+    "tr": {
+     "vi": "Ngày nào tôi cũng đi làm bằng tàu điện ngầm.",
+     "en": "I commute by subway every day.",
+     "ja": "毎日、地下鉄で出勤します。",
+     "id": "Setiap hari saya berangkat kerja naik kereta bawah tanah."
+    }
+   },
+   {
+    "ko": "세 시에 카페에서 만나요.",
+    "use": "e",
+    "tr": {
+     "vi": "Hẹn gặp nhau ở quán cà phê lúc ba giờ nhé.",
+     "en": "Let's meet at the café at three.",
+     "ja": "3時にカフェで会いましょう。",
+     "id": "Kita ketemu di kafe jam tiga, ya."
+    }
+   },
+   {
+    "ko": "* 지갑이 가방으로 있어요.",
+    "use": "euro",
+    "tr": {
+     "vi": "Ví ở trong túi. [Sai: động từ 'có/ở' (itda) chỉ đi với 'e', không đi với '(eu)ro']",
+     "en": "The wallet is in the bag. [Wrong: 'to be (somewhere)' (itda) takes 'e', never '(eu)ro']",
+     "ja": "財布はかばんにあります。［誤り：「ある・いる」（itda）には「(eu)ro」ではなく「e」を使う］",
+     "id": "Dompetnya ada di tas. [Salah: 'berada' (itda) memakai 'e', tidak pernah '(eu)ro']"
+    }
+   }
+  ]
+ },
+ {
+  "slug": "man-vs-bakke",
+  "pair": [
+   "man",
+   "bakke"
+  ],
+  "text": {
+   "vi": {
+    "summary": "Cả hai đều nghĩa là \"chỉ\", nhưng 만 trung tính và đi với câu khẳng định lẫn phủ định, còn 밖에 bắt buộc đi với vị ngữ phủ định và mang sắc thái \"chỉ có… thôi (ít quá)\".",
+    "points": [
+     "밖에 luôn theo sau bởi phủ định: 없다, 안, 못, 모르다 (천 원밖에 없어요).",
+     "만 dùng được với câu khẳng định, mệnh lệnh, rủ rê (이것만 주세요).",
+     "밖에 nhấn mạnh sự thiếu hụt, không đủ, thường kèm cảm giác tiếc nuối hoặc bất lực.",
+     "Cùng một ý: 한 명만 왔어요 = 한 명밖에 안 왔어요, nhưng câu thứ hai nghe \"ít ỏi\" hơn."
+    ]
+   },
+   "en": {
+    "summary": "Both mean 'only', but 만 is neutral and works in any sentence, while 밖에 must be followed by a negative predicate and stresses 'nothing but… (and that's not much)'.",
+    "points": [
+     "밖에 always needs a negative: 없다, 안, 못, 모르다 (천 원밖에 없어요 'I only have 1,000 won').",
+     "만 works in positive sentences, requests and suggestions (이것만 주세요 'Just this one, please').",
+     "밖에 emphasises shortage or that something is not enough, often with regret or helplessness.",
+     "Same fact, different feel: 한 명만 왔어요 vs 한 명밖에 안 왔어요 — the second stresses how few came."
+    ]
+   },
+   "ja": {
+    "summary": "どちらも「～だけ」ですが、만 は中立的で肯定・否定どちらにも使え、밖에 は必ず否定と一緒に使い「～しか…ない」という不足の気持ちを表します。",
+    "points": [
+     "밖에 の後には必ず否定（없다・안・못・모르다）が来ます（천 원밖에 없어요「千ウォンしかありません」）。",
+     "만 は肯定文・命令・勧誘にも使えます（이것만 주세요「これだけください」）。",
+     "밖에 は「足りない・少ない」という残念な気持ちや、ほかに選択肢がないことを強調します。",
+     "한 명만 왔어요「一人だけ来た」と 한 명밖에 안 왔어요「一人しか来なかった」は同じ事実でも、後者の方が少なさを強調します。"
+    ]
+   },
+   "id": {
+    "summary": "Keduanya berarti \"hanya\", tetapi 만 netral dan bisa dipakai di kalimat apa pun, sedangkan 밖에 wajib diikuti predikat negatif dan menekankan \"cuma… (dan itu kurang)\".",
+    "points": [
+     "밖에 selalu diikuti bentuk negatif: 없다, 안, 못, 모르다 (천 원밖에 없어요 'Saya cuma punya 1.000 won').",
+     "만 bisa dipakai di kalimat positif, perintah, dan ajakan (이것만 주세요 'Ini saja, ya').",
+     "밖에 menekankan kekurangan, sering dengan nada menyesal atau tidak berdaya.",
+     "한 명만 왔어요 dan 한 명밖에 안 왔어요 faktanya sama, tetapi yang kedua menekankan betapa sedikitnya."
+    ]
+   }
+  },
+  "examples": [
+   {
+    "ko": "저는 아침에 커피만 마셔요.",
+    "use": "man",
+    "tr": {
+     "vi": "Buổi sáng tôi chỉ uống cà phê.",
+     "en": "In the morning I only drink coffee.",
+     "ja": "朝はコーヒーだけ飲みます。",
+     "id": "Pagi hari saya hanya minum kopi."
+    }
+   },
+   {
+    "ko": "지갑에 천 원밖에 없어요.",
+    "use": "bakke",
+    "tr": {
+     "vi": "Trong ví chỉ còn có một nghìn won thôi.",
+     "en": "I've only got 1,000 won in my wallet.",
+     "ja": "財布に千ウォンしかありません。",
+     "id": "Di dompet cuma ada seribu won."
+    }
+   },
+   {
+    "ko": "잠깐만 기다려 주세요.",
+    "use": "man",
+    "tr": {
+     "vi": "Xin chờ một chút thôi.",
+     "en": "Please wait just a moment.",
+     "ja": "ちょっとだけ待ってください。",
+     "id": "Tolong tunggu sebentar saja."
+    }
+   },
+   {
+    "ko": "파티에 세 명밖에 안 왔어요.",
+    "use": "bakke",
+    "tr": {
+     "vi": "Bữa tiệc chỉ có ba người đến thôi.",
+     "en": "Only three people came to the party.",
+     "ja": "パーティーには三人しか来ませんでした。",
+     "id": "Yang datang ke pesta cuma tiga orang."
+    }
+   },
+   {
+    "ko": "* 저는 한국어밖에 알아요.",
+    "use": "bakke",
+    "tr": {
+     "vi": "Tôi chỉ biết tiếng Hàn. [Sai: 'bakke' bắt buộc đi với phủ định (\"không biết\"), hoặc phải dùng 'man' với \"biết\"]",
+     "en": "I only know Korean. [Wrong: 'bakke' needs a negative verb ('don't know'); with 'know' use 'man' instead]",
+     "ja": "韓国語しか知りません。［誤り：「bakke」には否定（「知らない」）が必要。「知っている」なら「man」を使う］",
+     "id": "Saya cuma tahu bahasa Korea. [Salah: 'bakke' wajib diikuti kata negatif ('tidak tahu'); dengan 'tahu' pakai 'man']"
+    }
+   }
+  ]
+ },
+ {
+  "slug": "a-yo-vs-seumnida",
+  "pair": [
+   "a-yo",
+   "seumnida"
+  ],
+  "text": {
+   "vi": {
+    "summary": "Cả hai đều là đuôi câu lịch sự. -아요/어요 mềm mại, dùng hằng ngày; -ㅂ니다/습니다 trang trọng, dùng trong bối cảnh chính thức như thuyết trình, tin tức, công việc, quân đội.",
+    "points": [
+     "Nói chuyện lịch sự hằng ngày với người lạ, đồng nghiệp, người lớn tuổi: -아요/어요 là đủ.",
+     "Phát biểu, báo cáo, bản tin, thông báo, phỏng vấn xin việc, chào hỏi lần đầu trang trọng: -ㅂ니다/습니다.",
+     "-아요/어요 dùng một hình thức cho câu kể, câu hỏi, mệnh lệnh, rủ rê (chỉ khác ngữ điệu); -ㅂ니다 có dạng riêng: -ㅂ니까?, -(으)십시오, -(으)ㅂ시다.",
+     "Trong một cuộc hội thoại người Hàn thường trộn cả hai: mở đầu và kết thúc bằng -습니다, phần giữa bằng -아요."
+    ]
+   },
+   "en": {
+    "summary": "Both are polite endings. -아요/어요 is the soft, everyday polite style; -ㅂ니다/습니다 is the formal style used in presentations, news, business and the military.",
+    "points": [
+     "For everyday polite talk with strangers, colleagues and older people, -아요/어요 is enough.",
+     "Speeches, reports, news, announcements, job interviews and formal greetings use -ㅂ니다/습니다.",
+     "-아요/어요 uses one form for statements, questions, commands and suggestions (only intonation changes); the formal style has separate forms: -ㅂ니까?, -(으)십시오, -(으)ㅂ시다.",
+     "Koreans often mix them: formal openings and closings with -습니다, the rest in -아요."
+    ]
+   },
+   "ja": {
+    "summary": "どちらも丁寧な文末表現ですが、-아요/어요 は柔らかい日常の丁寧語、-ㅂ니다/습니다 は発表・ニュース・ビジネス・軍隊などで使うかしこまった丁寧語です。",
+    "points": [
+     "初対面の人・同僚・目上の人との日常会話なら -아요/어요 で十分丁寧です。",
+     "スピーチ・報告・ニュース・アナウンス・面接・改まったあいさつでは -ㅂ니다/습니다 を使います。",
+     "-아요/어요 は平叙・疑問・命令・勧誘が同じ形で、イントネーションだけが変わります。-ㅂ니다 体には -ㅂ니까?、-(으)십시오、-(으)ㅂ시다 という別の形があります。",
+     "実際の会話では、最初と最後のあいさつは -습니다、途中は -아요 のように混ぜて使うことがよくあります。"
+    ]
+   },
+   "id": {
+    "summary": "Keduanya akhiran sopan. -아요/어요 adalah gaya sopan sehari-hari yang luwes; -ㅂ니다/습니다 gaya formal untuk presentasi, berita, urusan kantor, dan militer.",
+    "points": [
+     "Untuk percakapan sopan sehari-hari dengan orang asing, rekan kerja, atau orang yang lebih tua, -아요/어요 sudah cukup.",
+     "Pidato, laporan, berita, pengumuman, wawancara kerja, dan salam resmi memakai -ㅂ니다/습니다.",
+     "-아요/어요 memakai satu bentuk untuk pernyataan, pertanyaan, perintah, dan ajakan (hanya intonasi yang berbeda); gaya formal punya bentuk sendiri: -ㅂ니까?, -(으)십시오, -(으)ㅂ시다.",
+     "Orang Korea sering mencampur: pembuka dan penutup dengan -습니다, sisanya dengan -아요."
+    ]
+   }
+  },
+  "examples": [
+   {
+    "ko": "안녕하십니까? 저는 김민수입니다.",
+    "use": "seumnida",
+    "tr": {
+     "vi": "Xin chào quý vị. Tôi là Kim Minsu.",
+     "en": "Good day. My name is Kim Minsu.",
+     "ja": "こんにちは。キム・ミンスと申します。",
+     "id": "Selamat siang. Nama saya Kim Minsu."
+    }
+   },
+   {
+    "ko": "지금 어디 가요?",
+    "use": "a-yo",
+    "tr": {
+     "vi": "Bây giờ bạn đi đâu thế?",
+     "en": "Where are you going now?",
+     "ja": "今どこに行くんですか。",
+     "id": "Sekarang mau ke mana?"
+    }
+   },
+   {
+    "ko": "그럼 회의를 시작하겠습니다.",
+    "use": "seumnida",
+    "tr": {
+     "vi": "Vậy chúng ta bắt đầu cuộc họp.",
+     "en": "Well then, let's begin the meeting.",
+     "ja": "それでは会議を始めます。",
+     "id": "Baiklah, rapat kita mulai."
+    }
+   },
+   {
+    "ko": "같이 점심 먹어요.",
+    "use": "a-yo",
+    "tr": {
+     "vi": "Cùng ăn trưa đi.",
+     "en": "Let's have lunch together.",
+     "ja": "一緒にお昼を食べましょう。",
+     "id": "Ayo makan siang bareng."
+    }
+   },
+   {
+    "ko": "다음 역은 시청역입니다.",
+    "use": "seumnida",
+    "tr": {
+     "vi": "Ga tiếp theo là ga Tòa thị chính.",
+     "en": "The next station is City Hall.",
+     "ja": "次の駅は市庁駅です。",
+     "id": "Stasiun berikutnya adalah Stasiun Balai Kota."
+    }
+   }
+  ]
+ },
+ {
+  "slug": "go-vs-aseo",
+  "pair": [
+   "go",
+   "aseo"
+  ],
+  "text": {
+   "vi": {
+    "summary": "Khi nối hai hành động theo thứ tự, -아서/어서 dùng khi hành động trước là tiền đề gắn chặt với hành động sau (đến đó rồi làm ở đó, làm ra cái gì rồi dùng nó), còn -고 chỉ đơn thuần liệt kê \"làm A rồi làm B\".",
+    "points": [
+     "Đi/đến một nơi rồi làm việc gì ở đó: -아서 (시장에 가서 과일을 샀어요).",
+     "Hai hành động độc lập, chỉ là thứ tự thời gian: -고 (밥을 먹고 이를 닦았어요).",
+     "Động từ mặc/đeo (입다, 신다, 쓰다) và 타다: dùng -고 khi trạng thái được giữ trong lúc làm việc sau (옷을 입고 나갔어요).",
+     "Cả hai vế phải cùng chủ ngữ khi diễn tả trình tự; trước -아서 không gắn -았/었.",
+     "Lưu ý nghĩa: 친구를 만나서 영화를 봤어요 = xem phim cùng bạn; 친구를 만나고 영화를 봤어요 = gặp bạn xong rồi (có thể một mình) đi xem phim."
+    ]
+   },
+   "en": {
+    "summary": "When linking actions in sequence, -아서/어서 is used when the first action sets up the second (go somewhere and do something there, make something and use it), while -고 simply lists 'A, and then B'.",
+    "points": [
+     "Going somewhere and doing something there takes -아서 (시장에 가서 과일을 샀어요).",
+     "Two independent actions in time order take -고 (밥을 먹고 이를 닦았어요).",
+     "With wearing verbs (입다, 신다, 쓰다) and 타다, use -고 when the state carries over (옷을 입고 나갔어요).",
+     "For sequence, both clauses share the same subject, and -았/었 cannot be attached before -아서.",
+     "Meaning check: 친구를 만나서 영화를 봤어요 = met a friend and watched a film with them; 친구를 만나고 영화를 봤어요 = met a friend, then (maybe alone) watched a film."
+    ]
+   },
+   "ja": {
+    "summary": "動作を順につなぐとき、-아서/어서 は前の動作が後の動作の前提になっている場合（そこへ行ってそこで～する、作ってそれを～する）、-고 は単に「Aして、それからB」と並べる場合に使います。",
+    "points": [
+     "ある場所へ行ってそこで何かをするときは -아서 です（시장에 가서 과일을 샀어요）。",
+     "互いに関係の薄い二つの動作を時間順に並べるときは -고 です（밥을 먹고 이를 닦았어요）。",
+     "입다・신다・쓰다 などの着用動詞や 타다 は、その状態のまま次の動作をするので -고 を使います（옷을 입고 나갔어요）。",
+     "順序を表すとき主語は同じで、-아서 の前に -았/었 は付けられません。",
+     "친구를 만나서 영화를 봤어요 は「友達に会って一緒に映画を見た」、친구를 만나고 영화를 봤어요 は「友達に会ったあと（一人で）映画を見た」の意味になり得ます。"
+    ]
+   },
+   "id": {
+    "summary": "Saat merangkai tindakan berurutan, -아서/어서 dipakai bila tindakan pertama menjadi dasar tindakan kedua (pergi ke suatu tempat lalu melakukan sesuatu di sana, membuat sesuatu lalu memakainya), sedangkan -고 hanya mengurutkan \"A, lalu B\".",
+    "points": [
+     "Pergi ke suatu tempat lalu berbuat sesuatu di sana: -아서 (시장에 가서 과일을 샀어요).",
+     "Dua tindakan yang berdiri sendiri, hanya berurutan waktu: -고 (밥을 먹고 이를 닦았어요).",
+     "Kata kerja memakai (입다, 신다, 쓰다) dan 타다 memakai -고 karena keadaannya berlanjut (옷을 입고 나갔어요).",
+     "Untuk urutan, subjek kedua klausa sama, dan -았/었 tidak bisa dipasang sebelum -아서.",
+     "Cek makna: 친구를 만나서 영화를 봤어요 = bertemu teman lalu menonton bersamanya; 친구를 만나고 영화를 봤어요 = bertemu teman, setelah itu (mungkin sendirian) menonton film."
+    ]
+   }
+  },
+  "examples": [
+   {
+    "ko": "시장에 가서 과일을 샀어요.",
+    "use": "aseo",
+    "tr": {
+     "vi": "Tôi đi chợ và mua trái cây (ở chợ).",
+     "en": "I went to the market and bought some fruit there.",
+     "ja": "市場に行って果物を買いました。",
+     "id": "Saya pergi ke pasar dan membeli buah di sana."
+    }
+   },
+   {
+    "ko": "밥을 먹고 이를 닦았어요.",
+    "use": "go",
+    "tr": {
+     "vi": "Tôi ăn cơm rồi đánh răng.",
+     "en": "I ate and then brushed my teeth.",
+     "ja": "ご飯を食べて歯を磨きました。",
+     "id": "Saya makan lalu sikat gigi."
+    }
+   },
+   {
+    "ko": "의자에 앉아서 기다리세요.",
+    "use": "aseo",
+    "tr": {
+     "vi": "Hãy ngồi xuống ghế rồi chờ nhé.",
+     "en": "Please have a seat and wait.",
+     "ja": "椅子に座って待っていてください。",
+     "id": "Silakan duduk di kursi dan tunggu."
+    }
+   },
+   {
+    "ko": "코트를 입고 밖에 나갔어요.",
+    "use": "go",
+    "tr": {
+     "vi": "Tôi mặc áo khoác rồi đi ra ngoài.",
+     "en": "I put on my coat and went out.",
+     "ja": "コートを着て外に出ました。",
+     "id": "Saya memakai mantel lalu keluar."
+    }
+   },
+   {
+    "ko": "친구를 만나서 영화를 봤어요.",
+    "use": "aseo",
+    "tr": {
+     "vi": "Tôi gặp bạn rồi cùng bạn xem phim.",
+     "en": "I met my friend and we watched a film together.",
+     "ja": "友達に会って（一緒に）映画を見ました。",
+     "id": "Saya bertemu teman lalu menonton film bersamanya."
+    }
+   },
+   {
+    "ko": "친구를 만나고 영화를 봤어요.",
+    "use": "go",
+    "tr": {
+     "vi": "Tôi gặp bạn xong rồi đi xem phim (không nhất thiết cùng bạn).",
+     "en": "I met my friend, and after that I watched a film (not necessarily with them).",
+     "ja": "友達に会ってから映画を見ました（一緒とは限らない）。",
+     "id": "Saya bertemu teman, setelah itu menonton film (belum tentu bersamanya)."
+    }
+   }
+  ]
+ },
+ {
+  "slug": "aseo-vs-eunikka",
+  "pair": [
+   "aseo",
+   "eunikka"
+  ],
+  "text": {
+   "vi": {
+    "summary": "Cả hai đều chỉ lý do, nhưng -아서/어서 nêu nguyên nhân một cách tự nhiên, khách quan, còn -(으)니까 nhấn mạnh lý do mang tính chủ quan của người nói và đi được với mệnh lệnh, rủ rê.",
+    "points": [
+     "Vế sau là mệnh lệnh hoặc rủ rê (-(으)세요, -(으)ㅂ시다, -(으)ㄹ까요): chỉ dùng -(으)니까.",
+     "Không gắn -았/었 trước -아서 (* 늦었어서); với -(으)니까 thì được (늦었으니까).",
+     "Xin lỗi, cảm ơn, chào hỏi (늦어서 죄송합니다, 만나서 반가워요): dùng -아서, không dùng -(으)니까.",
+     "-(으)니까 hay dùng khi lý do là điều người nghe cũng biết hoặc khi người nói muốn thuyết phục.",
+     "-(으)니까 còn có nghĩa \"làm… thì phát hiện ra\" (집에 가 보니까 아무도 없었어요)."
+    ]
+   },
+   "en": {
+    "summary": "Both give a reason, but -아서/어서 states a cause in a neutral, natural way, while -(으)니까 presents the speaker's own reasoning and can be followed by commands and suggestions.",
+    "points": [
+     "If the main clause is a command or suggestion (-(으)세요, -(으)ㅂ시다, -(으)ㄹ까요), only -(으)니까 works.",
+     "-았/었 cannot come before -아서 (* 늦었어서), but it can before -(으)니까 (늦었으니까).",
+     "Apologies, thanks and greetings use -아서, not -(으)니까 (늦어서 죄송합니다, 만나서 반가워요).",
+     "-(으)니까 often appears when the reason is obvious to both sides or when the speaker is trying to persuade.",
+     "-(으)니까 also means 'when I did…, I found that…' (집에 가 보니까 아무도 없었어요)."
+    ]
+   },
+   "ja": {
+    "summary": "どちらも理由を表しますが、-아서/어서 は自然な因果関係を客観的に述べ、-(으)니까 は話し手の主観的な理由づけを示し、命令・勧誘と一緒に使えます。",
+    "points": [
+     "後ろが命令・勧誘（-(으)세요、-(으)ㅂ시다、-(으)ㄹ까요）なら -(으)니까 しか使えません。",
+     "-아서 の前に -았/었 は付けられません（* 늦었어서）。-(으)니까 は可能です（늦었으니까）。",
+     "お詫び・お礼・あいさつ（늦어서 죄송합니다、만나서 반가워요）は -아서 を使い、-(으)니까 は使いません。",
+     "-(으)니까 は、相手も分かっている理由を示したり、相手を説得したりするときによく使います。",
+     "-(으)니까 には「～してみたら…だった」という発見の意味もあります（집에 가 보니까 아무도 없었어요）。"
+    ]
+   },
+   "id": {
+    "summary": "Keduanya menyatakan alasan, tetapi -아서/어서 menyebut sebab secara wajar dan netral, sedangkan -(으)니까 menonjolkan alasan menurut pembicara dan bisa diikuti perintah atau ajakan.",
+    "points": [
+     "Jika klausa utama berupa perintah atau ajakan (-(으)세요, -(으)ㅂ시다, -(으)ㄹ까요), hanya -(으)니까 yang bisa.",
+     "-았/었 tidak bisa dipasang sebelum -아서 (* 늦었어서), tetapi bisa sebelum -(으)니까 (늦었으니까).",
+     "Permintaan maaf, ucapan terima kasih, dan salam memakai -아서, bukan -(으)니까 (늦어서 죄송합니다, 만나서 반가워요).",
+     "-(으)니까 sering dipakai bila alasannya sudah jelas bagi kedua pihak atau saat ingin meyakinkan lawan bicara.",
+     "-(으)니까 juga bisa berarti \"setelah saya…, ternyata…\" (집에 가 보니까 아무도 없었어요)."
+    ]
+   }
+  },
+  "examples": [
+   {
+    "ko": "비가 와서 집에 있었어요.",
+    "use": "aseo",
+    "tr": {
+     "vi": "Vì trời mưa nên tôi ở nhà.",
+     "en": "It rained, so I stayed home.",
+     "ja": "雨が降ったので家にいました。",
+     "id": "Karena hujan, saya di rumah saja."
+    }
+   },
+   {
+    "ko": "비가 오니까 우산을 가져가세요.",
+    "use": "eunikka",
+    "tr": {
+     "vi": "Trời đang mưa nên mang ô theo đi.",
+     "en": "It's raining, so take an umbrella.",
+     "ja": "雨が降っているから傘を持って行ってください。",
+     "id": "Hujan, jadi bawalah payung."
+    }
+   },
+   {
+    "ko": "* 비가 와서 우산을 가져가세요.",
+    "use": "aseo",
+    "tr": {
+     "vi": "Vì trời mưa nên hãy mang ô. [Sai: -aseo/eoseo không đi với câu mệnh lệnh, phải dùng -(eu)nikka]",
+     "en": "It's raining, so take an umbrella. [Wrong: -aseo/eoseo can't be followed by a command; use -(eu)nikka]",
+     "ja": "雨なので傘を持って行ってください。［誤り：-aseo/eoseo の後に命令は来られない。-(eu)nikka を使う］",
+     "id": "Karena hujan, bawalah payung. [Salah: -aseo/eoseo tidak bisa diikuti perintah; pakai -(eu)nikka]"
+    }
+   },
+   {
+    "ko": "늦어서 죄송합니다.",
+    "use": "aseo",
+    "tr": {
+     "vi": "Xin lỗi vì tôi đến muộn.",
+     "en": "Sorry I'm late.",
+     "ja": "遅れてすみません。",
+     "id": "Maaf saya terlambat."
+    }
+   },
+   {
+    "ko": "어제 푹 잤으니까 오늘은 괜찮을 거예요.",
+    "use": "eunikka",
+    "tr": {
+     "vi": "Hôm qua ngủ ngon rồi nên hôm nay chắc sẽ ổn thôi.",
+     "en": "I slept well last night, so I'll be fine today.",
+     "ja": "昨日ぐっすり寝たから、今日は大丈夫でしょう。",
+     "id": "Kemarin sudah tidur nyenyak, jadi hari ini pasti baik-baik saja."
+    }
+   }
+  ]
+ },
+ {
+  "slug": "eunikka-vs-gi-ttaemun",
+  "pair": [
+   "eunikka",
+   "gi-ttaemun"
+  ],
+  "text": {
+   "vi": {
+    "summary": "Cả hai đều chỉ lý do. -(으)니까 mang tính hội thoại, chủ quan và đi được với mệnh lệnh/rủ rê; -기 때문에 khách quan, nhấn mạnh lý do, hay dùng trong văn viết và bối cảnh trang trọng, nhưng không đi với mệnh lệnh/rủ rê.",
+    "points": [
+     "Vế sau là mệnh lệnh hoặc rủ rê: dùng -(으)니까, không dùng -기 때문에.",
+     "Giải thích nguyên nhân rõ ràng, khách quan (báo cáo, bài viết, tin tức): -기 때문에 tự nhiên hơn.",
+     "Với danh từ: N 때문에 (사고 때문에), hoặc N(이)기 때문에 (학생이기 때문에).",
+     "Cuối câu có thể nói -기 때문이에요 (\"là vì…\") để giải thích lý do.",
+     "Cả hai đều gắn được -았/었 (늦었으니까, 늦었기 때문에)."
+    ]
+   },
+   "en": {
+    "summary": "Both give reasons. -(으)니까 is conversational and subjective and can take commands/suggestions; -기 때문에 is objective, emphasises the cause, and is common in writing and formal speech, but does not go with commands or suggestions.",
+    "points": [
+     "If the main clause is a command or suggestion, use -(으)니까, not -기 때문에.",
+     "For a clear, objective explanation (reports, essays, news), -기 때문에 sounds more natural.",
+     "With nouns: N 때문에 'because of N' (사고 때문에) or N(이)기 때문에 'because it is N' (학생이기 때문에).",
+     "At the end of a sentence, -기 때문이에요 means 'It's because…'.",
+     "Both can take the past -았/었 (늦었으니까, 늦었기 때문에)."
+    ]
+   },
+   "ja": {
+    "summary": "どちらも理由を表します。-(으)니까 は会話的・主観的で命令や勧誘と使えますが、-기 때문에 は客観的に原因を強調する表現で、書き言葉や改まった場面に多く、命令・勧誘とは使いません。",
+    "points": [
+     "後ろが命令・勧誘なら -(으)니까 を使い、-기 때문에 は使いません。",
+     "報告書・作文・ニュースなどで原因を客観的に説明するときは -기 때문에 が自然です。",
+     "名詞には N 때문에「Nのせいで」（사고 때문에）や N(이)기 때문에「Nだから」（학생이기 때문에）を使います。",
+     "文末では -기 때문이에요「～からです」の形で理由を説明できます。",
+     "どちらも過去の -았/었 を付けられます（늦었으니까、늦었기 때문에）。"
+    ]
+   },
+   "id": {
+    "summary": "Keduanya menyatakan alasan. -(으)니까 bersifat percakapan dan subjektif serta bisa diikuti perintah/ajakan; -기 때문에 objektif, menekankan penyebab, sering dalam tulisan dan situasi formal, tetapi tidak dipakai dengan perintah/ajakan.",
+    "points": [
+     "Jika klausa utama berupa perintah atau ajakan, pakai -(으)니까, bukan -기 때문에.",
+     "Untuk penjelasan sebab yang objektif (laporan, esai, berita), -기 때문에 terdengar lebih alami.",
+     "Dengan kata benda: N 때문에 'karena N' (사고 때문에) atau N(이)기 때문에 'karena (dia) N' (학생이기 때문에).",
+     "Di akhir kalimat, -기 때문이에요 berarti \"Itu karena…\".",
+     "Keduanya bisa memakai bentuk lampau -았/었 (늦었으니까, 늦었기 때문에)."
+    ]
+   }
+  },
+  "examples": [
+   {
+    "ko": "시간이 없으니까 빨리 가자.",
+    "use": "eunikka",
+    "tr": {
+     "vi": "Không còn thời gian đâu, đi nhanh lên.",
+     "en": "We're short on time, so let's hurry.",
+     "ja": "時間がないから早く行こう。",
+     "id": "Waktunya mepet, ayo cepat pergi."
+    }
+   },
+   {
+    "ko": "* 시간이 없기 때문에 빨리 가자.",
+    "use": "gi-ttaemun",
+    "tr": {
+     "vi": "Vì không có thời gian nên đi nhanh lên. [Sai: -gi ttaemune không đi với câu rủ rê, phải dùng -(eu)nikka]",
+     "en": "Since there's no time, let's hurry. [Wrong: -gi ttaemune doesn't go with a suggestion; use -(eu)nikka]",
+     "ja": "時間がないので早く行こう。［誤り：-gi ttaemune は勧誘と一緒に使わない。-(eu)nikka を使う］",
+     "id": "Karena tidak ada waktu, ayo cepat. [Salah: -gi ttaemune tidak dipakai dengan ajakan; pakai -(eu)nikka]"
+    }
+   },
+   {
+    "ko": "교통사고가 났기 때문에 길이 많이 막혔습니다.",
+    "use": "gi-ttaemun",
+    "tr": {
+     "vi": "Do xảy ra tai nạn giao thông nên đường bị tắc nghiêm trọng.",
+     "en": "Traffic was heavy because there had been an accident.",
+     "ja": "交通事故が起きたため、道がひどく渋滞しました。",
+     "id": "Karena terjadi kecelakaan, jalan sangat macet."
+    }
+   },
+   {
+    "ko": "감기 때문에 학교에 못 갔어요.",
+    "use": "gi-ttaemun",
+    "tr": {
+     "vi": "Vì bị cảm nên tôi không đi học được.",
+     "en": "I couldn't go to school because of a cold.",
+     "ja": "風邪のせいで学校に行けませんでした。",
+     "id": "Karena flu, saya tidak bisa ke sekolah."
+    }
+   },
+   {
+    "ko": "날씨가 추우니까 따뜻하게 입으세요.",
+    "use": "eunikka",
+    "tr": {
+     "vi": "Trời lạnh nên hãy mặc ấm vào.",
+     "en": "It's cold, so dress warmly.",
+     "ja": "寒いから暖かくして出かけてください。",
+     "id": "Cuacanya dingin, jadi pakailah baju hangat."
+    }
+   }
+  ]
+ },
+ {
+  "slug": "jiman-vs-neunde",
+  "pair": [
+   "jiman",
+   "neunde"
+  ],
+  "text": {
+   "vi": {
+    "summary": "-지만 là \"nhưng\" với sự đối lập rõ ràng; -(으)ㄴ데/는데 rộng hơn: có thể là đối lập nhẹ nhàng, nhưng thường dùng để nêu bối cảnh, hoàn cảnh trước khi nói điều chính.",
+    "points": [
+     "Hai vế đối lập rõ (A nhưng B): -지만, và trong nhiều trường hợp -는데 cũng được nhưng nghe mềm hơn.",
+     "Nêu hoàn cảnh, thông tin nền trước khi hỏi, đề nghị, nhờ vả: chỉ dùng -는데 (지금 마트에 가는데 뭐 필요해요?).",
+     "Dạng: động từ + -는데, tính từ + -(으)ㄴ데, danh từ + 인데; quá khứ -았/었는데.",
+     "-지만 có thể mở đầu bằng lời xin phép lịch sự: 죄송하지만, 실례지만.",
+     "-는데(요) đặt cuối câu còn dùng để nói lửng, chờ phản ứng của người nghe."
+    ]
+   },
+   "en": {
+    "summary": "-지만 is a clear 'but'; -(으)ㄴ데/는데 is broader — it can mark a soft contrast, but very often it just sets the scene or gives background before the main point.",
+    "points": [
+     "For a clear contrast (A, but B), use -지만; -는데 often works too but sounds softer.",
+     "To give background before a question, offer or request, only -는데 works (지금 마트에 가는데 뭐 필요해요? 'I'm going to the store — need anything?').",
+     "Forms: verb + -는데, adjective + -(으)ㄴ데, noun + 인데; past -았/었는데.",
+     "-지만 appears in polite set phrases: 죄송하지만 'sorry, but', 실례지만 'excuse me, but'.",
+     "Sentence-final -는데(요) leaves the sentence hanging, inviting a reaction."
+    ]
+   },
+   "ja": {
+    "summary": "-지만 ははっきりした逆接の「～けれど」。-(으)ㄴ데/는데 はもっと広く、柔らかい逆接にもなりますが、本題の前に状況や背景を示す「～んだけど」として使うことが非常に多いです。",
+    "points": [
+     "はっきり対立する内容（AだがB）には -지만。多くの場合 -는데 も使えますが、より柔らかく聞こえます。",
+     "質問・提案・依頼の前に状況を説明するときは -는데 だけです（지금 마트에 가는데 뭐 필요해요?「今スーパーに行くんだけど、何か要る？」）。",
+     "形：動詞 + -는데、形容詞 + -(으)ㄴ데、名詞 + 인데、過去は -았/었는데。",
+     "-지만 は 죄송하지만「すみませんが」、실례지만「失礼ですが」のような丁寧な前置きによく使われます。",
+     "文末の -는데(요) は言いさしで、相手の反応を待つニュアンスになります。"
+    ]
+   },
+   "id": {
+    "summary": "-지만 adalah \"tetapi\" dengan pertentangan yang jelas; -(으)ㄴ데/는데 lebih luas: bisa pertentangan yang halus, tetapi sangat sering dipakai untuk memberi latar atau situasi sebelum hal utama.",
+    "points": [
+     "Untuk pertentangan jelas (A, tapi B), pakai -지만; -는데 sering juga bisa, tetapi terdengar lebih lembut.",
+     "Untuk memberi latar sebelum bertanya, menawarkan, atau meminta, hanya -는데 yang bisa (지금 마트에 가는데 뭐 필요해요? 'Saya mau ke minimarket, perlu sesuatu?').",
+     "Bentuk: kata kerja + -는데, kata sifat + -(으)ㄴ데, kata benda + 인데; lampau -았/었는데.",
+     "-지만 dipakai dalam ungkapan sopan: 죄송하지만 'maaf, tapi', 실례지만 'permisi, tapi'.",
+     "-는데(요) di akhir kalimat membuat kalimat menggantung, menunggu tanggapan lawan bicara."
+    ]
+   }
+  },
+  "examples": [
+   {
+    "ko": "한국어는 어렵지만 재미있어요.",
+    "use": "jiman",
+    "tr": {
+     "vi": "Tiếng Hàn khó nhưng thú vị.",
+     "en": "Korean is hard, but it's fun.",
+     "ja": "韓国語は難しいけれど面白いです。",
+     "id": "Bahasa Korea sulit, tetapi menyenangkan."
+    }
+   },
+   {
+    "ko": "이 식당은 좀 비싼데 정말 맛있어요.",
+    "use": "neunde",
+    "tr": {
+     "vi": "Quán này hơi đắt, mà ngon thật đấy.",
+     "en": "This restaurant is a bit pricey, but it's really good.",
+     "ja": "この店はちょっと高いんだけど、本当においしいです。",
+     "id": "Restoran ini agak mahal, tapi enak banget."
+    }
+   },
+   {
+    "ko": "지금 마트에 가는데 뭐 필요한 거 있어요?",
+    "use": "neunde",
+    "tr": {
+     "vi": "Giờ mình đi siêu thị, bạn có cần gì không?",
+     "en": "I'm heading to the store now — do you need anything?",
+     "ja": "今スーパーに行くんだけど、何か要るものある？",
+     "id": "Saya mau ke minimarket sekarang, ada yang perlu dibeli?"
+    }
+   },
+   {
+    "ko": "* 배가 고프지만 같이 밥 먹으러 갈까요?",
+    "use": "jiman",
+    "tr": {
+     "vi": "Tôi đói nhưng mình đi ăn cùng nhé? [Sai: đây là nêu hoàn cảnh trước lời rủ, phải dùng -(eu)nde]",
+     "en": "I'm hungry, but shall we go eat? [Wrong: this sets the scene for a suggestion, so it needs -(eu)nde, not -jiman]",
+     "ja": "お腹が空いたけれど、一緒にご飯を食べに行きましょうか。［誤り：勧誘の前置き（状況説明）なので -jiman ではなく -(eu)nde を使う］",
+     "id": "Saya lapar, tapi bagaimana kalau kita makan? [Salah: ini latar sebelum ajakan, jadi pakai -(eu)nde, bukan -jiman]"
+    }
+   },
+   {
+    "ko": "죄송하지만 잠깐 지나가도 될까요?",
+    "use": "jiman",
+    "tr": {
+     "vi": "Xin lỗi, cho tôi đi qua một chút được không?",
+     "en": "Excuse me, could I squeeze past?",
+     "ja": "すみませんが、ちょっと通してもらえますか。",
+     "id": "Maaf, boleh saya lewat sebentar?"
+    }
+   }
+  ]
+ },
+ {
+  "slug": "ji-anta-vs-ji-motada",
+  "pair": [
+   "ji-anta",
+   "ji-motada"
+  ],
+  "text": {
+   "vi": {
+    "summary": "-지 않다 (안) là phủ định thông thường hoặc \"không làm\" do ý muốn của chủ thể; -지 못하다 (못) là \"không thể làm\" vì thiếu khả năng hoặc do hoàn cảnh bên ngoài.",
+    "points": [
+     "Không làm vì không muốn, không cần: -지 않다 / 안 (고기를 먹지 않아요).",
+     "Muốn làm nhưng không làm được (bận, ốm, không biết): -지 못하다 / 못 (바빠서 가지 못했어요).",
+     "Tính từ gần như luôn dùng -지 않다 (춥지 않아요). -지 못하다 với tính từ chỉ dùng hạn chế, nghĩa \"không đạt mức mong đợi\" (넉넉하지 못하다).",
+     "Câu mệnh lệnh, rủ rê phủ định không dùng hai dạng này mà dùng -지 말다 (가지 마세요).",
+     "Dạng ngắn 안/못 + động từ dùng nhiều trong văn nói; dạng dài -지 않다/-지 못하다 trang trọng hơn."
+    ]
+   },
+   "en": {
+    "summary": "-지 않다 (안) is plain negation or 'not doing' by choice; -지 못하다 (못) means 'cannot' — inability or outside circumstances stop you.",
+    "points": [
+     "Not doing because you don't want or need to: -지 않다 / 안 (고기를 먹지 않아요 'I don't eat meat').",
+     "Wanting to but being unable (busy, ill, lack of skill): -지 못하다 / 못 (바빠서 가지 못했어요).",
+     "Adjectives almost always take -지 않다 (춥지 않아요). -지 못하다 with adjectives is limited and means 'falls short of what's expected' (넉넉하지 못하다).",
+     "Negative commands and suggestions use neither — they use -지 말다 (가지 마세요).",
+     "The short forms 안/못 + verb dominate speech; the long forms sound more formal."
+    ]
+   },
+   "ja": {
+    "summary": "-지 않다（안）は普通の否定や意志による「～しない」、-지 못하다（못）は能力不足や外的な事情による「～できない」です。",
+    "points": [
+     "したくない・必要がないからしない：-지 않다 / 안（고기를 먹지 않아요「肉を食べません」）。",
+     "したいのに（忙しい・病気・能力がない）できない：-지 못하다 / 못（바빠서 가지 못했어요）。",
+     "形容詞はほぼ -지 않다 を使います（춥지 않아요）。形容詞の -지 못하다 は「期待される水準に達していない」という限られた用法です（넉넉하지 못하다）。",
+     "否定の命令・勧誘にはどちらも使わず、-지 말다 を使います（가지 마세요）。",
+     "会話では短い形 안/못 + 動詞 が多く、長い形はやや改まった言い方です。"
+    ]
+   },
+   "id": {
+    "summary": "-지 않다 (안) adalah penyangkalan biasa atau \"tidak melakukan\" karena kemauan sendiri; -지 못하다 (못) berarti \"tidak bisa\" karena kemampuan atau keadaan dari luar.",
+    "points": [
+     "Tidak melakukan karena tidak mau atau tidak perlu: -지 않다 / 안 (고기를 먹지 않아요 'Saya tidak makan daging').",
+     "Ingin melakukan tetapi tidak bisa (sibuk, sakit, tidak mampu): -지 못하다 / 못 (바빠서 가지 못했어요).",
+     "Kata sifat hampir selalu memakai -지 않다 (춥지 않아요). -지 못하다 dengan kata sifat terbatas, artinya \"tidak sesuai harapan\" (넉넉하지 못하다).",
+     "Larangan dan ajakan negatif tidak memakai keduanya, tetapi -지 말다 (가지 마세요).",
+     "Dalam percakapan, bentuk pendek 안/못 + kata kerja lebih umum; bentuk panjang lebih formal."
+    ]
+   }
+  },
+  "examples": [
+   {
+    "ko": "저는 고기를 먹지 않아요.",
+    "use": "ji-anta",
+    "tr": {
+     "vi": "Tôi không ăn thịt.",
+     "en": "I don't eat meat.",
+     "ja": "私は肉を食べません。",
+     "id": "Saya tidak makan daging."
+    }
+   },
+   {
+    "ko": "배가 아파서 아무것도 먹지 못했어요.",
+    "use": "ji-motada",
+    "tr": {
+     "vi": "Đau bụng quá nên tôi không ăn được gì.",
+     "en": "My stomach hurt, so I couldn't eat anything.",
+     "ja": "お腹が痛くて何も食べられませんでした。",
+     "id": "Perut saya sakit, jadi saya tidak bisa makan apa-apa."
+    }
+   },
+   {
+    "ko": "오늘은 별로 춥지 않아요.",
+    "use": "ji-anta",
+    "tr": {
+     "vi": "Hôm nay không lạnh lắm.",
+     "en": "It's not very cold today.",
+     "ja": "今日はあまり寒くありません。",
+     "id": "Hari ini tidak terlalu dingin."
+    }
+   },
+   {
+    "ko": "너무 바빠서 숙제를 하지 못했어요.",
+    "use": "ji-motada",
+    "tr": {
+     "vi": "Bận quá nên tôi không làm bài tập được.",
+     "en": "I was so busy that I couldn't do my homework.",
+     "ja": "忙しすぎて宿題ができませんでした。",
+     "id": "Terlalu sibuk, jadi saya tidak bisa mengerjakan PR."
+    }
+   },
+   {
+    "ko": "* 오늘은 날씨가 춥지 못해요.",
+    "use": "ji-motada",
+    "tr": {
+     "vi": "Hôm nay trời không lạnh. [Sai: mô tả trạng thái thời tiết phải dùng -ji anta, không dùng -ji motada]",
+     "en": "It's not cold today. [Wrong: describing the weather needs -ji anta, not -ji motada]",
+     "ja": "今日は寒くありません。［誤り：天気の状態を言うときは -ji motada ではなく -ji anta を使う］",
+     "id": "Hari ini tidak dingin. [Salah: menyatakan keadaan cuaca memakai -ji anta, bukan -ji motada]"
+    }
+   }
+  ]
+ },
+ {
+  "slug": "eulgeyo-vs-eullaeyo",
+  "pair": [
+   "eulgeyo",
+   "eullaeyo"
+  ],
+  "text": {
+   "vi": {
+    "summary": "-(으)ㄹ게요 là lời hứa, lời báo cho người nghe biết \"tôi sẽ làm\" (có để ý tới người nghe); -(으)ㄹ래요 là ý muốn, sở thích của bản thân \"tôi muốn/tôi sẽ…\" và còn dùng để hỏi ý muốn của người nghe.",
+    "points": [
+     "Hứa hẹn, đáp lại yêu cầu, thông báo việc mình sắp làm: -(으)ㄹ게요 (내일 연락할게요).",
+     "Nói lựa chọn, ý thích của riêng mình: -(으)ㄹ래요 (저는 비빔밥 먹을래요).",
+     "Hỏi người nghe muốn gì: chỉ dùng -(으)ㄹ래요? (뭐 마실래요?). -(으)ㄹ게요 không dùng để hỏi.",
+     "Cả hai chỉ dùng với chủ ngữ ngôi thứ nhất khi là câu kể.",
+     "-(으)ㄹ래요 với người trên có thể nghe hơi trẻ con/bướng; lịch sự hơn: -(으)실래요?"
+    ]
+   },
+   "en": {
+    "summary": "-(으)ㄹ게요 is a promise or a heads-up to the listener ('I'll do it', with the listener in mind); -(으)ㄹ래요 expresses your own wish or preference ('I want to / I'll have…') and is also used to ask what the listener wants.",
+    "points": [
+     "Promises, responses to requests, announcing what you're about to do: -(으)ㄹ게요 (내일 연락할게요 'I'll contact you tomorrow').",
+     "Stating your own choice or preference: -(으)ㄹ래요 (저는 비빔밥 먹을래요 'I'll have bibimbap').",
+     "Asking what the listener wants: only -(으)ㄹ래요? (뭐 마실래요?). -(으)ㄹ게요 is never a question.",
+     "As statements, both are first-person only.",
+     "-(으)ㄹ래요 can sound childish or stubborn to superiors; to ask politely use -(으)실래요?."
+    ]
+   },
+   "ja": {
+    "summary": "-(으)ㄹ게요 は聞き手を意識した約束・宣言「（あなたのために）～しますね」、-(으)ㄹ래요 は話し手自身の意向・好み「～したいです／～にします」で、聞き手の意向を尋ねることもできます。",
+    "points": [
+     "約束、依頼への返事、これからすることの宣言には -(으)ㄹ게요（내일 연락할게요「明日連絡しますね」）。",
+     "自分の選択や好みを言うときは -(으)ㄹ래요（저는 비빔밥 먹을래요「私はビビンバにします」）。",
+     "相手の意向を尋ねるのは -(으)ㄹ래요? だけです（뭐 마실래요?）。-(으)ㄹ게요 は疑問文になりません。",
+     "平叙文ではどちらも一人称主語に限られます。",
+     "目上の人に -(으)ㄹ래요 を使うと子どもっぽく、わがままに聞こえることがあります。丁寧に尋ねるなら -(으)실래요? です。"
+    ]
+   },
+   "id": {
+    "summary": "-(으)ㄹ게요 adalah janji atau pemberitahuan \"saya akan…\" dengan memperhatikan lawan bicara; -(으)ㄹ래요 menyatakan keinginan atau pilihan sendiri (\"saya mau…\") dan juga dipakai untuk menanyakan keinginan lawan bicara.",
+    "points": [
+     "Janji, menanggapi permintaan, memberi tahu apa yang akan dilakukan: -(으)ㄹ게요 (내일 연락할게요 'Besok saya hubungi').",
+     "Menyatakan pilihan atau selera sendiri: -(으)ㄹ래요 (저는 비빔밥 먹을래요 'Saya pilih bibimbap').",
+     "Menanyakan keinginan lawan bicara: hanya -(으)ㄹ래요? (뭐 마실래요?). -(으)ㄹ게요 tidak pernah jadi pertanyaan.",
+     "Dalam kalimat pernyataan, keduanya hanya untuk orang pertama.",
+     "-(으)ㄹ래요 kepada atasan bisa terdengar kekanak-kanakan atau keras kepala; untuk bertanya sopan pakai -(으)실래요?."
+    ]
+   }
+  },
+  "examples": [
+   {
+    "ko": "도착하면 바로 전화할게요.",
+    "use": "eulgeyo",
+    "tr": {
+     "vi": "Đến nơi là tôi gọi cho bạn ngay nhé.",
+     "en": "I'll call you as soon as I arrive.",
+     "ja": "着いたらすぐ電話しますね。",
+     "id": "Begitu sampai, saya langsung telepon, ya."
+    }
+   },
+   {
+    "ko": "저는 비빔밥 먹을래요.",
+    "use": "eullaeyo",
+    "tr": {
+     "vi": "Tôi thì ăn cơm trộn.",
+     "en": "I'll have the bibimbap.",
+     "ja": "私はビビンバにします。",
+     "id": "Saya mau bibimbap."
+    }
+   },
+   {
+    "ko": "뭐 마실래요?",
+    "use": "eullaeyo",
+    "tr": {
+     "vi": "Bạn muốn uống gì?",
+     "en": "What would you like to drink?",
+     "ja": "何を飲みますか。",
+     "id": "Mau minum apa?"
+    }
+   },
+   {
+    "ko": "* 뭐 마실게요?",
+    "use": "eulgeyo",
+    "tr": {
+     "vi": "Bạn sẽ uống gì? [Sai: -(eu)lgeyo không dùng để hỏi, phải dùng -(eu)llaeyo?]",
+     "en": "What will you drink? [Wrong: -(eu)lgeyo can't be a question; use -(eu)llaeyo?]",
+     "ja": "何を飲みますか。［誤り：-(eu)lgeyo は疑問文にならない。-(eu)llaeyo? を使う］",
+     "id": "Mau minum apa? [Salah: -(eu)lgeyo tidak bisa untuk bertanya; pakai -(eu)llaeyo?]"
+    }
+   },
+   {
+    "ko": "괜찮아요, 설거지는 제가 할게요.",
+    "use": "eulgeyo",
+    "tr": {
+     "vi": "Không sao đâu, để tôi rửa bát cho.",
+     "en": "It's fine, I'll do the dishes.",
+     "ja": "大丈夫です、皿洗いは私がやりますね。",
+     "id": "Tidak apa-apa, biar saya yang cuci piring."
+    }
+   }
+  ]
+ },
+ {
+  "slug": "eulkkayo-vs-eullaeyo",
+  "pair": [
+   "eulkkayo",
+   "eullaeyo"
+  ],
+  "text": {
+   "vi": {
+    "summary": "-(으)ㄹ까요? hỏi ý kiến người nghe (\"chúng ta… nhé?\", \"tôi… nhé?\") hoặc phỏng đoán (\"liệu… không?\"); -(으)ㄹ래요? hỏi ý muốn của người nghe (\"bạn có muốn…?\"), và ở câu kể thì nói ý muốn của mình.",
+    "points": [
+     "Rủ rê (우리) …ㄹ까요? = \"mình cùng… nhé?\"; …ㄹ래요? = \"bạn có muốn…?\" — cả hai đều dùng để mời được.",
+     "Đề nghị làm giúp: 제가 …ㄹ까요? (\"để tôi… nhé?\"). Không dùng -(으)ㄹ래요 cho nghĩa này.",
+     "Phỏng đoán, tự hỏi: chỉ dùng -(으)ㄹ까요? (내일 비가 올까요?).",
+     "-(으)ㄹ까요 chỉ là câu hỏi; -(으)ㄹ래요 có thể là câu kể nói ý muốn bản thân (저는 집에 있을래요)."
+    ]
+   },
+   "en": {
+    "summary": "-(으)ㄹ까요? asks for the listener's opinion ('Shall we…?', 'Shall I…?') or wonders ('Do you think…?'); -(으)ㄹ래요? asks about the listener's own wish ('Do you want to…?') and, as a statement, gives your own wish.",
+    "points": [
+     "Inviting: (우리) …ㄹ까요? 'Shall we…?' vs …ㄹ래요? 'Would you like to…?' — both work as invitations.",
+     "Offering help: 제가 …ㄹ까요? 'Shall I…?'. -(으)ㄹ래요 can't do this.",
+     "Guessing or wondering: only -(으)ㄹ까요? (내일 비가 올까요? 'Will it rain tomorrow?').",
+     "-(으)ㄹ까요 is only a question; -(으)ㄹ래요 can also be a statement of your wish (저는 집에 있을래요 'I'll stay home')."
+    ]
+   },
+   "ja": {
+    "summary": "-(으)ㄹ까요? は相手の意見を尋ねる「～しましょうか」「（私が）～しましょうか」や推測「～でしょうか」、-(으)ㄹ래요? は相手自身の意向「～しますか／～したいですか」を尋ねます。平叙文の -(으)ㄹ래요 は自分の意向です。",
+    "points": [
+     "誘うとき：(우리) …ㄹ까요?「～しましょうか」、…ㄹ래요?「～しませんか（したい？）」。どちらも誘いに使えます。",
+     "申し出：제가 …ㄹ까요?「私が～しましょうか」。-(으)ㄹ래요 にはこの用法がありません。",
+     "推測・疑問：-(으)ㄹ까요? だけです（내일 비가 올까요?「明日雨が降るでしょうか」）。",
+     "-(으)ㄹ까요 は疑問文専用ですが、-(으)ㄹ래요 は自分の意向を言う平叙文にもなります（저는 집에 있을래요）。"
+    ]
+   },
+   "id": {
+    "summary": "-(으)ㄹ까요? meminta pendapat lawan bicara (\"Bagaimana kalau kita…?\", \"Perlukah saya…?\") atau menduga (\"Kira-kira…?\"); -(으)ㄹ래요? menanyakan keinginan lawan bicara (\"Mau…?\"), dan dalam kalimat pernyataan menyatakan keinginan sendiri.",
+    "points": [
+     "Mengajak: (우리) …ㄹ까요? \"Bagaimana kalau kita…?\" dan …ㄹ래요? \"Mau…?\" — keduanya bisa untuk mengajak.",
+     "Menawarkan bantuan: 제가 …ㄹ까요? \"Perlu saya…?\". -(으)ㄹ래요 tidak bisa untuk ini.",
+     "Menduga atau bertanya-tanya: hanya -(으)ㄹ까요? (내일 비가 올까요? 'Besok hujan tidak, ya?').",
+     "-(으)ㄹ까요 hanya untuk pertanyaan; -(으)ㄹ래요 juga bisa menyatakan keinginan sendiri (저는 집에 있을래요 'Saya di rumah saja')."
+    ]
+   }
+  },
+  "examples": [
+   {
+    "ko": "주말에 같이 영화 볼까요?",
+    "use": "eulkkayo",
+    "tr": {
+     "vi": "Cuối tuần mình cùng xem phim nhé?",
+     "en": "Shall we see a movie together this weekend?",
+     "ja": "週末、一緒に映画を見ましょうか。",
+     "id": "Bagaimana kalau akhir pekan kita nonton film bareng?"
+    }
+   },
+   {
+    "ko": "커피 한잔 마실래요?",
+    "use": "eullaeyo",
+    "tr": {
+     "vi": "Bạn có muốn uống một ly cà phê không?",
+     "en": "Do you want a cup of coffee?",
+     "ja": "コーヒー一杯飲みませんか。",
+     "id": "Mau minum kopi?"
+    }
+   },
+   {
+    "ko": "제가 창문 좀 열까요?",
+    "use": "eulkkayo",
+    "tr": {
+     "vi": "Để tôi mở cửa sổ nhé?",
+     "en": "Shall I open the window?",
+     "ja": "私が窓を開けましょうか。",
+     "id": "Perlu saya buka jendelanya?"
+    }
+   },
+   {
+    "ko": "내일 비가 올까요?",
+    "use": "eulkkayo",
+    "tr": {
+     "vi": "Liệu ngày mai trời có mưa không nhỉ?",
+     "en": "Do you think it'll rain tomorrow?",
+     "ja": "明日、雨が降るでしょうか。",
+     "id": "Kira-kira besok hujan, ya?"
+    }
+   },
+   {
+    "ko": "저는 피곤해서 그냥 집에 있을래요.",
+    "use": "eullaeyo",
+    "tr": {
+     "vi": "Tôi mệt nên ở nhà thôi.",
+     "en": "I'm tired, so I'll just stay home.",
+     "ja": "疲れたので、私は家にいます。",
+     "id": "Saya capek, jadi di rumah saja."
+    }
+   }
+  ]
+ },
+ {
+  "slug": "eul-geoyeyo-vs-eulgeyo",
+  "pair": [
+   "eul-geoyeyo",
+   "eulgeyo"
+  ],
+  "text": {
+   "vi": {
+    "summary": "-(으)ㄹ 거예요 nói kế hoạch hoặc dự đoán một cách trung tính, không liên quan đến người nghe; -(으)ㄹ게요 là lời hứa, quyết định được đưa ra vì người nghe hoặc khi đáp lại người nghe.",
+    "points": [
+     "Kế hoạch đã định sẵn, kể cho người khác biết: -(으)ㄹ 거예요 (다음 달에 이사할 거예요).",
+     "Đáp lại lời nhờ, lời khuyên, hứa với người nghe: -(으)ㄹ게요 (네, 조심할게요).",
+     "Dự đoán (trời sẽ mưa, anh ấy sẽ đến): chỉ dùng -(으)ㄹ 거예요.",
+     "Chủ ngữ ngôi thứ ba và câu hỏi: dùng được với -(으)ㄹ 거예요; -(으)ㄹ게요 chỉ dùng ngôi thứ nhất, không hỏi."
+    ]
+   },
+   "en": {
+    "summary": "-(으)ㄹ 거예요 states a plan or a prediction neutrally, without involving the listener; -(으)ㄹ게요 is a promise or decision made for or in response to the listener.",
+    "points": [
+     "Telling someone about an existing plan: -(으)ㄹ 거예요 (다음 달에 이사할 거예요 'I'm moving next month').",
+     "Responding to a request or advice, promising the listener: -(으)ㄹ게요 (네, 조심할게요 'OK, I'll be careful').",
+     "Predictions (it'll rain, he'll come): only -(으)ㄹ 거예요.",
+     "Third-person subjects and questions work with -(으)ㄹ 거예요; -(으)ㄹ게요 is first-person statements only."
+    ]
+   },
+   "ja": {
+    "summary": "-(으)ㄹ 거예요 は聞き手と関係なく予定や推測を述べる表現、-(으)ㄹ게요 は聞き手を意識して、または聞き手に応じてその場で約束・決定する表現です。",
+    "points": [
+     "すでに決まっている予定を伝える：-(으)ㄹ 거예요（다음 달에 이사할 거예요「来月引っ越します」）。",
+     "依頼や助言に応える、相手に約束する：-(으)ㄹ게요（네, 조심할게요「はい、気をつけます」）。",
+     "推測（雨が降るだろう、彼は来るだろう）は -(으)ㄹ 거예요 だけです。",
+     "三人称主語や疑問文は -(으)ㄹ 거예요 で可能ですが、-(으)ㄹ게요 は一人称の平叙文だけです。"
+    ]
+   },
+   "id": {
+    "summary": "-(으)ㄹ 거예요 menyatakan rencana atau dugaan secara netral tanpa melibatkan lawan bicara; -(으)ㄹ게요 adalah janji atau keputusan yang dibuat demi atau sebagai tanggapan kepada lawan bicara.",
+    "points": [
+     "Memberi tahu rencana yang sudah ada: -(으)ㄹ 거예요 (다음 달에 이사할 거예요 'Bulan depan saya pindah').",
+     "Menanggapi permintaan atau nasihat, berjanji kepada lawan bicara: -(으)ㄹ게요 (네, 조심할게요 'Ya, saya akan hati-hati').",
+     "Dugaan (akan hujan, dia akan datang): hanya -(으)ㄹ 거예요.",
+     "Subjek orang ketiga dan pertanyaan bisa dengan -(으)ㄹ 거예요; -(으)ㄹ게요 hanya untuk pernyataan orang pertama."
+    ]
+   }
+  },
+  "examples": [
+   {
+    "ko": "다음 달에 한국에 갈 거예요.",
+    "use": "eul-geoyeyo",
+    "tr": {
+     "vi": "Tháng sau tôi sẽ đi Hàn Quốc.",
+     "en": "I'm going to Korea next month.",
+     "ja": "来月、韓国に行く予定です。",
+     "id": "Bulan depan saya akan ke Korea."
+    }
+   },
+   {
+    "ko": "걱정하지 마세요. 제가 도와줄게요.",
+    "use": "eulgeyo",
+    "tr": {
+     "vi": "Đừng lo. Tôi sẽ giúp bạn.",
+     "en": "Don't worry. I'll help you.",
+     "ja": "心配しないでください。私が手伝いますよ。",
+     "id": "Jangan khawatir. Saya akan bantu."
+    }
+   },
+   {
+    "ko": "내일은 비가 올 거예요.",
+    "use": "eul-geoyeyo",
+    "tr": {
+     "vi": "Ngày mai chắc trời sẽ mưa.",
+     "en": "It'll probably rain tomorrow.",
+     "ja": "明日は雨が降るでしょう。",
+     "id": "Besok mungkin hujan."
+    }
+   },
+   {
+    "ko": "* 내일은 비가 올게요.",
+    "use": "eulgeyo",
+    "tr": {
+     "vi": "Ngày mai trời sẽ mưa. [Sai: -(eu)lgeyo là lời hứa của người nói, không dùng để dự đoán; phải dùng -(eu)l geoyeyo]",
+     "en": "It will rain tomorrow. [Wrong: -(eu)lgeyo is the speaker's promise, not a prediction; use -(eu)l geoyeyo]",
+     "ja": "明日は雨が降ります。［誤り：-(eu)lgeyo は話し手の約束で推測には使えない。-(eu)l geoyeyo を使う］",
+     "id": "Besok akan hujan. [Salah: -(eu)lgeyo adalah janji pembicara, bukan dugaan; pakai -(eu)l geoyeyo]"
+    }
+   },
+   {
+    "ko": "늦지 마세요. — 네, 일찍 올게요.",
+    "use": "eulgeyo",
+    "tr": {
+     "vi": "Đừng đến muộn nhé. — Vâng, tôi sẽ đến sớm.",
+     "en": "Don't be late. — OK, I'll come early.",
+     "ja": "遅れないでくださいね。— はい、早めに来ます。",
+     "id": "Jangan terlambat, ya. — Baik, saya datang lebih awal."
+    }
+   }
+  ]
+ },
+ {
+  "slug": "eureo-vs-euryeogo",
+  "pair": [
+   "eureo",
+   "euryeogo"
+  ],
+  "text": {
+   "vi": {
+    "summary": "Cả hai đều chỉ mục đích \"để\". -(으)러 chỉ đi với động từ di chuyển ở vế sau (가다, 오다, 다니다); -(으)려고 đi với mọi động từ nhưng không dùng với mệnh lệnh, rủ rê.",
+    "points": [
+     "Vế sau là 가다/오다/다니다/나가다…: dùng -(으)러 (책을 빌리러 도서관에 가요).",
+     "Vế sau là động từ khác (운동하다, 배우다, 모으다…): chỉ dùng -(으)려고.",
+     "Vế sau là mệnh lệnh, rủ rê: dùng -(으)러 (밥 먹으러 갑시다), không dùng -(으)려고.",
+     "-(으)려고 하다 còn có nghĩa \"định…\" hoặc \"sắp…\" (막 나가려고 했어요).",
+     "Cả hai chỉ gắn với động từ, không gắn với tính từ."
+    ]
+   },
+   "en": {
+    "summary": "Both mean 'in order to'. -(으)러 only works when the main verb is a movement verb (가다, 오다, 다니다); -(으)려고 works with any verb but cannot be followed by a command or suggestion.",
+    "points": [
+     "If the main verb is 가다/오다/다니다/나가다 etc., use -(으)러 (책을 빌리러 도서관에 가요).",
+     "With any other main verb (exercise, learn, save…), only -(으)려고 works.",
+     "If the main clause is a command or suggestion, use -(으)러 (밥 먹으러 갑시다), not -(으)려고.",
+     "-(으)려고 하다 also means 'plan to' or 'be about to' (막 나가려고 했어요 'I was just about to leave').",
+     "Both attach to verbs only, not adjectives."
+    ]
+   },
+   "ja": {
+    "summary": "どちらも目的「～ために」ですが、-(으)러 は後ろが移動動詞（가다・오다・다니다）のときだけ使え、-(으)려고 はどんな動詞にも使えますが命令・勧誘とは使えません。",
+    "points": [
+     "後ろが 가다/오다/다니다/나가다 などなら -(으)러（책을 빌리러 도서관에 가요「本を借りに図書館に行きます」）。",
+     "それ以外の動詞（운동하다・배우다・모으다 など）には -(으)려고 だけが使えます。",
+     "後ろが命令・勧誘なら -(으)러 を使い（밥 먹으러 갑시다）、-(으)려고 は使えません。",
+     "-(으)려고 하다 は「～しようと思う」「～しようとする（直前）」の意味にもなります（막 나가려고 했어요）。",
+     "どちらも動詞にだけ付き、形容詞には付きません。"
+    ]
+   },
+   "id": {
+    "summary": "Keduanya berarti \"untuk\" (tujuan). -(으)러 hanya bisa bila kata kerja utamanya kata kerja gerak (가다, 오다, 다니다); -(으)려고 bisa dengan kata kerja apa pun tetapi tidak bisa diikuti perintah atau ajakan.",
+    "points": [
+     "Jika kata kerja utama 가다/오다/다니다/나가다 dsb., pakai -(으)러 (책을 빌리러 도서관에 가요).",
+     "Dengan kata kerja lain (berolahraga, belajar, menabung…), hanya -(으)려고 yang bisa.",
+     "Jika klausa utama berupa perintah atau ajakan, pakai -(으)러 (밥 먹으러 갑시다), bukan -(으)려고.",
+     "-(으)려고 하다 juga berarti \"berniat\" atau \"hampir/baru mau\" (막 나가려고 했어요 'Saya baru mau keluar').",
+     "Keduanya hanya melekat pada kata kerja, bukan kata sifat."
+    ]
+   }
+  },
+  "examples": [
+   {
+    "ko": "책을 빌리러 도서관에 가요.",
+    "use": "eureo",
+    "tr": {
+     "vi": "Tôi đến thư viện để mượn sách.",
+     "en": "I'm going to the library to borrow a book.",
+     "ja": "本を借りに図書館に行きます。",
+     "id": "Saya pergi ke perpustakaan untuk meminjam buku."
+    }
+   },
+   {
+    "ko": "살을 빼려고 매일 운동해요.",
+    "use": "euryeogo",
+    "tr": {
+     "vi": "Tôi tập thể dục mỗi ngày để giảm cân.",
+     "en": "I work out every day to lose weight.",
+     "ja": "痩せようと毎日運動しています。",
+     "id": "Saya berolahraga setiap hari supaya berat badan turun."
+    }
+   },
+   {
+    "ko": "* 살을 빼러 매일 운동해요.",
+    "use": "eureo",
+    "tr": {
+     "vi": "Tôi tập thể dục để giảm cân. [Sai: vế sau không phải động từ di chuyển nên phải dùng -(eu)ryeogo]",
+     "en": "I work out to lose weight. [Wrong: the main verb isn't a movement verb, so use -(eu)ryeogo]",
+     "ja": "痩せるために運動します。［誤り：後ろが移動動詞ではないので -(eu)ryeogo を使う］",
+     "id": "Saya berolahraga untuk menurunkan berat badan. [Salah: kata kerja utama bukan kata kerja gerak, jadi pakai -(eu)ryeogo]"
+    }
+   },
+   {
+    "ko": "점심 먹으러 같이 나갑시다.",
+    "use": "eureo",
+    "tr": {
+     "vi": "Cùng ra ngoài ăn trưa nào.",
+     "en": "Let's go out for lunch together.",
+     "ja": "一緒にお昼を食べに出かけましょう。",
+     "id": "Ayo keluar makan siang bareng."
+    }
+   },
+   {
+    "ko": "한국 회사에 취직하려고 한국어를 배우고 있어요.",
+    "use": "euryeogo",
+    "tr": {
+     "vi": "Tôi đang học tiếng Hàn để xin việc ở công ty Hàn Quốc.",
+     "en": "I'm learning Korean to get a job at a Korean company.",
+     "ja": "韓国の会社に就職しようと韓国語を学んでいます。",
+     "id": "Saya belajar bahasa Korea supaya bisa bekerja di perusahaan Korea."
+    }
+   }
+  ]
+ },
+ {
+  "slug": "neyo-vs-gunyo",
+  "pair": [
+   "neyo",
+   "gunyo"
+  ],
+  "text": {
+   "vi": {
+    "summary": "Cả hai đều diễn tả sự ngạc nhiên, cảm thán khi biết điều mới. -네요 thiên về cảm nhận trực tiếp ngay lúc đó và hay dùng trong hội thoại; -군요 thiên về \"à, ra là vậy\" khi nhận ra điều gì, thường qua suy luận hoặc nghe người khác nói.",
+    "points": [
+     "Thấy, nghe, nếm trực tiếp rồi cảm thán: -네요 rất tự nhiên (와, 눈이 많이 왔네요).",
+     "Vừa được nghe thông tin rồi gật gù \"ra thế\": -군요 (아, 그렇군요).",
+     "-군요 nghe hơi trang trọng hoặc như văn viết, kịch; -네요 thân mật, mềm mại hơn trong nói chuyện.",
+     "Dạng: -네요 gắn thẳng vào thân từ (가네요); -군요 với động từ thì là -는군요 (가는군요), với tính từ là -군요 (예쁘군요)."
+    ]
+   },
+   "en": {
+    "summary": "Both express surprise at something newly learned. -네요 leans toward direct, in-the-moment perception and is very conversational; -군요 leans toward 'Ah, I see' realisation, often through inference or what someone has just told you.",
+    "points": [
+     "Reacting to what you directly see, hear or taste: -네요 sounds natural (와, 눈이 많이 왔네요 'Wow, it's snowed a lot').",
+     "Nodding at information you've just been told: -군요 (아, 그렇군요 'Ah, I see').",
+     "-군요 can sound a bit formal or bookish; -네요 is softer and more chatty.",
+     "Forms: -네요 attaches directly to the stem (가네요); -군요 is -는군요 after verbs (가는군요) and -군요 after adjectives (예쁘군요)."
+    ]
+   },
+   "ja": {
+    "summary": "どちらも新しく知ったことへの驚き・感嘆を表します。-네요 はその場で直接感じたことへの反応で会話的、-군요 は推論や相手の話から「なるほど、そうなんですね」と気づくニュアンスが強めです。",
+    "points": [
+     "直接見たり聞いたり味わったりしたことへの反応には -네요 が自然です（와, 눈이 많이 왔네요「わあ、雪がたくさん降りましたね」）。",
+     "聞いた情報に納得するときは -군요 がよく使われます（아, 그렇군요「ああ、そうなんですね」）。",
+     "-군요 はやや硬い・書き言葉的な響きがあり、-네요 の方が柔らかく日常会話向きです。",
+     "形：-네요 は語幹にそのまま（가네요）。-군요 は動詞なら -는군요（가는군요）、形容詞なら -군요（예쁘군요）。"
+    ]
+   },
+   "id": {
+    "summary": "Keduanya menyatakan rasa kagum atau terkejut atas hal yang baru diketahui. -네요 condong ke persepsi langsung saat itu dan sangat umum dalam percakapan; -군요 condong ke \"Oh, begitu rupanya\", sering lewat penalaran atau dari cerita orang lain.",
+    "points": [
+     "Menanggapi hal yang langsung dilihat, didengar, atau dicicipi: -네요 terdengar alami (와, 눈이 많이 왔네요 'Wah, saljunya banyak sekali').",
+     "Mengangguk paham atas informasi yang baru diberitahu: -군요 (아, 그렇군요 'Oh, begitu').",
+     "-군요 bisa terdengar agak formal atau seperti bahasa tulis; -네요 lebih lembut dan santai.",
+     "Bentuk: -네요 langsung pada akar kata (가네요); -군요 menjadi -는군요 setelah kata kerja (가는군요) dan -군요 setelah kata sifat (예쁘군요)."
+    ]
+   }
+  },
+  "examples": [
+   {
+    "ko": "와, 밖에 눈이 많이 왔네요!",
+    "use": "neyo",
+    "tr": {
+     "vi": "Ồ, ngoài trời tuyết rơi nhiều quá!",
+     "en": "Wow, it's snowed a lot outside!",
+     "ja": "わあ、外は雪がたくさん降りましたね！",
+     "id": "Wah, di luar saljunya banyak sekali!"
+    }
+   },
+   {
+    "ko": "저 10년 동안 서울에 살았어요. — 아, 그래서 한국어를 잘하시는군요.",
+    "use": "gunyo",
+    "tr": {
+     "vi": "Tôi đã sống ở Seoul 10 năm. — À, thảo nào anh nói tiếng Hàn giỏi thế.",
+     "en": "I lived in Seoul for ten years. — Ah, so that's why your Korean is so good.",
+     "ja": "ソウルに10年住んでいました。— ああ、だから韓国語がお上手なんですね。",
+     "id": "Saya tinggal di Seoul sepuluh tahun. — Oh, pantas bahasa Korea Anda bagus."
+    }
+   },
+   {
+    "ko": "이 김치찌개 정말 맛있네요.",
+    "use": "neyo",
+    "tr": {
+     "vi": "Món canh kim chi này ngon thật đấy.",
+     "en": "This kimchi stew is really tasty.",
+     "ja": "このキムチチゲ、本当においしいですね。",
+     "id": "Sup kimchi ini enak sekali, ya."
+    }
+   },
+   {
+    "ko": "아, 그렇군요. 몰랐어요.",
+    "use": "gunyo",
+    "tr": {
+     "vi": "À, ra là vậy. Tôi không biết đấy.",
+     "en": "Ah, I see. I didn't know that.",
+     "ja": "ああ、そうなんですね。知りませんでした。",
+     "id": "Oh, begitu. Saya tidak tahu."
+    }
+   },
+   {
+    "ko": "벌써 열두 시네요. 시간이 빨리 가네요.",
+    "use": "neyo",
+    "tr": {
+     "vi": "Đã mười hai giờ rồi. Thời gian trôi nhanh thật.",
+     "en": "It's already twelve. Time flies.",
+     "ja": "もう12時ですね。時間が経つのが早いですね。",
+     "id": "Sudah jam dua belas. Waktu cepat sekali berlalu."
+    }
+   }
+  ]
+ },
+ {
+  "slug": "eumyeon-vs-eul-ttae",
+  "pair": [
+   "eumyeon",
+   "eul-ttae"
+  ],
+  "text": {
+   "vi": {
+    "summary": "-(으)면 là điều kiện, giả định \"nếu/hễ\"; -(으)ㄹ 때 chỉ thời điểm, khoảng thời gian \"khi/lúc\" một việc xảy ra.",
+    "points": [
+     "Giả định chưa chắc xảy ra: -(으)면 (시간이 있으면 같이 가요).",
+     "Nói về một thời điểm hoặc giai đoạn cụ thể trong quá khứ: -았/었을 때 (어렸을 때), không dùng -(으)면.",
+     "Thói quen, điều luôn đúng: cả hai đều được nhưng sắc thái khác — -(으)면 = \"hễ… thì\", -(으)ㄹ 때 = \"vào những lúc…\".",
+     "-(으)ㄹ 때 có thể gắn với danh từ: N 때 (방학 때, 점심때)."
+    ]
+   },
+   "en": {
+    "summary": "-(으)면 is a condition or assumption ('if / whenever'); -(으)ㄹ 때 refers to the time or period when something happens ('when / at the time').",
+    "points": [
+     "Uncertain assumptions: -(으)면 (시간이 있으면 같이 가요 'If you have time, let's go together').",
+     "A specific time or period in the past: -았/었을 때 (어렸을 때 'when I was young'), not -(으)면.",
+     "Habits and general truths allow both, with a nuance: -(으)면 'whenever (if) A, then B', -(으)ㄹ 때 'at times when A'.",
+     "-(으)ㄹ 때 has a noun version: N 때 (방학 때 'during the holidays', 점심때 'at lunchtime')."
+    ]
+   },
+   "ja": {
+    "summary": "-(으)면 は条件・仮定「～たら／～れば」、-(으)ㄹ 때 は出来事が起こる時点や期間「～とき」を表します。",
+    "points": [
+     "実現するか分からない仮定には -(으)면（시간이 있으면 같이 가요「時間があれば一緒に行きましょう」）。",
+     "過去の特定の時点・時期には -았/었을 때 を使い（어렸을 때「幼いころ」）、-(으)면 は使えません。",
+     "習慣や一般的な事柄ではどちらも使えますが、-(으)면 は「～すると（いつも）」、-(으)ㄹ 때 は「～するときには」というニュアンスです。",
+     "-(으)ㄹ 때 には名詞の形 N 때 もあります（방학 때「休みのとき」、점심때「お昼どき」）。"
+    ]
+   },
+   "id": {
+    "summary": "-(으)면 adalah syarat atau pengandaian (\"kalau/jika\"); -(으)ㄹ 때 menunjuk waktu atau masa terjadinya sesuatu (\"ketika/saat\").",
+    "points": [
+     "Pengandaian yang belum pasti: -(으)면 (시간이 있으면 같이 가요 'Kalau ada waktu, ayo pergi bareng').",
+     "Waktu atau masa tertentu di masa lalu: -았/었을 때 (어렸을 때 'waktu kecil'), bukan -(으)면.",
+     "Untuk kebiasaan dan kebenaran umum keduanya bisa, dengan nuansa: -(으)면 \"setiap kali (kalau) A, maka B\", -(으)ㄹ 때 \"pada saat-saat A\".",
+     "-(으)ㄹ 때 punya bentuk kata benda: N 때 (방학 때 'saat liburan', 점심때 'saat makan siang')."
+    ]
+   }
+  },
+  "examples": [
+   {
+    "ko": "시간이 있으면 같이 저녁 먹어요.",
+    "use": "eumyeon",
+    "tr": {
+     "vi": "Nếu có thời gian thì cùng ăn tối nhé.",
+     "en": "If you have time, let's have dinner together.",
+     "ja": "時間があれば一緒に夕飯を食べましょう。",
+     "id": "Kalau ada waktu, ayo makan malam bareng."
+    }
+   },
+   {
+    "ko": "어렸을 때 부산에 살았어요.",
+    "use": "eul-ttae",
+    "tr": {
+     "vi": "Hồi nhỏ tôi sống ở Busan.",
+     "en": "I lived in Busan when I was little.",
+     "ja": "子どものころ、釜山に住んでいました。",
+     "id": "Waktu kecil saya tinggal di Busan."
+    }
+   },
+   {
+    "ko": "* 어렸으면 부산에 살았어요.",
+    "use": "eumyeon",
+    "tr": {
+     "vi": "Hồi nhỏ tôi sống ở Busan. [Sai: thời điểm cụ thể trong quá khứ phải dùng -ass/eosseul ttae]",
+     "en": "When I was little I lived in Busan. [Wrong: a specific past period needs -ass/eosseul ttae, not -(eu)myeon]",
+     "ja": "幼いころ釜山に住んでいました。［誤り：過去の特定の時期には -(eu)myeon ではなく -ass/eosseul ttae を使う］",
+     "id": "Waktu kecil saya tinggal di Busan. [Salah: masa tertentu di masa lalu harus memakai -ass/eosseul ttae, bukan -(eu)myeon]"
+    }
+   },
+   {
+    "ko": "피곤할 때 이 음악을 들어요. / 피곤하면 이 음악을 들어요.",
+    "use": "both",
+    "tr": {
+     "vi": "Những lúc mệt / Hễ mệt là tôi nghe bản nhạc này.",
+     "en": "When I'm tired / Whenever I'm tired, I listen to this music.",
+     "ja": "疲れたときに／疲れたら、この音楽を聴きます。",
+     "id": "Saat capek / Kalau capek, saya mendengarkan musik ini."
+    }
+   },
+   {
+    "ko": "돈을 많이 모으면 세계 여행을 할 거예요.",
+    "use": "eumyeon",
+    "tr": {
+     "vi": "Nếu dành dụm được nhiều tiền, tôi sẽ đi du lịch vòng quanh thế giới.",
+     "en": "If I save up a lot of money, I'll travel around the world.",
+     "ja": "お金をたくさん貯めたら、世界旅行をするつもりです。",
+     "id": "Kalau sudah menabung banyak, saya akan keliling dunia."
+    }
+   }
+  ]
+ },
+ {
+  "slug": "ado-doeda-vs-eumyeon-doeda",
+  "pair": [
+   "ado-doeda",
+   "eumyeon-doeda"
+  ],
+  "text": {
+   "vi": {
+    "summary": "-아도/어도 되다 là cho phép, \"làm… cũng được\"; -(으)면 되다 là điều kiện đủ, \"chỉ cần làm… là được\".",
+    "points": [
+     "Xin phép hoặc cho phép: -아도/어도 되다 (여기 앉아도 돼요?).",
+     "Chỉ cách làm, nói rằng chỉ cần thế là đủ: -(으)면 되다 (이 버스를 타면 돼요).",
+     "Phủ định đối ứng: -(으)면 안 되다 = cấm; 안 -아도 되다 / -지 않아도 되다 = không cần.",
+     "Hỏi cách làm: 어떻게 하면 돼요? (Làm thế nào thì được?) — không dùng -아도 되다."
+    ]
+   },
+   "en": {
+    "summary": "-아도/어도 되다 gives permission ('it's OK to…'); -(으)면 되다 states a sufficient condition ('you just need to…, and that's it').",
+    "points": [
+     "Asking for or giving permission: -아도/어도 되다 (여기 앉아도 돼요? 'May I sit here?').",
+     "Giving instructions, saying that one thing is enough: -(으)면 되다 (이 버스를 타면 돼요 'You just take this bus').",
+     "Negative counterparts: -(으)면 안 되다 'must not'; 안 -아도 되다 / -지 않아도 되다 'don't have to'.",
+     "Asking how to do something: 어떻게 하면 돼요? 'What should I do?' — not -아도 되다."
+    ]
+   },
+   "ja": {
+    "summary": "-아도/어도 되다 は許可「～してもいい」、-(으)면 되다 は十分条件「～すればいい（それで済む）」です。",
+    "points": [
+     "許可を求める・与える：-아도/어도 되다（여기 앉아도 돼요?「ここに座ってもいいですか」）。",
+     "やり方を教える、それだけで十分だと言う：-(으)면 되다（이 버스를 타면 돼요「このバスに乗ればいいです」）。",
+     "否定の対応形：-(으)면 안 되다「～してはいけない」、안 -아도 되다 / -지 않아도 되다「～しなくてもいい」。",
+     "方法を尋ねるときは 어떻게 하면 돼요?「どうすればいいですか」を使い、-아도 되다 は使いません。"
+    ]
+   },
+   "id": {
+    "summary": "-아도/어도 되다 memberi izin (\"boleh…\"); -(으)면 되다 menyatakan syarat yang cukup (\"cukup…, sudah beres\").",
+    "points": [
+     "Meminta atau memberi izin: -아도/어도 되다 (여기 앉아도 돼요? 'Boleh saya duduk di sini?').",
+     "Memberi petunjuk, menyatakan bahwa satu hal sudah cukup: -(으)면 되다 (이 버스를 타면 돼요 'Cukup naik bus ini').",
+     "Pasangan negatifnya: -(으)면 안 되다 'tidak boleh'; 안 -아도 되다 / -지 않아도 되다 'tidak perlu'.",
+     "Menanyakan caranya: 어떻게 하면 돼요? 'Harus bagaimana?' — bukan -아도 되다."
+    ]
+   }
+  },
+  "examples": [
+   {
+    "ko": "여기서 사진을 찍어도 돼요?",
+    "use": "ado-doeda",
+    "tr": {
+     "vi": "Tôi chụp ảnh ở đây có được không?",
+     "en": "Is it OK to take photos here?",
+     "ja": "ここで写真を撮ってもいいですか。",
+     "id": "Boleh foto di sini?"
+    }
+   },
+   {
+    "ko": "시청에 가려면 이 버스를 타면 돼요.",
+    "use": "eumyeon-doeda",
+    "tr": {
+     "vi": "Muốn đến tòa thị chính thì chỉ cần đi xe buýt này là được.",
+     "en": "To get to City Hall, you just take this bus.",
+     "ja": "市庁に行くなら、このバスに乗ればいいです。",
+     "id": "Kalau mau ke balai kota, cukup naik bus ini."
+    }
+   },
+   {
+    "ko": "이 서류에 이름만 쓰면 돼요.",
+    "use": "eumyeon-doeda",
+    "tr": {
+     "vi": "Chỉ cần viết tên vào giấy này là xong.",
+     "en": "You just need to write your name on this form.",
+     "ja": "この書類に名前だけ書けばいいです。",
+     "id": "Cukup tulis nama di formulir ini."
+    }
+   },
+   {
+    "ko": "피곤하면 먼저 집에 가도 돼요.",
+    "use": "ado-doeda",
+    "tr": {
+     "vi": "Nếu mệt thì bạn về nhà trước cũng được.",
+     "en": "If you're tired, you can go home first.",
+     "ja": "疲れているなら先に帰ってもいいですよ。",
+     "id": "Kalau capek, boleh pulang duluan."
+    }
+   },
+   {
+    "ko": "내일은 일찍 안 와도 돼요.",
+    "use": "ado-doeda",
+    "tr": {
+     "vi": "Ngày mai không cần đến sớm đâu.",
+     "en": "You don't have to come early tomorrow.",
+     "ja": "明日は早く来なくてもいいです。",
+     "id": "Besok tidak perlu datang pagi-pagi."
+    }
+   }
+  ]
+ },
+ {
+  "slug": "eul-su-itda-vs-eul-jul-alda",
+  "pair": [
+   "eul-su-itda",
+   "eul-jul-alda"
+  ],
+  "text": {
+   "vi": {
+    "summary": "-(으)ㄹ 수 있다/없다 nói về khả năng nói chung, kể cả do hoàn cảnh cho phép hay không; -(으)ㄹ 줄 알다/모르다 chỉ nói về việc biết cách làm, tức kỹ năng đã học.",
+    "points": [
+     "Kỹ năng đã học (bơi, lái xe, nấu ăn, chơi đàn): cả hai đều được, nhưng -(으)ㄹ 줄 알다 nhấn vào \"biết cách\".",
+     "Không làm được vì hoàn cảnh (đã uống rượu, bận, bị cấm): chỉ dùng -(으)ㄹ 수 없다.",
+     "Khả năng, xác suất (có thể xảy ra): chỉ dùng -(으)ㄹ 수 있다 (늦을 수도 있어요).",
+     "-(으)ㄹ 줄 알다 không đi với tính từ."
+    ]
+   },
+   "en": {
+    "summary": "-(으)ㄹ 수 있다/없다 covers ability in general, including whether circumstances allow it; -(으)ㄹ 줄 알다/모르다 is only about knowing how to do something — a learned skill.",
+    "points": [
+     "Learned skills (swimming, driving, cooking, playing an instrument): both work; -(으)ㄹ 줄 알다 stresses 'know how to'.",
+     "Can't because of circumstances (you've been drinking, you're busy, it's not allowed): only -(으)ㄹ 수 없다.",
+     "Possibility (it might happen): only -(으)ㄹ 수 있다 (늦을 수도 있어요 'I might be late').",
+     "-(으)ㄹ 줄 알다 doesn't attach to adjectives."
+    ]
+   },
+   "ja": {
+    "summary": "-(으)ㄹ 수 있다/없다 は状況が許すかどうかも含めた広い「できる／できない」、-(으)ㄹ 줄 알다/모르다 は「やり方を知っている」、つまり身につけた技能だけを表します。",
+    "points": [
+     "習得した技能（泳ぐ・運転する・料理する・楽器を弾く）はどちらも使えますが、-(으)ㄹ 줄 알다 は「やり方を知っている」ことを強調します。",
+     "状況のせいでできない（お酒を飲んだ・忙しい・禁止されている）ときは -(으)ㄹ 수 없다 だけです。",
+     "可能性（～かもしれない）は -(으)ㄹ 수 있다 だけです（늦을 수도 있어요「遅れるかもしれません」）。",
+     "-(으)ㄹ 줄 알다 は形容詞には付きません。"
+    ]
+   },
+   "id": {
+    "summary": "-(으)ㄹ 수 있다/없다 mencakup kemampuan secara umum, termasuk apakah keadaan memungkinkan; -(으)ㄹ 줄 알다/모르다 hanya tentang tahu caranya, yaitu keterampilan yang dipelajari.",
+    "points": [
+     "Keterampilan yang dipelajari (berenang, menyetir, memasak, main alat musik): keduanya bisa; -(으)ㄹ 줄 알다 menekankan \"tahu caranya\".",
+     "Tidak bisa karena keadaan (habis minum, sibuk, dilarang): hanya -(으)ㄹ 수 없다.",
+     "Kemungkinan (bisa saja terjadi): hanya -(으)ㄹ 수 있다 (늦을 수도 있어요 'Saya mungkin terlambat').",
+     "-(으)ㄹ 줄 알다 tidak dipakai dengan kata sifat."
+    ]
+   }
+  },
+  "examples": [
+   {
+    "ko": "저는 운전할 줄 알아요.",
+    "use": "eul-jul-alda",
+    "tr": {
+     "vi": "Tôi biết lái xe.",
+     "en": "I know how to drive.",
+     "ja": "私は運転ができます（運転の仕方を知っています）。",
+     "id": "Saya bisa menyetir."
+    }
+   },
+   {
+    "ko": "오늘은 술을 마셔서 운전할 수 없어요.",
+    "use": "eul-su-itda",
+    "tr": {
+     "vi": "Hôm nay tôi đã uống rượu nên không thể lái xe.",
+     "en": "I've been drinking today, so I can't drive.",
+     "ja": "今日はお酒を飲んだので運転できません。",
+     "id": "Hari ini saya sudah minum, jadi tidak bisa menyetir."
+    }
+   },
+   {
+    "ko": "* 오늘은 술을 마셔서 운전할 줄 몰라요.",
+    "use": "eul-jul-alda",
+    "tr": {
+     "vi": "Hôm nay uống rượu nên không biết lái xe. [Sai: không lái được là do hoàn cảnh, không phải không biết cách, nên phải dùng -(eu)l su eopda]",
+     "en": "I've been drinking, so I don't know how to drive. [Wrong: it's circumstances, not lack of skill, so use -(eu)l su eopda]",
+     "ja": "お酒を飲んだので運転の仕方を知りません。［誤り：技能ではなく状況の問題なので -(eu)l su eopda を使う］",
+     "id": "Saya habis minum, jadi tidak tahu cara menyetir. [Salah: ini soal keadaan, bukan keterampilan, jadi pakai -(eu)l su eopda]"
+    }
+   },
+   {
+    "ko": "김치찌개를 만들 줄 알아요? / 만들 수 있어요?",
+    "use": "both",
+    "tr": {
+     "vi": "Bạn có biết nấu canh kim chi không?",
+     "en": "Can you make kimchi stew?",
+     "ja": "キムチチゲを作れますか。",
+     "id": "Kamu bisa masak sup kimchi?"
+    }
+   },
+   {
+    "ko": "길이 막히면 조금 늦을 수도 있어요.",
+    "use": "eul-su-itda",
+    "tr": {
+     "vi": "Nếu tắc đường thì có thể tôi sẽ đến muộn một chút.",
+     "en": "If there's traffic, I might be a little late.",
+     "ja": "道が混んでいたら少し遅れるかもしれません。",
+     "id": "Kalau macet, mungkin saya agak terlambat."
+    }
+   }
+  ]
+ },
+ {
+  "slug": "ge-doeda-vs-a-jida",
+  "pair": [
+   "ge-doeda",
+   "a-jida"
+  ],
+  "text": {
+   "vi": {
+    "summary": "-게 되다 là \"trở nên/rốt cuộc phải…\" do hoàn cảnh bên ngoài đưa đẩy, thường đi với động từ; -아/어지다 với tính từ là \"dần trở nên\" (thay đổi trạng thái), còn với động từ thì mang nghĩa bị động.",
+    "points": [
+     "Tình huống thay đổi không do mình quyết định: động từ + -게 되다 (회사 때문에 서울에 살게 됐어요).",
+     "Trạng thái, tính chất thay đổi: tính từ + -아/어지다 (날씨가 따뜻해졌어요).",
+     "Phân biệt: 좋아지다 = trở nên tốt hơn; 좋아하게 되다 = dần thích.",
+     "Động từ + -아/어지다 thường là bị động (만들어지다, 지워지다), không phải \"trở nên\".",
+     "-게 되다 còn dùng để nói khiêm tốn về một quyết định: 이번에 결혼하게 됐어요."
+    ]
+   },
+   "en": {
+    "summary": "-게 되다 means 'come to / end up (doing)' because of circumstances, mostly with verbs; -아/어지다 on adjectives means 'become' (a gradual change of state), and on verbs it usually makes a passive.",
+    "points": [
+     "A situation changes, not by your own decision: verb + -게 되다 (회사 때문에 서울에 살게 됐어요 'I ended up living in Seoul because of work').",
+     "A state or quality changes: adjective + -아/어지다 (날씨가 따뜻해졌어요 'It has got warmer').",
+     "Contrast: 좋아지다 'get better' vs 좋아하게 되다 'come to like'.",
+     "Verb + -아/어지다 is usually passive (만들어지다 'be made', 지워지다 'be erased'), not 'become'.",
+     "-게 되다 is also a modest way to announce a decision: 이번에 결혼하게 됐어요 'I'm getting married'."
+    ]
+   },
+   "ja": {
+    "summary": "-게 되다 は外的な事情で「～するようになる・～することになる」で主に動詞に、-아/어지다 は形容詞に付くと「～くなる」（状態の変化）、動詞に付くと受け身の意味になります。",
+    "points": [
+     "自分の意志とは関係なく状況が変わる：動詞 + -게 되다（회사 때문에 서울에 살게 됐어요「会社の都合でソウルに住むことになりました」）。",
+     "状態・性質の変化：形容詞 + -아/어지다（날씨가 따뜻해졌어요「暖かくなりました」）。",
+     "좋아지다「良くなる」と 좋아하게 되다「好きになる」の違いに注意しましょう。",
+     "動詞 + -아/어지다 は多くの場合受け身です（만들어지다「作られる」、지워지다「消される」）。",
+     "-게 되다 は決定を控えめに伝えるときにも使います（이번에 결혼하게 됐어요「このたび結婚することになりました」）。"
+    ]
+   },
+   "id": {
+    "summary": "-게 되다 berarti \"jadi/akhirnya (melakukan)\" karena keadaan, terutama dengan kata kerja; -아/어지다 pada kata sifat berarti \"menjadi\" (perubahan keadaan), sedangkan pada kata kerja biasanya membentuk pasif.",
+    "points": [
+     "Keadaan berubah bukan karena keputusan sendiri: kata kerja + -게 되다 (회사 때문에 서울에 살게 됐어요 'Karena pekerjaan, saya jadi tinggal di Seoul').",
+     "Keadaan atau sifat berubah: kata sifat + -아/어지다 (날씨가 따뜻해졌어요 'Cuacanya jadi hangat').",
+     "Bedakan: 좋아지다 'menjadi lebih baik' dan 좋아하게 되다 'jadi suka'.",
+     "Kata kerja + -아/어지다 biasanya pasif (만들어지다 'dibuat', 지워지다 'terhapus'), bukan \"menjadi\".",
+     "-게 되다 juga dipakai untuk mengumumkan keputusan dengan rendah hati: 이번에 결혼하게 됐어요 'Saya akan menikah'."
+    ]
+   }
+  },
+  "examples": [
+   {
+    "ko": "회사 때문에 서울에 살게 됐어요.",
+    "use": "ge-doeda",
+    "tr": {
+     "vi": "Vì công việc mà tôi chuyển đến sống ở Seoul.",
+     "en": "Because of my job, I ended up living in Seoul.",
+     "ja": "会社の都合でソウルに住むことになりました。",
+     "id": "Karena pekerjaan, saya jadi tinggal di Seoul."
+    }
+   },
+   {
+    "ko": "봄이 되니까 날씨가 따뜻해졌어요.",
+    "use": "a-jida",
+    "tr": {
+     "vi": "Sang xuân nên trời đã ấm lên.",
+     "en": "Spring has come, so it's got warmer.",
+     "ja": "春になって暖かくなりました。",
+     "id": "Sudah musim semi, jadi cuaca menjadi hangat."
+    }
+   },
+   {
+    "ko": "드라마를 보다가 한국 음식을 좋아하게 됐어요.",
+    "use": "ge-doeda",
+    "tr": {
+     "vi": "Xem phim truyền hình rồi tôi thích món ăn Hàn lúc nào không hay.",
+     "en": "Watching dramas, I came to like Korean food.",
+     "ja": "ドラマを見ているうちに韓国料理が好きになりました。",
+     "id": "Gara-gara nonton drama, saya jadi suka makanan Korea."
+    }
+   },
+   {
+    "ko": "요즘 한국어 실력이 많이 좋아졌어요.",
+    "use": "a-jida",
+    "tr": {
+     "vi": "Dạo này trình độ tiếng Hàn của tôi đã tiến bộ nhiều.",
+     "en": "My Korean has improved a lot lately.",
+     "ja": "最近、韓国語の実力がだいぶ伸びました。",
+     "id": "Akhir-akhir ini kemampuan bahasa Korea saya jauh lebih baik."
+    }
+   },
+   {
+    "ko": "* 날씨가 따뜻하게 됐어요.",
+    "use": "ge-doeda",
+    "tr": {
+     "vi": "Trời đã ấm lên. [Không tự nhiên: sự thay đổi trạng thái của tính từ nên dùng -a/eojida]",
+     "en": "The weather became warm. [Unnatural: a change in an adjective's state is expressed with -a/eojida]",
+     "ja": "暖かくなりました。［不自然：形容詞の状態変化は -a/eojida で表す］",
+     "id": "Cuacanya jadi hangat. [Tidak alami: perubahan keadaan kata sifat dinyatakan dengan -a/eojida]"
+    }
+   }
+  ]
+ },
+ {
+  "slug": "go-sipda-vs-eumyeon-jokesseoyo",
+  "pair": [
+   "go-sipda",
+   "eumyeon-jokesseoyo"
+  ],
+  "text": {
+   "vi": {
+    "summary": "-고 싶다 là mong muốn trực tiếp được tự mình làm gì; -(으)면 좋겠다 là mong ước một tình huống nào đó xảy ra — có thể liên quan đến người khác hoặc điều nằm ngoài tầm kiểm soát.",
+    "points": [
+     "Muốn tự mình làm hành động: -고 싶다 (한국에 가고 싶어요).",
+     "Mong thời tiết, người khác, hoàn cảnh thay đổi: -(으)면 좋겠다 (비가 안 오면 좋겠어요). -고 싶다 không dùng được ở đây.",
+     "Dạng -았/었으면 좋겠다 rất hay dùng và nhấn mạnh mong ước hơn (빨리 나았으면 좋겠어요).",
+     "-(으)면 좋겠다 còn là cách nhờ vả, bày tỏ mong muốn một cách nhẹ nhàng (좀 조용히 해 주면 좋겠어요).",
+     "Chủ ngữ ngôi thứ ba với -고 싶다 phải chuyển thành -고 싶어 하다."
+    ]
+   },
+   "en": {
+    "summary": "-고 싶다 is a direct desire to do something yourself; -(으)면 좋겠다 is a wish that a situation would come about — it can involve other people or things beyond your control.",
+    "points": [
+     "Wanting to do an action yourself: -고 싶다 (한국에 가고 싶어요 'I want to go to Korea').",
+     "Wishing about the weather, other people or circumstances: -(으)면 좋겠다 (비가 안 오면 좋겠어요 'I hope it doesn't rain'). -고 싶다 can't do this.",
+     "-았/었으면 좋겠다 is very common and sounds more heartfelt (빨리 나았으면 좋겠어요 'I hope you get well soon').",
+     "-(으)면 좋겠다 also softens requests (좀 조용히 해 주면 좋겠어요 'It would be nice if you kept it down').",
+     "With a third-person subject, -고 싶다 becomes -고 싶어 하다."
+    ]
+   },
+   "ja": {
+    "summary": "-고 싶다 は自分がある行動をしたいという直接的な願望、-(으)면 좋겠다 はある状況が実現してほしいという願いで、他人や自分ではどうにもならないことにも使えます。",
+    "points": [
+     "自分が行動したい：-고 싶다（한국에 가고 싶어요「韓国に行きたいです」）。",
+     "天気・他人・状況についての願い：-(으)면 좋겠다（비가 안 오면 좋겠어요「雨が降らないといいです」）。この場合 -고 싶다 は使えません。",
+     "-았/었으면 좋겠다 の形が非常によく使われ、願いの気持ちがより強くなります（빨리 나았으면 좋겠어요「早く治るといいですね」）。",
+     "-(으)면 좋겠다 は遠回しなお願いにも使えます（좀 조용히 해 주면 좋겠어요）。",
+     "三人称主語では -고 싶다 ではなく -고 싶어 하다 を使います。"
+    ]
+   },
+   "id": {
+    "summary": "-고 싶다 adalah keinginan langsung untuk melakukan sesuatu sendiri; -(으)면 좋겠다 adalah harapan agar suatu keadaan terjadi — bisa menyangkut orang lain atau hal di luar kendali kita.",
+    "points": [
+     "Ingin melakukan sesuatu sendiri: -고 싶다 (한국에 가고 싶어요 'Saya ingin ke Korea').",
+     "Berharap soal cuaca, orang lain, atau keadaan: -(으)면 좋겠다 (비가 안 오면 좋겠어요 'Semoga tidak hujan'). -고 싶다 tidak bisa di sini.",
+     "Bentuk -았/었으면 좋겠다 sangat umum dan terdengar lebih tulus (빨리 나았으면 좋겠어요 'Semoga cepat sembuh').",
+     "-(으)면 좋겠다 juga melunakkan permintaan (좀 조용히 해 주면 좋겠어요 'Akan lebih baik kalau agak tenang').",
+     "Dengan subjek orang ketiga, -고 싶다 berubah menjadi -고 싶어 하다."
+    ]
+   }
+  },
+  "examples": [
+   {
+    "ko": "이번 방학에 제주도에 가고 싶어요.",
+    "use": "go-sipda",
+    "tr": {
+     "vi": "Kỳ nghỉ này tôi muốn đi đảo Jeju.",
+     "en": "I want to go to Jeju Island this vacation.",
+     "ja": "今度の休みに済州島に行きたいです。",
+     "id": "Liburan ini saya ingin ke Pulau Jeju."
+    }
+   },
+   {
+    "ko": "내일 소풍인데 비가 안 왔으면 좋겠어요.",
+    "use": "eumyeon-jokesseoyo",
+    "tr": {
+     "vi": "Mai đi dã ngoại, mong là trời không mưa.",
+     "en": "We have a picnic tomorrow — I hope it doesn't rain.",
+     "ja": "明日ピクニックなので、雨が降らないといいです。",
+     "id": "Besok piknik, semoga tidak hujan."
+    }
+   },
+   {
+    "ko": "* 내일 비가 안 오고 싶어요.",
+    "use": "go-sipda",
+    "tr": {
+     "vi": "Mong mai trời không mưa. [Sai: thời tiết không phải hành động của người nói, phải dùng -ass/eosseumyeon joketda]",
+     "en": "I hope it doesn't rain tomorrow. [Wrong: the weather isn't the speaker's own action; use -ass/eosseumyeon joketda]",
+     "ja": "明日雨が降らないでほしい。［誤り：天気は話し手の行動ではないので -ass/eosseumyeon joketda を使う］",
+     "id": "Semoga besok tidak hujan. [Salah: cuaca bukan tindakan pembicara; pakai -ass/eosseumyeon joketda]"
+    }
+   },
+   {
+    "ko": "엄마가 빨리 나으셨으면 좋겠어요.",
+    "use": "eumyeon-jokesseoyo",
+    "tr": {
+     "vi": "Tôi mong mẹ mau khỏi bệnh.",
+     "en": "I hope my mom gets better soon.",
+     "ja": "母が早く良くなるといいです。",
+     "id": "Semoga ibu cepat sembuh."
+    }
+   },
+   {
+    "ko": "오늘은 그냥 집에서 쉬고 싶어요.",
+    "use": "go-sipda",
+    "tr": {
+     "vi": "Hôm nay tôi chỉ muốn nghỉ ở nhà thôi.",
+     "en": "Today I just want to rest at home.",
+     "ja": "今日はただ家で休みたいです。",
+     "id": "Hari ini saya cuma ingin istirahat di rumah."
+    }
+   }
+  ]
+ },
+ {
+  "slug": "ina-vs-geona",
+  "pair": [
+   "ina",
+   "geona"
+  ],
+  "text": {
+   "vi": {
+    "summary": "Cả hai đều có nghĩa \"hoặc\", nhưng (이)나 gắn sau danh từ, còn -거나 gắn sau thân động từ/tính từ. Ngoài ra (이)나 còn có nghĩa \"tạm… vậy\" và \"tới tận (nhiều)\".",
+    "points": [
+     "Chọn giữa hai danh từ: N(이)나 N (커피나 차).",
+     "Chọn giữa hai hành động/trạng thái: V-거나 V (영화를 보거나 책을 읽어요).",
+     "(이)나 còn mang nghĩa \"hay là… vậy\" khi chọn tạm (심심한데 영화나 볼까요?).",
+     "Sau số lượng, (이)나 nghĩa là \"những… (nhiều hơn mong đợi)\" (다섯 그릇이나 먹었어요).",
+     "Danh từ kết thúc bằng nguyên âm dùng 나, bằng phụ âm dùng 이나."
+    ]
+   },
+   "en": {
+    "summary": "Both mean 'or', but (이)나 attaches to nouns while -거나 attaches to verb and adjective stems. (이)나 also means 'just… (for lack of better)' and 'as many as'.",
+    "points": [
+     "Choosing between nouns: N(이)나 N (커피나 차 'coffee or tea').",
+     "Choosing between actions or states: V-거나 V (영화를 보거나 책을 읽어요 'I watch a film or read').",
+     "(이)나 can mean 'just… (I guess)' when settling for something (심심한데 영화나 볼까요? 'I'm bored — shall we just watch a movie?').",
+     "After a quantity, (이)나 means 'as many as' (다섯 그릇이나 먹었어요 'ate as many as five bowls').",
+     "Use 나 after a vowel, 이나 after a consonant."
+    ]
+   },
+   "ja": {
+    "summary": "どちらも「～か／～や」ですが、(이)나 は名詞に、-거나 は動詞・形容詞の語幹に付きます。さらに (이)나 には「～でも（妥協）」「～も（多さ）」の意味もあります。",
+    "points": [
+     "名詞から選ぶ：N(이)나 N（커피나 차「コーヒーかお茶」）。",
+     "動作・状態から選ぶ：V-거나 V（영화를 보거나 책을 읽어요「映画を見たり本を読んだりします」）。",
+     "(이)나 は「～でも」と妥協して選ぶときにも使います（심심한데 영화나 볼까요?「暇だから映画でも見ましょうか」）。",
+     "数量の後の (이)나 は「～も（多い）」の意味です（다섯 그릇이나 먹었어요「5杯も食べました」）。",
+     "母音で終わる名詞には 나、子音で終わる名詞には 이나 を付けます。"
+    ]
+   },
+   "id": {
+    "summary": "Keduanya berarti \"atau\", tetapi (이)나 melekat pada kata benda, sedangkan -거나 pada akar kata kerja dan kata sifat. (이)나 juga bisa berarti \"…saja (seadanya)\" dan \"sampai sebanyak\".",
+    "points": [
+     "Memilih antara kata benda: N(이)나 N (커피나 차 'kopi atau teh').",
+     "Memilih antara tindakan atau keadaan: V-거나 V (영화를 보거나 책을 읽어요 'Saya menonton film atau membaca buku').",
+     "(이)나 bisa berarti \"…saja\" saat memilih seadanya (심심한데 영화나 볼까요? 'Bosan nih, nonton film saja, yuk?').",
+     "Setelah jumlah, (이)나 berarti \"sampai sebanyak\" (다섯 그릇이나 먹었어요 'makan sampai lima mangkuk').",
+     "Setelah vokal pakai 나, setelah konsonan pakai 이나."
+    ]
+   }
+  },
+  "examples": [
+   {
+    "ko": "커피나 차 드릴까요?",
+    "use": "ina",
+    "tr": {
+     "vi": "Anh/chị dùng cà phê hay trà ạ?",
+     "en": "Would you like coffee or tea?",
+     "ja": "コーヒーかお茶はいかがですか。",
+     "id": "Mau kopi atau teh?"
+    }
+   },
+   {
+    "ko": "주말에는 영화를 보거나 책을 읽어요.",
+    "use": "geona",
+    "tr": {
+     "vi": "Cuối tuần tôi xem phim hoặc đọc sách.",
+     "en": "On weekends I watch movies or read books.",
+     "ja": "週末は映画を見たり本を読んだりします。",
+     "id": "Akhir pekan saya menonton film atau membaca buku."
+    }
+   },
+   {
+    "ko": "* 주말에는 영화나 책을 읽어요.",
+    "use": "ina",
+    "tr": {
+     "vi": "Cuối tuần tôi đọc phim hoặc sách. [Sai: hai hành động khác nhau (xem phim / đọc sách) phải nối bằng -geona]",
+     "en": "On weekends I read movies or books. [Wrong: two different actions (watching / reading) must be linked with -geona]",
+     "ja": "週末は映画か本を読みます。［誤り：別々の動作（見る／読む）なので -geona でつなぐ］",
+     "id": "Akhir pekan saya membaca film atau buku. [Salah: dua tindakan berbeda (menonton / membaca) harus disambung dengan -geona]"
+    }
+   },
+   {
+    "ko": "심심한데 음악이나 들을까요?",
+    "use": "ina",
+    "tr": {
+     "vi": "Chán quá, hay mình nghe nhạc đi?",
+     "en": "I'm bored — shall we just listen to some music?",
+     "ja": "暇だから音楽でも聴きましょうか。",
+     "id": "Bosan nih, dengar musik saja, yuk?"
+    }
+   },
+   {
+    "ko": "아프거나 피곤하면 쉬세요.",
+    "use": "geona",
+    "tr": {
+     "vi": "Nếu bị ốm hoặc mệt thì hãy nghỉ đi.",
+     "en": "If you're sick or tired, take a rest.",
+     "ja": "具合が悪かったり疲れていたりしたら休んでください。",
+     "id": "Kalau sakit atau capek, istirahatlah."
+    }
+   }
+  ]
+ },
+ {
+  "slug": "go-itda-vs-a-itda",
+  "pair": [
+   "go-itda",
+   "a-itda"
+  ],
+  "text": {
+   "vi": {
+    "summary": "-고 있다 diễn tả hành động đang diễn ra; -아/어 있다 diễn tả trạng thái còn lưu lại sau khi một hành động đã kết thúc.",
+    "points": [
+     "Hành động đang tiến hành: -고 있다, dùng được với cả tha động từ và nội động từ (밥을 먹고 있어요).",
+     "Kết quả còn duy trì: -아/어 있다, chỉ dùng với nội động từ hoặc động từ bị động (앉아 있다, 열려 있다, 서 있다).",
+     "-아/어 있다 không dùng với tha động từ có tân ngữ (* 문을 열어 있다).",
+     "Động từ mặc/đeo (입다, 신다, 쓰다, 끼다) dùng -고 있다 để chỉ trạng thái đang mặc (안경을 쓰고 있어요).",
+     "앉고 있어요 = đang trong quá trình ngồi xuống; 앉아 있어요 = đang ngồi (trạng thái)."
+    ]
+   },
+   "en": {
+    "summary": "-고 있다 shows an action in progress; -아/어 있다 shows a state that remains after an action is completed.",
+    "points": [
+     "Action in progress: -고 있다, with both transitive and intransitive verbs (밥을 먹고 있어요 'I'm eating').",
+     "Resulting state: -아/어 있다, only with intransitive or passive verbs (앉아 있다 'be seated', 열려 있다 'be open', 서 있다 'be standing').",
+     "-아/어 있다 does not work with transitive verbs that take an object (* 문을 열어 있다).",
+     "Wearing verbs (입다, 신다, 쓰다, 끼다) use -고 있다 for the state of wearing (안경을 쓰고 있어요 'She's wearing glasses').",
+     "앉고 있어요 = in the middle of sitting down; 앉아 있어요 = is sitting (state)."
+    ]
+   },
+   "ja": {
+    "summary": "-고 있다 は動作の進行「～している（最中）」、-아/어 있다 は動作が終わった後に残っている状態「～ている（結果）」を表します。",
+    "points": [
+     "動作の進行：-고 있다。他動詞にも自動詞にも使えます（밥을 먹고 있어요「ご飯を食べています」）。",
+     "結果の状態：-아/어 있다。自動詞や受け身の動詞にだけ使います（앉아 있다「座っている」、열려 있다「開いている」、서 있다「立っている」）。",
+     "目的語をとる他動詞には -아/어 있다 は使えません（* 문을 열어 있다）。",
+     "着用動詞（입다・신다・쓰다・끼다）は着ている状態も -고 있다 で表します（안경을 쓰고 있어요「眼鏡をかけています」）。",
+     "앉고 있어요 は「座ろうとしている最中」、앉아 있어요 は「座っている（状態）」です。"
+    ]
+   },
+   "id": {
+    "summary": "-고 있다 menunjukkan tindakan yang sedang berlangsung; -아/어 있다 menunjukkan keadaan yang bertahan setelah suatu tindakan selesai.",
+    "points": [
+     "Tindakan sedang berlangsung: -고 있다, bisa dengan kata kerja transitif maupun intransitif (밥을 먹고 있어요 'Saya sedang makan').",
+     "Keadaan hasil: -아/어 있다, hanya dengan kata kerja intransitif atau pasif (앉아 있다 'dalam posisi duduk', 열려 있다 'terbuka', 서 있다 'berdiri').",
+     "-아/어 있다 tidak dipakai dengan kata kerja transitif yang punya objek (* 문을 열어 있다).",
+     "Kata kerja memakai (입다, 신다, 쓰다, 끼다) memakai -고 있다 untuk keadaan sedang memakai (안경을 쓰고 있어요 'Dia memakai kacamata').",
+     "앉고 있어요 = sedang dalam gerakan duduk; 앉아 있어요 = sedang duduk (keadaan)."
+    ]
+   }
+  },
+  "examples": [
+   {
+    "ko": "동생은 지금 방에서 숙제를 하고 있어요.",
+    "use": "go-itda",
+    "tr": {
+     "vi": "Em tôi đang làm bài tập trong phòng.",
+     "en": "My younger brother is doing his homework in his room.",
+     "ja": "弟は今、部屋で宿題をしています。",
+     "id": "Adik saya sedang mengerjakan PR di kamar."
+    }
+   },
+   {
+    "ko": "창문이 열려 있어요.",
+    "use": "a-itda",
+    "tr": {
+     "vi": "Cửa sổ đang mở.",
+     "en": "The window is open.",
+     "ja": "窓が開いています。",
+     "id": "Jendelanya terbuka."
+    }
+   },
+   {
+    "ko": "* 창문을 열어 있어요.",
+    "use": "a-itda",
+    "tr": {
+     "vi": "Cửa sổ đang mở. [Sai: 'mở' ở đây là tha động từ, -a/eo itda phải đi với dạng bị động \"được mở\"]",
+     "en": "The window is open. [Wrong: 'open' here is transitive; -a/eo itda needs the passive verb 'be opened']",
+     "ja": "窓が開いています。［誤り：ここでの「開ける」は他動詞。-a/eo itda には受け身の「開かれる」を使う］",
+     "id": "Jendelanya terbuka. [Salah: 'membuka' di sini transitif; -a/eo itda harus memakai bentuk pasif 'terbuka']"
+    }
+   },
+   {
+    "ko": "할머니께서 의자에 앉아 계세요.",
+    "use": "a-itda",
+    "tr": {
+     "vi": "Bà đang ngồi trên ghế.",
+     "en": "Grandma is sitting on the chair.",
+     "ja": "祖母は椅子に座っていらっしゃいます。",
+     "id": "Nenek sedang duduk di kursi."
+    }
+   },
+   {
+    "ko": "그 사람은 빨간 코트를 입고 있어요.",
+    "use": "go-itda",
+    "tr": {
+     "vi": "Người đó đang mặc áo khoác đỏ.",
+     "en": "That person is wearing a red coat.",
+     "ja": "その人は赤いコートを着ています。",
+     "id": "Orang itu memakai mantel merah."
+    }
+   }
+  ]
+ },
+ {
+  "slug": "geot-gatda-vs-na-boda",
+  "pair": [
+   "geot-gatda",
+   "na-boda"
+  ],
+  "text": {
+   "vi": {
+    "summary": "-(으)ㄴ/는/(으)ㄹ 것 같다 là phỏng đoán chung và cũng là cách nói ý kiến nhẹ nhàng (kể cả về cảm nhận của bản thân); -나 보다/-(으)ㄴ가 보다 là suy đoán dựa trên dấu hiệu quan sát được, không dùng cho trải nghiệm trực tiếp của chính mình.",
+    "points": [
+     "Suy luận từ dấu hiệu thấy được (mọi người cầm ô → trời mưa): -나 보다 rất tự nhiên.",
+     "Nói cảm nhận, ý kiến của bản thân cho mềm mỏng (이 옷은 좀 작은 것 같아요): chỉ dùng -것 같다.",
+     "Không dùng -나 보다 cho điều mình trực tiếp trải qua (mình đã ăn và thấy cay → 매운 것 같아요, không phải 매운가 봐요).",
+     "Phỏng đoán tương lai: -(으)ㄹ 것 같다 (비가 올 것 같아요); -나 보다 ít dùng cho tương lai.",
+     "Dạng: động từ + -나 보다, tính từ + -(으)ㄴ가 보다, quá khứ -았/었나 보다."
+    ]
+   },
+   "en": {
+    "summary": "-(으)ㄴ/는/(으)ㄹ 것 같다 is a general guess and also a soft way of giving your opinion (even about your own feelings); -나 보다/-(으)ㄴ가 보다 is an inference from evidence you observe, and isn't used for your own direct experience.",
+    "points": [
+     "Inferring from visible clues (people have umbrellas → it's raining): -나 보다 is very natural.",
+     "Softening your own opinion or feeling (이 옷은 좀 작은 것 같아요 'This seems a bit small'): only -것 같다.",
+     "Don't use -나 보다 for what you directly experienced (you tasted it and it's spicy → 매운 것 같아요, not 매운가 봐요).",
+     "Guesses about the future: -(으)ㄹ 것 같다 (비가 올 것 같아요); -나 보다 is rarely used for the future.",
+     "Forms: verb + -나 보다, adjective + -(으)ㄴ가 보다, past -았/었나 보다."
+    ]
+   },
+   "ja": {
+    "summary": "-(으)ㄴ/는/(으)ㄹ 것 같다 は広く使える推量で、自分の感想を柔らかく言うときにも使います。-나 보다/-(으)ㄴ가 보다 は観察した根拠からの推測「～みたいだ・～らしい」で、自分が直接経験したことには使いません。",
+    "points": [
+     "目に見える手がかりからの推測（みんな傘をさしている → 雨が降っている）には -나 보다 がとても自然です。",
+     "自分の意見・感想を和らげる（이 옷은 좀 작은 것 같아요「この服はちょっと小さいみたいです」）のは -것 같다 だけです。",
+     "自分が直接経験したことに -나 보다 は使いません（食べて辛かった → 매운 것 같아요。매운가 봐요 は不可）。",
+     "未来の推測は -(으)ㄹ 것 같다（비가 올 것 같아요）。-나 보다 は未来にはあまり使いません。",
+     "形：動詞 + -나 보다、形容詞 + -(으)ㄴ가 보다、過去は -았/었나 보다。"
+    ]
+   },
+   "id": {
+    "summary": "-(으)ㄴ/는/(으)ㄹ 것 같다 adalah dugaan umum sekaligus cara halus menyampaikan pendapat (termasuk perasaan sendiri); -나 보다/-(으)ㄴ가 보다 adalah kesimpulan dari bukti yang diamati, dan tidak dipakai untuk pengalaman langsung diri sendiri.",
+    "points": [
+     "Menyimpulkan dari tanda yang terlihat (orang-orang membawa payung → sedang hujan): -나 보다 sangat alami.",
+     "Melunakkan pendapat atau perasaan sendiri (이 옷은 좀 작은 것 같아요 'Baju ini sepertinya agak kecil'): hanya -것 같다.",
+     "Jangan pakai -나 보다 untuk hal yang dialami langsung (sudah mencicipi dan pedas → 매운 것 같아요, bukan 매운가 봐요).",
+     "Dugaan tentang masa depan: -(으)ㄹ 것 같다 (비가 올 것 같아요); -나 보다 jarang untuk masa depan.",
+     "Bentuk: kata kerja + -나 보다, kata sifat + -(으)ㄴ가 보다, lampau -았/었나 보다."
+    ]
+   }
+  },
+  "examples": [
+   {
+    "ko": "사람들이 우산을 쓰고 있네요. 밖에 비가 오나 봐요.",
+    "use": "na-boda",
+    "tr": {
+     "vi": "Mọi người đang che ô kìa. Hình như ngoài trời đang mưa.",
+     "en": "People are using umbrellas. It must be raining outside.",
+     "ja": "みんな傘をさしていますね。外は雨が降っているみたいです。",
+     "id": "Orang-orang pakai payung. Sepertinya di luar hujan."
+    }
+   },
+   {
+    "ko": "이 옷은 저한테 좀 작은 것 같아요.",
+    "use": "geot-gatda",
+    "tr": {
+     "vi": "Cái áo này hình như hơi nhỏ với tôi.",
+     "en": "I think this is a bit small for me.",
+     "ja": "この服は私にはちょっと小さいようです。",
+     "id": "Baju ini sepertinya agak kecil buat saya."
+    }
+   },
+   {
+    "ko": "하늘이 흐려요. 곧 비가 올 것 같아요.",
+    "use": "geot-gatda",
+    "tr": {
+     "vi": "Trời âm u quá. Có vẻ sắp mưa rồi.",
+     "en": "The sky is cloudy. It looks like it'll rain soon.",
+     "ja": "空が曇っています。もうすぐ雨が降りそうです。",
+     "id": "Langitnya mendung. Sepertinya sebentar lagi hujan."
+    }
+   },
+   {
+    "ko": "* (직접 먹어 보고) 이 떡볶이는 정말 매운가 봐요.",
+    "use": "na-boda",
+    "tr": {
+     "vi": "(Sau khi tự ăn thử) Món tteokbokki này hình như cay thật. [Sai: điều tự mình trực tiếp trải nghiệm không dùng -na boda, phải dùng -(eu)n geot gatda]",
+     "en": "(After tasting it) This tteokbokki seems really spicy. [Wrong: for your own direct experience, use -(eu)n geot gatda, not -na boda]",
+     "ja": "（自分で食べてみて）このトッポッキは本当に辛いみたいです。［誤り：自分の直接経験には -na boda ではなく -(eu)n geot gatda を使う］",
+     "id": "(Setelah mencicipi sendiri) Tteokbokki ini sepertinya pedas sekali. [Salah: pengalaman langsung sendiri memakai -(eu)n geot gatda, bukan -na boda]"
+    }
+   },
+   {
+    "ko": "민수 씨가 하품을 계속하네요. 어제 잠을 못 잤나 봐요.",
+    "use": "na-boda",
+    "tr": {
+     "vi": "Minsu cứ ngáp suốt. Chắc hôm qua cậu ấy không ngủ được.",
+     "en": "Minsu keeps yawning. He must not have slept last night.",
+     "ja": "ミンスさん、ずっとあくびしていますね。昨日眠れなかったみたいです。",
+     "id": "Minsu terus menguap. Sepertinya semalam dia tidak bisa tidur."
+    }
+   }
+  ]
+ },
+ {
+  "slug": "neun-baram-vs-neurago",
+  "pair": [
+   "neun-baram",
+   "neurago"
+  ],
+  "text": {
+   "vi": {
+    "summary": "Cả hai đều nêu nguyên nhân dẫn đến kết quả không mong muốn. -는 바람에 là một sự việc bất ngờ, ngoài ý muốn gây ra kết quả; -느라고 là \"vì mải làm A (tốn thời gian, công sức) nên không làm được B\".",
+    "points": [
+     "-는 바람에: nguyên nhân đột ngột, ngoài dự tính; chủ ngữ hai vế có thể khác nhau (비가 오는 바람에 …).",
+     "-느라고: hành động có chủ ý, kéo dài; hai vế cùng chủ ngữ; chỉ dùng với động từ.",
+     "Cả hai không gắn -았/었 vào vế trước, và vế sau không thể là mệnh lệnh, rủ rê.",
+     "-는 바람에 thường kết thúc bằng thì quá khứ; -느라고 hay đi với 못 하다, 늦다, 바쁘다, 힘들다.",
+     "Kết quả của -는 바람에 đôi khi tích cực nhưng hiếm; phần lớn là tiêu cực."
+    ]
+   },
+   "en": {
+    "summary": "Both give a cause for an unwanted result. -는 바람에 is a sudden, unexpected event that caused it; -느라고 means 'because I was busy doing A (which took time/effort), I couldn't do B'.",
+    "points": [
+     "-는 바람에: a sudden, unplanned cause; the two clauses can have different subjects (비가 오는 바람에 …).",
+     "-느라고: an intentional, ongoing action; both clauses share the same subject; verbs only.",
+     "Neither takes -았/었 in the first clause, and neither can be followed by a command or suggestion.",
+     "-는 바람에 usually ends in the past tense; -느라고 typically pairs with 못 하다, 늦다, 바쁘다, 힘들다.",
+     "The result after -는 바람에 is occasionally positive, but mostly negative."
+    ]
+   },
+   "ja": {
+    "summary": "どちらも望ましくない結果の原因を表します。-는 바람에 は突然の予期しない出来事がきっかけ、-느라고 は「A（時間や労力がかかること）をしていたせいでBができなかった」です。",
+    "points": [
+     "-는 바람에：突然の予想外の原因。前後の主語が違ってもかまいません（비가 오는 바람에…）。",
+     "-느라고：意図的で継続的な行動。前後の主語は同じで、動詞にだけ付きます。",
+     "どちらも前節に -았/었 を付けず、後節に命令・勧誘は来ません。",
+     "-는 바람에 の後はふつう過去形です。-느라고 は 못 하다・늦다・바쁘다・힘들다 などとよく組み合わさります。",
+     "-는 바람에 の結果がまれに良いこともありますが、ほとんどは否定的な結果です。"
+    ]
+   },
+   "id": {
+    "summary": "Keduanya menyatakan penyebab hasil yang tidak diinginkan. -는 바람에 adalah kejadian mendadak dan tak terduga yang menyebabkannya; -느라고 berarti \"karena sibuk melakukan A (yang makan waktu/tenaga), jadi tidak bisa B\".",
+    "points": [
+     "-는 바람에: penyebab mendadak dan tak direncanakan; subjek kedua klausa boleh berbeda (비가 오는 바람에 …).",
+     "-느라고: tindakan yang disengaja dan berlangsung lama; subjek kedua klausa sama; hanya kata kerja.",
+     "Keduanya tidak memakai -았/었 di klausa pertama, dan tidak bisa diikuti perintah atau ajakan.",
+     "-는 바람에 biasanya diakhiri bentuk lampau; -느라고 sering berpasangan dengan 못 하다, 늦다, 바쁘다, 힘들다.",
+     "Hasil setelah -는 바람에 kadang positif, tetapi sebagian besar negatif."
+    ]
+   }
+  },
+  "examples": [
+   {
+    "ko": "갑자기 비가 오는 바람에 옷이 다 젖었어요.",
+    "use": "neun-baram",
+    "tr": {
+     "vi": "Tự nhiên trời đổ mưa nên quần áo ướt hết.",
+     "en": "It suddenly started raining, and my clothes got soaked.",
+     "ja": "急に雨が降ったせいで服がびしょ濡れになりました。",
+     "id": "Tiba-tiba hujan, jadi baju saya basah semua."
+    }
+   },
+   {
+    "ko": "게임을 하느라고 숙제를 못 했어요.",
+    "use": "neurago",
+    "tr": {
+     "vi": "Mải chơi game nên tôi không làm bài tập.",
+     "en": "I was busy playing games, so I didn't get my homework done.",
+     "ja": "ゲームをしていて宿題ができませんでした。",
+     "id": "Keasyikan main game, jadi PR saya tidak selesai."
+    }
+   },
+   {
+    "ko": "알람이 안 울리는 바람에 회사에 지각했어요.",
+    "use": "neun-baram",
+    "tr": {
+     "vi": "Đồng hồ báo thức không kêu nên tôi đi làm muộn.",
+     "en": "My alarm didn't go off, so I was late for work.",
+     "ja": "目覚ましが鳴らなかったせいで会社に遅刻しました。",
+     "id": "Alarmnya tidak berbunyi, jadi saya terlambat ke kantor."
+    }
+   },
+   {
+    "ko": "이사 준비하느라고 요즘 정신이 없어요.",
+    "use": "neurago",
+    "tr": {
+     "vi": "Dạo này lo chuẩn bị chuyển nhà nên tôi bận tối mắt.",
+     "en": "I've been swamped lately getting ready to move.",
+     "ja": "引っ越しの準備でこのところバタバタしています。",
+     "id": "Akhir-akhir ini saya sibuk sekali menyiapkan pindahan."
+    }
+   },
+   {
+    "ko": "* 비가 오느라고 소풍을 못 갔어요.",
+    "use": "neurago",
+    "tr": {
+     "vi": "Vì trời mưa nên không đi dã ngoại được. [Sai: mưa không phải hành động có chủ ý của chủ ngữ, phải dùng -neun barame]",
+     "en": "Because it rained, we couldn't go on the picnic. [Wrong: rain isn't the subject's intentional activity; use -neun barame]",
+     "ja": "雨が降っていてピクニックに行けませんでした。［誤り：雨は主語の意図的な行動ではないので -neun barame を使う］",
+     "id": "Karena hujan, kami tidak jadi piknik. [Salah: hujan bukan tindakan sengaja subjek; pakai -neun barame]"
+    }
+   }
+  ]
+ },
+ {
+  "slug": "ado-vs-deorado",
+  "pair": [
+   "ado",
+   "deorado"
+  ],
+  "text": {
+   "vi": {
+    "summary": "Cả hai đều là \"dù… cũng\". -아도/어도 dùng rộng rãi cho cả sự thật lẫn giả định; -더라도 nhấn mạnh giả định (kể cả khi điều đó xảy ra, dù khó xảy ra), mạnh và trang trọng hơn.",
+    "points": [
+     "Sự thật, thói quen đang xảy ra (아무리 바빠도 아침은 먹어요): dùng -아도 tự nhiên hơn.",
+     "Giả định, tình huống chưa xảy ra, nhấn mạnh quyết tâm: -더라도 (무슨 일이 있더라도 포기하지 마세요).",
+     "Thường đi với 아무리, 혹시, 설령 để nhấn mạnh.",
+     "Cả hai đều đi được với mệnh lệnh, rủ rê ở vế sau.",
+     "-더라도 nghe trang trọng, văn viết hơn; hội thoại hằng ngày dùng -아도 nhiều hơn."
+    ]
+   },
+   "en": {
+    "summary": "Both mean 'even if / even though'. -아도/어도 is all-purpose, for facts and hypotheses; -더라도 stresses a hypothetical ('even if that were to happen', often something unlikely) and sounds stronger and more formal.",
+    "points": [
+     "Real facts and habits (아무리 바빠도 아침은 먹어요 'However busy I am, I eat breakfast'): -아도 is more natural.",
+     "Hypothetical situations, especially with resolve: -더라도 (무슨 일이 있더라도 포기하지 마세요 'Whatever happens, don't give up').",
+     "Both often pair with 아무리, 혹시, 설령 for emphasis.",
+     "Both can be followed by commands or suggestions.",
+     "-더라도 sounds more formal and written; in everyday chat -아도 is far more common."
+    ]
+   },
+   "ja": {
+    "summary": "どちらも「～ても」ですが、-아도/어도 は事実にも仮定にも広く使え、-더라도 は「たとえ～だとしても」と仮定（起こりにくいこと）を強調し、より強く改まった響きがあります。",
+    "points": [
+     "実際の事実や習慣（아무리 바빠도 아침은 먹어요「どんなに忙しくても朝ご飯は食べます」）には -아도 が自然です。",
+     "仮定の状況、特に強い決意を表すときは -더라도（무슨 일이 있더라도 포기하지 마세요「何があっても諦めないでください」）。",
+     "どちらも 아무리・혹시・설령 とよく一緒に使われます。",
+     "どちらも後ろに命令・勧誘を続けられます。",
+     "-더라도 は書き言葉的で改まった感じ、日常会話では -아도 の方がずっとよく使われます。"
+    ]
+   },
+   "id": {
+    "summary": "Keduanya berarti \"meskipun / walaupun\". -아도/어도 serbaguna, untuk fakta maupun pengandaian; -더라도 menekankan pengandaian (\"sekalipun hal itu terjadi\", sering yang kecil kemungkinannya) dan terdengar lebih kuat serta formal.",
+    "points": [
+     "Fakta dan kebiasaan nyata (아무리 바빠도 아침은 먹어요 'Sesibuk apa pun, saya sarapan'): -아도 lebih alami.",
+     "Situasi pengandaian, terutama dengan tekad: -더라도 (무슨 일이 있더라도 포기하지 마세요 'Apa pun yang terjadi, jangan menyerah').",
+     "Keduanya sering dipakai bersama 아무리, 혹시, 설령 untuk penekanan.",
+     "Keduanya bisa diikuti perintah atau ajakan.",
+     "-더라도 terdengar lebih formal dan tertulis; dalam obrolan sehari-hari -아도 jauh lebih umum."
+    ]
+   }
+  },
+  "examples": [
+   {
+    "ko": "아무리 바빠도 아침은 꼭 먹어요.",
+    "use": "ado",
+    "tr": {
+     "vi": "Dù bận đến mấy tôi cũng nhất định ăn sáng.",
+     "en": "No matter how busy I am, I always eat breakfast.",
+     "ja": "どんなに忙しくても朝ご飯は必ず食べます。",
+     "id": "Sesibuk apa pun, saya selalu sarapan."
+    }
+   },
+   {
+    "ko": "무슨 일이 있더라도 포기하지 마세요.",
+    "use": "deorado",
+    "tr": {
+     "vi": "Dù có chuyện gì xảy ra cũng đừng bỏ cuộc.",
+     "en": "Whatever happens, don't give up.",
+     "ja": "たとえ何があっても諦めないでください。",
+     "id": "Apa pun yang terjadi, jangan menyerah."
+    }
+   },
+   {
+    "ko": "혹시 조금 늦더라도 꼭 와 주세요.",
+    "use": "deorado",
+    "tr": {
+     "vi": "Lỡ có đến muộn một chút thì cũng nhất định hãy đến nhé.",
+     "en": "Even if you end up a little late, please do come.",
+     "ja": "たとえ少し遅れても、必ず来てください。",
+     "id": "Kalaupun agak terlambat, tolong tetap datang, ya."
+    }
+   },
+   {
+    "ko": "이 약은 써도 몸에 좋아요.",
+    "use": "ado",
+    "tr": {
+     "vi": "Thuốc này đắng nhưng tốt cho sức khỏe.",
+     "en": "This medicine is bitter, but it's good for you.",
+     "ja": "この薬は苦くても体にいいです。",
+     "id": "Obat ini walaupun pahit, baik untuk tubuh."
+    }
+   },
+   {
+    "ko": "비싸도 이 가방을 살 거예요. / 비싸더라도 이 가방을 살 거예요.",
+    "use": "both",
+    "tr": {
+     "vi": "Dù đắt tôi cũng sẽ mua cái túi này.",
+     "en": "Even if it's expensive, I'm going to buy this bag.",
+     "ja": "高くてもこのかばんを買うつもりです。",
+     "id": "Walaupun mahal, saya akan beli tas ini."
+    }
+   }
+  ]
+ },
+ {
+  "slug": "ado-vs-neundedo",
+  "pair": [
+   "ado",
+   "neundedo"
+  ],
+  "text": {
+   "vi": {
+    "summary": "-는데도 chỉ dùng cho sự việc đã/đang thực sự xảy ra: \"mặc dù (thực tế là) A nhưng vẫn B\"; -아도/어도 dùng được cho cả sự thật lẫn giả định \"dù (có) A thì cũng B\".",
+    "points": [
+     "Tình huống giả định, tương lai (내일 비가 와도…): chỉ dùng -아도.",
+     "Sự việc có thật, kết quả trái với mong đợi (약을 먹었는데도 안 나아요): -는데도 nhấn mạnh hơn.",
+     "Vế sau là mệnh lệnh, rủ rê: dùng -아도, không dùng -는데도.",
+     "Dạng: động từ + -는데도, tính từ + -(으)ㄴ데도, danh từ + 인데도, quá khứ -았/었는데도.",
+     "-는데도 thường mang sắc thái ngạc nhiên hoặc bực bội."
+    ]
+   },
+   "en": {
+    "summary": "-는데도 is only for something that is actually the case: 'even though (in fact) A, still B'; -아도/어도 works for both real and hypothetical situations: 'even if A, B'.",
+    "points": [
+     "Hypothetical or future situations (내일 비가 와도… 'Even if it rains tomorrow…'): only -아도.",
+     "Real facts where the result defies expectations (약을 먹었는데도 안 나아요 'I took medicine but I'm still not better'): -는데도 is more emphatic.",
+     "If the main clause is a command or suggestion, use -아도, not -는데도.",
+     "Forms: verb + -는데도, adjective + -(으)ㄴ데도, noun + 인데도, past -았/었는데도.",
+     "-는데도 often carries surprise or frustration."
+    ]
+   },
+   "ja": {
+    "summary": "-는데도 は実際に起きている・起きたことにだけ使う「（実際）Aなのに、それでもB」、-아도/어도 は事実にも仮定にも使える「（たとえ）Aしても B」です。",
+    "points": [
+     "仮定や未来のこと（내일 비가 와도…「明日雨が降っても」）は -아도 だけです。",
+     "実際の事実で、予想に反する結果（약을 먹었는데도 안 나아요「薬を飲んだのに治りません」）は -는데도 の方が強調されます。",
+     "後ろが命令・勧誘なら -아도 を使い、-는데도 は使えません。",
+     "形：動詞 + -는데도、形容詞 + -(으)ㄴ데도、名詞 + 인데도、過去 -았/었는데도。",
+     "-는데도 には驚きや不満の気持ちがこもることが多いです。"
+    ]
+   },
+   "id": {
+    "summary": "-는데도 hanya untuk hal yang benar-benar terjadi: \"padahal (kenyataannya) A, tetap saja B\"; -아도/어도 bisa untuk fakta maupun pengandaian: \"meskipun (kalaupun) A, B\".",
+    "points": [
+     "Situasi pengandaian atau masa depan (내일 비가 와도… 'Kalaupun besok hujan…'): hanya -아도.",
+     "Fakta nyata yang hasilnya berlawanan dengan harapan (약을 먹었는데도 안 나아요 'Sudah minum obat, tetap belum sembuh'): -는데도 lebih menekankan.",
+     "Jika klausa utama berupa perintah atau ajakan, pakai -아도, bukan -는데도.",
+     "Bentuk: kata kerja + -는데도, kata sifat + -(으)ㄴ데도, kata benda + 인데도, lampau -았/었는데도.",
+     "-는데도 sering mengandung rasa heran atau kesal."
+    ]
+   }
+  },
+  "examples": [
+   {
+    "ko": "약을 먹었는데도 머리가 계속 아파요.",
+    "use": "neundedo",
+    "tr": {
+     "vi": "Đã uống thuốc rồi mà vẫn đau đầu mãi.",
+     "en": "Even though I took medicine, my head still hurts.",
+     "ja": "薬を飲んだのに、ずっと頭が痛いです。",
+     "id": "Padahal sudah minum obat, kepala saya masih sakit."
+    }
+   },
+   {
+    "ko": "내일 비가 와도 등산을 갈 거예요.",
+    "use": "ado",
+    "tr": {
+     "vi": "Ngày mai dù trời mưa tôi cũng sẽ đi leo núi.",
+     "en": "Even if it rains tomorrow, I'll go hiking.",
+     "ja": "明日雨が降っても山登りに行くつもりです。",
+     "id": "Kalaupun besok hujan, saya tetap mendaki gunung."
+    }
+   },
+   {
+    "ko": "* 내일 비가 오는데도 등산을 갈 거예요.",
+    "use": "neundedo",
+    "tr": {
+     "vi": "Ngày mai mưa mà tôi vẫn đi leo núi. [Sai: chuyện ngày mai là giả định, còn -neundedo chỉ dùng cho sự việc có thật; phải dùng -ado]",
+     "en": "Even though it's raining tomorrow, I'll go hiking. [Wrong: tomorrow is hypothetical, but -neundedo is only for real facts; use -ado]",
+     "ja": "明日雨が降るのに山登りに行きます。［誤り：明日のことは仮定だが、-neundedo は事実にしか使えない。-ado を使う］",
+     "id": "Padahal besok hujan, saya tetap mendaki. [Salah: besok masih pengandaian, sedangkan -neundedo hanya untuk fakta; pakai -ado]"
+    }
+   },
+   {
+    "ko": "힘들어도 조금만 더 참으세요.",
+    "use": "ado",
+    "tr": {
+     "vi": "Dù vất vả cũng cố chịu thêm một chút nữa nhé.",
+     "en": "Even if it's hard, hang in there a little longer.",
+     "ja": "つらくても、もう少しだけ頑張ってください。",
+     "id": "Walaupun berat, bertahanlah sedikit lagi."
+    }
+   },
+   {
+    "ko": "열심히 공부했는데도 시험에 떨어졌어요.",
+    "use": "neundedo",
+    "tr": {
+     "vi": "Đã học chăm chỉ vậy mà vẫn thi trượt.",
+     "en": "Even though I studied hard, I failed the exam.",
+     "ja": "一生懸命勉強したのに試験に落ちました。",
+     "id": "Padahal sudah belajar keras, saya tetap gagal ujian."
+    }
+   }
+  ]
+ },
+ {
+  "slug": "atdeoni-vs-deoni",
+  "pair": [
+   "atdeoni",
+   "deoni"
+  ],
+  "text": {
+   "vi": {
+    "summary": "-았/었더니 kể lại hành động của chính người nói (ngôi thứ nhất) rồi phát hiện ra kết quả/phản ứng; -더니 kể lại điều người nói đã quan sát thấy ở người khác hay sự vật (ngôi thứ ba), rồi nói về sự thay đổi hoặc diễn biến tiếp theo.",
+    "points": [
+     "Chủ ngữ vế trước của -았/었더니 thường là \"tôi\": 내가 …했더니 → kết quả mình phát hiện.",
+     "-더니 thường có chủ ngữ ngôi thứ ba, và hai vế cùng chủ ngữ (동생이 …하더니 결국 …).",
+     "-더니 còn dùng để đối chiếu quá khứ và hiện tại (어제는 춥더니 오늘은 따뜻하네요).",
+     "Vế sau của cả hai không dùng mệnh lệnh, rủ rê, và thường là sự việc đã xảy ra.",
+     "Đừng dùng -더니 cho hành động của chính mình (* 제가 열심히 공부하더니 …)."
+    ]
+   },
+   "en": {
+    "summary": "-았/었더니 reports the speaker's own past action (first person) and then what they found or how others reacted; -더니 reports something the speaker observed about someone or something else (third person), followed by a change or what happened next.",
+    "points": [
+     "With -았/었더니 the first clause is usually 'I': 내가 …했더니 → the result I discovered.",
+     "-더니 usually has a third-person subject, the same in both clauses (동생이 …하더니 결국 …).",
+     "-더니 also contrasts past and present (어제는 춥더니 오늘은 따뜻하네요 'It was cold yesterday, but today it's warm').",
+     "Neither is followed by commands or suggestions; the second clause is usually something that already happened.",
+     "Don't use -더니 for your own actions (* 제가 열심히 공부하더니 …)."
+    ]
+   },
+   "ja": {
+    "summary": "-았/었더니 は話し手自身（一人称）の過去の行動と、その結果気づいたことや相手の反応「～したら…だった」を述べ、-더니 は話し手が他の人や物（三人称）について見たことと、その後の変化・展開「～していたが／～したと思ったら」を述べます。",
+    "points": [
+     "-았/었더니 の前節の主語はふつう「私」です：내가 …했더니 → 自分が発見した結果。",
+     "-더니 の主語はふつう三人称で、前後の主語は同じです（동생이 …하더니 결국 …）。",
+     "-더니 は過去と現在の対比にも使えます（어제는 춥더니 오늘은 따뜻하네요「昨日は寒かったのに、今日は暖かいですね」）。",
+     "どちらも後ろに命令・勧誘は来ず、後節はふつうすでに起きたことです。",
+     "自分の行動に -더니 は使いません（* 제가 열심히 공부하더니 …）。"
+    ]
+   },
+   "id": {
+    "summary": "-았/었더니 menceritakan tindakan pembicara sendiri (orang pertama) di masa lalu lalu hasil yang ditemukannya atau reaksi orang lain; -더니 menceritakan hal yang diamati pembicara pada orang atau benda lain (orang ketiga), lalu perubahan atau kejadian berikutnya.",
+    "points": [
+     "Pada -았/었더니, subjek klausa pertama biasanya \"saya\": 내가 …했더니 → hasil yang saya temukan.",
+     "-더니 biasanya bersubjek orang ketiga, sama di kedua klausa (동생이 …하더니 결국 …).",
+     "-더니 juga dipakai untuk membandingkan dulu dan sekarang (어제는 춥더니 오늘은 따뜻하네요 'Kemarin dingin, hari ini hangat ya').",
+     "Keduanya tidak diikuti perintah atau ajakan; klausa kedua biasanya hal yang sudah terjadi.",
+     "Jangan pakai -더니 untuk tindakan sendiri (* 제가 열심히 공부하더니 …)."
+    ]
+   }
+  },
+  "examples": [
+   {
+    "ko": "아침에 창문을 열었더니 눈이 와 있었어요.",
+    "use": "atdeoni",
+    "tr": {
+     "vi": "Sáng tôi mở cửa sổ ra thì thấy tuyết đã rơi.",
+     "en": "When I opened the window this morning, it had snowed.",
+     "ja": "朝、窓を開けたら雪が積もっていました。",
+     "id": "Pagi tadi saya buka jendela, ternyata salju sudah turun."
+    }
+   },
+   {
+    "ko": "동생이 아침부터 기침을 하더니 결국 열이 났어요.",
+    "use": "deoni",
+    "tr": {
+     "vi": "Em tôi ho từ sáng, rồi cuối cùng thì bị sốt.",
+     "en": "My little brother was coughing all morning, and in the end he got a fever.",
+     "ja": "弟は朝から咳をしていたと思ったら、結局熱が出ました。",
+     "id": "Adik saya batuk sejak pagi, akhirnya demam."
+    }
+   },
+   {
+    "ko": "어제는 그렇게 춥더니 오늘은 따뜻하네요.",
+    "use": "deoni",
+    "tr": {
+     "vi": "Hôm qua lạnh thế mà hôm nay lại ấm nhỉ.",
+     "en": "It was so cold yesterday, but today it's warm.",
+     "ja": "昨日はあんなに寒かったのに、今日は暖かいですね。",
+     "id": "Kemarin dingin sekali, hari ini malah hangat, ya."
+    }
+   },
+   {
+    "ko": "친구한테 전화했더니 안 받았어요.",
+    "use": "atdeoni",
+    "tr": {
+     "vi": "Tôi gọi điện cho bạn nhưng bạn không nghe máy.",
+     "en": "I called my friend, but they didn't pick up.",
+     "ja": "友達に電話したら出ませんでした。",
+     "id": "Saya menelepon teman, tapi dia tidak mengangkat."
+    }
+   },
+   {
+    "ko": "* 제가 열심히 공부하더니 시험에 합격했어요.",
+    "use": "deoni",
+    "tr": {
+     "vi": "Tôi học chăm chỉ nên đã thi đỗ. [Sai: hành động của chính mình không dùng -deoni, phải dùng -ass/eotdeoni]",
+     "en": "I studied hard and passed the exam. [Wrong: your own action doesn't take -deoni; use -ass/eotdeoni]",
+     "ja": "私は一生懸命勉強したら試験に合格しました。［誤り：自分の行動には -deoni を使わない。-ass/eotdeoni を使う］",
+     "id": "Saya belajar keras lalu lulus ujian. [Salah: tindakan sendiri tidak memakai -deoni; pakai -ass/eotdeoni]"
+    }
+   }
+  ]
+ },
+ {
+  "slug": "jocha-vs-buteo-kkaji",
+  "pair": [
+   "jocha",
+   "buteo-kkaji"
+  ],
+  "text": {
+   "vi": {
+    "summary": "조차, 마저 và 까지 đều có thể dịch là \"ngay cả/thậm chí\". 까지 trung tính, dùng được cả trong tình huống tốt lẫn xấu; 조차 nhấn mạnh rằng ngay cả điều tối thiểu cũng không có/không làm được; 마저 là \"ngay cả cái cuối cùng còn lại\" cũng mất.",
+    "points": [
+     "Tình huống tích cực, thêm điều tốt (선물까지 줬어요): chỉ dùng 까지.",
+     "조차 chủ yếu đi với phủ định hoặc kết quả xấu: \"đến cả cái cơ bản nhất cũng không\" (이름조차 몰라요).",
+     "마저 nhấn mạnh thứ cuối cùng còn sót lại cũng biến mất/gặp chuyện (마지막 희망마저 사라졌어요).",
+     "조차/마저 không dùng trong mệnh lệnh, rủ rê.",
+     "까지 còn có nghĩa \"đến\" (giới hạn thời gian, nơi chốn), 조차/마저 thì không."
+    ]
+   },
+   "en": {
+    "summary": "조차, 마저 and 까지 can all translate as 'even'. 까지 is neutral and works for good or bad situations; 조차 stresses that not even the bare minimum happened; 마저 means 'even the last remaining one' was lost too.",
+    "points": [
+     "Positive situations, adding something good (선물까지 줬어요 'even gave me a present'): only 까지.",
+     "조차 mostly appears with negatives or bad outcomes — 'not even the most basic thing' (이름조차 몰라요 'I don't even know their name').",
+     "마저 stresses that the last thing left was also lost or affected (마지막 희망마저 사라졌어요).",
+     "조차 and 마저 aren't used in commands or suggestions.",
+     "까지 also means 'until / up to' (time or place); 조차/마저 don't."
+    ]
+   },
+   "ja": {
+    "summary": "조차・마저・까지 はどれも「～さえ／～まで」と訳せます。까지 は中立的で良い状況にも悪い状況にも使え、조차 は「最低限のことさえ～ない」、마저 は「最後に残ったものまで（失った）」という意味合いです。",
+    "points": [
+     "良いことが加わる肯定的な状況（선물까지 줬어요「プレゼントまでくれました」）は 까지 だけです。",
+     "조차 は主に否定や悪い結果と使い、「いちばん基本的なことさえ」を強調します（이름조차 몰라요「名前さえ知りません」）。",
+     "마저 は最後に残っていたものまでなくなる・悪くなることを強調します（마지막 희망마저 사라졌어요）。",
+     "조차・마저 は命令文・勧誘文には使いません。",
+     "까지 には「～まで（時間・場所の範囲）」の意味もありますが、조차・마저 にはありません。"
+    ]
+   },
+   "id": {
+    "summary": "조차, 마저, dan 까지 semuanya bisa diterjemahkan \"bahkan\". 까지 netral, bisa untuk situasi baik maupun buruk; 조차 menekankan bahwa hal paling minimal pun tidak terjadi; 마저 berarti \"bahkan yang terakhir tersisa pun\" ikut hilang.",
+    "points": [
+     "Situasi positif, menambah hal baik (선물까지 줬어요 'bahkan memberi hadiah'): hanya 까지.",
+     "조차 kebanyakan dengan bentuk negatif atau hasil buruk — \"hal paling dasar pun tidak\" (이름조차 몰라요 'Namanya pun saya tidak tahu').",
+     "마저 menekankan bahwa hal terakhir yang tersisa pun hilang atau terkena (마지막 희망마저 사라졌어요).",
+     "조차 dan 마저 tidak dipakai dalam perintah atau ajakan.",
+     "까지 juga berarti \"sampai\" (batas waktu/tempat); 조차/마저 tidak."
+    ]
+   }
+  },
+  "examples": [
+   {
+    "ko": "너무 바빠서 물조차 마시지 못했어요.",
+    "use": "jocha",
+    "tr": {
+     "vi": "Bận quá đến nỗi ngay cả nước cũng không kịp uống.",
+     "en": "I was so busy I couldn't even drink water.",
+     "ja": "忙しすぎて水さえ飲めませんでした。",
+     "id": "Saking sibuknya, minum air pun tidak sempat."
+    }
+   },
+   {
+    "ko": "친구가 밥도 사 주고 선물까지 줬어요.",
+    "use": "buteo-kkaji",
+    "tr": {
+     "vi": "Bạn tôi vừa mời cơm lại còn tặng cả quà nữa.",
+     "en": "My friend bought me dinner and even gave me a present.",
+     "ja": "友達がご飯をおごってくれて、プレゼントまでくれました。",
+     "id": "Teman saya mentraktir makan, bahkan memberi hadiah juga."
+    }
+   },
+   {
+    "ko": "* 친구가 밥도 사 주고 선물조차 줬어요.",
+    "use": "jocha",
+    "tr": {
+     "vi": "Bạn tôi mời cơm, thậm chí còn tặng quà. [Sai: tình huống tích cực nên dùng 'kkaji', không dùng 'jocha']",
+     "en": "My friend bought me dinner and even gave me a present. [Wrong: it's a positive situation, so use 'kkaji', not 'jocha']",
+     "ja": "友達がご飯をおごってくれて、プレゼントさえくれました。［誤り：良い状況なので「jocha」ではなく「kkaji」を使う］",
+     "id": "Teman saya mentraktir, bahkan memberi hadiah. [Salah: situasinya positif, jadi pakai 'kkaji', bukan 'jocha']"
+    }
+   },
+   {
+    "ko": "마지막 희망마저 사라졌어요.",
+    "use": "jocha",
+    "tr": {
+     "vi": "Ngay cả hy vọng cuối cùng cũng tan biến.",
+     "en": "Even my last hope is gone.",
+     "ja": "最後の希望まで消えてしまいました。",
+     "id": "Bahkan harapan terakhir pun lenyap."
+    }
+   },
+   {
+    "ko": "비가 오는데 바람까지 불어요.",
+    "use": "buteo-kkaji",
+    "tr": {
+     "vi": "Trời mưa mà còn có cả gió nữa.",
+     "en": "It's raining, and on top of that it's windy.",
+     "ja": "雨が降っているうえに風まで吹いています。",
+     "id": "Sudah hujan, anginnya kencang pula."
+    }
+   }
+  ],
+  "title": "조차/마저 vs 까지"
+ },
+ {
+  "slug": "man-vs-ppun",
+  "pair": [
+   "man",
+   "ppun"
+  ],
+  "text": {
+   "vi": {
+    "summary": "Cả hai đều nghĩa là \"chỉ\". 만 là tiểu từ linh hoạt, gắn vào danh từ ở bất cứ vị trí nào và có thể theo sau bởi tiểu từ khác; 뿐 chủ yếu đứng trước 이다 (N뿐이다) hoặc trong 뿐만 아니라, không đứng trước động từ thường.",
+    "points": [
+     "Trong câu thông thường với động từ: dùng 만 (물만 마셨어요).",
+     "Kết câu \"chỉ có… mà thôi\": N뿐이다 (가진 건 이것뿐이에요) — nghe dứt khoát hơn N만 있어요.",
+     "뿐 không thể đứng ngay trước động từ như 만 (* 물뿐 마셨어요).",
+     "N뿐만 아니라 = \"không chỉ N mà còn\"; 만 không có cấu trúc này.",
+     "만 có thể kết hợp với tiểu từ khác (에서만, 한테만, 만은); 뿐 thì hạn chế."
+    ]
+   },
+   "en": {
+    "summary": "Both mean 'only'. 만 is a flexible particle that attaches to nouns anywhere in the sentence and can stack with other particles; 뿐 mostly comes before 이다 (N뿐이다) or in 뿐만 아니라, not directly before an ordinary verb.",
+    "points": [
+     "In ordinary sentences with a verb, use 만 (물만 마셨어요 'I only drank water').",
+     "To end with 'that's all there is': N뿐이다 (가진 건 이것뿐이에요 'This is all I have') — firmer than N만 있어요.",
+     "뿐 can't sit directly before a verb the way 만 can (* 물뿐 마셨어요).",
+     "N뿐만 아니라 = 'not only N but also'; 만 has no such pattern.",
+     "만 combines with other particles (에서만, 한테만, 만은); 뿐 is much more limited."
+    ]
+   },
+   "ja": {
+    "summary": "どちらも「～だけ」ですが、만 は文中のどこでも名詞に付けられ、他の助詞とも組み合わせられる柔軟な助詞です。뿐 は主に 이다 の前（N뿐이다「Nだけだ」）や 뿐만 아니라 の形で使い、普通の動詞の直前には来ません。",
+    "points": [
+     "動詞のある普通の文では 만 を使います（물만 마셨어요「水だけ飲みました」）。",
+     "「～だけだ（それしかない）」と言い切るときは N뿐이다（가진 건 이것뿐이에요「持っているのはこれだけです」）。N만 있어요 より断定的です。",
+     "뿐 は 만 のように動詞の直前には置けません（* 물뿐 마셨어요）。",
+     "N뿐만 아니라 は「Nだけでなく」。만 にはこの構文がありません。",
+     "만 は他の助詞と組み合わせられます（에서만・한테만・만은）が、뿐 はかなり制限されます。"
+    ]
+   },
+   "id": {
+    "summary": "Keduanya berarti \"hanya\". 만 adalah partikel luwes yang melekat pada kata benda di posisi mana pun dan bisa digabung dengan partikel lain; 뿐 terutama muncul sebelum 이다 (N뿐이다) atau dalam 뿐만 아니라, tidak langsung sebelum kata kerja biasa.",
+    "points": [
+     "Dalam kalimat biasa dengan kata kerja, pakai 만 (물만 마셨어요 'Saya hanya minum air').",
+     "Untuk menutup kalimat \"hanya itu saja\": N뿐이다 (가진 건 이것뿐이에요 'Yang saya punya hanya ini') — lebih tegas daripada N만 있어요.",
+     "뿐 tidak bisa langsung di depan kata kerja seperti 만 (* 물뿐 마셨어요).",
+     "N뿐만 아니라 = \"bukan hanya N, tetapi juga\"; 만 tidak punya pola ini.",
+     "만 bisa digabung dengan partikel lain (에서만, 한테만, 만은); 뿐 jauh lebih terbatas."
+    ]
+   }
+  },
+  "examples": [
+   {
+    "ko": "어제는 하루 종일 물만 마셨어요.",
+    "use": "man",
+    "tr": {
+     "vi": "Hôm qua cả ngày tôi chỉ uống nước.",
+     "en": "Yesterday I drank nothing but water all day.",
+     "ja": "昨日は一日中水だけ飲みました。",
+     "id": "Kemarin seharian saya hanya minum air."
+    }
+   },
+   {
+    "ko": "제가 믿을 수 있는 사람은 당신뿐이에요.",
+    "use": "ppun",
+    "tr": {
+     "vi": "Người tôi có thể tin chỉ có mình anh thôi.",
+     "en": "You're the only one I can trust.",
+     "ja": "私が信じられるのはあなただけです。",
+     "id": "Orang yang bisa saya percaya hanya kamu."
+    }
+   },
+   {
+    "ko": "* 어제는 하루 종일 물뿐 마셨어요.",
+    "use": "ppun",
+    "tr": {
+     "vi": "Hôm qua cả ngày tôi chỉ uống nước. [Sai: 'ppun' không đứng ngay trước động từ thường, phải dùng 'man']",
+     "en": "Yesterday I only drank water. [Wrong: 'ppun' can't go right before an ordinary verb; use 'man']",
+     "ja": "昨日は一日中水だけ飲みました。［誤り：「ppun」は普通の動詞の直前に置けない。「man」を使う］",
+     "id": "Kemarin saya hanya minum air. [Salah: 'ppun' tidak bisa langsung sebelum kata kerja biasa; pakai 'man']"
+    }
+   },
+   {
+    "ko": "지금 가진 돈은 이것뿐이에요.",
+    "use": "ppun",
+    "tr": {
+     "vi": "Tiền tôi có bây giờ chỉ có chừng này thôi.",
+     "en": "This is all the money I have right now.",
+     "ja": "今持っているお金はこれだけです。",
+     "id": "Uang yang saya punya sekarang hanya ini."
+    }
+   },
+   {
+    "ko": "이 식당은 주말에만 문을 열어요.",
+    "use": "man",
+    "tr": {
+     "vi": "Quán này chỉ mở cửa vào cuối tuần.",
+     "en": "This restaurant is only open on weekends.",
+     "ja": "この店は週末だけ開いています。",
+     "id": "Restoran ini hanya buka di akhir pekan."
+    }
+   }
+  ]
+ },
+ {
+  "slug": "eumyeon-vs-damyeon",
+  "pair": [
+   "eumyeon",
+   "damyeon"
+  ],
+  "text": {
+   "vi": {
+    "summary": "-(으)면 là điều kiện thông thường, có khả năng xảy ra hoặc mang tính quy luật; -(ㄴ/는)다면 nhấn mạnh giả định, thường là điều khó xảy ra hoặc hoàn toàn tưởng tượng.",
+    "points": [
+     "Quy luật, thói quen, điều kiện thực tế: -(으)면 (봄이 되면 꽃이 펴요).",
+     "Giả định khó xảy ra hoặc trái với thực tế: -다면 tự nhiên hơn (복권에 당첨된다면…, 내가 새라면…).",
+     "Với danh từ: N(이)라면 (내가 너라면 \"nếu tớ là cậu\").",
+     "Dạng: động từ + -ㄴ/는다면, tính từ + -다면, quá khứ -았/었다면.",
+     "Nhiều trường hợp dùng được cả hai; -다면 làm cho câu nghe \"giả sử như\" rõ hơn."
+    ]
+   },
+   "en": {
+    "summary": "-(으)면 is an ordinary condition — likely, real or rule-like; -(ㄴ/는)다면 stresses the hypothetical, often something unlikely or purely imaginary.",
+    "points": [
+     "Rules, habits and realistic conditions: -(으)면 (봄이 되면 꽃이 펴요 'When spring comes, flowers bloom').",
+     "Unlikely or contrary-to-fact assumptions sound more natural with -다면 (복권에 당첨된다면… 'If I won the lottery…', 내가 새라면… 'If I were a bird…').",
+     "With nouns: N(이)라면 (내가 너라면 'if I were you').",
+     "Forms: verb + -ㄴ/는다면, adjective + -다면, past -았/었다면.",
+     "Often both are possible; -다면 makes the 'suppose that…' flavour explicit."
+    ]
+   },
+   "ja": {
+    "summary": "-(으)면 は実現の可能性がある普通の条件や法則的な条件、-(ㄴ/는)다면 は仮定を強調し、起こりにくいことや想像上のことによく使います（「もし～なら」）。",
+    "points": [
+     "法則・習慣・現実的な条件：-(으)면（봄이 되면 꽃이 펴요「春になると花が咲きます」）。",
+     "起こりそうにない仮定や事実に反する仮定は -다면 が自然です（복권에 당첨된다면…「宝くじに当たったら」、내가 새라면…「私が鳥だったら」）。",
+     "名詞には N(이)라면 を使います（내가 너라면「私が君だったら」）。",
+     "形：動詞 + -ㄴ/는다면、形容詞 + -다면、過去 -았/었다면。",
+     "両方使える場合も多く、-다면 を使うと「仮に～としたら」というニュアンスがはっきりします。"
+    ]
+   },
+   "id": {
+    "summary": "-(으)면 adalah syarat biasa — mungkin terjadi, nyata, atau bersifat aturan; -(ㄴ/는)다면 menekankan pengandaian, sering hal yang kecil kemungkinannya atau sepenuhnya khayalan.",
+    "points": [
+     "Aturan, kebiasaan, dan syarat yang realistis: -(으)면 (봄이 되면 꽃이 펴요 'Kalau musim semi tiba, bunga mekar').",
+     "Pengandaian yang kecil kemungkinannya atau berlawanan dengan kenyataan lebih alami dengan -다면 (복권에 당첨된다면… 'Seandainya menang lotre…', 내가 새라면… 'Seandainya aku burung…').",
+     "Dengan kata benda: N(이)라면 (내가 너라면 'kalau aku jadi kamu').",
+     "Bentuk: kata kerja + -ㄴ/는다면, kata sifat + -다면, lampau -았/었다면.",
+     "Sering keduanya bisa; -다면 membuat nuansa \"seandainya\" lebih jelas."
+    ]
+   }
+  },
+  "examples": [
+   {
+    "ko": "봄이 되면 이 길에 벚꽃이 펴요.",
+    "use": "eumyeon",
+    "tr": {
+     "vi": "Cứ sang xuân là con đường này hoa anh đào nở.",
+     "en": "When spring comes, cherry blossoms bloom along this road.",
+     "ja": "春になると、この道に桜が咲きます。",
+     "id": "Kalau musim semi tiba, bunga sakura mekar di jalan ini."
+    }
+   },
+   {
+    "ko": "복권에 당첨된다면 부모님께 집을 사 드리고 싶어요.",
+    "use": "damyeon",
+    "tr": {
+     "vi": "Nếu trúng xổ số, tôi muốn mua nhà cho bố mẹ.",
+     "en": "If I won the lottery, I'd like to buy my parents a house.",
+     "ja": "もし宝くじに当たったら、両親に家を買ってあげたいです。",
+     "id": "Seandainya menang lotre, saya ingin membelikan rumah untuk orang tua."
+    }
+   },
+   {
+    "ko": "내가 새라면 너에게 날아갈 텐데.",
+    "use": "damyeon",
+    "tr": {
+     "vi": "Nếu tớ là chim thì tớ đã bay đến bên cậu rồi.",
+     "en": "If I were a bird, I'd fly to you.",
+     "ja": "僕が鳥だったら君のところへ飛んでいくのに。",
+     "id": "Seandainya aku burung, aku akan terbang menemuimu."
+    }
+   },
+   {
+    "ko": "시간이 있으면 연락 주세요.",
+    "use": "eumyeon",
+    "tr": {
+     "vi": "Nếu có thời gian thì liên lạc với tôi nhé.",
+     "en": "If you have time, get in touch.",
+     "ja": "時間があれば連絡ください。",
+     "id": "Kalau ada waktu, hubungi saya, ya."
+    }
+   },
+   {
+    "ko": "다시 태어난다면 무엇을 하고 싶어요?",
+    "use": "damyeon",
+    "tr": {
+     "vi": "Nếu được sinh ra lần nữa, bạn muốn làm gì?",
+     "en": "If you were born again, what would you want to do?",
+     "ja": "もし生まれ変わったら、何がしたいですか。",
+     "id": "Seandainya terlahir kembali, kamu ingin jadi apa?"
+    }
+   }
+  ]
+ },
+ {
+  "slug": "euryeogo-vs-gi-wihaeseo",
+  "pair": [
+   "euryeogo",
+   "gi-wihaeseo"
+  ],
+  "text": {
+   "vi": {
+    "summary": "Cả hai đều chỉ mục đích \"để\". -(으)려고 là ý định của người nói, mang tính hội thoại và không đi với mệnh lệnh/rủ rê; -기 위해서 nhấn mạnh mục tiêu, trang trọng hơn và đi được với mệnh lệnh, rủ rê, -아야 하다.",
+    "points": [
+     "Vế sau là mệnh lệnh, rủ rê, -아/어야 하다: dùng -기 위해서 (합격하기 위해서 열심히 공부하세요).",
+     "Hội thoại thường ngày nói về ý định của mình: -(으)려고 tự nhiên hơn.",
+     "Với danh từ: N을/를 위해서 (건강을 위해서, 가족을 위해서).",
+     "-(으)려고 còn có nghĩa \"định/sắp\" (-(으)려고 하다), -기 위해서 thì không.",
+     "-기 위해서 không gắn với tính từ (dùng -아/어지기 위해서: 건강해지기 위해서)."
+    ]
+   },
+   "en": {
+    "summary": "Both express purpose ('in order to'). -(으)려고 is the speaker's intention, conversational, and can't be followed by commands/suggestions; -기 위해서 emphasises the goal, is more formal, and works with commands, suggestions and -아야 하다.",
+    "points": [
+     "If the main clause is a command, suggestion or 'must' (-아/어야 하다), use -기 위해서 (합격하기 위해서 열심히 공부하세요).",
+     "In casual talk about your own plans, -(으)려고 sounds more natural.",
+     "With nouns: N을/를 위해서 (건강을 위해서 'for health', 가족을 위해서 'for my family').",
+     "-(으)려고 also means 'plan to / be about to' (-(으)려고 하다); -기 위해서 doesn't.",
+     "-기 위해서 doesn't attach to adjectives; use -아/어지기 위해서 (건강해지기 위해서 'to become healthy')."
+    ]
+   },
+   "ja": {
+    "summary": "どちらも目的「～ために」を表します。-(으)려고 は話し手の意図で会話的、命令・勧誘とは使えません。-기 위해서 は目標を強調するやや改まった表現で、命令・勧誘・-아야 하다 とも使えます。",
+    "points": [
+     "後ろが命令・勧誘・「～なければならない」なら -기 위해서 を使います（합격하기 위해서 열심히 공부하세요）。",
+     "日常会話で自分の意図を話すときは -(으)려고 の方が自然です。",
+     "名詞には N을/를 위해서 を使います（건강을 위해서「健康のために」、가족을 위해서「家族のために」）。",
+     "-(으)려고 には「～しようとする（直前）」の意味（-(으)려고 하다）もありますが、-기 위해서 にはありません。",
+     "-기 위해서 は形容詞には付かないので、-아/어지기 위해서 を使います（건강해지기 위해서）。"
+    ]
+   },
+   "id": {
+    "summary": "Keduanya menyatakan tujuan (\"untuk / agar\"). -(으)려고 adalah niat pembicara, bernada percakapan, dan tidak bisa diikuti perintah/ajakan; -기 위해서 menekankan sasaran, lebih formal, dan bisa dipakai dengan perintah, ajakan, serta -아야 하다.",
+    "points": [
+     "Jika klausa utama berupa perintah, ajakan, atau \"harus\" (-아/어야 하다), pakai -기 위해서 (합격하기 위해서 열심히 공부하세요).",
+     "Dalam obrolan santai tentang niat sendiri, -(으)려고 lebih alami.",
+     "Dengan kata benda: N을/를 위해서 (건강을 위해서 'demi kesehatan', 가족을 위해서 'demi keluarga').",
+     "-(으)려고 juga berarti \"berniat / hampir\" (-(으)려고 하다); -기 위해서 tidak.",
+     "-기 위해서 tidak melekat pada kata sifat; pakai -아/어지기 위해서 (건강해지기 위해서 'agar menjadi sehat')."
+    ]
+   }
+  },
+  "examples": [
+   {
+    "ko": "한국 친구를 사귀려고 언어 교환 모임에 나가요.",
+    "use": "euryeogo",
+    "tr": {
+     "vi": "Tôi tham gia nhóm trao đổi ngôn ngữ để kết bạn với người Hàn.",
+     "en": "I go to a language exchange meetup to make Korean friends.",
+     "ja": "韓国人の友達を作ろうと言語交換の集まりに参加しています。",
+     "id": "Saya ikut pertemuan pertukaran bahasa supaya dapat teman Korea."
+    }
+   },
+   {
+    "ko": "건강을 지키기 위해서 매일 30분씩 걸어야 합니다.",
+    "use": "gi-wihaeseo",
+    "tr": {
+     "vi": "Để giữ gìn sức khỏe, mỗi ngày cần đi bộ 30 phút.",
+     "en": "To stay healthy, you should walk for 30 minutes every day.",
+     "ja": "健康を保つためには毎日30分ずつ歩かなければなりません。",
+     "id": "Untuk menjaga kesehatan, Anda harus berjalan 30 menit setiap hari."
+    }
+   },
+   {
+    "ko": "시험에 합격하기 위해서 열심히 준비하세요.",
+    "use": "gi-wihaeseo",
+    "tr": {
+     "vi": "Hãy chuẩn bị thật kỹ để thi đỗ.",
+     "en": "Prepare hard so you can pass the exam.",
+     "ja": "試験に合格するために、しっかり準備してください。",
+     "id": "Bersiaplah dengan sungguh-sungguh agar lulus ujian."
+    }
+   },
+   {
+    "ko": "* 시험에 합격하려고 열심히 준비하세요.",
+    "use": "euryeogo",
+    "tr": {
+     "vi": "Hãy chuẩn bị kỹ để thi đỗ. [Sai: -(eu)ryeogo không đi với câu mệnh lệnh, phải dùng -gi wihaeseo]",
+     "en": "Prepare hard to pass the exam. [Wrong: -(eu)ryeogo can't be followed by a command; use -gi wihaeseo]",
+     "ja": "試験に合格しようと、しっかり準備してください。［誤り：-(eu)ryeogo の後に命令は来ない。-gi wihaeseo を使う］",
+     "id": "Bersiaplah agar lulus ujian. [Salah: -(eu)ryeogo tidak bisa diikuti perintah; pakai -gi wihaeseo]"
+    }
+   },
+   {
+    "ko": "막 나가려고 하는데 전화가 왔어요.",
+    "use": "euryeogo",
+    "tr": {
+     "vi": "Tôi vừa định đi ra ngoài thì có điện thoại.",
+     "en": "I was just about to head out when the phone rang.",
+     "ja": "ちょうど出かけようとしたら電話がかかってきました。",
+     "id": "Saya baru mau keluar, tiba-tiba ada telepon."
+    }
+   }
+  ]
+ },
+ {
+  "slug": "jamaja-vs-neun-daero",
+  "pair": [
+   "jamaja",
+   "neun-daero"
+  ],
+  "text": {
+   "vi": {
+    "summary": "Cả hai đều là \"ngay khi… thì…\". -자마자 chỉ hai sự việc nối tiếp ngay lập tức, dùng cho cả quá khứ lẫn tương lai, kể cả việc xảy ra ngoài ý muốn; -는 대로 chỉ dùng cho kế hoạch, hành động có chủ ý trong tương lai, thường kèm lời hứa hay yêu cầu.",
+    "points": [
+     "Kể lại chuyện đã xảy ra (về đến nhà là ngủ thiếp đi): dùng -자마자, không dùng -는 대로.",
+     "Hứa hẹn, dặn dò, yêu cầu về tương lai (đến nơi thì liên lạc ngay): -는 대로 rất tự nhiên.",
+     "Vế sau của -는 대로 thường là -(으)ㄹ게요, -(으)세요, -겠습니다.",
+     "Cả hai không gắn -았/었 vào vế trước.",
+     "-는 대로 còn có nghĩa khác: \"theo như\" (말하는 대로 하세요)."
+    ]
+   },
+   "en": {
+    "summary": "Both mean 'as soon as'. -자마자 links two events that follow immediately, in the past or future, even unintended ones; -는 대로 is only for planned, intentional actions in the future, often with a promise or request.",
+    "points": [
+     "Narrating something that already happened (fell asleep as soon as I got home): use -자마자, not -는 대로.",
+     "Promises, instructions and requests about the future (call me as soon as you arrive): -는 대로 is very natural.",
+     "The main clause after -는 대로 is typically -(으)ㄹ게요, -(으)세요 or -겠습니다.",
+     "Neither takes -았/었 in the first clause.",
+     "-는 대로 has another meaning too: 'as / in the way that' (말하는 대로 하세요 'Do as I say')."
+    ]
+   },
+   "ja": {
+    "summary": "どちらも「～するとすぐ」ですが、-자마자 は過去にも未来にも、意図しない出来事にも使える「～するやいなや」、-는 대로 は未来の計画的・意図的な行動にだけ使い、約束や依頼と一緒によく使います。",
+    "points": [
+     "すでに起きたことを話す（家に着くなり寝てしまった）ときは -자마자 を使い、-는 대로 は使えません。",
+     "未来についての約束・指示・依頼（着いたらすぐ連絡する）には -는 대로 がとても自然です。",
+     "-는 대로 の後ろには -(으)ㄹ게요・-(으)세요・-겠습니다 がよく来ます。",
+     "どちらも前節に -았/었 は付けません。",
+     "-는 대로 には「～するとおりに」という別の意味もあります（말하는 대로 하세요）。"
+    ]
+   },
+   "id": {
+    "summary": "Keduanya berarti \"begitu… langsung…\". -자마자 menghubungkan dua kejadian yang berurutan seketika, baik lampau maupun mendatang, termasuk yang tidak disengaja; -는 대로 hanya untuk tindakan terencana dan disengaja di masa depan, sering bersama janji atau permintaan.",
+    "points": [
+     "Menceritakan hal yang sudah terjadi (begitu sampai rumah langsung tertidur): pakai -자마자, bukan -는 대로.",
+     "Janji, instruksi, dan permintaan tentang masa depan (begitu sampai langsung kabari): -는 대로 sangat alami.",
+     "Setelah -는 대로 biasanya muncul -(으)ㄹ게요, -(으)세요, atau -겠습니다.",
+     "Keduanya tidak memakai -았/었 pada klausa pertama.",
+     "-는 대로 juga punya arti lain: \"sesuai dengan\" (말하는 대로 하세요 'Lakukan sesuai yang saya katakan')."
+    ]
+   }
+  },
+  "examples": [
+   {
+    "ko": "집에 도착하자마자 잠이 들었어요.",
+    "use": "jamaja",
+    "tr": {
+     "vi": "Vừa về đến nhà là tôi ngủ thiếp đi.",
+     "en": "I fell asleep as soon as I got home.",
+     "ja": "家に着くなり眠ってしまいました。",
+     "id": "Begitu sampai rumah, saya langsung tertidur."
+    }
+   },
+   {
+    "ko": "공항에 도착하는 대로 연락드릴게요.",
+    "use": "neun-daero",
+    "tr": {
+     "vi": "Đến sân bay là tôi sẽ liên lạc ngay.",
+     "en": "I'll get in touch as soon as I arrive at the airport.",
+     "ja": "空港に着き次第ご連絡します。",
+     "id": "Begitu tiba di bandara, saya akan segera menghubungi Anda."
+    }
+   },
+   {
+    "ko": "* 집에 도착하는 대로 잠이 들었어요.",
+    "use": "neun-daero",
+    "tr": {
+     "vi": "Về đến nhà là ngủ thiếp đi. [Sai: -neun daero không dùng để kể sự việc quá khứ ngoài ý muốn, phải dùng -jamaja]",
+     "en": "I fell asleep as soon as I got home. [Wrong: -neun daero isn't used for unintended past events; use -jamaja]",
+     "ja": "家に着き次第眠ってしまいました。［誤り：-neun daero は過去の意図しない出来事には使えない。-jamaja を使う］",
+     "id": "Begitu sampai rumah saya tertidur. [Salah: -neun daero tidak dipakai untuk kejadian lampau yang tak disengaja; pakai -jamaja]"
+    }
+   },
+   {
+    "ko": "결과가 나오는 대로 알려 주세요.",
+    "use": "neun-daero",
+    "tr": {
+     "vi": "Có kết quả là báo cho tôi ngay nhé.",
+     "en": "Please let me know as soon as the results are out.",
+     "ja": "結果が出次第教えてください。",
+     "id": "Tolong kabari saya begitu hasilnya keluar."
+    }
+   },
+   {
+    "ko": "수업이 끝나자마자 학생들이 교실을 나갔어요.",
+    "use": "jamaja",
+    "tr": {
+     "vi": "Giờ học vừa kết thúc là học sinh ra khỏi lớp ngay.",
+     "en": "As soon as class ended, the students left the room.",
+     "ja": "授業が終わるとすぐ、学生たちは教室を出ていきました。",
+     "id": "Begitu pelajaran selesai, para siswa langsung keluar kelas."
+    }
+   }
+  ]
+ },
+ {
+  "slug": "deon-vs-atdeon",
+  "pair": [
+   "deon",
+   "atdeon"
+  ],
+  "text": {
+   "vi": {
+    "summary": "-던 gợi lại hành động trong quá khứ chưa hoàn thành, đang dở dang hoặc lặp đi lặp lại nhiều lần; -았/었던 gợi lại hành động đã hoàn tất, thường xảy ra một lần hoặc nay đã không còn.",
+    "points": [
+     "Việc đang làm dở: -던 (내가 먹던 빵 = cái bánh tôi đang ăn dở).",
+     "Thói quen lặp lại trong quá khứ: -던 (자주 가던 카페).",
+     "Việc đã xong, trải nghiệm một lần: -았/었던 (작년에 갔던 식당).",
+     "Với tính từ, cả hai đều được; -았/었던 nhấn mạnh trạng thái đó đã kết thúc hẳn (예뻤던 머리).",
+     "So sánh: 읽던 책 = sách đang đọc dở; 읽었던 책 = sách đã đọc xong (trước đây)."
+    ]
+   },
+   "en": {
+    "summary": "-던 recalls a past action that was unfinished, in progress or repeated; -았/었던 recalls a completed past action, often a one-off or something no longer the case.",
+    "points": [
+     "Something left unfinished: -던 (내가 먹던 빵 'the bread I was eating').",
+     "Habits in the past: -던 (자주 가던 카페 'the café I used to go to').",
+     "Completed actions and one-time experiences: -았/었던 (작년에 갔던 식당 'the restaurant I went to last year').",
+     "With adjectives both work; -았/었던 stresses the state is over (예뻤던 머리 'my once-pretty hair').",
+     "Compare: 읽던 책 = a book I was (partway) reading; 읽었던 책 = a book I read (and finished) before."
+    ]
+   },
+   "ja": {
+    "summary": "-던 は過去に途中だった・継続していた・繰り返していた行動を回想し、-았/었던 は完了した過去の行動（一回きりの経験や今はもうないこと）を回想します。",
+    "points": [
+     "途中でやめたこと：-던（내가 먹던 빵「私が食べかけのパン」）。",
+     "過去の習慣的な繰り返し：-던（자주 가던 카페「よく行っていたカフェ」）。",
+     "完了したこと・一回の経験：-았/었던（작년에 갔던 식당「去年行ったレストラン」）。",
+     "形容詞ではどちらも使えますが、-았/었던 はその状態がもう終わったことを強調します（예뻤던 머리）。",
+     "읽던 책 は「読みかけの本」、읽었던 책 は「（以前）読み終えた本」です。"
+    ]
+   },
+   "id": {
+    "summary": "-던 mengingat tindakan masa lalu yang belum selesai, sedang berlangsung, atau berulang; -았/었던 mengingat tindakan masa lalu yang sudah selesai, sering sekali saja atau kini tidak lagi.",
+    "points": [
+     "Hal yang belum selesai: -던 (내가 먹던 빵 'roti yang sedang saya makan tadi').",
+     "Kebiasaan di masa lalu: -던 (자주 가던 카페 'kafe yang dulu sering saya datangi').",
+     "Tindakan yang tuntas dan pengalaman sekali: -았/었던 (작년에 갔던 식당 'restoran yang saya kunjungi tahun lalu').",
+     "Dengan kata sifat keduanya bisa; -았/었던 menekankan keadaan itu sudah berakhir (예뻤던 머리).",
+     "Bandingkan: 읽던 책 = buku yang sedang dibaca (belum selesai); 읽었던 책 = buku yang dulu sudah dibaca."
+    ]
+   }
+  },
+  "examples": [
+   {
+    "ko": "제가 먹던 빵 어디 갔어요?",
+    "use": "deon",
+    "tr": {
+     "vi": "Cái bánh tôi đang ăn dở đâu mất rồi?",
+     "en": "Where did the bread I was eating go?",
+     "ja": "私が食べかけていたパン、どこに行きました？",
+     "id": "Roti yang tadi saya makan ke mana?"
+    }
+   },
+   {
+    "ko": "작년에 갔던 식당에 또 가 보고 싶어요.",
+    "use": "atdeon",
+    "tr": {
+     "vi": "Tôi muốn đến lại nhà hàng đã đi năm ngoái.",
+     "en": "I'd like to go back to the restaurant we went to last year.",
+     "ja": "去年行ったレストランにまた行ってみたいです。",
+     "id": "Saya ingin ke restoran yang kita datangi tahun lalu lagi."
+    }
+   },
+   {
+    "ko": "학생 때 자주 가던 카페가 없어졌어요.",
+    "use": "deon",
+    "tr": {
+     "vi": "Quán cà phê hồi sinh viên tôi hay lui tới đã đóng cửa rồi.",
+     "en": "The café I used to go to as a student has closed down.",
+     "ja": "学生のころよく行っていたカフェがなくなりました。",
+     "id": "Kafe yang dulu sering saya datangi waktu kuliah sudah tutup."
+    }
+   },
+   {
+    "ko": "이건 제가 어렸을 때 살았던 동네예요.",
+    "use": "atdeon",
+    "tr": {
+     "vi": "Đây là khu phố tôi đã sống hồi nhỏ.",
+     "en": "This is the neighbourhood I lived in as a child.",
+     "ja": "ここは私が子どものころに住んでいた町です。",
+     "id": "Ini lingkungan tempat saya tinggal waktu kecil."
+    }
+   },
+   {
+    "ko": "읽던 책을 마저 읽어야겠어요.",
+    "use": "deon",
+    "tr": {
+     "vi": "Tôi phải đọc nốt cuốn sách đang đọc dở.",
+     "en": "I should finish the book I was reading.",
+     "ja": "読みかけの本を最後まで読まなくちゃ。",
+     "id": "Saya harus menyelesaikan buku yang sedang saya baca."
+    }
+   }
+  ]
+ },
+ {
+  "slug": "ge-vs-dorok",
+  "pair": [
+   "ge",
+   "dorok"
+  ],
+  "text": {
+   "vi": {
+    "summary": "Khi chỉ mục đích \"để cho…\", -게 và -도록 gần như thay thế được cho nhau; -게 mang tính khẩu ngữ, -도록 trang trọng hơn. Ngoài ra -도록 còn chỉ mức độ/giới hạn (\"đến mức, cho đến khi\"), còn -게 còn biến tính từ thành trạng từ.",
+    "points": [
+     "Mục đích \"để (người khác/sự việc) có thể…\": cả hai đều được (잘 들리게/들리도록 크게 말해 주세요).",
+     "Văn bản hướng dẫn, thông báo, lời khuyên trang trọng: -도록 (늦지 않도록 주의하십시오); -도록 하다 = \"hãy… cho\".",
+     "Mức độ, thời hạn \"đến mức/đến tận\": chỉ -도록 (밤새도록, 목이 쉬도록).",
+     "Biến tính từ thành trạng từ (맛있게, 예쁘게, 빨리 ~ 빠르게): chỉ -게."
+    ]
+   },
+   "en": {
+    "summary": "For purpose ('so that…'), -게 and -도록 are largely interchangeable; -게 is more colloquial and -도록 more formal. -도록 can also mean 'to the point of / until', while -게 also turns adjectives into adverbs.",
+    "points": [
+     "Purpose 'so that someone/something can…': both work (잘 들리게/들리도록 크게 말해 주세요 'Speak up so we can hear').",
+     "Formal instructions, notices and advice prefer -도록 (늦지 않도록 주의하십시오 'Take care not to be late'); -도록 하다 = 'make sure to…'.",
+     "Degree or time limit ('until / to the point that'): only -도록 (밤새도록 'all night long', 목이 쉬도록 'till I went hoarse').",
+     "Making adverbs from adjectives (맛있게, 예쁘게, 빠르게): only -게."
+    ]
+   },
+   "ja": {
+    "summary": "目的「～ように」を表すとき、-게 と -도록 はほぼ入れ替え可能で、-게 は口語的、-도록 はやや改まった言い方です。さらに -도록 は程度・限度「～ほど・～まで」を表し、-게 は形容詞を副詞化します。",
+    "points": [
+     "「（誰か・何かが）～できるように」という目的：どちらも可（잘 들리게/들리도록 크게 말해 주세요「よく聞こえるように大きな声で話してください」）。",
+     "改まった指示・案内・助言では -도록 が好まれます（늦지 않도록 주의하십시오）。-도록 하다 は「～するようにする」。",
+     "程度・時間の限度「～ほど・～まで」は -도록 だけです（밤새도록「夜通し」、목이 쉬도록「声がかれるほど」）。",
+     "形容詞を副詞にする（맛있게・예쁘게・빠르게）のは -게 だけです。"
+    ]
+   },
+   "id": {
+    "summary": "Untuk tujuan (\"supaya…\"), -게 dan -도록 umumnya bisa saling ganti; -게 lebih lisan, -도록 lebih formal. -도록 juga bisa berarti \"sampai (taraf/waktu)\", sedangkan -게 juga mengubah kata sifat menjadi kata keterangan.",
+    "points": [
+     "Tujuan \"supaya (orang/sesuatu) bisa…\": keduanya bisa (잘 들리게/들리도록 크게 말해 주세요 'Bicaralah keras supaya terdengar').",
+     "Instruksi, pengumuman, dan nasihat formal lebih memakai -도록 (늦지 않도록 주의하십시오 'Harap berhati-hati agar tidak terlambat'); -도록 하다 = \"usahakan…\".",
+     "Taraf atau batas waktu (\"sampai\"): hanya -도록 (밤새도록 'semalaman', 목이 쉬도록 'sampai suara serak').",
+     "Membentuk kata keterangan dari kata sifat (맛있게, 예쁘게, 빠르게): hanya -게."
+    ]
+   }
+  },
+  "examples": [
+   {
+    "ko": "뒤에서도 잘 들리게 크게 말해 주세요.",
+    "use": "ge",
+    "tr": {
+     "vi": "Hãy nói to lên để người ngồi phía sau cũng nghe rõ.",
+     "en": "Please speak up so people at the back can hear.",
+     "ja": "後ろの方でもよく聞こえるように大きな声で話してください。",
+     "id": "Tolong bicara keras supaya yang di belakang juga dengar."
+    }
+   },
+   {
+    "ko": "감기에 걸리지 않도록 주의하십시오.",
+    "use": "dorok",
+    "tr": {
+     "vi": "Xin hãy chú ý để không bị cảm.",
+     "en": "Please take care not to catch a cold.",
+     "ja": "風邪をひかないようにご注意ください。",
+     "id": "Harap berhati-hati agar tidak terkena flu."
+    }
+   },
+   {
+    "ko": "친구와 밤새도록 이야기했어요.",
+    "use": "dorok",
+    "tr": {
+     "vi": "Tôi đã nói chuyện với bạn suốt cả đêm.",
+     "en": "I talked with my friend all night long.",
+     "ja": "友達と夜通し話しました。",
+     "id": "Saya mengobrol dengan teman semalaman."
+    }
+   },
+   {
+    "ko": "맛있게 드세요.",
+    "use": "ge",
+    "tr": {
+     "vi": "Chúc ngon miệng.",
+     "en": "Enjoy your meal.",
+     "ja": "どうぞ召し上がってください。",
+     "id": "Selamat menikmati."
+    }
+   },
+   {
+    "ko": "아이가 잘 수 있게 조용히 해 주세요. / 잘 수 있도록 조용히 해 주세요.",
+    "use": "both",
+    "tr": {
+     "vi": "Hãy giữ yên lặng để em bé ngủ được.",
+     "en": "Please keep quiet so the child can sleep.",
+     "ja": "子どもが眠れるように静かにしてください。",
+     "id": "Tolong tenang supaya anaknya bisa tidur."
+    }
+   }
+  ]
+ },
+ {
+  "slug": "eul-tende-vs-eul-tenikka",
+  "pair": [
+   "eul-tende",
+   "eul-tenikka"
+  ],
+  "text": {
+   "vi": {
+    "summary": "Cả hai đều chứa phỏng đoán chắc chắn của người nói (-(으)ㄹ 터). -(으)ㄹ 텐데 nêu phỏng đoán làm bối cảnh, thường kèm lo lắng, tiếc nuối; -(으)ㄹ 테니까 dùng phỏng đoán hoặc ý định của người nói làm lý do cho lời đề nghị, mệnh lệnh.",
+    "points": [
+     "Lo lắng, quan tâm đến người nghe (\"chắc bạn mệt lắm, …\"): -(으)ㄹ 텐데 (피곤할 텐데 좀 쉬세요).",
+     "Ý định của chính người nói làm điều kiện: chỉ -(으)ㄹ 테니까 (제가 청소할 테니까 요리해 주세요).",
+     "Phỏng đoán làm lý do cho lời khuyên: cả hai đều được (길이 막힐 테니까/텐데 지하철을 타세요).",
+     "-(으)ㄹ 텐데(요) ở cuối câu diễn tả tiếc nuối, ước muốn (시간이 있으면 좋을 텐데).",
+     "-(으)ㄹ 테니까 không đứng cuối câu một mình như -(으)ㄹ 텐데."
+    ]
+   },
+   "en": {
+    "summary": "Both contain the speaker's confident guess (-(으)ㄹ 터). -(으)ㄹ 텐데 sets a guess as background, often with worry or regret; -(으)ㄹ 테니까 uses a guess or the speaker's own intention as the reason for a suggestion or command.",
+    "points": [
+     "Showing concern for the listener ('you must be tired, so…'): -(으)ㄹ 텐데 (피곤할 텐데 좀 쉬세요).",
+     "The speaker's own intention as a condition: only -(으)ㄹ 테니까 (제가 청소할 테니까 요리해 주세요 'I'll clean, so you cook').",
+     "A guess as the reason for advice: both work (길이 막힐 테니까/텐데 지하철을 타세요 'Traffic will be bad, so take the subway').",
+     "Sentence-final -(으)ㄹ 텐데(요) expresses regret or wishing (시간이 있으면 좋을 텐데 'It'd be nice if I had time').",
+     "-(으)ㄹ 테니까 doesn't end a sentence on its own the way -(으)ㄹ 텐데 does."
+    ]
+   },
+   "ja": {
+    "summary": "どちらも話し手の確信のある推測（-(으)ㄹ 터）を含みます。-(으)ㄹ 텐데 は推測を背景として示し、心配や残念な気持ちを伴うことが多く、-(으)ㄹ 테니까 は推測や話し手の意志を理由にして提案・命令をします。",
+    "points": [
+     "相手を気遣う（「疲れているでしょうから…」）：-(으)ㄹ 텐데（피곤할 텐데 좀 쉬세요）。",
+     "話し手自身の意志を条件にする：-(으)ㄹ 테니까 だけです（제가 청소할 테니까 요리해 주세요「私が掃除するから料理してください」）。",
+     "推測を理由に助言する：どちらも可（길이 막힐 테니까/텐데 지하철을 타세요）。",
+     "文末の -(으)ㄹ 텐데(요) は残念な気持ちや願望を表します（시간이 있으면 좋을 텐데「時間があればいいのに」）。",
+     "-(으)ㄹ 테니까 は -(으)ㄹ 텐데 のように単独で文を終えることはありません。"
+    ]
+   },
+   "id": {
+    "summary": "Keduanya mengandung dugaan kuat pembicara (-(으)ㄹ 터). -(으)ㄹ 텐데 menjadikan dugaan sebagai latar, sering dengan rasa khawatir atau sesal; -(으)ㄹ 테니까 memakai dugaan atau niat pembicara sebagai alasan untuk saran atau perintah.",
+    "points": [
+     "Menunjukkan perhatian kepada lawan bicara (\"kamu pasti capek, jadi…\"): -(으)ㄹ 텐데 (피곤할 텐데 좀 쉬세요).",
+     "Niat pembicara sendiri sebagai syarat: hanya -(으)ㄹ 테니까 (제가 청소할 테니까 요리해 주세요 'Saya yang bersih-bersih, kamu yang masak').",
+     "Dugaan sebagai alasan nasihat: keduanya bisa (길이 막힐 테니까/텐데 지하철을 타세요 'Pasti macet, naik kereta saja').",
+     "-(으)ㄹ 텐데(요) di akhir kalimat menyatakan sesal atau harapan (시간이 있으면 좋을 텐데 'Andai saja ada waktu').",
+     "-(으)ㄹ 테니까 tidak bisa menutup kalimat sendirian seperti -(으)ㄹ 텐데."
+    ]
+   }
+  },
+  "examples": [
+   {
+    "ko": "많이 피곤할 텐데 오늘은 일찍 쉬세요.",
+    "use": "eul-tende",
+    "tr": {
+     "vi": "Chắc bạn mệt lắm, hôm nay nghỉ sớm đi.",
+     "en": "You must be exhausted — get some rest early tonight.",
+     "ja": "きっとお疲れでしょうから、今日は早めに休んでください。",
+     "id": "Kamu pasti capek sekali, hari ini istirahat lebih awal, ya."
+    }
+   },
+   {
+    "ko": "제가 청소할 테니까 당신은 요리 좀 해 줘요.",
+    "use": "eul-tenikka",
+    "tr": {
+     "vi": "Anh sẽ dọn dẹp, em nấu ăn nhé.",
+     "en": "I'll do the cleaning, so you do the cooking.",
+     "ja": "僕が掃除するから、君は料理をお願い。",
+     "id": "Aku yang bersih-bersih, kamu yang masak, ya."
+    }
+   },
+   {
+    "ko": "퇴근 시간이라 길이 막힐 테니까 지하철을 타세요.",
+    "use": "eul-tenikka",
+    "tr": {
+     "vi": "Giờ tan tầm chắc sẽ tắc đường, nên đi tàu điện ngầm đi.",
+     "en": "It's rush hour, so the roads will be jammed — take the subway.",
+     "ja": "退勤時間で道が混むでしょうから、地下鉄に乗ってください。",
+     "id": "Jam pulang kantor pasti macet, jadi naik kereta bawah tanah saja."
+    }
+   },
+   {
+    "ko": "돈이 많으면 좋을 텐데.",
+    "use": "eul-tende",
+    "tr": {
+     "vi": "Giá mà có nhiều tiền thì tốt biết mấy.",
+     "en": "I wish I had lots of money.",
+     "ja": "お金がたくさんあればいいのになあ。",
+     "id": "Andai saja punya banyak uang."
+    }
+   },
+   {
+    "ko": "일찍 왔으면 그 사람을 만났을 텐데 아쉽네요.",
+    "use": "eul-tende",
+    "tr": {
+     "vi": "Nếu đến sớm thì đã gặp được người đó rồi, tiếc thật.",
+     "en": "If you'd come earlier, you would have met them — what a shame.",
+     "ja": "早く来ていたらその人に会えたのに、残念ですね。",
+     "id": "Kalau datang lebih awal, kamu pasti sudah bertemu dia. Sayang sekali."
+    }
+   }
+  ]
+ },
+ {
+  "slug": "a-beorida-vs-go-malda",
+  "pair": [
+   "a-beorida",
+   "go-malda"
+  ],
+  "text": {
+   "vi": {
+    "summary": "Cả hai đều diễn tả việc đã xảy ra trọn vẹn. -아/어 버리다 nhấn vào sự hoàn tất, có thể kèm cảm giác nhẹ nhõm hoặc tiếc nuối; -고 말다 nhấn vào việc cuối cùng điều không mong muốn vẫn xảy ra (dù đã cố tránh), hoặc quyết tâm \"nhất định phải…\".",
+    "points": [
+     "Làm xong hẳn và thấy nhẹ nhõm: -아/어 버리다 (숙제를 다 해 버렸어요).",
+     "Cuối cùng thì (đáng tiếc) đã xảy ra, dù đã cố gắng: -고 말다 (참으려고 했지만 울고 말았어요).",
+     "Quyết tâm mạnh với tương lai: -고 말겠다 (꼭 합격하고 말겠어요); -아/어 버리다 không có nghĩa này.",
+     "-아/어 버리다 dùng được cho hành động cố ý, dứt khoát (그냥 가 버렸어요), nghe khẩu ngữ hơn; -고 말다 hay dùng trong văn viết, kể chuyện."
+    ]
+   },
+   "en": {
+    "summary": "Both say something happened completely. -아/어 버리다 stresses completion, possibly with relief or regret; -고 말다 stresses that something undesirable finally happened (despite efforts), or a firm resolve to 'definitely do it'.",
+    "points": [
+     "Completely done, with relief: -아/어 버리다 (숙제를 다 해 버렸어요 'I got all my homework done').",
+     "It finally (regrettably) happened despite trying not to: -고 말다 (참으려고 했지만 울고 말았어요 'I tried to hold it in, but I ended up crying').",
+     "Strong resolve about the future: -고 말겠다 (꼭 합격하고 말겠어요 'I'll pass no matter what'); -아/어 버리다 has no such use.",
+     "-아/어 버리다 can describe a deliberate, decisive action (그냥 가 버렸어요 'just went off') and is more colloquial; -고 말다 is common in writing and storytelling."
+    ]
+   },
+   "ja": {
+    "summary": "どちらも「～してしまう」ですが、-아/어 버리다 は完了を強調し、すっきりした気持ちや残念な気持ちを伴います。-고 말다 は（避けようとしたのに）望まないことが結局起きてしまったこと、または「必ず～してみせる」という強い決意を表します。",
+    "points": [
+     "すっかり終えてすっきり：-아/어 버리다（숙제를 다 해 버렸어요「宿題を全部やってしまいました」）。",
+     "努力したのに結局（残念ながら）そうなった：-고 말다（참으려고 했지만 울고 말았어요「我慢しようとしたけれど泣いてしまいました」）。",
+     "未来への強い決意：-고 말겠다（꼭 합격하고 말겠어요「必ず合格してみせます」）。-아/어 버리다 にはこの用法がありません。",
+     "-아/어 버리다 は意図的で思い切った行動（그냥 가 버렸어요「さっさと行ってしまった」）にも使え、口語的です。-고 말다 は書き言葉や物語でよく使われます。"
+    ]
+   },
+   "id": {
+    "summary": "Keduanya menyatakan sesuatu terjadi sepenuhnya. -아/어 버리다 menekankan tuntasnya tindakan, bisa dengan rasa lega atau menyesal; -고 말다 menekankan bahwa hal yang tidak diinginkan akhirnya terjadi (meski sudah berusaha), atau tekad kuat \"pasti akan…\".",
+    "points": [
+     "Selesai tuntas dan merasa lega: -아/어 버리다 (숙제를 다 해 버렸어요 'PR saya sudah beres semua').",
+     "Akhirnya (sayangnya) terjadi juga meski sudah berusaha: -고 말다 (참으려고 했지만 울고 말았어요 'Saya mencoba menahan, tapi akhirnya menangis juga').",
+     "Tekad kuat untuk masa depan: -고 말겠다 (꼭 합격하고 말겠어요 'Saya pasti akan lulus'); -아/어 버리다 tidak punya arti ini.",
+     "-아/어 버리다 bisa untuk tindakan sengaja dan tegas (그냥 가 버렸어요 'langsung pergi begitu saja') dan lebih lisan; -고 말다 sering dalam tulisan dan cerita."
+    ]
+   }
+  },
+  "examples": [
+   {
+    "ko": "밀린 숙제를 오늘 다 해 버렸어요.",
+    "use": "a-beorida",
+    "tr": {
+     "vi": "Hôm nay tôi làm xong hết đống bài tập tồn đọng rồi.",
+     "en": "I got all my backlog of homework done today.",
+     "ja": "たまっていた宿題を今日全部やってしまいました。",
+     "id": "Hari ini PR yang menumpuk sudah saya bereskan semua."
+    }
+   },
+   {
+    "ko": "참으려고 했지만 결국 울고 말았어요.",
+    "use": "go-malda",
+    "tr": {
+     "vi": "Tôi đã cố kìm nén nhưng rốt cuộc vẫn bật khóc.",
+     "en": "I tried to hold back, but in the end I burst into tears.",
+     "ja": "我慢しようとしたけれど、結局泣いてしまいました。",
+     "id": "Saya sudah berusaha menahan, tapi akhirnya menangis juga."
+    }
+   },
+   {
+    "ko": "이번 시험에는 꼭 합격하고 말겠어요.",
+    "use": "go-malda",
+    "tr": {
+     "vi": "Kỳ thi lần này tôi nhất định phải đỗ.",
+     "en": "I'm going to pass this exam no matter what.",
+     "ja": "今度の試験には必ず合格してみせます。",
+     "id": "Ujian kali ini saya pasti akan lulus."
+    }
+   },
+   {
+    "ko": "동생이 내 케이크를 다 먹어 버렸어요.",
+    "use": "a-beorida",
+    "tr": {
+     "vi": "Em tôi ăn sạch cái bánh của tôi mất rồi.",
+     "en": "My little sister ate my whole cake.",
+     "ja": "妹が私のケーキを全部食べてしまいました。",
+     "id": "Adik saya menghabiskan kue saya."
+    }
+   },
+   {
+    "ko": "기다리다가 화가 나서 그냥 가 버렸어요.",
+    "use": "a-beorida",
+    "tr": {
+     "vi": "Chờ mãi bực quá nên tôi bỏ về luôn.",
+     "en": "I got fed up waiting, so I just left.",
+     "ja": "待っているうちに腹が立って、そのまま帰ってしまいました。",
+     "id": "Kesal menunggu, saya langsung pergi saja."
+    }
+   }
+  ]
+ },
+ {
+  "slug": "gi-ilssu-vs-gi-sipsang",
+  "pair": [
+   "gi-ilssu",
+   "gi-sipsang"
+  ],
+  "text": {
+   "vi": {
+    "summary": "Cả hai đều nói về chuyện tiêu cực. -기 일쑤이다 là \"thường xuyên, hay bị\" — mô tả thói quen xấu đã thực sự lặp lại; -기 십상이다 là \"rất dễ bị, dễ dẫn đến\" — dự đoán, cảnh báo về kết quả có khả năng xảy ra.",
+    "points": [
+     "Nói về điều đã/đang lặp lại thường xuyên: -기 일쑤이다 (지각하기 일쑤예요).",
+     "Cảnh báo rằng nếu cứ thế thì dễ gặp chuyện: -기 십상이다 (무리하면 병나기 십상이에요).",
+     "-기 십상이다 thường đi với vế điều kiện -(으)면 hoặc trạng từ như 그렇게.",
+     "Cả hai chỉ dùng cho kết quả xấu, không dùng cho điều tích cực.",
+     "Cả hai đều là cách nói hơi trang trọng, hay gặp trong TOPIK II và văn viết."
+    ]
+   },
+   "en": {
+    "summary": "Both describe negative things. -기 일쑤이다 means 'often ends up…' — a bad pattern that actually keeps happening; -기 십상이다 means 'is very likely to…' — a prediction or warning about a probable outcome.",
+    "points": [
+     "For something that has been happening repeatedly: -기 일쑤이다 (지각하기 일쑤예요 'He's late all the time').",
+     "For warning that something will easily happen if this goes on: -기 십상이다 (무리하면 병나기 십상이에요 'If you overdo it, you'll likely get sick').",
+     "-기 십상이다 often follows a condition with -(으)면 or words like 그렇게 'like that'.",
+     "Both are only for undesirable results, never positive ones.",
+     "Both are somewhat formal and appear often in TOPIK II and written Korean."
+    ]
+   },
+   "ja": {
+    "summary": "どちらも好ましくないことに使います。-기 일쑤이다 は「しょっちゅう～する」と、実際に繰り返されている悪い習慣を述べ、-기 십상이다 は「～しがちだ・～しやすい」と、起こりそうな結果を予測・警告します。",
+    "points": [
+     "実際に何度も起きていること：-기 일쑤이다（지각하기 일쑤예요「遅刻してばかりです」）。",
+     "このままだと簡単にそうなるという警告：-기 십상이다（무리하면 병나기 십상이에요「無理をすると病気になりやすいです」）。",
+     "-기 십상이다 は -(으)면 の条件節や 그렇게 などと一緒によく使われます。",
+     "どちらも望ましくない結果にだけ使い、良いことには使いません。",
+     "どちらもやや改まった表現で、TOPIK II や書き言葉でよく見られます。"
+    ]
+   },
+   "id": {
+    "summary": "Keduanya untuk hal negatif. -기 일쑤이다 berarti \"sering sekali…\" — pola buruk yang memang terus terjadi; -기 십상이다 berarti \"besar kemungkinan…\" — dugaan atau peringatan tentang hasil yang mungkin terjadi.",
+    "points": [
+     "Untuk hal yang sudah berulang kali terjadi: -기 일쑤이다 (지각하기 일쑤예요 'Dia sering sekali terlambat').",
+     "Untuk memperingatkan bahwa sesuatu mudah terjadi kalau terus begini: -기 십상이다 (무리하면 병나기 십상이에요 'Kalau memaksakan diri, gampang jatuh sakit').",
+     "-기 십상이다 sering didahului syarat -(으)면 atau kata seperti 그렇게 'begitu'.",
+     "Keduanya hanya untuk hasil yang tidak diinginkan, bukan hal positif.",
+     "Keduanya agak formal dan sering muncul di TOPIK II serta bahasa tulis."
+    ]
+   }
+  },
+  "examples": [
+   {
+    "ko": "그 친구는 늦잠을 자서 지각하기 일쑤예요.",
+    "use": "gi-ilssu",
+    "tr": {
+     "vi": "Cậu bạn đó hay ngủ dậy muộn nên thường xuyên đi trễ.",
+     "en": "That friend oversleeps and is late all the time.",
+     "ja": "あの友達は寝坊して遅刻してばかりです。",
+     "id": "Teman itu sering kesiangan, jadi sering sekali terlambat."
+    }
+   },
+   {
+    "ko": "그렇게 무리하면 병나기 십상이에요.",
+    "use": "gi-sipsang",
+    "tr": {
+     "vi": "Cứ làm quá sức như thế thì dễ đổ bệnh lắm.",
+     "en": "If you push yourself that hard, you're likely to get sick.",
+     "ja": "そんなに無理をすると病気になりやすいですよ。",
+     "id": "Kalau memaksakan diri seperti itu, gampang jatuh sakit."
+    }
+   },
+   {
+    "ko": "요즘 너무 바빠서 점심을 거르기 일쑤예요.",
+    "use": "gi-ilssu",
+    "tr": {
+     "vi": "Dạo này bận quá nên tôi hay bỏ bữa trưa.",
+     "en": "I've been so busy lately that I skip lunch all the time.",
+     "ja": "最近忙しすぎて、昼ご飯を抜いてばかりです。",
+     "id": "Akhir-akhir ini terlalu sibuk, jadi sering sekali melewatkan makan siang."
+    }
+   },
+   {
+    "ko": "서두르면 실수하기 십상입니다.",
+    "use": "gi-sipsang",
+    "tr": {
+     "vi": "Vội vàng thì rất dễ mắc lỗi.",
+     "en": "If you rush, you're bound to make mistakes.",
+     "ja": "急ぐとミスをしがちです。",
+     "id": "Kalau terburu-buru, gampang sekali melakukan kesalahan."
+    }
+   },
+   {
+    "ko": "겨울에 얇게 입고 다니면 감기에 걸리기 십상이에요.",
+    "use": "gi-sipsang",
+    "tr": {
+     "vi": "Mùa đông mà mặc phong phanh ra ngoài thì dễ bị cảm lắm.",
+     "en": "If you go around in thin clothes in winter, you'll easily catch a cold.",
+     "ja": "冬に薄着で出歩くと風邪をひきやすいです。",
+     "id": "Kalau musim dingin keluar pakai baju tipis, gampang kena flu."
+    }
+   }
+  ]
+ },
+ {
+  "slug": "geodeunyo-vs-janayo",
+  "pair": [
+   "geodeunyo",
+   "janayo"
+  ],
+  "text": {
+   "vi": {
+    "summary": "Cả hai đều dùng để giải thích, nêu lý do ở cuối câu. -거든요 đưa ra thông tin/lý do mà người nghe chưa biết; -잖아요 nhắc lại điều người nghe đã biết hoặc lẽ ra phải biết (\"thì… mà\").",
+    "points": [
+     "Giải thích lý do người nghe không biết: -거든요 (아까 많이 먹었거든요).",
+     "Nhắc điều cả hai đều biết, tìm sự đồng tình: -잖아요 (내일 주말이잖아요).",
+     "-잖아요 có thể nghe như trách móc (제가 말했잖아요! \"Tôi đã bảo rồi mà!\"), nên cẩn thận với người trên.",
+     "-거든요 còn dùng để mở đầu câu chuyện, chờ người nghe phản ứng (제가 요즘 요가를 배우거든요. 그런데…).",
+     "Cả hai đều không dùng ở câu hỏi."
+    ]
+   },
+   "en": {
+    "summary": "Both explain or give a reason at the end of a sentence. -거든요 offers information or a reason the listener doesn't know; -잖아요 reminds the listener of something they already know or should know ('…, you know').",
+    "points": [
+     "Explaining a reason the listener doesn't know: -거든요 (아까 많이 먹었거든요 'I ate a lot earlier, you see').",
+     "Pointing to shared knowledge, seeking agreement: -잖아요 (내일 주말이잖아요 'Tomorrow's the weekend, you know').",
+     "-잖아요 can sound reproachful (제가 말했잖아요! 'I told you!'), so be careful with superiors.",
+     "-거든요 also opens a story and invites a reaction (제가 요즘 요가를 배우거든요. 그런데… 'So I've been learning yoga lately, and…').",
+     "Neither is used in questions."
+    ]
+   },
+   "ja": {
+    "summary": "どちらも文末で説明や理由を述べますが、-거든요 は聞き手が知らない情報・理由「～んですよ」を伝え、-잖아요 は聞き手もすでに知っている（知っているはずの）ことを思い出させる「～じゃないですか」です。",
+    "points": [
+     "相手が知らない理由を説明する：-거든요（아까 많이 먹었거든요「さっきたくさん食べたんですよ」）。",
+     "共通の知識を持ち出して同意を求める：-잖아요（내일 주말이잖아요「明日は週末じゃないですか」）。",
+     "-잖아요 は責めるように聞こえることがあるので（제가 말했잖아요!「言ったじゃないですか！」）、目上の人には注意が必要です。",
+     "-거든요 は話を切り出して相手の反応を待つときにも使います（제가 요즘 요가를 배우거든요. 그런데…「最近ヨガを習っているんですけど…」）。",
+     "どちらも疑問文には使いません。"
+    ]
+   },
+   "id": {
+    "summary": "Keduanya dipakai di akhir kalimat untuk menjelaskan atau memberi alasan. -거든요 memberikan informasi atau alasan yang belum diketahui lawan bicara; -잖아요 mengingatkan hal yang sudah atau seharusnya diketahui lawan bicara (\"…kan\").",
+    "points": [
+     "Menjelaskan alasan yang tidak diketahui lawan bicara: -거든요 (아까 많이 먹었거든요 'Soalnya tadi saya sudah makan banyak').",
+     "Merujuk pengetahuan bersama, mencari persetujuan: -잖아요 (내일 주말이잖아요 'Besok kan akhir pekan').",
+     "-잖아요 bisa terdengar menyalahkan (제가 말했잖아요! 'Saya kan sudah bilang!'), jadi hati-hati dengan atasan.",
+     "-거든요 juga dipakai untuk membuka cerita dan menunggu tanggapan (제가 요즘 요가를 배우거든요. 그런데… 'Saya lagi belajar yoga nih. Terus…').",
+     "Keduanya tidak dipakai dalam kalimat tanya."
+    ]
+   }
+  },
+  "examples": [
+   {
+    "ko": "왜 안 먹어요? — 아까 많이 먹었거든요.",
+    "use": "geodeunyo",
+    "tr": {
+     "vi": "Sao bạn không ăn? — Tại lúc nãy tôi ăn nhiều rồi.",
+     "en": "Why aren't you eating? — I ate a lot earlier, you see.",
+     "ja": "どうして食べないんですか。— さっきたくさん食べたんですよ。",
+     "id": "Kenapa tidak makan? — Soalnya tadi sudah makan banyak."
+    }
+   },
+   {
+    "ko": "오늘은 늦잠 자도 돼요. 내일 주말이잖아요.",
+    "use": "janayo",
+    "tr": {
+     "vi": "Hôm nay ngủ muộn cũng được. Mai là cuối tuần mà.",
+     "en": "You can sleep in today. Tomorrow's the weekend, you know.",
+     "ja": "今日は寝坊してもいいですよ。明日は週末じゃないですか。",
+     "id": "Hari ini boleh bangun siang. Besok kan akhir pekan."
+    }
+   },
+   {
+    "ko": "그러니까 우산 가져가라고 제가 말했잖아요!",
+    "use": "janayo",
+    "tr": {
+     "vi": "Thấy chưa, tôi đã bảo mang ô theo rồi mà!",
+     "en": "See? I told you to take an umbrella!",
+     "ja": "だから傘を持って行けって言ったじゃないですか！",
+     "id": "Tuh kan, saya sudah bilang bawa payung!"
+    }
+   },
+   {
+    "ko": "제가 요즘 요가를 배우거든요. 그런데 생각보다 어려워요.",
+    "use": "geodeunyo",
+    "tr": {
+     "vi": "Dạo này tôi đang học yoga. Mà nó khó hơn tôi nghĩ.",
+     "en": "So I've been learning yoga lately. It's harder than I thought.",
+     "ja": "最近ヨガを習っているんですよ。でも思ったより難しいです。",
+     "id": "Akhir-akhir ini saya belajar yoga. Ternyata lebih susah dari dugaan."
+    }
+   },
+   {
+    "ko": "이번 주는 못 만나요. 출장을 가거든요.",
+    "use": "geodeunyo",
+    "tr": {
+     "vi": "Tuần này không gặp được đâu. Tôi đi công tác.",
+     "en": "I can't meet this week — I'm going on a business trip.",
+     "ja": "今週は会えません。出張に行くんですよ。",
+     "id": "Minggu ini tidak bisa ketemu. Soalnya saya dinas ke luar kota."
+    }
+   }
+  ]
+ },
+ {
+  "slug": "a-itda-vs-a-nota",
+  "pair": [
+   "a-itda",
+   "a-nota"
+  ],
+  "text": {
+   "vi": {
+    "summary": "Cả hai đều chỉ trạng thái kết quả còn lưu lại. -아/어 있다 đi với nội động từ/bị động và chỉ mô tả trạng thái; -아/어 놓다 (hoặc -아/어 두다) đi với tha động từ, nhấn mạnh ai đó đã làm sẵn và giữ nguyên kết quả, thường có mục đích.",
+    "points": [
+     "Mô tả trạng thái (không nói ai làm): nội động từ/bị động + -아/어 있다 (문이 열려 있어요).",
+     "Nói ai đó đã làm trước và để nguyên: tha động từ + -아/어 놓다 (제가 문을 열어 놓았어요).",
+     "Chuẩn bị sẵn cho việc sau: -아/어 놓다/두다 (손님이 오기 전에 음식을 만들어 놓았어요).",
+     "Cặp hay gặp: 열어 놓다 ↔ 열려 있다, 켜 놓다 ↔ 켜져 있다, 걸어 놓다 ↔ 걸려 있다.",
+     "-아/어 놓다 đi với 을/를 (tân ngữ); -아/어 있다 đi với 이/가 (chủ ngữ)."
+    ]
+   },
+   "en": {
+    "summary": "Both describe a resulting state that remains. -아/어 있다 goes with intransitive/passive verbs and simply describes the state; -아/어 놓다 (or -아/어 두다) goes with transitive verbs and stresses that someone did it in advance and left it that way, usually on purpose.",
+    "points": [
+     "Describing a state (without saying who did it): intransitive/passive + -아/어 있다 (문이 열려 있어요 'The door is open').",
+     "Saying someone did it and left it: transitive + -아/어 놓다 (제가 문을 열어 놓았어요 'I left the door open').",
+     "Preparing something in advance for later: -아/어 놓다/두다 (손님이 오기 전에 음식을 만들어 놓았어요).",
+     "Common pairs: 열어 놓다 ↔ 열려 있다, 켜 놓다 ↔ 켜져 있다, 걸어 놓다 ↔ 걸려 있다.",
+     "-아/어 놓다 takes an object with 을/를; -아/어 있다 takes a subject with 이/가."
+    ]
+   },
+   "ja": {
+    "summary": "どちらも結果の状態が残っていることを表します。-아/어 있다 は自動詞・受け身の動詞と使い、状態をそのまま描写します。-아/어 놓다（-아/어 두다）は他動詞と使い、誰かが前もってそうしてその状態を保っていること（多くは意図的）を表します。",
+    "points": [
+     "状態の描写（誰がしたかは言わない）：自動詞・受け身 + -아/어 있다（문이 열려 있어요「ドアが開いています」）。",
+     "誰かがしてそのままにしてある：他動詞 + -아/어 놓다（제가 문을 열어 놓았어요「私がドアを開けておきました」）。",
+     "後のために準備しておく：-아/어 놓다/두다（손님이 오기 전에 음식을 만들어 놓았어요）。",
+     "よく出るペア：열어 놓다 ↔ 열려 있다、켜 놓다 ↔ 켜져 있다、걸어 놓다 ↔ 걸려 있다。",
+     "-아/어 놓다 は目的語に 을/를、-아/어 있다 は主語に 이/가 を取ります。"
+    ]
+   },
+   "id": {
+    "summary": "Keduanya menunjukkan keadaan hasil yang bertahan. -아/어 있다 dipakai dengan kata kerja intransitif/pasif dan hanya menggambarkan keadaan; -아/어 놓다 (atau -아/어 두다) dipakai dengan kata kerja transitif dan menekankan bahwa seseorang sudah melakukannya lebih dulu dan membiarkannya begitu, biasanya dengan sengaja.",
+    "points": [
+     "Menggambarkan keadaan (tanpa menyebut pelaku): intransitif/pasif + -아/어 있다 (문이 열려 있어요 'Pintunya terbuka').",
+     "Menyatakan seseorang melakukannya lalu membiarkannya: transitif + -아/어 놓다 (제가 문을 열어 놓았어요 'Saya membiarkan pintu terbuka').",
+     "Menyiapkan sesuatu untuk nanti: -아/어 놓다/두다 (손님이 오기 전에 음식을 만들어 놓았어요).",
+     "Pasangan umum: 열어 놓다 ↔ 열려 있다, 켜 놓다 ↔ 켜져 있다, 걸어 놓다 ↔ 걸려 있다.",
+     "-아/어 놓다 memakai objek dengan 을/를; -아/어 있다 memakai subjek dengan 이/가."
+    ]
+   }
+  },
+  "examples": [
+   {
+    "ko": "교실 창문이 열려 있어요.",
+    "use": "a-itda",
+    "tr": {
+     "vi": "Cửa sổ lớp học đang mở.",
+     "en": "The classroom window is open.",
+     "ja": "教室の窓が開いています。",
+     "id": "Jendela kelasnya terbuka."
+    }
+   },
+   {
+    "ko": "환기하려고 제가 창문을 열어 놓았어요.",
+    "use": "a-nota",
+    "tr": {
+     "vi": "Tôi đã mở sẵn cửa sổ để cho thoáng khí.",
+     "en": "I left the window open to air the room.",
+     "ja": "換気しようと思って、私が窓を開けておきました。",
+     "id": "Saya sengaja membuka jendela supaya ada udara segar."
+    }
+   },
+   {
+    "ko": "손님이 오기 전에 음식을 만들어 놓았어요.",
+    "use": "a-nota",
+    "tr": {
+     "vi": "Tôi đã nấu sẵn đồ ăn trước khi khách đến.",
+     "en": "I made the food before the guests arrived.",
+     "ja": "お客さんが来る前に料理を作っておきました。",
+     "id": "Saya sudah menyiapkan makanan sebelum tamu datang."
+    }
+   },
+   {
+    "ko": "벽에 가족사진이 걸려 있어요.",
+    "use": "a-itda",
+    "tr": {
+     "vi": "Trên tường có treo ảnh gia đình.",
+     "en": "A family photo is hanging on the wall.",
+     "ja": "壁に家族写真が掛かっています。",
+     "id": "Di dinding tergantung foto keluarga."
+    }
+   },
+   {
+    "ko": "* 창문이 열어 놓았어요.",
+    "use": "a-nota",
+    "tr": {
+     "vi": "Cửa sổ đã được mở. [Sai: -a/eo nota cần tân ngữ (người làm mở cửa sổ); muốn tả trạng thái thì dùng dạng bị động + -a/eo itda]",
+     "en": "The window has been opened. [Wrong: -a/eo nota needs an object (someone opened the window); to describe the state, use the passive verb + -a/eo itda]",
+     "ja": "窓が開けておきました。［誤り：-a/eo nota には目的語が必要（誰かが窓を開けた）。状態を言うなら受け身の動詞 + -a/eo itda を使う］",
+     "id": "Jendelanya sudah dibuka. [Salah: -a/eo nota butuh objek (seseorang membuka jendela); untuk menggambarkan keadaan, pakai kata kerja pasif + -a/eo itda]"
+    }
+   }
+  ]
+ }
+]

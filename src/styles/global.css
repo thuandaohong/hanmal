@@ -1,0 +1,84 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* Chữ Latin và tiếng Việt dùng Be Vietnam Pro (tự host). Chữ Hàn, Nhật dùng font có sẵn
+     của hệ điều hành để không phải tải hàng trăm file font và giữ số file dưới giới hạn. */
+  --font-sans: 'Be Vietnam Pro', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', 'Noto Sans CJK KR',
+    ui-sans-serif, system-ui, sans-serif;
+  --font-ko: 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', 'Noto Sans CJK KR', 'Nanum Gothic', sans-serif;
+  --font-ja: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', 'Meiryo', 'Noto Sans JP', 'Noto Sans CJK JP',
+    sans-serif;
+  --font-hanja: 'AppleMyungjo', 'Batang', 'Noto Serif CJK KR', 'Noto Serif KR', 'Source Han Serif K', serif;
+
+  /* Bảng màu giống Kanjiba (kanjiba.net): đỏ son trên nền trắng ngà. */
+  --color-brand: #e11d2e;
+  --color-brand-soft: #fde8ea;
+  /* Chữ đỏ đặt trên nền brand-soft: đậm hơn brand một chút để đủ tương phản 4,5:1. */
+  --color-brand-ink: #b3121f;
+  /* Chữ trên nền brand: trắng ở chế độ sáng, gần đen ở chế độ tối (đủ tương phản 4,5:1). */
+  --color-on-brand: #ffffff;
+  /* Thông báo lỗi, câu trả lời sai: cam đất, để phân biệt với màu thương hiệu. */
+  --color-accent: #c2410c;
+
+  --color-bg: #fdfdfd;
+  --color-bg-muted: #f5f5f5;
+  --color-surface: #ffffff;
+  --color-fg: #232326;
+  --color-fg-muted: #5c5c66;
+  --color-line: #e6e6e9;
+}
+
+@layer base {
+  .dark {
+    --color-brand: #ff4d5e;
+    --color-brand-soft: #3a1418;
+    --color-brand-ink: #ff8a95;
+    --color-on-brand: #1a0a0c;
+    --color-accent: #fb923c;
+    --color-bg: #121214;
+    --color-bg-muted: #18181b;
+    --color-surface: #1c1c20;
+    --color-fg: #ececf0;
+    --color-fg-muted: #a1a1aa;
+    --color-line: #2c2c32;
+  }
+
+  html {
+    color-scheme: light;
+  }
+  html.dark {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-bg font-sans text-fg antialiased;
+  }
+
+  /* Trang tiếng Nhật: ưu tiên font Nhật cho kana/kanji trong giao diện. */
+  html:lang(ja) body {
+    font-family: 'Be Vietnam Pro', var(--font-ja);
+  }
+  /* Mọi đoạn tiếng Hàn đánh dấu lang="ko" dùng font Hàn. */
+  :lang(ko) {
+    font-family: var(--font-ko);
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-brand;
+  }
+}
+
+@utility container-page {
+  @apply mx-auto w-full max-w-6xl px-4 sm:px-6;
+}
+
+@utility link-underline {
+  @apply underline decoration-fg/40 underline-offset-4 hover:text-brand hover:decoration-brand;
+}
+
+/* Chữ Hán trong tiếng Hàn: font có chân, thường là phồn thể. */
+@utility font-hanja {
+  font-family: var(--font-hanja);
+}

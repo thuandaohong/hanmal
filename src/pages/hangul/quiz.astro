@@ -1,0 +1,310 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/PageHeader.astro';
+import SpeechNotice from '../../components/SpeechNotice.astro';
+import { JAMO } from '../../data/jamo';
+import { type Key, getLang, linker, translator } from '../../i18n';
+import { compose } from '../../lib/hangul/compose';
+
+const lang = getLang(Astro);
+const l = linker(lang);
+const tr = translator(lang);
+// Dữ liệu cho script: chữ cái, nhóm, phiên âm (đầu và cuối âm tiết), chữ dễ nhầm, âm tiết mẫu để nghe.
+const items = JAMO.map((j) => ({
+  char: j.char,
+  group: j.group,
+  roman: j.roman[0] || '∅',
+  alt: j.roman[1] ?? '',
+  related: j.related,
+  sound: j.kind === 'consonant' ? compose({ c: j.char, v: 'ㅏ', f: '' }) : compose({ c: 'ㅇ', v: j.char, f: '' }),
+}));
+const keys = ['correct', 'wrong', 'score', 'timer', 'progress', 'streak', 'best', 'newBest', 'result', 'resultTimed'] as const;
+const strings = Object.fromEntries(keys.map((k) => [k, tr(`quiz.${k}` as Key)]));
+const sets = ['all', 'plain', 'aspirated', 'tense', 'basic', 'compound'];
+const label = 'inline-flex items-center gap-2';
+---
+<BaseLayout title={tr('nav.quiz')} description={`${tr('quiz.lead')} ${tr('quiz.lead2')}`}>
+  <script is:inline type="application/json" id="quiz-data" set:html={JSON.stringify({ items, strings })} />
+  <PageHeader title={tr('nav.quiz')} crumbs={[{ label: tr('nav.hangul'), href: l('/hangul') }, { label: tr('nav.quiz') }]} lead={tr('quiz.lead')}>
+    <p class="mt-3 max-w-2xl text-sm text-fg-muted">{tr('quiz.lead2')}</p>
+  </PageHeader>
+  <section class="container-page py-10">
+    <div class="mx-auto max-w-xl">
+      <!-- Cài đặt -->
+      <form id="quiz-setup" class="space-y-4 text-sm">
+        <div class="flex flex-wrap gap-4">
+          <label class={label}><input type="radio" name="mode" value="read" checked class="accent-brand" /> {tr('quiz.modeRead')}</label>
+          <label class={label}><input type="radio" name="mode" value="listen" class="accent-brand" /> {tr('quiz.modeListen')}</label>
+          <label class={label}><input type="radio" name="mode" value="type" class="accent-brand" /> {tr('quiz.modeType')}</label>
+        </div>
+        <div class="flex flex-wrap items-center gap-4">
+          <label class={label}>
+            {tr('quiz.set')}
+            <select id="quiz-set" name="set" class="rounded-md border border-line bg-surface px-2 py-1">
+              {sets.map((s) => <option value={s}>{s === 'all' ? tr('quiz.setAll') : tr(`group.${s}` as Key)}</option>)}
+            </select>
+          </label>
+          <label class={label}>
+            {tr('quiz.length')}
+            <select id="quiz-length" name="length" class="rounded-md border border-line bg-surface px-2 py-1">
+              <option value="endless">{tr('quiz.lengthEndless')}</option>
+              <option value="10">10</option>
+              <option value="20">20</option>
+              <option value="timed">{tr('quiz.lengthTimed')}</option>
+            </select>
+          </label>
+          <button type="submit" class="ml-auto rounded-lg bg-brand px-5 py-2 font-semibold text-on-brand hover:opacity-90">{tr('quiz.start')}</button>
+        </div>
+        <p id="quiz-best" class="text-fg-muted"></p>
+      </form>
+      <div class="mt-4"><SpeechNotice /></div>
+
+      <!-- Chơi -->
+      <div id="quiz-play">
+        <div class="mt-6 flex items-center justify-between gap-3 text-sm text-fg-muted">
+          <span id="quiz-progress"></span>
+          <span id="quiz-streak" class="font-semibold text-brand"></span>
+          <span id="quiz-score"></span>
+        </div>
+        <div class="mt-2 h-1.5 overflow-hidden rounded-full bg-bg-muted"><div id="quiz-bar" class="h-full w-0 rounded-full bg-brand transition-[width]"></div></div>
+        <div class="mt-4 rounded-2xl border border-line bg-surface p-8 text-center">
+          <p id="quiz-prompt" lang="ko" class="text-8xl font-bold"></p>
+          <button type="button" id="quiz-replay" hidden class="rounded-full bg-brand px-5 py-3 font-semibold text-on-brand">🔊 {tr('quiz.listenAgain')}</button>
+          <div id="quiz-options" class="mt-8 grid grid-cols-2 gap-3"></div>
+          <form id="quiz-type" hidden class="mt-8 flex gap-2">
+            <input id="quiz-input" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder={tr('quiz.typePlaceholder')} aria-label={tr('quiz.typePlaceholder')} class="h-12 min-w-0 flex-1 rounded-lg border border-line bg-bg px-4 text-lg" />
+            <button type="submit" class="rounded-lg bg-brand px-5 font-semibold text-on-brand hover:opacity-90">{tr('quiz.answer')}</button>
+          </form>
+          <p id="quiz-feedback" class="mt-6 min-h-6 font-semibold" aria-live="polite"></p>
+          <button type="button" id="quiz-next" hidden class="mt-4 rounded-lg border border-line px-5 py-2 hover:border-brand">{tr('quiz.next')} →</button>
+        </div>
+      </div>
+
+      <!-- Kết quả -->
+      <div id="quiz-done" hidden class="mt-6 rounded-2xl border border-line bg-surface p-8 text-center">
+        <p lang="ko" class="text-6xl font-bold text-brand">한글</p>
+        <p id="quiz-result" class="mt-4 text-lg"></p>
+        <div class="mt-6 flex flex-wrap justify-center gap-3">
+          <button type="button" id="quiz-retry" class="rounded-lg bg-brand px-5 py-2.5 font-semibold text-on-brand hover:opacity-90">{tr('quiz.retryWrong')}</button>
+          <button type="button" id="quiz-again" class="rounded-lg border border-line px-5 py-2.5 hover:border-brand">{tr('quiz.again')}</button>
+        </div>
+        <div id="quiz-review" class="mt-8 text-left">
+          <h2 class="mb-3 font-bold">{tr('quiz.mistakes')}</h2>
+          <ul id="quiz-wrong" class="grid grid-cols-[repeat(auto-fill,minmax(4.5rem,1fr))] gap-2"></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  import { speak } from '../../scripts/speech';
+
+  type Item = { char: string; group: string; roman: string; alt: string; related: string[]; sound: string };
+  type Mode = 'read' | 'listen' | 'type';
+  const { items, strings } = JSON.parse(document.getElementById('quiz-data')!.textContent!) as {
+    items: Item[];
+    strings: Record<string, string>;
+  };
+  const $ = <T extends HTMLElement = HTMLElement>(id: string) => document.getElementById(id) as T;
+  const fill = (s: string, v: Record<string, string | number>) => s.replace(/\{(\w+)\}/g, (_, k) => String(v[k]));
+  const shuffle = <T,>(a: T[]) => a.map((x) => [Math.random(), x] as const).sort((p, q) => p[0] - q[0]).map((p) => p[1]);
+  const store = {
+    get: (k: string) => { try { return localStorage.getItem(k); } catch { return null; } },
+    set: (k: string, v: string) => { try { localStorage.setItem(k, v); } catch {} },
+  };
+  const TIME_LIMIT = 60;
+
+  const setup = $<HTMLFormElement>('quiz-setup');
+  const input = $<HTMLInputElement>('quiz-input');
+  let mode: Mode = 'read';
+  let length = 'endless';
+  let queue: Item[] = [];
+  let total = 0, correct = 0, streak = 0, answered = false;
+  let current: Item;
+  let wrong: Item[] = [];
+  let deadline = 0, timer = 0;
+  let bestKey = '';
+
+  const settings = () => {
+    const f = new FormData(setup);
+    return { mode: f.get('mode') as Mode, set: String(f.get('set')), length: String(f.get('length')) };
+  };
+  /** Chữ cái của bộ đang chọn; gõ phiên âm thì bỏ ㅇ (đầu âm tiết không đọc). */
+  const pool = (set: string, m: Mode) =>
+    (set === 'all' ? items : items.filter((i) => i.group === set)).filter((i) => m !== 'type' || i.roman !== '∅');
+  /** Phiên âm được chấp nhận khi gõ: dạng đầu và cuối âm tiết (ㄱ: g hoặc k). */
+  const accepted = (i: Item) => new Set([i.roman, i.alt].filter(Boolean).flatMap((r) => r.split('/')));
+
+  function showBest() {
+    const s = settings();
+    bestKey = `quiz-best:${s.mode}:${s.set}:${s.length}`;
+    const best = s.length === 'endless' ? null : store.get(bestKey);
+    $('quiz-best').textContent = best ? fill(strings.best, { best: s.length === 'timed' ? best : `${best}%` }) : '';
+  }
+
+  function start(fixed?: Item[]) {
+    const s = settings();
+    mode = s.mode;
+    length = fixed ? String(fixed.length) : s.length;
+    const list = pool(s.set, mode);
+    // Số câu cố định: lặp lại bộ chữ (đã xáo) cho đủ, vì bộ nhỏ như phụ âm căng chỉ có 5 chữ.
+    const n = Number(length);
+    queue = fixed
+      ? shuffle(fixed)
+      : length === 'endless' || length === 'timed' ? [] : Array.from({ length: Math.ceil(n / list.length) }, () => shuffle(list)).flat().slice(0, n);
+    total = correct = streak = 0;
+    wrong = [];
+    clearInterval(timer);
+    if (length === 'timed') {
+      deadline = Date.now() + TIME_LIMIT * 1000;
+      timer = window.setInterval(tick, 200);
+    }
+    // Làm lại câu sai không tính kỷ lục.
+    if (fixed) bestKey = '';
+    $('quiz-done').hidden = true;
+    $('quiz-play').hidden = false;
+    ask();
+  }
+
+  function tick() {
+    const left = Math.max(0, Math.ceil((deadline - Date.now()) / 1000));
+    $('quiz-progress').textContent = fill(strings.timer, { s: left });
+    $('quiz-bar').style.width = `${(left / TIME_LIMIT) * 100}%`;
+    if (left === 0) finish();
+  }
+
+  function ask() {
+    const s = settings();
+    const list = pool(s.set, mode);
+    if (length === 'endless' || length === 'timed') current = list[Math.floor(Math.random() * list.length)];
+    else {
+      const n = Number(length);
+      if (total >= n) return finish();
+      current = queue[total];
+      $('quiz-progress').textContent = fill(strings.progress, { n: total + 1, total: n });
+      $('quiz-bar').style.width = `${(total / n) * 100}%`;
+    }
+    if (length === 'endless') $('quiz-progress').textContent = '';
+    answered = false;
+    const listen = mode === 'listen';
+    $('quiz-prompt').textContent = listen ? '' : current.char;
+    $('quiz-prompt').hidden = listen;
+    $('quiz-replay').hidden = !listen;
+    $('quiz-feedback').textContent = '';
+    $('quiz-next').hidden = true;
+    $('quiz-type').hidden = mode !== 'type';
+    $('quiz-options').hidden = mode === 'type';
+    if (mode === 'type') {
+      input.value = '';
+      input.disabled = false;
+      input.focus({ preventScroll: true });
+    } else {
+      // Đáp án nhiễu: ưu tiên chữ dễ nhầm (ㅓ/ㅗ, ㄱ/ㅋ/ㄲ…), sau đó chữ cùng bộ; không trùng phiên âm hay âm đọc.
+      const ok = (i: Item) => i !== current && i.roman !== current.roman && i.sound !== current.sound;
+      const look = shuffle(items.filter((i) => current.related.includes(i.char) && ok(i))).slice(0, 2);
+      const others = shuffle(list.filter((i) => ok(i) && !look.includes(i)));
+      const options = shuffle([current, ...[...look, ...others].slice(0, 3)]);
+      $('quiz-options').replaceChildren(
+        ...options.map((o, n) => {
+          const b = document.createElement('button');
+          b.type = 'button';
+          b.className = 'relative rounded-xl border border-line px-4 py-4 text-2xl font-semibold hover:border-brand disabled:opacity-60';
+          b.textContent = listen ? o.char : o.roman;
+          if (listen) b.lang = 'ko';
+          const key = document.createElement('span');
+          key.className = 'absolute top-1.5 left-2.5 font-sans text-xs font-normal text-fg-muted';
+          key.textContent = String(n + 1);
+          b.prepend(key);
+          b.addEventListener('click', () => answer(o === current, b));
+          return b;
+        }),
+      );
+    }
+    if (listen) speak(current.sound);
+  }
+
+  function answer(ok: boolean, btn?: HTMLButtonElement) {
+    if (answered) return;
+    answered = true;
+    total++;
+    if (ok) {
+      correct++;
+      streak++;
+    } else {
+      streak = 0;
+      if (!wrong.includes(current)) wrong.push(current);
+    }
+    $('quiz-options').querySelectorAll('button').forEach((b) => ((b as HTMLButtonElement).disabled = true));
+    input.disabled = true;
+    // Đúng: xanh lá; sai: màu accent (màu brand là đỏ nên không dùng cho câu trả lời đúng).
+    btn?.classList.add(ok ? 'border-green-600' : 'border-accent', ok ? 'text-green-700' : 'text-accent', ok ? 'dark:text-green-400' : 'dark:text-accent');
+    $('quiz-feedback').textContent = ok ? strings.correct : fill(strings.wrong, { answer: `${current.char} = ${current.roman}` });
+    $('quiz-feedback').className = `mt-6 min-h-6 font-semibold ${ok ? 'text-green-700 dark:text-green-400' : 'text-accent'}`;
+    $('quiz-score').textContent = fill(strings.score, { correct, total });
+    $('quiz-streak').textContent = streak >= 3 ? fill(strings.streak, { n: streak }) : '';
+    if (mode !== 'listen') speak(current.sound);
+    // Tính giờ: đúng thì sang câu luôn, sai thì dừng một chút để xem đáp án.
+    if (length === 'timed') {
+      setTimeout(() => !$('quiz-play').hidden && ask(), ok ? 400 : 1200);
+      return;
+    }
+    $('quiz-next').hidden = false;
+    $('quiz-next').focus({ preventScroll: true });
+  }
+
+  function finish() {
+    if ($('quiz-play').hidden) return;
+    clearInterval(timer);
+    $('quiz-play').hidden = true;
+    $('quiz-done').hidden = false;
+    const timed = length === 'timed';
+    const pct = total ? Math.round((correct / total) * 100) : 0;
+    let msg = timed ? fill(strings.resultTimed, { correct, total }) : fill(strings.result, { correct, total });
+    const value = timed ? correct : pct;
+    if (bestKey && value > Number(store.get(bestKey) ?? -1)) {
+      if (store.get(bestKey) !== null) msg += ` ${strings.newBest}`;
+      store.set(bestKey, String(value));
+    }
+    $('quiz-result').textContent = msg;
+    $('quiz-review').hidden = !wrong.length;
+    $('quiz-retry').hidden = !wrong.length;
+    $('quiz-wrong').replaceChildren(
+      ...wrong.map((i) => {
+        const li = document.createElement('li');
+        li.className = 'flex aspect-square flex-col items-center justify-center rounded-lg border border-line';
+        li.innerHTML = '<span lang="ko" class="text-3xl font-bold"></span><span class="mt-1 text-sm text-fg-muted"></span>';
+        li.children[0].textContent = i.char;
+        li.children[1].textContent = i.roman;
+        return li;
+      }),
+    );
+    showBest();
+  }
+
+  setup.addEventListener('submit', (e) => {
+    e.preventDefault();
+    showBest();
+    start();
+  });
+  setup.addEventListener('change', () => {
+    showBest();
+    // Chế độ không giới hạn: đổi cài đặt là chơi luôn như trước.
+    if (settings().length === 'endless') start();
+  });
+  $<HTMLFormElement>('quiz-type').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const v = input.value.trim().toLowerCase();
+    if (v && !answered) answer(accepted(current).has(v));
+  });
+  $('quiz-next').addEventListener('click', ask);
+  $('quiz-replay').addEventListener('click', () => speak(current.sound));
+  $('quiz-again').addEventListener('click', () => start());
+  $('quiz-retry').addEventListener('click', () => start(wrong));
+  document.addEventListener('keydown', (e) => {
+    if ($('quiz-play').hidden || mode === 'type' || e.target instanceof HTMLSelectElement) return;
+    if (!answered && /^[1-4]$/.test(e.key)) $('quiz-options').querySelectorAll('button')[Number(e.key) - 1]?.click();
+  });
+  showBest();
+  start();
+</script>

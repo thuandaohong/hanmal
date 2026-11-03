@@ -1,0 +1,35 @@
+---
+// Ô lọc nhanh: ẩn các mục [data-filter] không chứa từ khoá (so khớp không dấu).
+import { getLang, t } from '../i18n';
+const lang = getLang(Astro);
+---
+<input
+  type="search"
+  data-list-filter
+  placeholder={t(lang, 'vocab.filterPlaceholder')}
+  aria-label={t(lang, 'vocab.filterPlaceholder')}
+  class="h-10 w-full max-w-sm rounded-lg border border-line bg-surface px-3 text-sm placeholder:text-fg-muted focus:border-brand focus:outline-none"
+/>
+<script>
+  import { foldAccents } from '../lib/text';
+  document.querySelectorAll<HTMLInputElement>('[data-list-filter]').forEach((input) => {
+    // Chỉ chuẩn bị dữ liệu lọc khi người dùng bắt đầu gõ, để không làm chậm lúc tải trang dài.
+    let items: HTMLElement[] = [];
+    let keys: string[] = [];
+    let sections: HTMLElement[] = [];
+    input.addEventListener('focus', prepare, { once: true });
+    function prepare() {
+      if (items.length) return;
+      items = [...document.querySelectorAll<HTMLElement>('[data-filter]')];
+      keys = items.map((el) => foldAccents(el.dataset.filter!));
+      sections = [...document.querySelectorAll<HTMLElement>('[data-filter-section]')];
+    }
+    input.addEventListener('input', () => {
+      prepare();
+      const q = foldAccents(input.value.trim());
+      items.forEach((el, i) => (el.hidden = !!q && !keys[i].includes(q)));
+      // Ẩn nhóm không còn mục nào.
+      sections.forEach((s) => (s.hidden = !!q && !s.querySelector('[data-filter]:not([hidden])')));
+    });
+  });
+</script>

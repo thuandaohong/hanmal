@@ -1,0 +1,78 @@
+---
+import ProseLayout from '../layouts/ProseLayout.astro';
+import { getLang, t } from '../i18n';
+const lang = getLang(Astro);
+
+// Nội dung theo ngôn ngữ: [giới thiệu, ghi chú giấy phép, danh sách nguồn [tên, link, mô tả]]
+const TEXT = {
+  vi: {
+    intro: 'Trang web được xây dựng từ các dữ liệu và dự án mã nguồn mở sau. Xin cảm ơn các tác giả!',
+    license: 'Nội dung từ điển trên trang (nghĩa, định nghĩa, câu ví dụ, cách đọc chuẩn) lấy từ Từ điển tiếng Hàn cơ bản và được chia sẻ lại theo cùng giấy phép CC BY-SA 2.0 KR.',
+    items: {
+      krdict: 'Từ vựng, cấp độ, cách đọc chuẩn, câu ví dụ, bản dịch tiếng Việt, Nhật, Anh, Indonesia và các mục ngữ pháp. © Viện Quốc ngữ Quốc gia Hàn Quốc, giấy phép CC BY-SA 2.0 KR. Trang web không dùng file âm thanh của từ điển.',
+      kanjidic: 'Âm Hàn, âm Hán Việt, âm On/Kun của chữ Hán. © EDRDG, giấy phép CC BY-SA 4.0.',
+      kanjivg: 'Thứ tự nét của chữ Hán. © Ulrich Apel, giấy phép CC BY-SA 3.0.',
+      opencc: 'Bảng chuyển chữ Hán cũ sang chữ mới của Nhật. Giấy phép Apache 2.0.',
+      freq: 'Danh sách tần suất từ (chỉ dùng để xếp thứ tự ưu tiên từ vựng). Giấy phép MIT.',
+      font: 'Phông chữ Be Vietnam Pro. Giấy phép SIL Open Font License.',
+    },
+  },
+  ja: {
+    intro: 'このサイトは次のオープンデータとオープンソースプロジェクトを利用しています。作者の皆さまに感謝します。',
+    license: '辞書の内容（意味、定義、例文、標準発音）は「韓国語基礎辞典」に基づき、同じ CC BY-SA 2.0 KR ライセンスで公開しています。',
+    items: {
+      krdict: '単語、レベル、標準発音、例文、日本語・ベトナム語・英語・インドネシア語の訳、文法項目。© 韓国・国立国語院、CC BY-SA 2.0 KR。辞書の音声ファイルは使用していません。',
+      kanjidic: '漢字の韓国語の読み、ベトナム漢字音、音読み・訓読み。© EDRDG、CC BY-SA 4.0。',
+      kanjivg: '漢字の書き順。© Ulrich Apel、CC BY-SA 3.0。',
+      opencc: '旧字体から新字体への対応表。Apache 2.0。',
+      freq: '単語の頻度リスト（収録語の優先順位付けにのみ使用）。MIT。',
+      font: 'フォント Be Vietnam Pro。SIL Open Font License。',
+    },
+  },
+  en: {
+    intro: 'This site is built on the following open data and open-source projects. Many thanks to their authors!',
+    license: 'Dictionary content on this site (meanings, definitions, example sentences, standard pronunciations) comes from the Basic Korean Dictionary and is shared under the same CC BY-SA 2.0 KR license.',
+    items: {
+      krdict: 'Vocabulary, levels, standard pronunciation, example sentences, Vietnamese/Japanese/English/Indonesian translations and grammar entries. © National Institute of Korean Language, CC BY-SA 2.0 KR. The dictionary’s audio files are not used.',
+      kanjidic: 'Korean, Sino-Vietnamese and Japanese readings of hanja. © EDRDG, CC BY-SA 4.0.',
+      kanjivg: 'Hanja stroke order. © Ulrich Apel, CC BY-SA 3.0.',
+      opencc: 'Traditional-to-shinjitai (modern Japanese) character table. Apache 2.0.',
+      freq: 'Word frequency lists (only used to prioritize vocabulary). MIT.',
+      font: 'Be Vietnam Pro font. SIL Open Font License.',
+    },
+  },
+  id: {
+    intro: 'Situs ini dibangun dengan data terbuka dan proyek sumber terbuka berikut. Terima kasih kepada para pembuatnya!',
+    license: 'Konten kamus di situs ini (arti, definisi, contoh kalimat, pelafalan baku) berasal dari Kamus Dasar Bahasa Korea dan dibagikan dengan lisensi yang sama, CC BY-SA 2.0 KR.',
+    items: {
+      krdict: 'Kosakata, tingkat, pelafalan baku, contoh kalimat, terjemahan bahasa Vietnam/Jepang/Inggris/Indonesia, dan entri tata bahasa. © Institut Nasional Bahasa Korea, CC BY-SA 2.0 KR. File audio kamus tidak digunakan.',
+      kanjidic: 'Bacaan Korea, Sino-Vietnam, dan Jepang untuk hanja. © EDRDG, CC BY-SA 4.0.',
+      kanjivg: 'Urutan goresan hanja. © Ulrich Apel, CC BY-SA 3.0.',
+      opencc: 'Tabel konversi aksara lama ke aksara Jepang modern. Apache 2.0.',
+      freq: 'Daftar frekuensi kata (hanya untuk mengurutkan prioritas kosakata). MIT.',
+      font: 'Fon Be Vietnam Pro. SIL Open Font License.',
+    },
+  },
+}[lang];
+
+const SOURCES: [keyof typeof TEXT.items, string, string][] = [
+  ['krdict', '한국어기초사전 (Basic Korean Dictionary)', 'https://krdict.korean.go.kr/'],
+  ['kanjidic', 'KANJIDIC2', 'https://www.edrdg.org/wiki/index.php/KANJIDIC_Project'],
+  ['kanjivg', 'KanjiVG', 'https://kanjivg.tagaini.net/'],
+  ['opencc', 'OpenCC', 'https://github.com/BYVoid/OpenCC'],
+  ['freq', 'FrequencyWords', 'https://github.com/hermitdave/FrequencyWords'],
+  ['font', 'Be Vietnam Pro', 'https://fonts.google.com/specimen/Be+Vietnam+Pro'],
+];
+const description = lang === 'ja'
+  ? `${TEXT.intro}${SOURCES.map((s) => s[1]).join('、')}。`
+  : `${TEXT.intro} ${SOURCES.map((s) => s[1]).join(', ')}.`;
+---
+<ProseLayout title={t(lang, 'footer.credits')} description={description}>
+  <p>{TEXT.intro}</p>
+  <ul>
+    {SOURCES.map(([key, name, url]) => (
+      <li><a href={url}>{name}</a> – {TEXT.items[key]}</li>
+    ))}
+  </ul>
+  <p>{TEXT.license}</p>
+</ProseLayout>

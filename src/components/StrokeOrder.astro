@@ -1,0 +1,116 @@
+---
+import { getLang, t } from '../i18n';
+// Thứ tự nét viết (chữ cái Hangul vẽ tay, chữ Hán từ KanjiVG): một ô lớn có hoạt ảnh.
+// Path chỉ khai báo một lần trong ô lớn; các ô nhỏ dùng <use> để tái sử dụng.
+interface Props { char: string; paths: string[] }
+const { char, paths } = Astro.props;
+const id = `s${char.codePointAt(0)!.toString(16)}`;
+const lang = getLang(Astro);
+---
+<div class="stroke-order" data-stroke-order>
+  <div class="relative mx-auto aspect-square w-full max-w-60 rounded-2xl border border-line bg-surface md:max-w-none">
+    <svg viewBox="0 0 109 109" class="guide absolute inset-0 size-full" aria-hidden="true">
+      <path d="M54.5 0v109M0 54.5h109" />
+    </svg>
+    <svg viewBox="0 0 109 109" class="strokes relative size-full" role="img" aria-label={`${t(lang, 'jamo.strokeOrder')}: ${char}`}>
+      <defs>
+        {paths.map((d, i) => <path id={`${id}-${i}`} d={d} />)}
+      </defs>
+      {paths.map((_, i) => <use href={`#${id}-${i}`} class="ghost" />)}
+      {paths.map((_, i) => <use href={`#${id}-${i}`} class="ink" />)}
+    </svg>
+  </div>
+  <div class="mx-auto mt-3 flex max-w-60 items-center justify-between md:max-w-none">
+    <span class="text-sm text-fg-muted">{t(lang, 'jamo.strokes', { n: paths.length })}</span>
+    <button type="button" data-play class="inline-flex items-center gap-1.5 rounded-lg border border-line px-3 py-1.5 text-sm font-semibold hover:border-brand hover:text-brand">
+      <svg viewBox="0 0 24 24" class="size-4" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z" /></svg>
+      {t(lang, 'jamo.play')}
+    </button>
+  </div>
+</div>
+
+<style>
+  .guide path {
+    fill: none;
+    stroke: var(--color-line);
+    stroke-dasharray: 2 2;
+    stroke-width: 0.5;
+  }
+  .strokes :global(use) {
+    fill: none;
+    stroke-width: 3.2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  .strokes :global(.ghost) {
+    stroke: var(--color-line);
+  }
+  .strokes :global(.ink) {
+    stroke: var(--color-fg);
+  }
+  .strokes :global(.ink.current) {
+    stroke: var(--color-brand);
+  }
+</style>
+
+<script>
+  // Vẽ lần lượt từng nét bằng cách chạy stroke-dashoffset từ độ dài path về 0.
+  const SPEED = 0.006; // giây cho mỗi đơn vị độ dài path
+  const PAUSE = 150;
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  document.querySelectorAll<HTMLElement>('[data-stroke-order]').forEach((root) => {
+    const inks = [...root.querySelectorAll<SVGUseElement>('use.ink')];
+    const lengths = inks.map((u) => {
+      const path = root.querySelector<SVGPathElement>(u.getAttribute('href')!)!;
+      return path.getTotalLength();
+    });
+    let run = 0;
+
+    function show(all: boolean) {
+      inks.forEach((u) => {
+        u.getAnimations().forEach((a) => a.cancel());
+        u.classList.remove('current');
+        u.style.strokeDasharray = '';
+        u.style.strokeDashoffset = '';
+        u.style.visibility = all ? 'visible' : 'hidden';
+      });
+    }
+
+    async function play() {
+      const id = ++run;
+      show(false);
+      for (let i = 0; i < inks.length; i++) {
+        if (id !== run) return;
+        const u = inks[i];
+        const len = lengths[i];
+        u.style.visibility = 'visible';
+        u.style.strokeDasharray = `${len}`;
+        u.classList.add('current');
+        const anim = u.animate([{ strokeDashoffset: len }, { strokeDashoffset: 0 }], {
+          duration: Math.max(250, len * SPEED * 1000),
+          easing: 'ease-in-out',
+          fill: 'forwards',
+        });
+        await anim.finished.catch(() => {});
+        u.classList.remove('current');
+        await new Promise((r) => setTimeout(r, PAUSE));
+      }
+    }
+
+    root.querySelector('[data-play]')!.addEventListener('click', () => (reduce ? show(true) : play()));
+    // Trang khác có thể yêu cầu chạy lại, ví dụ khi mở hộp thoại kana.
+    root.addEventListener('stroke:play', () => (reduce ? show(true) : play()));
+
+    // Tự chạy một lần khi ô lớn xuất hiện trên màn hình.
+    if (!reduce) {
+      const io = new IntersectionObserver((entries) => {
+        if (entries.some((e) => e.isIntersecting)) {
+          io.disconnect();
+          play();
+        }
+      });
+      io.observe(root);
+    }
+  });
+</script>

@@ -1,0 +1,21 @@
+---
+// Thanh chọn phụ âm đầu cho danh sách từ theo trình độ.
+import { getLang, linker, t } from '../i18n';
+interface Props { level: string; initials: string[]; current?: string }
+const { level, initials, current } = Astro.props;
+const lang = getLang(Astro);
+const l = linker(lang);
+---
+<nav class="mt-6 flex flex-wrap gap-1.5" aria-label={t(lang, 'vocab.byInitial')}>
+  {initials.map((c) => (
+    <a
+      href={l(`/vocabulary/${level}/${c}`)}
+      lang="ko"
+      aria-current={c === current ? 'page' : undefined}
+      class:list={[
+        'grid size-10 place-items-center rounded-lg border text-lg font-semibold hover:border-brand hover:text-brand',
+        c === current ? 'border-brand bg-brand-soft text-brand-ink' : 'border-line',
+      ]}
+    >{c}</a>
+  ))}
+</nav>

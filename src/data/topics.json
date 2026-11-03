@@ -1,0 +1,1376 @@
+[
+ {
+  "ko": "개념",
+  "slug": "concepts",
+  "name": {
+   "vi": "Khái niệm",
+   "ja": "概念",
+   "en": "Concepts",
+   "id": "Konsep"
+  },
+  "subs": [
+   {
+    "ko": "모양",
+    "name": {
+     "vi": "Hình dạng",
+     "ja": "形",
+     "en": "Shapes",
+     "id": "Bentuk"
+    }
+   },
+   {
+    "ko": "밝기",
+    "name": {
+     "vi": "Độ sáng",
+     "ja": "明るさ",
+     "en": "Brightness",
+     "id": "Kecerahan"
+    }
+   },
+   {
+    "ko": "빈도",
+    "name": {
+     "vi": "Tần suất",
+     "ja": "頻度",
+     "en": "Frequency",
+     "id": "Frekuensi"
+    }
+   },
+   {
+    "ko": "색깔",
+    "name": {
+     "vi": "Màu sắc",
+     "ja": "色",
+     "en": "Colors",
+     "id": "Warna"
+    }
+   },
+   {
+    "ko": "성질",
+    "name": {
+     "vi": "Tính chất",
+     "ja": "性質",
+     "en": "Properties",
+     "id": "Sifat"
+    }
+   },
+   {
+    "ko": "세는 말",
+    "name": {
+     "vi": "Từ chỉ đơn vị đếm",
+     "ja": "助数詞",
+     "en": "Counters",
+     "id": "Kata penggolong"
+    }
+   },
+   {
+    "ko": "속도",
+    "name": {
+     "vi": "Tốc độ",
+     "ja": "速度",
+     "en": "Speed",
+     "id": "Kecepatan"
+    }
+   },
+   {
+    "ko": "수",
+    "name": {
+     "vi": "Số",
+     "ja": "数",
+     "en": "Numbers",
+     "id": "Bilangan"
+    }
+   },
+   {
+    "ko": "순서",
+    "name": {
+     "vi": "Thứ tự",
+     "ja": "順序",
+     "en": "Order",
+     "id": "Urutan"
+    }
+   },
+   {
+    "ko": "시간",
+    "name": {
+     "vi": "Thời gian",
+     "ja": "時間",
+     "en": "Time",
+     "id": "Waktu"
+    }
+   },
+   {
+    "ko": "양",
+    "name": {
+     "vi": "Số lượng",
+     "ja": "量",
+     "en": "Quantity",
+     "id": "Jumlah"
+    }
+   },
+   {
+    "ko": "온도",
+    "name": {
+     "vi": "Nhiệt độ",
+     "ja": "温度",
+     "en": "Temperature",
+     "id": "Suhu"
+    }
+   },
+   {
+    "ko": "위치 및 방향",
+    "name": {
+     "vi": "Vị trí và phương hướng",
+     "ja": "位置と方向",
+     "en": "Position & direction",
+     "id": "Posisi & arah"
+    }
+   },
+   {
+    "ko": "의문",
+    "name": {
+     "vi": "Từ để hỏi",
+     "ja": "疑問詞",
+     "en": "Question words",
+     "id": "Kata tanya"
+    }
+   },
+   {
+    "ko": "인칭",
+    "name": {
+     "vi": "Đại từ nhân xưng",
+     "ja": "人称代名詞",
+     "en": "Personal pronouns",
+     "id": "Kata ganti orang"
+    }
+   },
+   {
+    "ko": "접속",
+    "name": {
+     "vi": "Từ nối",
+     "ja": "接続詞",
+     "en": "Connectives",
+     "id": "Kata sambung"
+    }
+   },
+   {
+    "ko": "정도",
+    "name": {
+     "vi": "Mức độ",
+     "ja": "程度",
+     "en": "Degree",
+     "id": "Derajat"
+    }
+   },
+   {
+    "ko": "지시",
+    "name": {
+     "vi": "Từ chỉ định",
+     "ja": "指示語",
+     "en": "Demonstratives",
+     "id": "Kata tunjuk"
+    }
+   },
+   {
+    "ko": "지역",
+    "name": {
+     "vi": "Khu vực",
+     "ja": "地域",
+     "en": "Regions",
+     "id": "Wilayah"
+    }
+   }
+  ]
+ },
+ {
+  "ko": "인간",
+  "slug": "people",
+  "name": {
+   "vi": "Con người",
+   "ja": "人間",
+   "en": "People",
+   "id": "Manusia"
+  },
+  "subs": [
+   {
+    "ko": "감각",
+    "name": {
+     "vi": "Cảm giác",
+     "ja": "感覚",
+     "en": "Senses",
+     "id": "Indra"
+    }
+   },
+   {
+    "ko": "감정",
+    "name": {
+     "vi": "Cảm xúc",
+     "ja": "感情",
+     "en": "Emotions",
+     "id": "Emosi"
+    }
+   },
+   {
+    "ko": "능력",
+    "name": {
+     "vi": "Năng lực",
+     "ja": "能力",
+     "en": "Abilities",
+     "id": "Kemampuan"
+    }
+   },
+   {
+    "ko": "사람의 종류",
+    "name": {
+     "vi": "Các kiểu người",
+     "ja": "人の種類",
+     "en": "Kinds of people",
+     "id": "Jenis orang"
+    }
+   },
+   {
+    "ko": "생리 현상",
+    "name": {
+     "vi": "Hiện tượng sinh lý",
+     "ja": "生理現象",
+     "en": "Bodily functions",
+     "id": "Fungsi tubuh"
+    }
+   },
+   {
+    "ko": "성격",
+    "name": {
+     "vi": "Tính cách",
+     "ja": "性格",
+     "en": "Personality",
+     "id": "Kepribadian"
+    }
+   },
+   {
+    "ko": "신체 내부 구성",
+    "name": {
+     "vi": "Cơ quan bên trong",
+     "ja": "体の内部",
+     "en": "Internal organs",
+     "id": "Organ dalam"
+    }
+   },
+   {
+    "ko": "신체 변화",
+    "name": {
+     "vi": "Thay đổi cơ thể",
+     "ja": "体の変化",
+     "en": "Bodily changes",
+     "id": "Perubahan tubuh"
+    }
+   },
+   {
+    "ko": "신체 부위",
+    "name": {
+     "vi": "Bộ phận cơ thể",
+     "ja": "体の部位",
+     "en": "Body parts",
+     "id": "Anggota tubuh"
+    }
+   },
+   {
+    "ko": "신체 행위",
+    "name": {
+     "vi": "Cử động cơ thể",
+     "ja": "体の動作",
+     "en": "Body movements",
+     "id": "Gerakan tubuh"
+    }
+   },
+   {
+    "ko": "신체에 가하는 행위",
+    "name": {
+     "vi": "Tác động lên cơ thể",
+     "ja": "体に対する行為",
+     "en": "Actions on the body",
+     "id": "Tindakan pada tubuh"
+    }
+   },
+   {
+    "ko": "용모",
+    "name": {
+     "vi": "Ngoại hình",
+     "ja": "容姿",
+     "en": "Appearance",
+     "id": "Penampilan"
+    }
+   },
+   {
+    "ko": "인지 행위",
+    "name": {
+     "vi": "Hoạt động nhận thức",
+     "ja": "認知行為",
+     "en": "Thinking & knowing",
+     "id": "Kegiatan kognitif"
+    }
+   },
+   {
+    "ko": "체력 상태",
+    "name": {
+     "vi": "Thể lực",
+     "ja": "体力の状態",
+     "en": "Physical condition",
+     "id": "Kondisi fisik"
+    }
+   },
+   {
+    "ko": "태도",
+    "name": {
+     "vi": "Thái độ",
+     "ja": "態度",
+     "en": "Attitude",
+     "id": "Sikap"
+    }
+   }
+  ]
+ },
+ {
+  "ko": "사회 생활",
+  "slug": "social-life",
+  "name": {
+   "vi": "Đời sống xã hội",
+   "ja": "社会生活",
+   "en": "Social life",
+   "id": "Kehidupan sosial"
+  },
+  "subs": [
+   {
+    "ko": "교통 수단",
+    "name": {
+     "vi": "Phương tiện giao thông",
+     "ja": "交通手段",
+     "en": "Transportation",
+     "id": "Alat transportasi"
+    }
+   },
+   {
+    "ko": "교통 이용 장소",
+    "name": {
+     "vi": "Nhà ga, bến xe",
+     "ja": "交通施設",
+     "en": "Stations & stops",
+     "id": "Tempat transportasi"
+    }
+   },
+   {
+    "ko": "교통 이용 행위",
+    "name": {
+     "vi": "Đi lại",
+     "ja": "交通の利用",
+     "en": "Getting around",
+     "id": "Bepergian"
+    }
+   },
+   {
+    "ko": "말",
+    "name": {
+     "vi": "Lời nói",
+     "ja": "言葉",
+     "en": "Speech",
+     "id": "Ucapan"
+    }
+   },
+   {
+    "ko": "매체",
+    "name": {
+     "vi": "Truyền thông",
+     "ja": "メディア",
+     "en": "Media",
+     "id": "Media"
+    }
+   },
+   {
+    "ko": "사회 행사",
+    "name": {
+     "vi": "Sự kiện xã hội",
+     "ja": "社会行事",
+     "en": "Social events",
+     "id": "Acara sosial"
+    }
+   },
+   {
+    "ko": "사회 활동",
+    "name": {
+     "vi": "Hoạt động xã hội",
+     "ja": "社会活動",
+     "en": "Social activities",
+     "id": "Kegiatan sosial"
+    }
+   },
+   {
+    "ko": "소통 수단",
+    "name": {
+     "vi": "Phương tiện liên lạc",
+     "ja": "コミュニケーション手段",
+     "en": "Means of communication",
+     "id": "Sarana komunikasi"
+    }
+   },
+   {
+    "ko": "언어 행위",
+    "name": {
+     "vi": "Nói và viết",
+     "ja": "言語行為",
+     "en": "Speaking & writing",
+     "id": "Tindak bahasa"
+    }
+   },
+   {
+    "ko": "인간관계",
+    "name": {
+     "vi": "Quan hệ con người",
+     "ja": "人間関係",
+     "en": "Relationships",
+     "id": "Hubungan antarmanusia"
+    }
+   },
+   {
+    "ko": "직업",
+    "name": {
+     "vi": "Nghề nghiệp",
+     "ja": "職業",
+     "en": "Jobs",
+     "id": "Pekerjaan"
+    }
+   },
+   {
+    "ko": "직위",
+    "name": {
+     "vi": "Chức vụ",
+     "ja": "職位",
+     "en": "Positions",
+     "id": "Jabatan"
+    }
+   },
+   {
+    "ko": "직장",
+    "name": {
+     "vi": "Nơi làm việc",
+     "ja": "職場",
+     "en": "Workplace",
+     "id": "Tempat kerja"
+    }
+   },
+   {
+    "ko": "직장 생활",
+    "name": {
+     "vi": "Đời sống công sở",
+     "ja": "職場生活",
+     "en": "Work life",
+     "id": "Kehidupan kerja"
+    }
+   },
+   {
+    "ko": "통신 행위",
+    "name": {
+     "vi": "Liên lạc",
+     "ja": "通信",
+     "en": "Communicating",
+     "id": "Berkomunikasi"
+    }
+   }
+  ]
+ },
+ {
+  "ko": "동식물",
+  "slug": "animals-plants",
+  "name": {
+   "vi": "Động thực vật",
+   "ja": "動植物",
+   "en": "Animals & plants",
+   "id": "Hewan & tumbuhan"
+  },
+  "subs": [
+   {
+    "ko": "곤충류",
+    "name": {
+     "vi": "Côn trùng",
+     "ja": "昆虫",
+     "en": "Insects",
+     "id": "Serangga"
+    }
+   },
+   {
+    "ko": "동물류",
+    "name": {
+     "vi": "Động vật",
+     "ja": "動物",
+     "en": "Animals",
+     "id": "Hewan"
+    }
+   },
+   {
+    "ko": "동물의 부분",
+    "name": {
+     "vi": "Bộ phận động vật",
+     "ja": "動物の部位",
+     "en": "Animal parts",
+     "id": "Bagian hewan"
+    }
+   },
+   {
+    "ko": "동식물 행위",
+    "name": {
+     "vi": "Hoạt động của động thực vật",
+     "ja": "動植物の行動",
+     "en": "Animal & plant actions",
+     "id": "Aktivitas hewan & tumbuhan"
+    }
+   },
+   {
+    "ko": "식물류",
+    "name": {
+     "vi": "Thực vật",
+     "ja": "植物",
+     "en": "Plants",
+     "id": "Tumbuhan"
+    }
+   },
+   {
+    "ko": "식물의 부분",
+    "name": {
+     "vi": "Bộ phận thực vật",
+     "ja": "植物の部位",
+     "en": "Plant parts",
+     "id": "Bagian tumbuhan"
+    }
+   }
+  ]
+ },
+ {
+  "ko": "자연",
+  "slug": "nature",
+  "name": {
+   "vi": "Thiên nhiên",
+   "ja": "自然",
+   "en": "Nature",
+   "id": "Alam"
+  },
+  "subs": [
+   {
+    "ko": "기상 및 기후",
+    "name": {
+     "vi": "Thời tiết và khí hậu",
+     "ja": "気象と気候",
+     "en": "Weather & climate",
+     "id": "Cuaca & iklim"
+    }
+   },
+   {
+    "ko": "자원",
+    "name": {
+     "vi": "Tài nguyên",
+     "ja": "資源",
+     "en": "Resources",
+     "id": "Sumber daya"
+    }
+   },
+   {
+    "ko": "재해",
+    "name": {
+     "vi": "Thiên tai",
+     "ja": "災害",
+     "en": "Disasters",
+     "id": "Bencana"
+    }
+   },
+   {
+    "ko": "지표면 사물",
+    "name": {
+     "vi": "Vật trên mặt đất",
+     "ja": "地表のもの",
+     "en": "Things on the ground",
+     "id": "Benda di permukaan bumi"
+    }
+   },
+   {
+    "ko": "지형",
+    "name": {
+     "vi": "Địa hình",
+     "ja": "地形",
+     "en": "Landforms",
+     "id": "Bentang alam"
+    }
+   },
+   {
+    "ko": "천체",
+    "name": {
+     "vi": "Thiên thể",
+     "ja": "天体",
+     "en": "Celestial bodies",
+     "id": "Benda langit"
+    }
+   }
+  ]
+ },
+ {
+  "ko": "주생활",
+  "slug": "housing",
+  "name": {
+   "vi": "Nhà ở",
+   "ja": "住生活",
+   "en": "Housing",
+   "id": "Tempat tinggal"
+  },
+  "subs": [
+   {
+    "ko": "가사 행위",
+    "name": {
+     "vi": "Việc nhà",
+     "ja": "家事",
+     "en": "Housework",
+     "id": "Pekerjaan rumah"
+    }
+   },
+   {
+    "ko": "건물 종류",
+    "name": {
+     "vi": "Các loại toà nhà",
+     "ja": "建物の種類",
+     "en": "Buildings",
+     "id": "Jenis bangunan"
+    }
+   },
+   {
+    "ko": "생활 용품",
+    "name": {
+     "vi": "Đồ dùng sinh hoạt",
+     "ja": "生活用品",
+     "en": "Household items",
+     "id": "Barang rumah tangga"
+    }
+   },
+   {
+    "ko": "주거 상태",
+    "name": {
+     "vi": "Tình trạng nhà ở",
+     "ja": "住まいの状態",
+     "en": "Living conditions",
+     "id": "Kondisi tempat tinggal"
+    }
+   },
+   {
+    "ko": "주거 지역",
+    "name": {
+     "vi": "Khu dân cư",
+     "ja": "住宅地",
+     "en": "Residential areas",
+     "id": "Kawasan permukiman"
+    }
+   },
+   {
+    "ko": "주거 행위",
+    "name": {
+     "vi": "Sinh hoạt ở nhà",
+     "ja": "住まいの行動",
+     "en": "Living at home",
+     "id": "Kegiatan di rumah"
+    }
+   },
+   {
+    "ko": "주거 형태",
+    "name": {
+     "vi": "Kiểu nhà ở",
+     "ja": "住居形態",
+     "en": "Types of housing",
+     "id": "Jenis hunian"
+    }
+   },
+   {
+    "ko": "주택 구성",
+    "name": {
+     "vi": "Các phần của ngôi nhà",
+     "ja": "住宅の構成",
+     "en": "Parts of a house",
+     "id": "Bagian rumah"
+    }
+   }
+  ]
+ },
+ {
+  "ko": "경제 생활",
+  "slug": "economy",
+  "name": {
+   "vi": "Kinh tế",
+   "ja": "経済生活",
+   "en": "Economy & money",
+   "id": "Ekonomi"
+  },
+  "subs": [
+   {
+    "ko": "경제 산물",
+    "name": {
+     "vi": "Hàng hoá, sản phẩm",
+     "ja": "商品・製品",
+     "en": "Goods & products",
+     "id": "Barang & produk"
+    }
+   },
+   {
+    "ko": "경제 상태",
+    "name": {
+     "vi": "Tình trạng kinh tế",
+     "ja": "経済状態",
+     "en": "Economic conditions",
+     "id": "Kondisi ekonomi"
+    }
+   },
+   {
+    "ko": "경제 수단",
+    "name": {
+     "vi": "Tiền và thanh toán",
+     "ja": "お金と支払い",
+     "en": "Money & payment",
+     "id": "Uang & pembayaran"
+    }
+   },
+   {
+    "ko": "경제 행위",
+    "name": {
+     "vi": "Mua bán, kiếm tiền",
+     "ja": "経済活動",
+     "en": "Buying, selling & earning",
+     "id": "Kegiatan ekonomi"
+    }
+   },
+   {
+    "ko": "경제 행위 장소",
+    "name": {
+     "vi": "Cửa hàng, nơi kinh doanh",
+     "ja": "経済活動の場所",
+     "en": "Shops & businesses",
+     "id": "Tempat usaha"
+    }
+   },
+   {
+    "ko": "경제 행위 주체",
+    "name": {
+     "vi": "Chủ thể kinh tế",
+     "ja": "経済活動の主体",
+     "en": "Economic actors",
+     "id": "Pelaku ekonomi"
+    }
+   }
+  ]
+ },
+ {
+  "ko": "삶",
+  "slug": "daily-life",
+  "name": {
+   "vi": "Cuộc sống",
+   "ja": "暮らし",
+   "en": "Daily life",
+   "id": "Kehidupan"
+  },
+  "subs": [
+   {
+    "ko": "가족 행사",
+    "name": {
+     "vi": "Sự kiện gia đình",
+     "ja": "家族行事",
+     "en": "Family events",
+     "id": "Acara keluarga"
+    }
+   },
+   {
+    "ko": "병과 증상",
+    "name": {
+     "vi": "Bệnh và triệu chứng",
+     "ja": "病気と症状",
+     "en": "Illnesses & symptoms",
+     "id": "Penyakit & gejala"
+    }
+   },
+   {
+    "ko": "삶의 상태",
+    "name": {
+     "vi": "Hoàn cảnh sống",
+     "ja": "暮らしの状態",
+     "en": "Life situations",
+     "id": "Keadaan hidup"
+    }
+   },
+   {
+    "ko": "삶의 행위",
+    "name": {
+     "vi": "Những việc trong đời",
+     "ja": "人生の出来事",
+     "en": "Life events",
+     "id": "Peristiwa hidup"
+    }
+   },
+   {
+    "ko": "약품류",
+    "name": {
+     "vi": "Thuốc",
+     "ja": "薬品",
+     "en": "Medicines",
+     "id": "Obat-obatan"
+    }
+   },
+   {
+    "ko": "여가 도구",
+    "name": {
+     "vi": "Đồ dùng giải trí",
+     "ja": "余暇の道具",
+     "en": "Leisure items",
+     "id": "Alat rekreasi"
+    }
+   },
+   {
+    "ko": "여가 시설",
+    "name": {
+     "vi": "Nơi giải trí",
+     "ja": "余暇施設",
+     "en": "Leisure facilities",
+     "id": "Fasilitas rekreasi"
+    }
+   },
+   {
+    "ko": "여가 활동",
+    "name": {
+     "vi": "Hoạt động giải trí",
+     "ja": "余暇活動",
+     "en": "Leisure activities",
+     "id": "Kegiatan rekreasi"
+    }
+   },
+   {
+    "ko": "일상 행위",
+    "name": {
+     "vi": "Sinh hoạt hằng ngày",
+     "ja": "日常の行為",
+     "en": "Everyday actions",
+     "id": "Kegiatan sehari-hari"
+    }
+   },
+   {
+    "ko": "치료 시설",
+    "name": {
+     "vi": "Cơ sở y tế",
+     "ja": "医療施設",
+     "en": "Medical facilities",
+     "id": "Fasilitas kesehatan"
+    }
+   },
+   {
+    "ko": "치료 행위",
+    "name": {
+     "vi": "Điều trị",
+     "ja": "治療行為",
+     "en": "Treatment",
+     "id": "Pengobatan"
+    }
+   },
+   {
+    "ko": "친족 관계",
+    "name": {
+     "vi": "Quan hệ họ hàng",
+     "ja": "親族関係",
+     "en": "Family members",
+     "id": "Hubungan keluarga"
+    }
+   }
+  ]
+ },
+ {
+  "ko": "교육",
+  "slug": "education",
+  "name": {
+   "vi": "Giáo dục",
+   "ja": "教育",
+   "en": "Education",
+   "id": "Pendidikan"
+  },
+  "subs": [
+   {
+    "ko": "교수 학습 주체",
+    "name": {
+     "vi": "Người dạy và người học",
+     "ja": "教える人・学ぶ人",
+     "en": "Teachers & learners",
+     "id": "Pengajar & pelajar"
+    }
+   },
+   {
+    "ko": "교수 학습 행위",
+    "name": {
+     "vi": "Dạy và học",
+     "ja": "教授・学習",
+     "en": "Teaching & learning",
+     "id": "Mengajar & belajar"
+    }
+   },
+   {
+    "ko": "교육 기관",
+    "name": {
+     "vi": "Cơ sở giáo dục",
+     "ja": "教育機関",
+     "en": "Schools & institutions",
+     "id": "Lembaga pendidikan"
+    }
+   },
+   {
+    "ko": "전공과 교과목",
+    "name": {
+     "vi": "Chuyên ngành và môn học",
+     "ja": "専攻と教科",
+     "en": "Majors & subjects",
+     "id": "Jurusan & mata pelajaran"
+    }
+   },
+   {
+    "ko": "학교 시설",
+    "name": {
+     "vi": "Cơ sở vật chất trường học",
+     "ja": "学校施設",
+     "en": "School facilities",
+     "id": "Fasilitas sekolah"
+    }
+   },
+   {
+    "ko": "학문 용어",
+    "name": {
+     "vi": "Thuật ngữ học thuật",
+     "ja": "学術用語",
+     "en": "Academic terms",
+     "id": "Istilah akademik"
+    }
+   },
+   {
+    "ko": "학문 행위",
+    "name": {
+     "vi": "Hoạt động học thuật",
+     "ja": "学問活動",
+     "en": "Academic activities",
+     "id": "Kegiatan akademik"
+    }
+   },
+   {
+    "ko": "학습 관련 사물",
+    "name": {
+     "vi": "Đồ dùng học tập",
+     "ja": "学用品",
+     "en": "School supplies",
+     "id": "Perlengkapan belajar"
+    }
+   }
+  ]
+ },
+ {
+  "ko": "식생활",
+  "slug": "food",
+  "name": {
+   "vi": "Ăn uống",
+   "ja": "食生活",
+   "en": "Food & drink",
+   "id": "Makanan & minuman"
+  },
+  "subs": [
+   {
+    "ko": "곡류",
+    "name": {
+     "vi": "Ngũ cốc",
+     "ja": "穀物",
+     "en": "Grains",
+     "id": "Biji-bijian"
+    }
+   },
+   {
+    "ko": "과일",
+    "name": {
+     "vi": "Trái cây",
+     "ja": "果物",
+     "en": "Fruit",
+     "id": "Buah"
+    }
+   },
+   {
+    "ko": "맛",
+    "name": {
+     "vi": "Vị",
+     "ja": "味",
+     "en": "Tastes",
+     "id": "Rasa"
+    }
+   },
+   {
+    "ko": "식사 및 조리 행위",
+    "name": {
+     "vi": "Ăn uống và nấu nướng",
+     "ja": "食事と調理",
+     "en": "Eating & cooking",
+     "id": "Makan & memasak"
+    }
+   },
+   {
+    "ko": "식생활 관련 장소",
+    "name": {
+     "vi": "Nơi ăn uống",
+     "ja": "飲食の場所",
+     "en": "Places to eat",
+     "id": "Tempat makan"
+    }
+   },
+   {
+    "ko": "식재료",
+    "name": {
+     "vi": "Nguyên liệu nấu ăn",
+     "ja": "食材",
+     "en": "Ingredients",
+     "id": "Bahan makanan"
+    }
+   },
+   {
+    "ko": "음료",
+    "name": {
+     "vi": "Đồ uống",
+     "ja": "飲み物",
+     "en": "Drinks",
+     "id": "Minuman"
+    }
+   },
+   {
+    "ko": "음식",
+    "name": {
+     "vi": "Món ăn",
+     "ja": "料理",
+     "en": "Dishes",
+     "id": "Masakan"
+    }
+   },
+   {
+    "ko": "조리 도구",
+    "name": {
+     "vi": "Dụng cụ nấu ăn",
+     "ja": "調理器具",
+     "en": "Kitchen tools",
+     "id": "Alat masak"
+    }
+   },
+   {
+    "ko": "채소",
+    "name": {
+     "vi": "Rau củ",
+     "ja": "野菜",
+     "en": "Vegetables",
+     "id": "Sayuran"
+    }
+   }
+  ]
+ },
+ {
+  "ko": "종교",
+  "slug": "religion",
+  "name": {
+   "vi": "Tôn giáo",
+   "ja": "宗教",
+   "en": "Religion",
+   "id": "Agama"
+  },
+  "subs": [
+   {
+    "ko": "신앙 대상",
+    "name": {
+     "vi": "Đối tượng tín ngưỡng",
+     "ja": "信仰の対象",
+     "en": "Objects of worship",
+     "id": "Objek kepercayaan"
+    }
+   },
+   {
+    "ko": "종교 유형",
+    "name": {
+     "vi": "Các tôn giáo",
+     "ja": "宗教の種類",
+     "en": "Religions",
+     "id": "Jenis agama"
+    }
+   },
+   {
+    "ko": "종교 행위",
+    "name": {
+     "vi": "Hoạt động tôn giáo",
+     "ja": "宗教行為",
+     "en": "Religious practices",
+     "id": "Praktik keagamaan"
+    }
+   },
+   {
+    "ko": "종교 활동 장소",
+    "name": {
+     "vi": "Nơi thờ tự",
+     "ja": "宗教施設",
+     "en": "Places of worship",
+     "id": "Tempat ibadah"
+    }
+   },
+   {
+    "ko": "종교어",
+    "name": {
+     "vi": "Từ ngữ tôn giáo",
+     "ja": "宗教用語",
+     "en": "Religious terms",
+     "id": "Istilah keagamaan"
+    }
+   },
+   {
+    "ko": "종교인",
+    "name": {
+     "vi": "Chức sắc tôn giáo",
+     "ja": "宗教者",
+     "en": "Clergy",
+     "id": "Pemuka agama"
+    }
+   }
+  ]
+ },
+ {
+  "ko": "의생활",
+  "slug": "clothing",
+  "name": {
+   "vi": "Trang phục",
+   "ja": "衣生活",
+   "en": "Clothing",
+   "id": "Pakaian"
+  },
+  "subs": [
+   {
+    "ko": "모자, 신발, 장신구",
+    "name": {
+     "vi": "Mũ, giày, trang sức",
+     "ja": "帽子・靴・アクセサリー",
+     "en": "Hats, shoes & accessories",
+     "id": "Topi, sepatu & aksesori"
+    }
+   },
+   {
+    "ko": "미용 행위",
+    "name": {
+     "vi": "Làm đẹp",
+     "ja": "美容",
+     "en": "Beauty care",
+     "id": "Perawatan kecantikan"
+    }
+   },
+   {
+    "ko": "옷 종류",
+    "name": {
+     "vi": "Các loại quần áo",
+     "ja": "服の種類",
+     "en": "Clothes",
+     "id": "Jenis pakaian"
+    }
+   },
+   {
+    "ko": "옷의 부분",
+    "name": {
+     "vi": "Các phần của quần áo",
+     "ja": "服の部分",
+     "en": "Parts of clothes",
+     "id": "Bagian pakaian"
+    }
+   },
+   {
+    "ko": "의복 착용 상태",
+    "name": {
+     "vi": "Cách ăn mặc",
+     "ja": "着こなし",
+     "en": "How clothes fit",
+     "id": "Cara berpakaian"
+    }
+   },
+   {
+    "ko": "의복 착용 행위",
+    "name": {
+     "vi": "Mặc và cởi",
+     "ja": "着脱",
+     "en": "Dressing & undressing",
+     "id": "Berpakaian"
+    }
+   },
+   {
+    "ko": "의생활 관련 장소",
+    "name": {
+     "vi": "Nơi liên quan đến trang phục",
+     "ja": "衣類の店・サービス",
+     "en": "Clothing shops & services",
+     "id": "Tempat terkait pakaian"
+    }
+   }
+  ]
+ },
+ {
+  "ko": "문화",
+  "slug": "culture",
+  "name": {
+   "vi": "Văn hoá",
+   "ja": "文化",
+   "en": "Culture",
+   "id": "Budaya"
+  },
+  "subs": [
+   {
+    "ko": "대중 문화",
+    "name": {
+     "vi": "Văn hoá đại chúng",
+     "ja": "大衆文化",
+     "en": "Pop culture",
+     "id": "Budaya populer"
+    }
+   },
+   {
+    "ko": "문학",
+    "name": {
+     "vi": "Văn học",
+     "ja": "文学",
+     "en": "Literature",
+     "id": "Sastra"
+    }
+   },
+   {
+    "ko": "문화 생활 장소",
+    "name": {
+     "vi": "Nơi sinh hoạt văn hoá",
+     "ja": "文化施設",
+     "en": "Cultural venues",
+     "id": "Tempat budaya"
+    }
+   },
+   {
+    "ko": "문화 활동",
+    "name": {
+     "vi": "Hoạt động văn hoá",
+     "ja": "文化活動",
+     "en": "Cultural activities",
+     "id": "Kegiatan budaya"
+    }
+   },
+   {
+    "ko": "문화 활동 주체",
+    "name": {
+     "vi": "Nghệ sĩ, người biểu diễn",
+     "ja": "文化活動の担い手",
+     "en": "Artists & performers",
+     "id": "Pelaku budaya"
+    }
+   },
+   {
+    "ko": "미술",
+    "name": {
+     "vi": "Mỹ thuật",
+     "ja": "美術",
+     "en": "Fine arts",
+     "id": "Seni rupa"
+    }
+   },
+   {
+    "ko": "예술",
+    "name": {
+     "vi": "Nghệ thuật",
+     "ja": "芸術",
+     "en": "Arts",
+     "id": "Seni"
+    }
+   },
+   {
+    "ko": "음악",
+    "name": {
+     "vi": "Âm nhạc",
+     "ja": "音楽",
+     "en": "Music",
+     "id": "Musik"
+    }
+   },
+   {
+    "ko": "전통 문화",
+    "name": {
+     "vi": "Văn hoá truyền thống",
+     "ja": "伝統文化",
+     "en": "Traditional culture",
+     "id": "Budaya tradisional"
+    }
+   }
+  ]
+ },
+ {
+  "ko": "정치와 행정",
+  "slug": "politics",
+  "name": {
+   "vi": "Chính trị và hành chính",
+   "ja": "政治と行政",
+   "en": "Politics & government",
+   "id": "Politik & pemerintahan"
+  },
+  "subs": [
+   {
+    "ko": "공공 기관",
+    "name": {
+     "vi": "Cơ quan công quyền",
+     "ja": "公共機関",
+     "en": "Public institutions",
+     "id": "Lembaga publik"
+    }
+   },
+   {
+    "ko": "무기",
+    "name": {
+     "vi": "Vũ khí",
+     "ja": "武器",
+     "en": "Weapons",
+     "id": "Senjata"
+    }
+   },
+   {
+    "ko": "사법 및 치안 주체",
+    "name": {
+     "vi": "Cơ quan tư pháp, công an",
+     "ja": "司法・警察機関",
+     "en": "Law enforcement",
+     "id": "Penegak hukum"
+    }
+   },
+   {
+    "ko": "사법 및 치안 행위",
+    "name": {
+     "vi": "Tư pháp và an ninh",
+     "ja": "司法・治安の行為",
+     "en": "Law & order",
+     "id": "Hukum & ketertiban"
+    }
+   },
+   {
+    "ko": "정치 및 치안 상태",
+    "name": {
+     "vi": "Tình hình chính trị, an ninh",
+     "ja": "政治・治安の状態",
+     "en": "Political conditions",
+     "id": "Kondisi politik"
+    }
+   },
+   {
+    "ko": "정치 및 행정 주체",
+    "name": {
+     "vi": "Cơ quan chính trị, hành chính",
+     "ja": "政府・行政機関",
+     "en": "Government bodies",
+     "id": "Lembaga pemerintahan"
+    }
+   },
+   {
+    "ko": "정치 및 행정 행위",
+    "name": {
+     "vi": "Hoạt động chính trị, hành chính",
+     "ja": "政治・行政の行為",
+     "en": "Politics & administration",
+     "id": "Kegiatan politik & administrasi"
+    }
+   }
+  ]
+ }
+]

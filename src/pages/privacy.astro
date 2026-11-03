@@ -1,0 +1,103 @@
+---
+import ProseLayout from '../layouts/ProseLayout.astro';
+import { SITE } from '../data/site';
+import { getLang } from '../i18n';
+const lang = getLang(Astro);
+const email = SITE.contactEmail;
+// Ngày cập nhật lần cuối; đổi khi sửa nội dung chính sách.
+const UPDATED = '2026-11-02';
+const CF = 'https://www.cloudflare.com/privacypolicy/';
+const GOOGLE_ADS = 'https://policies.google.com/technologies/ads';
+const AD_SETTINGS = 'https://adssettings.google.com/';
+
+type Section = { h: string; p: string; links?: [string, string][] };
+const TEXT: Record<string, { title: string; description: string; updated: string; intro: string; sections: Section[]; contactH: string; contact: string }> = {
+  en: {
+    title: 'Privacy policy',
+    description: `How ${SITE.name} handles your data.`,
+    updated: 'Last updated',
+    intro: `${SITE.name} is a static website. You do not need an account, and we have no forms that collect your personal information.`,
+    sections: [
+      { h: 'Data stored in your browser', p: "Some settings are saved in your browser's local storage so they are still there next time: light/dark theme, your flashcard progress and your best scores in the Hangul quiz. This data stays on your device and is never sent to us. You can delete it at any time by clearing this site's data in your browser settings." },
+      { h: 'Tools that run in your browser', p: 'The verb conjugator, pronunciation analyzer, romanizer, name converter, Hangul keyboard and search run entirely in your browser; the text you type is not sent anywhere. Audio uses the Korean voice built into your device (Web Speech API).' },
+      { h: 'Hosting and analytics', p: 'The site is hosted on Cloudflare Pages. Like any web server, Cloudflare processes technical data such as your IP address and browser type to deliver pages and protect against attacks. We may use Cloudflare Web Analytics, which counts visits without cookies and without tracking individual visitors. See {0}.', links: [[CF, "Cloudflare's privacy policy"]] },
+      { h: 'Advertising', p: 'The site may show ads from Google AdSense. Google and its partners use cookies to show ads based on your previous visits to this and other websites. You can turn off personalised ads in {0}, and learn more in {1}. Visitors in the European Economic Area, the United Kingdom and Switzerland are asked for consent before such cookies are used.', links: [[AD_SETTINGS, 'Google Ad Settings'], [GOOGLE_ADS, 'how Google uses data in advertising']] },
+      { h: 'Changes to this policy', p: 'We may update this policy as the site changes. The date at the top shows the latest version.' },
+    ],
+    contactH: 'Contact',
+    contact: 'If you have questions about this policy, email {0}.',
+  },
+  vi: {
+    title: 'Chính sách quyền riêng tư',
+    description: `Cách ${SITE.name} xử lý dữ liệu của bạn.`,
+    updated: 'Cập nhật lần cuối',
+    intro: `${SITE.name} là website tĩnh. Bạn không cần tạo tài khoản, và trang không có biểu mẫu nào thu thập thông tin cá nhân.`,
+    sections: [
+      { h: 'Dữ liệu lưu trên trình duyệt', p: 'Một số tuỳ chọn được lưu trong bộ nhớ cục bộ (local storage) của trình duyệt để lần sau vẫn còn: giao diện sáng/tối, tiến độ flashcards và kỷ lục trong trò chơi Hangul. Dữ liệu này chỉ nằm trên thiết bị của bạn và không bao giờ được gửi cho chúng tôi. Bạn có thể xoá bất cứ lúc nào bằng cách xoá dữ liệu của trang này trong cài đặt trình duyệt.' },
+      { h: 'Công cụ chạy trên trình duyệt', p: 'Công cụ chia động từ, phân tích phát âm, phiên âm Latin, chuyển tên sang tiếng Hàn, bàn phím Hangul và tìm kiếm chạy hoàn toàn trên trình duyệt; văn bản bạn nhập không được gửi đi đâu. Tính năng phát âm dùng giọng đọc tiếng Hàn có sẵn trên thiết bị của bạn (Web Speech API).' },
+      { h: 'Lưu trữ và thống kê truy cập', p: 'Trang được lưu trữ trên Cloudflare Pages. Như mọi máy chủ web, Cloudflare xử lý dữ liệu kỹ thuật như địa chỉ IP và loại trình duyệt để phân phối trang và chống tấn công. Chúng tôi có thể dùng Cloudflare Web Analytics, công cụ đếm lượt truy cập không dùng cookie và không theo dõi từng người. Xem thêm {0}.', links: [[CF, 'chính sách quyền riêng tư của Cloudflare']] },
+      { h: 'Quảng cáo', p: 'Trang có thể hiển thị quảng cáo của Google AdSense. Google và các đối tác dùng cookie để hiển thị quảng cáo dựa trên các lần bạn truy cập trang này hoặc trang khác trước đó. Bạn có thể tắt quảng cáo được cá nhân hoá trong {0}, và tìm hiểu thêm về {1}. Người dùng ở Khu vực Kinh tế châu Âu, Vương quốc Anh và Thuỵ Sĩ sẽ được hỏi ý kiến trước khi các cookie này được sử dụng.', links: [[AD_SETTINGS, 'Cài đặt quảng cáo của Google'], [GOOGLE_ADS, 'cách Google sử dụng dữ liệu trong quảng cáo']] },
+      { h: 'Thay đổi chính sách', p: 'Chính sách có thể được cập nhật khi trang thay đổi. Ngày ở đầu trang là phiên bản mới nhất.' },
+    ],
+    contactH: 'Liên hệ',
+    contact: 'Nếu có câu hỏi về chính sách này, hãy gửi email tới {0}.',
+  },
+  ja: {
+    title: 'プライバシーポリシー',
+    description: `${SITE.name} におけるデータの取り扱いについて。`,
+    updated: '最終更新日',
+    intro: `${SITE.name} は静的なウェブサイトです。アカウント登録は不要で、個人情報を収集するフォームもありません。`,
+    sections: [
+      { h: 'ブラウザに保存されるデータ', p: '次回も設定が残るよう、ライト/ダークモード、単語カードの学習状況、ハングルクイズの最高記録をブラウザのローカルストレージに保存します。これらのデータはお使いの端末内にのみ保存され、当サイトに送信されることはありません。ブラウザの設定で本サイトのデータを消去すれば、いつでも削除できます。' },
+      { h: 'ブラウザ上で動作するツール', p: '活用ツール、発音分析、ローマ字変換、名前のハングル変換、ハングルキーボード、検索はすべてブラウザ上で動作し、入力した文字がどこかに送信されることはありません。音声は端末に内蔵された韓国語音声（Web Speech API）を使用します。' },
+      { h: 'ホスティングとアクセス解析', p: '本サイトは Cloudflare Pages でホスティングしています。一般的なウェブサーバーと同様に、Cloudflare はページの配信と攻撃からの保護のため、IP アドレスやブラウザの種類などの技術情報を処理します。Cookie を使わず個々の訪問者を追跡しない Cloudflare Web Analytics を利用する場合があります。詳しくは{0}をご覧ください。', links: [[CF, 'Cloudflare のプライバシーポリシー']] },
+      { h: '広告', p: '本サイトでは Google AdSense の広告を表示する場合があります。Google とそのパートナーは、本サイトや他サイトへの過去のアクセスに基づいて広告を表示するために Cookie を使用します。パーソナライズド広告は{0}で無効にでき、詳しくは{1}をご覧ください。欧州経済領域、英国、スイスからの訪問者には、こうした Cookie を使用する前に同意を求めます。', links: [[AD_SETTINGS, 'Google 広告設定'], [GOOGLE_ADS, 'Google による広告でのデータ利用']] },
+      { h: 'ポリシーの変更', p: 'サイトの変更に合わせて本ポリシーを更新することがあります。ページ上部の日付が最新版を示します。' },
+    ],
+    contactH: 'お問い合わせ',
+    contact: '本ポリシーに関するご質問は {0} までメールでお問い合わせください。',
+  },
+  id: {
+    title: 'Kebijakan privasi',
+    description: `Cara ${SITE.name} menangani data kamu.`,
+    updated: 'Terakhir diperbarui',
+    intro: `${SITE.name} adalah situs statis. Kamu tidak perlu membuat akun, dan kami tidak punya formulir yang mengumpulkan data pribadi.`,
+    sections: [
+      { h: 'Data yang disimpan di browser', p: 'Beberapa pengaturan disimpan di penyimpanan lokal browser agar tetap ada saat kamu kembali: tema terang/gelap, progres flashcard, dan skor terbaik di kuis Hangul. Data ini tetap di perangkatmu dan tidak pernah dikirim ke kami. Kamu bisa menghapusnya kapan saja dengan membersihkan data situs ini di pengaturan browser.' },
+      { h: 'Alat yang berjalan di browser', p: 'Alat konjugasi, analisis pelafalan, romanisasi, pengubah nama, papan ketik Hangul, dan pencarian berjalan sepenuhnya di browser; teks yang kamu ketik tidak dikirim ke mana pun. Suara memakai suara bahasa Korea bawaan perangkatmu (Web Speech API).' },
+      { h: 'Hosting dan statistik', p: 'Situs ini di-host di Cloudflare Pages. Seperti server web lainnya, Cloudflare memproses data teknis seperti alamat IP dan jenis browser untuk mengirim halaman dan melindungi dari serangan. Kami mungkin memakai Cloudflare Web Analytics, yang menghitung kunjungan tanpa cookie dan tanpa melacak pengunjung secara individual. Lihat {0}.', links: [[CF, 'kebijakan privasi Cloudflare']] },
+      { h: 'Iklan', p: 'Situs ini mungkin menampilkan iklan dari Google AdSense. Google dan mitranya memakai cookie untuk menampilkan iklan berdasarkan kunjunganmu sebelumnya ke situs ini atau situs lain. Kamu bisa mematikan iklan yang dipersonalisasi di {0}, dan mempelajari lebih lanjut di {1}. Pengunjung dari Wilayah Ekonomi Eropa, Inggris, dan Swiss akan dimintai persetujuan sebelum cookie tersebut dipakai.', links: [[AD_SETTINGS, 'Setelan Iklan Google'], [GOOGLE_ADS, 'cara Google memakai data dalam iklan']] },
+      { h: 'Perubahan kebijakan', p: 'Kebijakan ini bisa diperbarui seiring perubahan situs. Tanggal di bagian atas menunjukkan versi terbaru.' },
+    ],
+    contactH: 'Kontak',
+    contact: 'Jika ada pertanyaan tentang kebijakan ini, kirim email ke {0}.',
+  },
+};
+const T = TEXT[lang];
+/** Tách đoạn văn có chỗ trống {0}, {1}… để chèn link. */
+const parts = (p: string) => p.split(/(\{\d\})/);
+---
+<ProseLayout title={T.title} description={T.description}>
+  <p>{T.updated}: {UPDATED}</p>
+  <p>{T.intro}</p>
+  {T.sections.map((s) => (
+    <>
+      <h2>{s.h}</h2>
+      <p>
+        {parts(s.p).map((x) => {
+          const m = x.match(/^\{(\d)\}$/);
+          const link = m && s.links?.[Number(m[1])];
+          return link ? <a href={link[0]}>{link[1]}</a> : x;
+        })}
+      </p>
+    </>
+  ))}
+  {email && (
+    <>
+      <h2>{T.contactH}</h2>
+      <p>
+        {parts(T.contact).map((x) => (x === '{0}' ? <a href={`mailto:${email}`}>{email}</a> : x))}
+      </p>
+    </>
+  )}
+</ProseLayout>

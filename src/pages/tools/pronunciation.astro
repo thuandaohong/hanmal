@@ -1,0 +1,137 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/PageHeader.astro';
+import SpeechNotice from '../../components/SpeechNotice.astro';
+import { type Key, getLang, linker, translator } from '../../i18n';
+
+const lang = getLang(Astro);
+const l = linker(lang);
+const tr = translator(lang);
+const RULES = ['linking', 'palatalization', 'aspiration', 'hDrop', 'neutralization', 'nasalization', 'rieulNasalization', 'liquidization', 'tensification', 'ui', 'yeo'];
+const strings = {
+  rules: Object.fromEntries(RULES.map((r) => [r, tr(`rule.${r}` as Key)])),
+  none: tr('pron.none'),
+  dictionary: tr('pron.dictionary'),
+  wordBase: l('/word/'),
+};
+const examples = ['한국어', '감사합니다', '같이 먹어요', '좋아해요', '국립 박물관', '신라', '읽고 싶어요'];
+---
+<BaseLayout title={tr('pron.title')} description={tr('pron.lead')}>
+  <script is:inline type="application/json" id="page-strings" set:html={JSON.stringify(strings)} />
+  <PageHeader title={tr('pron.title')} crumbs={[{ label: tr('nav.tools') }, { label: tr('nav.pronunciation') }]} lead={tr('pron.lead')} />
+  <section class="container-page grid gap-8 py-10 lg:grid-cols-2">
+    <div>
+      <label for="pron-in" class="mb-1.5 block text-sm font-semibold">{tr('pron.input')}</label>
+      <textarea id="pron-in" lang="ko" rows="4" class="w-full rounded-xl border border-line bg-surface p-4 text-xl focus:border-brand focus:outline-none">한국어를 공부해요</textarea>
+      <p class="mt-2 text-sm text-fg-muted">
+        {tr('tools.try')}{' '}
+        {examples.map((w, i) => <>{i > 0 && ' · '}<button type="button" data-example={w} lang="ko" class="link-underline">{w}</button></>)}
+      </p>
+      <p class="mt-6 text-xs text-fg-muted">{tr('pron.note')}</p>
+    </div>
+    <div>
+      <p class="mb-1.5 text-sm font-semibold">{tr('pron.output')}</p>
+      <div class="rounded-xl border border-line bg-surface p-5">
+        <div class="flex items-start justify-between gap-3">
+          <p id="pron-out" lang="ko" class="text-2xl leading-relaxed"></p>
+          <button type="button" id="pron-speak" aria-label={tr('jamo.listen')} title={tr('jamo.listen')} class="shrink-0 rounded-full bg-brand px-3 py-1.5 text-sm font-semibold text-on-brand">🔊</button>
+        </div>
+        <p id="pron-roman" class="mt-2 text-fg-muted"></p>
+      </div>
+      <div class="mt-3"><SpeechNotice /></div>
+      <p class="mt-6 mb-2 text-sm font-semibold">{tr('pron.rules')}</p>
+      <ul id="pron-rules" class="space-y-1.5"></ul>
+      <div id="pron-dict" class="mt-6"></div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  import { pronounce } from '../../lib/hangul/pronounce';
+  import { romanize } from '../../lib/hangul/romanize';
+  import { speak } from '../../scripts/speech';
+
+  const S = JSON.parse(document.getElementById('page-strings')!.textContent!);
+  const $ = (id: string) => document.getElementById(id)!;
+  const input = $('pron-in') as HTMLTextAreaElement;
+  let dict: Record<string, string> = {};
+
+  function render() {
+    const text = input.value;
+    const { text: spoken, changes } = pronounce(text);
+    // Tô màu những âm tiết đọc khác chữ viết (số âm tiết không đổi khi biến âm).
+    const a = [...text];
+    const b = [...spoken];
+    $('pron-out').replaceChildren(
+      ...b.map((ch, i) => {
+        if (ch === a[i]) return document.createTextNode(ch);
+        const s = document.createElement('mark');
+        s.className = 'rounded bg-brand-soft px-0.5 text-brand-ink';
+        s.textContent = ch;
+        return s;
+      }),
+    );
+    $('pron-roman').textContent = romanize(text);
+
+    const counts = new Map<string, number>();
+    for (const c of changes) counts.set(c.rule, (counts.get(c.rule) ?? 0) + 1);
+    $('pron-rules').replaceChildren(
+      ...(counts.size
+        ? [...counts].map(([rule, n]) => {
+            const li = document.createElement('li');
+            li.className = 'flex items-center justify-between rounded-lg border border-line px-3 py-2';
+            li.append(S.rules[rule]);
+            const badge = document.createElement('span');
+            badge.className = 'text-sm text-fg-muted';
+            badge.textContent = `×${n}`;
+            li.append(badge);
+            return li;
+          })
+        : [Object.assign(document.createElement('li'), { className: 'text-fg-muted', textContent: S.none })]),
+    );
+
+    // Từ có trong từ điển: hiện cách đọc chuẩn để đối chiếu.
+    const words = [...new Set(text.split(/[^가-힣]+/).filter((w) => dict[w]))];
+    const box = $('pron-dict');
+    box.replaceChildren();
+    if (words.length) {
+      box.append(Object.assign(document.createElement('p'), { className: 'mb-2 text-sm font-semibold', textContent: S.dictionary }));
+      const ul = document.createElement('ul');
+      ul.className = 'flex flex-wrap gap-2';
+      for (const w of words) {
+        const a = document.createElement('a');
+        a.href = S.wordBase + w;
+        a.lang = 'ko';
+        a.className = 'rounded-lg border border-line px-3 py-1.5 hover:border-brand';
+        a.textContent = `${w} [${dict[w]}]`;
+        const li = document.createElement('li');
+        li.append(a);
+        ul.append(li);
+      }
+      box.append(ul);
+    }
+    const url = new URL(location.href);
+    // Câu mẫu mặc định không ghi vào URL.
+    text.trim() && text !== input.defaultValue ? url.searchParams.set('q', text) : url.searchParams.delete('q');
+    history.replaceState(null, '', url);
+  }
+
+  input.addEventListener('input', render);
+  $('pron-speak').addEventListener('click', () => speak(input.value));
+  document.querySelectorAll<HTMLButtonElement>('[data-example]').forEach((b) =>
+    b.addEventListener('click', () => {
+      input.value = b.dataset.example!;
+      render();
+    }),
+  );
+  const q = new URLSearchParams(location.search).get('q');
+  if (q) input.value = q;
+  render();
+  fetch('/data/lexicon.json')
+    .then((r) => r.json())
+    .then((d) => {
+      dict = d.pron;
+      render();
+    })
+    .catch(() => {});
+</script>

@@ -1,0 +1,294 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import SpeechNotice from '../components/SpeechNotice.astro';
+import { type Key, getLang, linker, translator } from '../i18n';
+
+const lang = getLang(Astro);
+const l = linker(lang);
+const tr = translator(lang);
+const keys = ['deckInfo', 'allKnown', 'remaining', 'remainingOne', 'details', 'summary', 'confirmReset', 'part', 'byLevel', 'byTopic'] as const;
+const strings = {
+  lang,
+  wordBase: l('/word/'),
+  levels: { 1: tr('nav.beginner'), 2: tr('nav.intermediate') },
+  error: tr('common.loadError'),
+  ...Object.fromEntries(keys.map((k) => [k, tr(`fc.${k}` as Key)])),
+};
+---
+<BaseLayout title={tr('nav.flashcards')} description={tr('fc.lead')}>
+  <script is:inline type="application/json" id="page-strings" set:html={JSON.stringify(strings)} />
+  <PageHeader title={tr('nav.flashcards')} crumbs={[{ label: tr('nav.tools') }, { label: tr('nav.flashcards') }]} lead={tr('fc.lead')} />
+
+  <section class="container-page py-10">
+    <form id="fc-setup" class="max-w-xl space-y-5">
+      <div>
+        <label for="fc-deck" class="mb-1.5 block text-sm font-semibold">{tr('fc.deck')}</label>
+        <select id="fc-deck" class="h-11 w-full rounded-lg border border-line bg-surface px-3" disabled>
+          <option>{tr('search.loading')}</option>
+        </select>
+        <p id="fc-deck-info" class="mt-2 text-sm text-fg-muted"></p>
+      </div>
+      <fieldset>
+        <legend class="mb-1.5 text-sm font-semibold">{tr('fc.front')}</legend>
+        <div class="flex flex-wrap gap-4 text-sm">
+          <label class="inline-flex items-center gap-2"><input type="radio" name="mode" value="ko" checked class="accent-brand" /> {tr('fc.modeKo')}</label>
+          <label class="inline-flex items-center gap-2"><input type="radio" name="mode" value="meaning" class="accent-brand" /> {tr('fc.modeMeaning')}</label>
+          <label class="inline-flex items-center gap-2"><input type="radio" name="mode" value="listen" class="accent-brand" /> {tr('fc.modeListen')}</label>
+        </div>
+      </fieldset>
+      <label class="flex items-center gap-2 text-sm"><input type="checkbox" id="fc-only-new" checked class="size-4 accent-brand" /> {tr('fc.onlyNew')}</label>
+      <div class="flex flex-wrap gap-3">
+        <button type="submit" class="rounded-lg bg-brand px-5 py-2.5 font-semibold text-on-brand hover:opacity-90">{tr('fc.start')}</button>
+        <button type="button" id="fc-reset" class="rounded-lg border border-line px-4 py-2.5 text-sm hover:border-brand">{tr('fc.reset')}</button>
+      </div>
+      <SpeechNotice />
+    </form>
+
+    <div id="fc-study" hidden class="mx-auto max-w-xl">
+      <div class="mb-4 flex items-center justify-between text-sm text-fg-muted">
+        <span id="fc-deck-name"></span>
+        <span id="fc-count"></span>
+      </div>
+      <div class="mb-6 h-1.5 overflow-hidden rounded-full bg-bg-muted"><div id="fc-bar" class="h-full rounded-full bg-brand transition-[width]"></div></div>
+      <button type="button" id="fc-card" class="flex min-h-80 w-full flex-col items-center justify-center rounded-2xl border border-line bg-surface p-8 text-center shadow-sm transition hover:border-brand/50" aria-live="polite">
+        <div id="fc-front"></div>
+        <div id="fc-back" hidden class="mt-6 w-full border-t border-dashed border-line pt-6"></div>
+        <span id="fc-hint" class="mt-6 text-xs text-fg-muted">{tr('fc.hint')}</span>
+      </button>
+      <div class="mt-5 grid grid-cols-2 gap-3">
+        <button type="button" id="fc-again" disabled class="rounded-lg border border-line py-3 font-semibold hover:border-brand disabled:opacity-40">{tr('fc.again')} <span class="text-xs text-fg-muted">(1)</span></button>
+        <button type="button" id="fc-good" disabled class="rounded-lg bg-brand py-3 font-semibold text-on-brand hover:opacity-90 disabled:opacity-40">{tr('fc.good')} <span class="text-xs opacity-80">(2)</span></button>
+      </div>
+      <button type="button" id="fc-quit" class="link-underline mt-6 text-sm">← {tr('fc.chooseAnother')}</button>
+    </div>
+
+    <div id="fc-done" hidden class="mx-auto max-w-xl rounded-2xl border border-line bg-surface p-8 text-center">
+      <p lang="ko" class="text-6xl font-bold">끝!</p>
+      <h2 class="mt-4 text-2xl font-bold">{tr('fc.done')}</h2>
+      <p id="fc-summary" class="mt-2 text-fg-muted"></p>
+      <div class="mt-6 flex justify-center gap-3">
+        <button type="button" id="fc-restart" class="rounded-lg bg-brand px-5 py-2.5 font-semibold text-on-brand hover:opacity-90">{tr('fc.restart')}</button>
+        <button type="button" id="fc-back-setup" class="rounded-lg border border-line px-5 py-2.5 hover:border-brand">{tr('fc.chooseAnother')}</button>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  import { speak } from '../scripts/speech';
+
+  type Row = [string, string, string, number, string];
+  type Deck = { id: string; group: string; name: string; words: string[] };
+  const S = JSON.parse(document.getElementById('page-strings')!.textContent!);
+  const fill = (s: string, v: Record<string, string | number>) => s.replace(/\{(\w+)\}/g, (_, k) => String(v[k]));
+  const $ = <T extends HTMLElement = HTMLElement>(id: string) => document.getElementById(id) as T;
+  const setup = $<HTMLFormElement>('fc-setup');
+  const study = $('fc-study');
+  const done = $('fc-done');
+  const deckSelect = $<HTMLSelectElement>('fc-deck');
+  const onlyNew = $<HTMLInputElement>('fc-only-new');
+  const front = $('fc-front');
+  const back = $('fc-back');
+  const btnAgain = $<HTMLButtonElement>('fc-again');
+  const btnGood = $<HTMLButtonElement>('fc-good');
+
+  const store = {
+    get: (k: string) => { try { return localStorage.getItem(k); } catch { return null; } },
+    set: (k: string, v: string) => { try { localStorage.setItem(k, v); } catch {} },
+  };
+  // Tiến độ dùng chung cho mọi ngôn ngữ giao diện: chỉ phụ thuộc vào từ tiếng Hàn.
+  const knownKey = (d: Deck) => `fc-ko:${d.id}`;
+  const getKnown = (d: Deck) => {
+    try {
+      const v = JSON.parse(store.get(knownKey(d)) ?? '[]');
+      return new Set<string>(Array.isArray(v) ? v : []);
+    } catch {
+      return new Set<string>(); // dữ liệu lưu bị hỏng: bắt đầu lại
+    }
+  };
+  const saveKnown = (d: Deck, s: Set<string>) => store.set(knownKey(d), JSON.stringify([...s]));
+
+  let byWord = new Map<string, Row>();
+  let decks: Deck[] = [];
+  let deck: Deck;
+  let queue: string[] = [];
+  let total = 0, learned = 0, flipped = false;
+  let mode: 'ko' | 'meaning' | 'listen' = 'ko';
+  const currentDeck = () => decks.find((d) => d.id === deckSelect.value)!;
+
+  function buildDecks(rows: Row[], topics: [string, string][]) {
+    const out: Deck[] = [];
+    for (const level of [1, 2]) {
+      const words = rows.filter((r) => r[3] === level).map((r) => r[0]);
+      for (let i = 0; i < words.length; i += 100) {
+        const part = words.slice(i, i + 100);
+        out.push({
+          id: `level${level}-${i / 100 + 1}`,
+          group: S.byLevel,
+          name: fill(S.part, { level: S.levels[level], i: i / 100 + 1, from: i + 1, to: i + part.length }),
+          words: part,
+        });
+      }
+    }
+    for (const [slug, name] of topics) {
+      out.push({ id: `topic-${slug}`, group: S.byTopic, name, words: rows.filter((r) => r[4] === slug).map((r) => r[0]) });
+    }
+    return out;
+  }
+
+  function showDeckInfo() {
+    const d = currentDeck();
+    const known = getKnown(d);
+    $('fc-deck-info').textContent = fill(S.deckInfo, { n: d.words.length, known: d.words.filter((w) => known.has(w)).length });
+    store.set('fc-ko-last', d.id);
+  }
+
+  const shuffle = <T,>(a: T[]) => {
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  };
+  const el = (tag: string, cls: string, text: string, ko = false) => {
+    const e = document.createElement(tag);
+    e.className = cls;
+    e.textContent = text;
+    if (ko) e.lang = 'ko';
+    return e;
+  };
+
+  function start() {
+    deck = currentDeck();
+    mode = new FormData(setup).get('mode') as typeof mode;
+    const known = getKnown(deck);
+    let words = [...deck.words];
+    if (onlyNew.checked) words = words.filter((w) => !known.has(w));
+    if (!words.length) {
+      $('fc-deck-info').textContent = S.allKnown;
+      return;
+    }
+    queue = shuffle(words);
+    total = queue.length;
+    learned = 0;
+    $('fc-deck-name').textContent = deck.name;
+    setup.hidden = done.hidden = true;
+    study.hidden = false;
+    showCard();
+  }
+
+  function showCard() {
+    if (!queue.length) return finish();
+    const [w, rom, gl] = byWord.get(queue[0])!;
+    flipped = false;
+    btnAgain.disabled = btnGood.disabled = true;
+    back.hidden = true;
+    $('fc-hint').hidden = false;
+    $('fc-count').textContent = (queue.length === 1 ? S.remainingOne : fill(S.remaining, { n: queue.length }));
+    $('fc-bar').style.width = `${(learned / total) * 100}%`;
+    if (mode === 'ko') front.replaceChildren(el('p', 'text-6xl font-bold', w, true));
+    else if (mode === 'meaning') front.replaceChildren(el('p', 'text-2xl font-semibold text-brand', gl));
+    else {
+      front.replaceChildren(el('p', 'text-6xl', '🔊'));
+      speak(w);
+    }
+    const link = el('a', 'link-underline mt-4 inline-block text-sm', S.details) as HTMLAnchorElement;
+    link.href = S.wordBase + w;
+    link.target = '_blank';
+    back.replaceChildren(
+      ...(mode === 'ko' ? [] : [el('p', 'text-5xl font-bold', w, true)]),
+      el('p', 'mt-2 text-fg-muted', rom),
+      ...(mode === 'meaning' ? [] : [el('p', 'mt-2 text-xl font-semibold text-brand', gl)]),
+      link,
+    );
+  }
+
+  function flip() {
+    if (flipped || study.hidden) return;
+    flipped = true;
+    back.hidden = false;
+    $('fc-hint').hidden = true;
+    btnAgain.disabled = btnGood.disabled = false;
+    if (mode !== 'listen') speak(queue[0]);
+  }
+
+  function answer(good: boolean) {
+    if (!flipped) return;
+    const w = queue.shift()!;
+    if (good) {
+      learned++;
+      const known = getKnown(deck);
+      known.add(w);
+      saveKnown(deck, known);
+    } else queue.splice(Math.min(queue.length, 3 + Math.floor(Math.random() * 4)), 0, w);
+    showCard();
+  }
+
+  function finish() {
+    study.hidden = true;
+    done.hidden = false;
+    $('fc-summary').textContent = fill(S.summary, { total, deck: deck.name });
+  }
+  function backToSetup() {
+    study.hidden = done.hidden = true;
+    setup.hidden = false;
+    showDeckInfo();
+  }
+
+  setup.addEventListener('submit', (e) => {
+    e.preventDefault();
+    start();
+  });
+  deckSelect.addEventListener('change', showDeckInfo);
+  $('fc-reset').addEventListener('click', () => {
+    const d = currentDeck();
+    if (confirm(fill(S.confirmReset, { deck: d.name }))) {
+      saveKnown(d, new Set());
+      showDeckInfo();
+    }
+  });
+  $('fc-card').addEventListener('click', flip);
+  btnAgain.addEventListener('click', () => answer(false));
+  btnGood.addEventListener('click', () => answer(true));
+  $('fc-quit').addEventListener('click', backToSetup);
+  $('fc-back-setup').addEventListener('click', backToSetup);
+  $('fc-restart').addEventListener('click', () => {
+    onlyNew.checked = false;
+    start();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (study.hidden || e.target instanceof HTMLInputElement || e.target instanceof HTMLSelectElement) return;
+    // Phím tắt chỉ khi không có nút/link nào đang được chọn (để Tab + Enter vẫn dùng được cho nút).
+    const focusedControl = e.target instanceof HTMLElement && e.target !== document.body && !!e.target.closest('a, button, [role=button], textarea');
+    if (focusedControl && (e.key === ' ' || e.key === 'Enter')) return;
+    if (e.key === ' ' || e.key === 'Enter') {
+      e.preventDefault();
+      flip();
+    } else if (e.key === '1' || e.key === 'ArrowLeft') answer(false);
+    else if (e.key === '2' || e.key === 'ArrowRight') answer(true);
+  });
+
+  fetch(`/data/words-${S.lang}.json`)
+    .then((r) => r.json())
+    .then((d) => {
+      byWord = new Map((d.words as Row[]).map((r) => [r[0], r]));
+      decks = buildDecks(d.words, d.topics);
+      const groups = new Map<string, HTMLOptGroupElement>();
+      deckSelect.replaceChildren();
+      for (const dk of decks) {
+        if (!groups.has(dk.group)) {
+          const g = document.createElement('optgroup');
+          g.label = dk.group;
+          groups.set(dk.group, g);
+          deckSelect.append(g);
+        }
+        groups.get(dk.group)!.append(new Option(dk.name, dk.id));
+      }
+      const last = store.get('fc-ko-last');
+      if (last && decks.some((x) => x.id === last)) deckSelect.value = last;
+      deckSelect.disabled = false;
+      showDeckInfo();
+    })
+    .catch(() => ($('fc-deck-info').textContent = S.error));
+</script>

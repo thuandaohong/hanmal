@@ -1,0 +1,45 @@
+---
+// Trang trình độ: các từ thông dụng nhất + link tới danh sách đầy đủ theo phụ âm đầu
+// (danh sách đầy đủ 1.800–2.200 từ trong một trang nặng gần 1 MB).
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/PageHeader.astro';
+import WordList from '../../components/WordList.astro';
+import InitialNav from '../../components/InitialNav.astro';
+import { LEVELS, byLevel, groupByInitial } from '../../data/words';
+import { type Key, getLang, linker, translator } from '../../i18n';
+
+const TOP = 200;
+export function getStaticPaths() {
+  return LEVELS.map((lv) => ({ params: { level: lv.slug }, props: { lv } }));
+}
+const { lv } = Astro.props as { lv: (typeof LEVELS)[number] };
+const lang = getLang(Astro);
+const l = linker(lang);
+const tr = translator(lang);
+const words = byLevel(lv.level); // đã xếp theo mức thông dụng
+const groups = groupByInitial(words);
+const lead = tr(`vocab.levelLead.${lv.level}` as Key, { n: words.length.toLocaleString(lang) });
+---
+<BaseLayout title={`${tr(lv.key)} (${lv.topik}) – ${tr('vocab.title')}`} description={lead}>
+  <PageHeader title={`${tr(lv.key)} · ${lv.topik}`} crumbs={[{ label: tr('nav.vocabulary'), href: l('/vocabulary') }, { label: tr(lv.key) }]} lead={lead}>
+    <InitialNav level={lv.slug} initials={groups.map((g) => g.initial)} />
+  </PageHeader>
+  <section class="container-page py-8">
+    <h2 class="mb-4 text-2xl font-bold">{tr('vocab.mostCommon', { n: TOP })}</h2>
+    <WordList words={words.slice(0, TOP)} />
+  </section>
+  <section class="container-page pb-12">
+    <h2 class="mb-4 text-2xl font-bold">{tr('vocab.byInitial')}</h2>
+    <ul class="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
+      {groups.map((g) => (
+        <li>
+          <a href={l(`/vocabulary/${lv.slug}/${g.initial}`)} class="block rounded-xl border border-line bg-surface p-4 hover:border-brand">
+            <span lang="ko" class="text-2xl font-bold">{g.initial}</span>
+            <span class="mt-1 block text-sm text-fg-muted">{tr('common.words', { n: g.words.length })}</span>
+            <span lang="ko" class="mt-1 block truncate text-sm">{g.words.slice(0, 4).map((w) => w.w).join(', ')}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </section>
+</BaseLayout>

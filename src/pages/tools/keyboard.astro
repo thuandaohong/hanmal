@@ -1,0 +1,123 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/PageHeader.astro';
+import { getLang, translator } from '../../i18n';
+
+const lang = getLang(Astro);
+const tr = translator(lang);
+// Bố cục bàn phím 2 hàng (두벌식): [phím QWERTY, chữ thường, chữ khi giữ Shift]
+const ROWS: [string, string, string][][] = [
+  [['q', 'ㅂ', 'ㅃ'], ['w', 'ㅈ', 'ㅉ'], ['e', 'ㄷ', 'ㄸ'], ['r', 'ㄱ', 'ㄲ'], ['t', 'ㅅ', 'ㅆ'], ['y', 'ㅛ', 'ㅛ'], ['u', 'ㅕ', 'ㅕ'], ['i', 'ㅑ', 'ㅑ'], ['o', 'ㅐ', 'ㅒ'], ['p', 'ㅔ', 'ㅖ']],
+  [['a', 'ㅁ', 'ㅁ'], ['s', 'ㄴ', 'ㄴ'], ['d', 'ㅇ', 'ㅇ'], ['f', 'ㄹ', 'ㄹ'], ['g', 'ㅎ', 'ㅎ'], ['h', 'ㅗ', 'ㅗ'], ['j', 'ㅓ', 'ㅓ'], ['k', 'ㅏ', 'ㅏ'], ['l', 'ㅣ', 'ㅣ']],
+  [['z', 'ㅋ', 'ㅋ'], ['x', 'ㅌ', 'ㅌ'], ['c', 'ㅊ', 'ㅊ'], ['v', 'ㅍ', 'ㅍ'], ['b', 'ㅠ', 'ㅠ'], ['n', 'ㅜ', 'ㅜ'], ['m', 'ㅡ', 'ㅡ']],
+];
+const strings = { copy: tr('tools.copy'), copied: tr('tools.copied'), keys: ROWS.flat() };
+---
+<BaseLayout title={tr('kb.title')} description={tr('kb.lead')}>
+  <script is:inline type="application/json" id="page-strings" set:html={JSON.stringify(strings)} />
+  <PageHeader title={tr('kb.title')} crumbs={[{ label: tr('nav.tools') }, { label: tr('nav.keyboard') }]} lead={tr('kb.lead')} />
+  <section class="container-page py-10">
+    <div class="mx-auto max-w-3xl">
+      <div class="relative">
+        <textarea id="kb-out" lang="ko" aria-label={tr('kb.title')} rows="3" readonly class="w-full rounded-xl border border-line bg-surface p-4 pr-24 text-2xl focus:border-brand focus:outline-none"></textarea>
+        <button type="button" id="kb-copy" class="absolute top-3 right-3 rounded-md border border-line bg-surface px-3 py-1 text-sm hover:border-brand">{tr('tools.copy')}</button>
+      </div>
+      <label class="mt-3 flex items-center gap-2 text-sm">
+        <input type="checkbox" id="kb-physical" checked class="size-4 accent-brand" /> {tr('kb.physical')}
+      </label>
+
+      <div id="kb" class="mt-6 space-y-2 select-none">
+        {ROWS.map((row, r) => (
+          <div class="flex justify-center gap-1.5" style={`padding-left:${r * 1.25}rem`}>
+            {row.map(([key, base, shifted]) => (
+              <button type="button" data-key={key} data-base={base} data-shift={shifted} class="kb-key relative grid h-14 w-[9%] min-w-8 place-items-center rounded-lg border border-line bg-surface text-xl shadow-sm active:translate-y-px hover:border-brand sm:text-2xl">
+                <span lang="ko" class="kb-label">{base}</span>
+                <span class="absolute right-1 bottom-0.5 hidden text-[10px] text-fg-muted uppercase sm:block">{key}</span>
+              </button>
+            ))}
+          </div>
+        ))}
+        <div class="flex justify-center gap-1.5">
+          <button type="button" id="kb-shift" aria-pressed="false" class="h-12 rounded-lg border border-line px-4 text-sm font-semibold aria-pressed:border-brand aria-pressed:bg-brand-soft aria-pressed:text-brand-ink">Shift</button>
+          <button type="button" id="kb-space" class="h-12 w-1/2 rounded-lg border border-line text-sm text-fg-muted">{tr('kb.space')}</button>
+          <button type="button" id="kb-back" class="h-12 rounded-lg border border-line px-4 text-sm">⌫ {tr('kb.backspace')}</button>
+          <button type="button" id="kb-clear" class="h-12 rounded-lg border border-line px-4 text-sm">{tr('kb.clear')}</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  import { assemble } from '../../lib/hangul/keyboard';
+
+  const S = JSON.parse(document.getElementById('page-strings')!.textContent!);
+  const $ = <T extends HTMLElement>(id: string) => document.getElementById(id) as T;
+  const out = $<HTMLTextAreaElement>('kb-out');
+  const physical = $<HTMLInputElement>('kb-physical');
+  const shiftBtn = $('kb-shift');
+  const KEYMAP = new Map<string, [string, string]>(S.keys.map(([k, b, s]: string[]) => [k, [b, s]]));
+  // Lưu chuỗi chữ cái gốc; văn bản hiển thị luôn được ghép lại từ chuỗi này.
+  let buffer = '';
+  let shift = false;
+
+  const render = () => {
+    out.value = assemble(buffer);
+    out.scrollTop = out.scrollHeight;
+  };
+  const type = (s: string) => {
+    buffer += s;
+    render();
+  };
+  const setShift = (on: boolean) => {
+    shift = on;
+    shiftBtn.setAttribute('aria-pressed', String(on));
+    document.querySelectorAll<HTMLElement>('.kb-key').forEach((k) => (k.querySelector('.kb-label')!.textContent = on ? k.dataset.shift! : k.dataset.base!));
+  };
+
+  document.querySelectorAll<HTMLButtonElement>('.kb-key').forEach((k) =>
+    k.addEventListener('click', () => {
+      type(shift ? k.dataset.shift! : k.dataset.base!);
+      if (shift) setShift(false);
+    }),
+  );
+  shiftBtn.addEventListener('click', () => setShift(!shift));
+  $('kb-space').addEventListener('click', () => type(' '));
+  $('kb-back').addEventListener('click', () => {
+    buffer = [...buffer].slice(0, -1).join('');
+    render();
+  });
+  $('kb-clear').addEventListener('click', () => {
+    buffer = '';
+    render();
+  });
+  $('kb-copy').addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(out.value);
+      $('kb-copy').textContent = S.copied;
+      setTimeout(() => ($('kb-copy').textContent = S.copy), 1200);
+    } catch {}
+  });
+
+  // Gõ bằng bàn phím máy tính: đổi phím QWERTY thành chữ Hangul theo bố cục 2 hàng.
+  document.addEventListener('keydown', (e) => {
+    if (!physical.checked || e.ctrlKey || e.metaKey || e.altKey) return;
+    const target = e.target as HTMLElement;
+    if (target !== out && target !== document.body && !target.closest('#kb')) return;
+    // Enter/Space trên một phím ảo đang được chọn: để trình duyệt bấm nút đó.
+    if ((e.key === 'Enter' || e.key === ' ') && target.closest('button')) return;
+    const mapped = KEYMAP.get(e.key.toLowerCase());
+    if (mapped) {
+      e.preventDefault();
+      type(e.shiftKey ? mapped[1] : mapped[0]);
+    } else if (e.key === 'Backspace') {
+      e.preventDefault();
+      buffer = [...buffer].slice(0, -1).join('');
+      render();
+    } else if (e.key === 'Enter' || e.key === ' ' || /^[0-9.,!?'"()\-]$/.test(e.key)) {
+      e.preventDefault();
+      type(e.key === 'Enter' ? '\n' : e.key);
+    }
+  });
+  render();
+</script>

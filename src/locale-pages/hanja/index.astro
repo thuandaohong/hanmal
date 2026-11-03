@@ -1,0 +1,31 @@
+---
+// @locales: vi ja
+// Module Hán tự chỉ có ở bản tiếng Việt (âm Hán Việt) và tiếng Nhật (chữ kanji).
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/PageHeader.astro';
+import { HANJA, hanjaUrl } from '../../data/hanja';
+import { HANJA_LANGS } from '../../data/site';
+import { getLang, translator } from '../../i18n';
+
+const lang = getLang(Astro);
+const tr = translator(lang);
+const lead = tr('hanja.lead', { n: HANJA.length });
+---
+<BaseLayout title={tr('hanja.title')} description={lead} locales={HANJA_LANGS}>
+  <PageHeader title={tr('hanja.title')} crumbs={[{ label: tr('nav.hanja') }]} lead={lead}>
+    <p class="mt-3 text-sm text-fg-muted">{tr('hanja.sortNote')}</p>
+  </PageHeader>
+  <section class="container-page py-10">
+    <ul class="grid grid-cols-[repeat(auto-fill,minmax(6rem,1fr))] gap-2">
+      {HANJA.map((h) => (
+        <li>
+          <a href={hanjaUrl(h.c, lang)} title={h.en.slice(0, 3).join(', ')} class="flex aspect-square flex-col items-center justify-center rounded-xl border border-line bg-surface px-1 transition hover:border-brand/60 hover:text-brand">
+            <span lang={lang === 'ja' ? 'ja' : 'ko'} class="font-hanja text-4xl leading-none">{h.c}</span>
+            <span lang="ko" class="mt-2 text-sm font-semibold">{h.ko[0]}</span>
+            <span class="max-w-full truncate text-xs text-fg-muted">{lang === 'ja' ? (h.ja !== h.c ? `${h.ja} ` : '') + (h.on[0] ?? '') : h.hv[0]}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </section>
+</BaseLayout>

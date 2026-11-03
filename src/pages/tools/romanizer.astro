@@ -1,0 +1,44 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/PageHeader.astro';
+import { getLang, translator } from '../../i18n';
+
+const lang = getLang(Astro);
+const tr = translator(lang);
+const strings = { copy: tr('tools.copy'), copied: tr('tools.copied') };
+---
+<BaseLayout title={tr('roman.title')} description={tr('roman.lead')}>
+  <script is:inline type="application/json" id="page-strings" set:html={JSON.stringify(strings)} />
+  <PageHeader title={tr('roman.title')} crumbs={[{ label: tr('nav.tools') }, { label: tr('nav.romanizer') }]} lead={tr('roman.lead')} />
+  <section class="container-page grid gap-6 py-10 lg:grid-cols-2">
+    <div>
+      <label for="rom-in" class="mb-1.5 block text-sm font-semibold">{tr('pron.input')}</label>
+      <textarea id="rom-in" lang="ko" rows="6" class="w-full rounded-xl border border-line bg-surface p-4 text-xl focus:border-brand focus:outline-none">안녕하세요. 저는 서울에 살아요.</textarea>
+    </div>
+    <div>
+      <div class="mb-1.5 flex items-center justify-between">
+        <span class="text-sm font-semibold">{tr('nav.romanizer')}</span>
+        <button type="button" id="rom-copy" class="rounded-md border border-line px-3 py-1 text-sm hover:border-brand">{tr('tools.copy')}</button>
+      </div>
+      <output id="rom-out" for="rom-in" class="block min-h-40 rounded-xl border border-line bg-surface p-4 text-xl whitespace-pre-wrap"></output>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  import { romanize } from '../../lib/hangul/romanize';
+  const S = JSON.parse(document.getElementById('page-strings')!.textContent!);
+  const input = document.getElementById('rom-in') as HTMLTextAreaElement;
+  const out = document.getElementById('rom-out')!;
+  const copy = document.getElementById('rom-copy')!;
+  const render = () => (out.textContent = romanize(input.value));
+  input.addEventListener('input', render);
+  copy.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(out.textContent ?? '');
+      copy.textContent = S.copied;
+      setTimeout(() => (copy.textContent = S.copy), 1200);
+    } catch {}
+  });
+  render();
+</script>

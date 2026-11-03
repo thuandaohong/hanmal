@@ -1,0 +1,49 @@
+---
+// Lưới ô luyện viết với vài âm tiết Hangul mờ trang trí: [chữ, cột, hàng].
+const HERO: [string, number, number][] = [
+  ['한', 1, 1],
+  ['글', 3, 1],
+  ['말', 2, 2],
+];
+const COLS = 5;
+const ROWS = 4;
+const cells = Array.from({ length: COLS * ROWS }, (_, i) => {
+  const col = i % COLS;
+  const row = Math.floor(i / COLS);
+  return HERO.find(([, c, r]) => c === col && r === row)?.[0];
+});
+---
+<div
+  class="hero-grid pointer-events-none absolute inset-y-0 right-0 hidden w-[56%] md:block"
+  aria-hidden="true"
+  style={`--cols:${COLS};--rows:${ROWS}`}
+>
+  <div class="grid h-full" style="grid-template-columns:repeat(var(--cols),minmax(0,1fr));grid-template-rows:repeat(var(--rows),minmax(0,1fr))">
+    {cells.map((k) => (
+      <div class="cell relative grid place-items-center border-t border-l border-line">
+        {k && <span lang="ko" class="text-7xl font-bold text-fg/20 select-none lg:text-8xl">{k}</span>}
+      </div>
+    ))}
+  </div>
+</div>
+
+<style>
+  .hero-grid {
+    mask-image: linear-gradient(to right, transparent, #000 35%), linear-gradient(to bottom, #000 70%, transparent);
+    mask-composite: intersect;
+  }
+  /* Đường chữ thập đứt nét ở giữa mỗi ô */
+  .cell::before,
+  .cell::after {
+    content: '';
+    position: absolute;
+  }
+  .cell::before {
+    inset: 0 50%;
+    border-left: 1px dashed var(--color-line);
+  }
+  .cell::after {
+    inset: 50% 0;
+    border-top: 1px dashed var(--color-line);
+  }
+</style>

@@ -1,0 +1,16 @@
+---
+import type { Jamo } from '../data/jamo';
+import { getLang, localize } from '../i18n';
+interface Props { jamo: Jamo }
+const { jamo } = Astro.props;
+const lang = getLang(Astro);
+const roman = jamo.roman[0] || '–';
+---
+<a
+  href={localize(`/hangul/${jamo.char}`, lang)}
+  class="flex aspect-square flex-col items-center justify-center rounded-xl border border-line bg-surface transition hover:-translate-y-0.5 hover:border-brand/60 hover:text-brand"
+>
+  <span lang="ko" class="text-4xl leading-none font-bold">{jamo.char}</span>
+  <span class="mt-2 text-sm font-semibold">{roman}</span>
+  <span lang="ko" class="text-xs text-fg-muted">{jamo.name}</span>
+</a>

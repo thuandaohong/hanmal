@@ -1,0 +1,96 @@
+---
+// @locales: vi ja
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/PageHeader.astro';
+import StrokeOrder from '../../components/StrokeOrder.astro';
+import { BY_WORD, gloss, wordUrl } from '../../data/words';
+import { HANJA, HANJA_STROKES, type Hanja, WORD_HANJA, hanjaUrl } from '../../data/hanja';
+import { HANJA_LANGS } from '../../data/site';
+import { getLang, linker, translator } from '../../i18n';
+
+export function getStaticPaths() {
+  return HANJA.map((h) => ({ params: { char: h.c }, props: { h } }));
+}
+const { h } = Astro.props as { h: Hanja };
+const lang = getLang(Astro);
+const l = linker(lang);
+const tr = translator(lang);
+const ja = lang === 'ja';
+const paths = HANJA_STROKES[h.c] ?? [];
+const i = HANJA.indexOf(h);
+const [prev, next] = [HANJA[i - 1], HANJA[i + 1]];
+const words = h.words.map((w) => BY_WORD.get(w)).filter((w) => !!w);
+const readingForDescription = ja ? [h.ja, ...h.on.slice(0, 2)].join('・') : h.hv.slice(0, 2).join(', ');
+
+const facts: [string, string, string?][] = [
+  [tr('hanja.korean'), h.ko.join(', '), 'ko'],
+  ...(ja
+    ? ([
+        [tr('hanja.japanese'), h.ja, 'ja'],
+        [tr('hanja.onyomi'), h.on.join('、') || '—', 'ja'],
+        [tr('hanja.kunyomi'), h.kun.map((k) => k.replace('.', '')).slice(0, 4).join('、') || '—', 'ja'],
+      ] as [string, string, string?][])
+    : ([
+        [tr('hanja.hanViet'), h.hv.slice(0, 3).join(', ')],
+        [tr('hanja.meaning'), h.en.slice(0, 3).join(', ')],
+      ] as [string, string, string?][])),
+];
+---
+<BaseLayout
+  title={tr('hanja.pageTitle', { c: h.c, ko: h.ko[0] ?? '' })}
+  description={tr('hanja.pageDescription', { c: h.c, ko: h.ko.join(', '), hv: readingForDescription })}
+  locales={HANJA_LANGS}
+>
+  <PageHeader title={tr('hanja.pageTitle', { c: h.c, ko: h.ko[0] ?? '' })} crumbs={[{ label: tr('nav.hanja'), href: l('/hanja') }, { label: h.c }]} />
+
+  <section class="container-page grid gap-10 py-10 md:grid-cols-[16rem_1fr]">
+    <div>
+      {paths.length ? (
+        <StrokeOrder char={h.c} paths={paths} />
+      ) : (
+        <div class="grid aspect-square place-items-center rounded-2xl border border-line bg-surface font-hanja text-[9rem]">{h.c}</div>
+      )}
+      <nav class="mx-auto mt-4 flex max-w-60 justify-between text-sm md:max-w-none" aria-label={tr('nav.hanja')}>
+        {prev ? <a href={hanjaUrl(prev.c, lang)} class="link-underline font-hanja">← {prev.c}</a> : <span />}
+        {next && <a href={hanjaUrl(next.c, lang)} class="link-underline font-hanja">{next.c} →</a>}
+      </nav>
+    </div>
+    <div>
+      <p class="flex flex-wrap items-baseline gap-3">
+        <span lang="ko" class="text-4xl font-bold">{h.ko[0]}</span>
+        <span class="text-2xl font-semibold text-brand" lang={ja ? 'ja' : undefined}>{ja ? h.ja : h.hv[0]}</span>
+      </p>
+      <dl class="mt-6 grid gap-2 sm:grid-cols-2">
+        {facts.map(([label, value, lng]) => (
+          <div class="rounded-xl border border-line bg-surface p-4">
+            <dt class="text-xs text-fg-muted">{label}</dt>
+            <dd class="mt-1 font-semibold" lang={lng}>{value}</dd>
+          </div>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="border-t border-dashed border-line">
+    <div class="container-page py-10">
+      <h2 class="mb-5 text-xl font-bold">{tr('hanja.words', { c: h.c })} <span class="text-base font-normal text-fg-muted">({words.length})</span></h2>
+      <ul class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        {words.map((w) => {
+          const wh = WORD_HANJA[w.w];
+          return (
+            <li>
+              <a href={wordUrl(w.w, lang)} class="block h-full rounded-xl border border-line bg-surface px-4 py-3 hover:border-brand/60">
+                <span class="flex flex-wrap items-baseline gap-x-2">
+                  <span lang="ko" class="text-xl font-semibold">{w.w}</span>
+                  {wh && <span lang={ja ? 'ja' : 'ko'} class="font-hanja text-fg-muted">{ja ? wh.ja : wh.hanja}</span>}
+                </span>
+                {!ja && wh?.hv && <span class="block text-sm font-semibold text-brand">{wh.hv}</span>}
+                <span class="mt-1 block truncate text-sm">{gloss(w, lang)}</span>
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  </section>
+</BaseLayout>

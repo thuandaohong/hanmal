@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHeader from '../../../components/PageHeader.astro';
+import { COMPARES, compareLevel, compareTitle, compareUrl } from '../../../data/grammar-compare';
+import { LEVELS } from '../../../data/words';
+import { getLang, linker, translator } from '../../../i18n';
+
+const lang = getLang(Astro);
+const l = linker(lang);
+const tr = translator(lang);
+const lead = tr('compare.lead', { n: COMPARES.length });
+---
+<BaseLayout title={tr('compare.title')} description={lead}>
+  <PageHeader title={tr('compare.title')} crumbs={[{ label: tr('nav.grammar'), href: l('/grammar') }, { label: tr('nav.grammarCompare') }]} lead={lead} />
+  {LEVELS.map((lv) => {
+    const items = COMPARES.filter((c) => compareLevel(c) === lv.level);
+    return items.length > 0 && (
+      <section class="container-page py-10">
+        <h2 class="mb-5 text-2xl font-bold">{tr(lv.key)} · {lv.topik} <span class="text-base font-normal text-fg-muted">({items.length})</span></h2>
+        <ul class="grid gap-3 sm:grid-cols-2">
+          {items.map((c) => (
+            <li>
+              <a href={compareUrl(c.slug, lang)} class="block h-full rounded-xl border border-line bg-surface p-5 transition hover:-translate-y-0.5 hover:border-brand/50 hover:shadow-md">
+                <span lang="ko" class="block text-lg font-bold">{compareTitle(c)}</span>
+                <span class="mt-1.5 block text-sm text-fg-muted">{c.text[lang].summary}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    );
+  })}
+</BaseLayout>

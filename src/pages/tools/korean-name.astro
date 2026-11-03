@@ -1,0 +1,107 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/PageHeader.astro';
+import SpeechNotice from '../../components/SpeechNotice.astro';
+import { type Key, LANGS, getLang, translator } from '../../i18n';
+
+const lang = getLang(Astro);
+const tr = translator(lang);
+// Ví dụ theo ngôn ngữ nguồn; mặc định chọn ngôn ngữ của trang.
+const EXAMPLES: Record<string, string[]> = {
+  vi: ['Nguyễn Văn An', 'Trần Thị Thu Hà', 'Lê Minh Tuấn'],
+  en: ['Emily Johnson', 'Michael Brown', 'Sarah Wilson'],
+  ja: ['たなか ゆうき', 'Sato Sakura', 'すずき はると'],
+  id: ['Siti Rahmawati', 'Budi Santoso', 'Dewi Putri'],
+};
+const strings = { examples: EXAMPLES, kanaHint: tr('name.kanaHint') };
+---
+<BaseLayout title={tr('name.title')} description={tr('name.lead')}>
+  <script is:inline type="application/json" id="page-strings" set:html={JSON.stringify(strings)} />
+  <PageHeader title={tr('name.title')} crumbs={[{ label: tr('nav.tools') }, { label: tr('nav.koreanName') }]} lead={tr('name.lead')} />
+  <section class="container-page grid gap-8 py-10 lg:grid-cols-2">
+    <form id="name-form" class="space-y-4">
+      <div>
+        <label for="name-in" class="mb-1.5 block text-sm font-semibold">{tr('name.input')}</label>
+        <input id="name-in" autocomplete="off" class="h-12 w-full rounded-xl border border-line bg-surface px-4 text-xl focus:border-brand focus:outline-none" value={EXAMPLES[lang][0]} />
+      </div>
+      <div>
+        <label for="name-src" class="mb-1.5 block text-sm font-semibold">{tr('name.source')}</label>
+        <select id="name-src" class="h-11 w-full rounded-lg border border-line bg-surface px-3">
+          {LANGS.map((l) => <option value={l} selected={l === lang}>{tr(`name.src.${l}` as Key)}</option>)}
+        </select>
+      </div>
+      <p class="text-sm text-fg-muted">{tr('name.examples')}: <span id="name-examples"></span></p>
+      <p id="name-hint" hidden class="text-sm text-accent"></p>
+    </form>
+    <div>
+      <p class="mb-1.5 text-sm font-semibold">{tr('name.result')}</p>
+      <div class="rounded-2xl border border-line bg-surface p-6">
+        <div class="flex flex-wrap items-center gap-3">
+          <output id="name-out" for="name-in" lang="ko" class="text-5xl font-bold"></output>
+          <button type="button" id="name-speak" class="rounded-full bg-brand px-4 py-1.5 text-sm font-semibold text-on-brand">🔊 {tr('name.listen')}</button>
+        </div>
+        <p id="name-roman" class="mt-2 text-lg text-fg-muted"></p>
+        <ul id="name-parts" class="mt-5 grid grid-cols-[repeat(auto-fill,minmax(7rem,1fr))] gap-2"></ul>
+      </div>
+      <div class="mt-4"><SpeechNotice /></div>
+      <p class="mt-4 text-sm text-fg-muted">{tr('name.note')}</p>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  import { type NameSource, nameToHangul } from '../../lib/hangul/names';
+  import { romanize } from '../../lib/hangul/romanize';
+  import { speak } from '../../scripts/speech';
+
+  const S = JSON.parse(document.getElementById('page-strings')!.textContent!) as { examples: Record<string, string[]>; kanaHint: string };
+  const $ = <T extends HTMLElement = HTMLElement>(id: string) => document.getElementById(id) as T;
+  const input = $<HTMLInputElement>('name-in');
+  const src = $<HTMLSelectElement>('name-src');
+
+  function render() {
+    const parts = nameToHangul(input.value, src.value as NameSource);
+    const hangul = parts.map((p) => p.hangul).filter(Boolean).join(' ');
+    $('name-out').textContent = hangul;
+    $('name-roman').textContent = hangul ? romanize(hangul) : '';
+    $('name-speak').hidden = !hangul;
+    // Chữ kanji không chuyển được: nhắc nhập bằng kana hoặc romaji.
+    const missing = parts.some((p) => p.input && !p.hangul);
+    $('name-hint').hidden = !missing;
+    $('name-hint').textContent = missing ? S.kanaHint : '';
+    $('name-parts').replaceChildren(
+      ...parts.filter((p) => p.hangul).map((p) => {
+        const li = document.createElement('li');
+        li.className = 'rounded-lg border border-line px-3 py-2';
+        li.innerHTML = '<span class="block text-sm text-fg-muted"></span><span lang="ko" class="block text-xl font-semibold"></span>';
+        li.children[0].textContent = p.input;
+        li.children[1].textContent = p.hangul;
+        return li;
+      }),
+    );
+  }
+  function showExamples() {
+    $('name-examples').replaceChildren(
+      ...(S.examples[src.value] ?? []).flatMap((ex, i) => {
+        const b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'link-underline';
+        b.textContent = ex;
+        b.addEventListener('click', () => {
+          input.value = ex;
+          render();
+        });
+        return i ? [document.createTextNode(' · '), b] : [b];
+      }),
+    );
+  }
+  input.addEventListener('input', render);
+  src.addEventListener('change', () => {
+    showExamples();
+    render();
+  });
+  $('name-form').addEventListener('submit', (e) => e.preventDefault());
+  $('name-speak').addEventListener('click', () => speak($('name-out').textContent ?? ''));
+  showExamples();
+  render();
+</script>

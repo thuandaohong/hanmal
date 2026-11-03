@@ -1,0 +1,67 @@
+---
+// Chọn ngôn ngữ: liên kết sang cùng trang ở ngôn ngữ khác (nếu trang có bản đó).
+import { LANGS, LANG_META, type Lang, getLang, localize, t } from '../i18n';
+import { publicPath } from '../lib/text';
+// `compact`: trên màn hình chưa đủ rộng (dưới xl) chỉ hiện mã ngắn (EN, VI…) để menu không bị xuống dòng.
+interface Props { locales?: readonly Lang[]; id: string; up?: boolean; compact?: boolean }
+const { locales = LANGS, id, up = false, compact = false } = Astro.props;
+const lang = getLang(Astro);
+const path = publicPath(Astro.url.pathname);
+// Trang chỉ có ở một số ngôn ngữ thì chuyển về trang chủ của ngôn ngữ kia; 404 cũng vậy.
+const hrefFor = (l: Lang) => localize(path !== '/404' && locales.includes(l) ? path : '/', l);
+---
+<div class="lang-menu relative">
+  <button
+    type="button"
+    class="inline-flex h-10 items-center gap-1.5 whitespace-nowrap rounded-full border border-line px-3 text-sm font-semibold hover:border-brand"
+    aria-expanded="false"
+    aria-controls={id}
+    aria-label={t(lang, 'lang.label')}
+  >
+    <svg viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+      <circle cx="12" cy="12" r="9" /><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18" />
+    </svg>
+    {compact ? (
+      <>
+        <span class="xl:hidden">{LANG_META[lang].short}</span>
+        <span class="hidden xl:inline">{LANG_META[lang].label}</span>
+      </>
+    ) : (
+      <span>{LANG_META[lang].label}</span>
+    )}
+  </button>
+  <ul id={id} hidden class={`absolute right-0 z-50 min-w-48 rounded-xl border border-line bg-surface p-1.5 shadow-lg ${up ? 'bottom-full mb-2' : 'top-full mt-2'}`}>
+    {LANGS.map((l) => (
+      <li>
+        <a
+          href={hrefFor(l)}
+          hreflang={l}
+          lang={l}
+          aria-current={l === lang ? 'true' : undefined}
+          class="block rounded-md px-3 py-2 text-sm hover:bg-bg-muted aria-[current=true]:font-semibold aria-[current=true]:text-brand"
+        >{LANG_META[l].label}</a>
+      </li>
+    ))}
+  </ul>
+</div>
+
+<script>
+  document.querySelectorAll<HTMLElement>('.lang-menu').forEach((menu) => {
+    const btn = menu.querySelector('button')!;
+    const list = menu.querySelector('ul')!;
+    const set = (open: boolean) => {
+      list.hidden = !open;
+      btn.setAttribute('aria-expanded', String(open));
+    };
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      set(list.hidden);
+    });
+    document.addEventListener('click', (e) => {
+      if (!menu.contains(e.target as Node)) set(false);
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') set(false);
+    });
+  });
+</script>

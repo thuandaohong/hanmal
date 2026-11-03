@@ -1,0 +1,74 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/PageHeader.astro';
+import SpeechNotice from '../../components/SpeechNotice.astro';
+import { BASIC_VOWELS, CONSONANTS } from '../../data/jamo';
+import { getLang, linker, translator } from '../../i18n';
+import { compose } from '../../lib/hangul/compose';
+import { romanize } from '../../lib/hangul/romanize';
+
+const lang = getLang(Astro);
+const l = linker(lang);
+const tr = translator(lang);
+---
+<BaseLayout title={tr('syllables.title')} description={tr('syllables.lead')}>
+  <PageHeader title={tr('syllables.title')} crumbs={[{ label: tr('nav.hangul'), href: l('/hangul') }, { label: tr('nav.syllables') }]} lead={tr('syllables.lead')}>
+    <div class="mt-6 flex flex-wrap gap-5 text-sm">
+      <label class="inline-flex items-center gap-2"><input type="checkbox" id="show-tense" class="size-4 accent-brand" /> {tr('syllables.showTense')}</label>
+      <label class="inline-flex items-center gap-2"><input type="checkbox" id="show-roman" checked class="size-4 accent-brand" /> {tr('syllables.showRoman')}</label>
+    </div>
+  </PageHeader>
+  <section class="container-page py-10">
+    <SpeechNotice />
+    <div class="mt-4 overflow-x-auto">
+      <table id="syllable-table" class="w-full min-w-[44rem] table-fixed border-separate border-spacing-1 text-center">
+        <thead>
+          <tr>
+            <th class="w-14"></th>
+            {BASIC_VOWELS.map((v) => (
+              <th scope="col"><a href={l(`/hangul/${v.char}`)} lang="ko" class="block rounded-md bg-brand-soft py-1 text-lg font-bold text-brand-ink">{v.char}</a></th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {CONSONANTS.map((c) => (
+            <tr class={c.group === 'tense' ? 'tense-row' : ''}>
+              <th scope="row"><a href={l(`/hangul/${c.char}`)} lang="ko" class="block rounded-md bg-brand-soft px-2 py-2 text-lg font-bold text-brand-ink">{c.char}</a></th>
+              {BASIC_VOWELS.map((v) => {
+                const s = compose({ c: c.char, v: v.char, f: '' });
+                return (
+                  <td>
+                    <button type="button" data-speak={s} class="w-full rounded-md border border-line bg-surface py-1.5 hover:border-brand/60 hover:text-brand">
+                      <span lang="ko" class="block text-xl">{s}</span>
+                      <span class="roman block text-[11px] text-fg-muted">{romanize(s)}</span>
+                    </button>
+                  </td>
+                );
+              })}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  #syllable-table:not(.with-tense) .tense-row,
+  #syllable-table.no-roman .roman {
+    display: none;
+  }
+</style>
+
+<script>
+  const table = document.getElementById('syllable-table')!;
+  const tense = document.getElementById('show-tense') as HTMLInputElement;
+  const roman = document.getElementById('show-roman') as HTMLInputElement;
+  const apply = () => {
+    table.classList.toggle('with-tense', tense.checked);
+    table.classList.toggle('no-roman', !roman.checked);
+  };
+  tense.addEventListener('change', apply);
+  roman.addEventListener('change', apply);
+  apply();
+</script>

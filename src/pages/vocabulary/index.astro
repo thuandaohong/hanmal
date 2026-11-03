@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/PageHeader.astro';
+import CardLink from '../../components/CardLink.astro';
+import { LEVELS, TOPICS, WORDS, byLevel, topicOf } from '../../data/words';
+import { getLang, linker, translator } from '../../i18n';
+
+const lang = getLang(Astro);
+const l = linker(lang);
+const tr = translator(lang);
+const topicCount = (slug: string) => WORDS.filter((w) => topicOf(w)?.topic.slug === slug).length;
+---
+<BaseLayout title={tr('vocab.title')} description={tr('vocab.lead', { n: WORDS.length })}>
+  <PageHeader title={tr('vocab.title')} crumbs={[{ label: tr('nav.vocabulary') }]} lead={tr('vocab.lead', { n: WORDS.length.toLocaleString(lang) })} />
+  <section class="container-page py-10">
+    <div class="grid gap-4 sm:grid-cols-2">
+      {LEVELS.map((lv) => (
+        <CardLink href={l(`/vocabulary/${lv.slug}`)} title={`${tr(lv.key)} · ${lv.topik}`} subtitle={tr('common.words', { n: byLevel(lv.level).length.toLocaleString(lang) })} />
+      ))}
+    </div>
+    <h2 class="mt-14 text-2xl font-bold">{tr('vocab.topicsTitle')}</h2>
+    <p class="mt-2 text-fg-muted">{tr('vocab.topicsLead')}</p>
+    <div class="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+      {TOPICS.map((tp) => (
+        <CardLink href={l(`/vocabulary/topics/${tp.slug}`)} title={tp.name[lang]} subtitle={`${tp.ko} · ${tr('common.words', { n: topicCount(tp.slug) })}`} />
+      ))}
+    </div>
+  </section>
+</BaseLayout>

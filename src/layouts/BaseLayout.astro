@@ -1,0 +1,89 @@
+---
+// Font chữ Latin/tiếng Việt tự host; chữ Hàn và Nhật dùng font hệ thống (xem global.css).
+import '@fontsource/be-vietnam-pro/vietnamese-400.css';
+import '@fontsource/be-vietnam-pro/latin-400.css';
+import '@fontsource/be-vietnam-pro/latin-ext-400.css';
+import '@fontsource/be-vietnam-pro/vietnamese-600.css';
+import '@fontsource/be-vietnam-pro/latin-600.css';
+import '@fontsource/be-vietnam-pro/latin-ext-600.css';
+import '@fontsource/be-vietnam-pro/vietnamese-700.css';
+import '@fontsource/be-vietnam-pro/latin-700.css';
+import '@fontsource/be-vietnam-pro/latin-ext-700.css';
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE } from '../data/site';
+import { publicPath } from '../lib/text';
+import { DEFAULT_LANG, LANGS, LANG_META, type Lang, getLang, localize, t } from '../i18n';
+
+interface Props {
+  title?: string;
+  description?: string;
+  /** Dữ liệu có cấu trúc (schema.org) cho trang này */
+  jsonLd?: Record<string, unknown>;
+  noindex?: boolean;
+  /** Các ngôn ngữ có bản của trang này (mặc định: tất cả) */
+  locales?: readonly Lang[];
+}
+const lang = getLang(Astro);
+const { title, description = t(lang, 'site.description'), jsonLd, noindex = false, locales = LANGS } = Astro.props;
+const fullTitle = title ? `${title} – ${SITE.name}` : t(lang, 'site.title');
+const path = publicPath(Astro.url.pathname);
+const canonical = new URL(path, Astro.site);
+// Báo cho máy tìm kiếm các bản ngôn ngữ khác của cùng trang.
+const alternates = locales.map((l) => ({ lang: l, href: new URL(localize(path, l), Astro.site).href }));
+// x-default (người dùng ngôn ngữ khác): bản tiếng Anh nếu có, không thì bản mặc định.
+const xDefault = locales.includes('en') ? 'en' : locales.includes(DEFAULT_LANG) ? DEFAULT_LANG : locales[0];
+const ogImage = new URL(`/og-${lang}.png`, Astro.site);
+// Token của Cloudflare Web Analytics (tuỳ chọn), đặt trong biến môi trường khi build.
+const beaconToken = import.meta.env.PUBLIC_CF_BEACON_TOKEN;
+---
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    {!noindex && alternates.map((a) => <link rel="alternate" hreflang={a.lang} href={a.href} />)}
+    {!noindex && <link rel="alternate" hreflang="x-default" href={new URL(localize(path, xDefault), Astro.site).href} />}
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:site_name" content={SITE.name} />
+    <meta property="og:locale" content={LANG_META[lang].ogLocale} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#e11d2e" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#121214" media="(prefers-color-scheme: dark)" />
+    {noindex && <meta name="robots" content="noindex" />}
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
+    {beaconToken && (
+      <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon={JSON.stringify({ token: beaconToken })} />
+    )}
+
+    <!-- Áp giao diện trước khi render để tránh nháy sáng/tối -->
+    <script is:inline>
+      (() => {
+        let pref = 'system';
+        try { pref = localStorage.getItem('theme') || 'system'; } catch {}
+        const dark = pref === 'dark' || (pref === 'system' && matchMedia('(prefers-color-scheme: dark)').matches);
+        document.documentElement.classList.toggle('dark', dark);
+      })();
+    </script>
+  </head>
+  <body class="flex min-h-dvh flex-col">
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:rounded focus:bg-surface focus:px-3 focus:py-2">{t(lang, 'common.skip')}</a>
+    <Header locales={locales} />
+    <main id="main" class="flex-1">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

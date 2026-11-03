@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/PageHeader.astro';
+import JamoTile from '../../components/JamoTile.astro';
+import CardLink from '../../components/CardLink.astro';
+import { CONSONANTS, VOWELS } from '../../data/jamo';
+import { type Key, getLang, linker, translator } from '../../i18n';
+
+const lang = getLang(Astro);
+const l = linker(lang);
+const tr = translator(lang);
+const sections = [
+  { title: tr('hangul.consonants'), groups: (['plain', 'aspirated', 'tense'] as const).map((g) => ({ g, items: CONSONANTS.filter((c) => c.group === g) })) },
+  { title: tr('hangul.vowels'), groups: (['basic', 'compound'] as const).map((g) => ({ g, items: VOWELS.filter((v) => v.group === g) })) },
+];
+---
+<BaseLayout title={tr('hangul.title')} description={tr('hangul.lead')}>
+  <PageHeader title={tr('hangul.title')} crumbs={[{ label: tr('nav.hangul') }]} lead={tr('hangul.lead')}>
+    <div class="mt-6 grid max-w-3xl gap-3 sm:grid-cols-3">
+      <CardLink href={l('/hangul/syllables')} title={tr('nav.syllables')} subtitle="가 갸 거 겨 고" />
+      <CardLink href={l('/hangul/batchim')} title={tr('nav.batchim')} subtitle="각 간 갇 갈 감" />
+      <CardLink href={l('/hangul/quiz')} title={tr('nav.quiz')} subtitle="ㄱ = g ?" />
+    </div>
+  </PageHeader>
+
+  {sections.map((sec) => (
+    <section class="container-page py-10">
+      <h2 class="text-2xl font-bold">{sec.title}</h2>
+      {sec.groups.map(({ g, items }) => (
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold">{tr(`group.${g}` as Key)} <span class="text-fg-muted">({items.length})</span></h3>
+          <p class="mt-1 max-w-3xl text-sm text-fg-muted">{tr(`groupNote.${g}` as Key)}</p>
+          <ul class="mt-4 grid grid-cols-[repeat(auto-fill,minmax(5.5rem,1fr))] gap-2">
+            {items.map((j) => <li><JamoTile jamo={j} /></li>)}
+          </ul>
+        </div>
+      ))}
+    </section>
+  ))}
+</BaseLayout>

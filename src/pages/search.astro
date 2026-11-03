@@ -1,0 +1,135 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import { type Key, getLang, linker, translator } from '../i18n';
+
+const lang = getLang(Astro);
+const l = linker(lang);
+const tr = translator(lang);
+const strings = {
+  lang,
+  wordBase: l('/word/'),
+  ...Object.fromEntries((['loading', 'idle', 'none', 'count', 'countOne', 'truncated'] as const).map((k) => [k, tr(`search.${k}` as Key)])),
+  levels: { 1: tr('nav.beginner'), 2: tr('nav.intermediate') },
+  error: tr('common.loadError'),
+};
+const examples = { vi: ['학교', 'ㅎㄱ', 'hakgyo', 'trường học', 'an'], ja: ['학교', 'ㅎㄱ', 'hakgyo', '学校', 'たべる'], en: ['학교', 'ㅎㄱ', 'hakgyo', 'school', 'eat'], id: ['학교', 'ㅎㄱ', 'hakgyo', 'sekolah', 'makan'] }[lang];
+---
+<BaseLayout title={tr('search.title')} description={tr('search.lead')}>
+  <script is:inline type="application/json" id="page-strings" set:html={JSON.stringify(strings)} />
+  <PageHeader title={tr('search.title')} crumbs={[{ label: tr('nav.search') }]} lead={tr('search.lead')}>
+    <form id="search-form" class="mt-6 max-w-2xl" role="search">
+      <label for="search-q" class="sr-only">{tr('common.searchLabel')}</label>
+      <input id="search-q" name="q" type="search" autocomplete="off" autofocus placeholder={tr('search.placeholder')} class="h-12 w-full rounded-xl border border-line bg-surface px-4 text-lg placeholder:text-fg-muted focus:border-brand focus:outline-none" />
+    </form>
+    <p class="mt-3 text-sm text-fg-muted">
+      {tr('tools.try')}{' '}
+      {examples.map((s, i) => <>{i > 0 && ' · '}<button type="button" data-example={s} class="link-underline">{s}</button></>)}
+    </p>
+  </PageHeader>
+  <section class="container-page py-10">
+    <p id="search-status" class="mb-5 text-sm text-fg-muted" aria-live="polite">{strings.loading}</p>
+    <ul id="search-results" class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3"></ul>
+  </section>
+</BaseLayout>
+
+<script>
+  import { initials } from '../lib/hangul/compose';
+  import { foldAccents } from '../lib/text';
+
+  type Row = [string, string, string, number, string];
+  const S = JSON.parse(document.getElementById('page-strings')!.textContent!);
+  const fill = (s: string, v: Record<string, string | number>) => s.replace(/\{(\w+)\}/g, (_, k) => String(v[k]));
+  const MAX = 120;
+  const input = document.getElementById('search-q') as HTMLInputElement;
+  const status = document.getElementById('search-status')!;
+  const list = document.getElementById('search-results')!;
+  let rows: { row: Row; ini: string; rom: string; gl: string; terms: string[] }[] = [];
+
+  const HANGUL = /[가-힣]/;
+  const ONLY_INITIALS = /^[ㄱ-ㅎ]+$/;
+
+  function score(q: string, r: (typeof rows)[number]): number {
+    const [w] = r.row;
+    if (ONLY_INITIALS.test(q)) return r.ini === q ? 100 : r.ini.startsWith(q) ? 70 : 0;
+    if (HANGUL.test(q)) {
+      const base = w.replace(/^-/, '');
+      return base === q ? 100 : base.startsWith(q) ? 60 : base.includes(q) ? 30 : 0;
+    }
+    const f = foldAccents(q);
+    const compact = f.replace(/[\s-]/g, '');
+    let s = 0;
+    if (r.rom === compact) s = 90;
+    else if (compact.length >= 2 && r.rom.startsWith(compact)) s = 45;
+    if (r.terms.includes(f)) s = Math.max(s, 85);
+    else if (r.terms.some((t) => t.startsWith(f + ' ') || t.split(/\s+/).includes(f))) s = Math.max(s, 60);
+    else if (f.length >= 3 && r.gl.includes(f)) s = Math.max(s, 20);
+    return s;
+  }
+
+  function render(q: string) {
+    q = q.trim();
+    const url = new URL(location.href);
+    q ? url.searchParams.set('q', q) : url.searchParams.delete('q');
+    history.replaceState(null, '', url);
+    if (!q) {
+      list.replaceChildren();
+      status.textContent = fill(S.idle, { n: rows.length });
+      return;
+    }
+    // Dữ liệu đã xếp theo độ thông dụng; sort ổn định giữ thứ tự đó khi bằng điểm.
+    const hits = rows.map((r) => [r, score(q, r)] as const).filter(([, s]) => s > 0).sort((a, b) => b[1] - a[1]).map(([r]) => r.row);
+    list.replaceChildren(
+      ...hits.slice(0, MAX).map(([w, rom, gl, lv]) => {
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.href = S.wordBase + w;
+        a.className = 'flex h-full flex-col rounded-xl border border-line bg-surface p-4 transition hover:border-brand/60';
+        const head = document.createElement('p');
+        head.className = 'flex items-baseline justify-between gap-2';
+        const word = document.createElement('span');
+        word.lang = 'ko';
+        word.className = 'text-2xl font-bold';
+        word.textContent = w;
+        const level = document.createElement('span');
+        level.className = 'shrink-0 rounded-full bg-bg-muted px-2 py-0.5 text-xs font-semibold text-fg-muted';
+        level.textContent = S.levels[lv];
+        head.append(word, level);
+        const r = document.createElement('p');
+        r.className = 'text-sm text-fg-muted';
+        r.textContent = rom;
+        const g = document.createElement('p');
+        g.className = 'mt-1 line-clamp-2';
+        g.textContent = gl;
+        a.append(head, r, g);
+        li.append(a);
+        return li;
+      }),
+    );
+    status.textContent = hits.length
+      ? (hits.length === 1 ? S.countOne : fill(S.count, { n: hits.length })) + (hits.length > MAX ? fill(S.truncated, { max: MAX }) : '')
+      : fill(S.none, { q });
+  }
+
+  input.value = new URLSearchParams(location.search).get('q') ?? '';
+  document.getElementById('search-form')!.addEventListener('submit', (e) => e.preventDefault());
+  input.addEventListener('input', () => render(input.value));
+  document.querySelectorAll<HTMLButtonElement>('[data-example]').forEach((b) =>
+    b.addEventListener('click', () => {
+      input.value = b.dataset.example!;
+      render(input.value);
+    }),
+  );
+  fetch(`/data/words-${S.lang}.json`)
+    .then((r) => r.json())
+    .then((d) => {
+      rows = (d.words as Row[]).map((row) => {
+        const gl = foldAccents(row[2]);
+        // Nghĩa có thể gồm nhiều từ tương đương: "giúp, giúp đỡ", "たべる【食べる】。くう【食う】"
+        const terms = gl.split(/[,;。、]|【|】/).map((t) => t.trim()).filter(Boolean);
+        return { row, ini: initials(row[0]), rom: row[1].replace(/[\s-]/g, ''), gl, terms };
+      });
+      render(input.value);
+    })
+    .catch(() => (status.textContent = S.error));
+</script>

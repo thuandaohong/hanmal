@@ -1,0 +1,25 @@
+---
+import { SITE, footer } from '../data/site';
+import { getLang } from '../i18n';
+import Logo from './Logo.astro';
+
+const lang = getLang(Astro);
+---
+<footer class="border-t border-line bg-bg-muted">
+  <div class="container-page py-14">
+    <Logo showText={false} />
+    <div class="mt-8 grid grid-cols-2 gap-8 md:grid-cols-4">
+      {footer(lang).map((col) => (
+        <div>
+          <h2 class="mb-4 text-lg font-semibold">{col.title}</h2>
+          <ul class="space-y-2.5">
+            {col.links.map((l) => (
+              <li><a href={l.href} class="text-fg-muted hover:text-brand">{l.label}</a></li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+    <p class="mt-12 text-sm text-fg-muted">© {new Date().getFullYear()} {SITE.name}</p>
+  </div>
+</footer>

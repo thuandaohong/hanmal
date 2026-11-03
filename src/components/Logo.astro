@@ -1,0 +1,20 @@
+---
+import { SITE } from '../data/site';
+import { getLang, localize, t } from '../i18n';
+interface Props { showText?: boolean; class?: string }
+const { showText = true, class: className = '' } = Astro.props;
+const lang = getLang(Astro);
+const home = t(lang, 'common.home');
+---
+<!-- Có chữ thì tên truy cập lấy từ chữ hiển thị; chỉ có biểu tượng thì dùng aria-label. -->
+<a href={localize('/', lang)} class={`inline-flex items-center gap-2 ${className}`} aria-label={showText ? undefined : `${SITE.name} – ${home}`}>
+  <svg viewBox="0 0 32 32" class="size-7 shrink-0" aria-hidden="true">
+    <rect x="2" y="2" width="28" height="28" rx="8" class="fill-brand" />
+    <text x="16" y="21.5" text-anchor="middle" font-size="15" fill="#fff" font-weight="700" style="font-family: var(--font-ko)">{SITE.mark}</text>
+  </svg>
+  {showText && (
+    <span class="text-lg font-bold tracking-tight">
+      {SITE.nameParts[0]}<span class="text-brand">{SITE.nameParts[1]}</span><span class="sr-only"> – {home}</span>
+    </span>
+  )}
+</a>

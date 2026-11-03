@@ -1,0 +1,82 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CardLink from '../components/CardLink.astro';
+import HeroGrid from '../components/HeroGrid.astro';
+import { SITE, hasHanja } from '../data/site';
+import { getLang, linker, translator } from '../i18n';
+import { GRAMMAR } from '../data/grammar';
+import { COMPARES } from '../data/grammar-compare';
+
+const lang = getLang(Astro);
+const l = linker(lang);
+const tr = translator(lang);
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: SITE.name,
+  url: new URL(l('/'), Astro.site).href,
+  inLanguage: lang,
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: `${new URL(l('/search'), Astro.site).href}?q={search_term_string}`,
+    'query-input': 'required name=search_term_string',
+  },
+};
+---
+<BaseLayout jsonLd={jsonLd}>
+  <section class="relative overflow-hidden border-b border-line">
+    <HeroGrid />
+    <div class="container-page relative py-20 md:py-32">
+      <div class="max-w-xl">
+        <h1 class="text-4xl leading-tight font-bold text-balance md:text-[44px]">{tr('home.heroTitle')}</h1>
+        <p class="mt-6 text-lg text-fg-muted md:text-xl">{tr('home.heroLead')}</p>
+        <a href={l('/hangul')} class="mt-8 inline-block rounded-lg bg-brand px-5 py-3 font-semibold text-on-brand hover:opacity-90">
+          {tr('home.startHangul')} →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="container-page py-16 md:py-20">
+    <h2 class="text-2xl font-bold">{tr('home.levelsTitle')}</h2>
+    <div class="mt-8 grid gap-4 sm:grid-cols-3">
+      <CardLink href={l('/vocabulary/beginner')} title={tr('nav.beginner')} subtitle="초급" />
+      <CardLink href={l('/vocabulary/intermediate')} title={tr('nav.intermediate')} subtitle="중급" />
+      <CardLink href={l('/vocabulary/topics')} title={tr('nav.byTopic')} subtitle="주제별" />
+    </div>
+  </section>
+
+  <section class="border-t border-dashed border-line">
+    <div class="container-page py-16 md:py-20">
+      <h2 class="text-2xl font-bold">{tr('home.grammarTitle')}</h2>
+      <div class="mt-8 grid gap-4 sm:grid-cols-3">
+        <CardLink href={`${l('/grammar')}#level-1`} title={`${tr('nav.beginner')} · TOPIK I`} subtitle={tr('home.grammarCount', { n: GRAMMAR.filter((g) => g.level === 1).length })} />
+        <CardLink href={`${l('/grammar')}#level-2`} title={`${tr('nav.intermediate')} · TOPIK II`} subtitle={tr('home.grammarCount', { n: GRAMMAR.filter((g) => g.level === 2).length })} />
+        <CardLink href={l('/grammar/compare')} title={tr('nav.grammarCompare')} subtitle={tr('home.compareCount', { n: COMPARES.length })} />
+      </div>
+    </div>
+  </section>
+
+  <section class="border-t border-dashed border-line">
+    <div class="container-page py-16 md:py-20">
+      <h2 class="text-2xl font-bold">{tr('home.toolsTitle')}</h2>
+      <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <CardLink href={l('/tools/conjugator')} title={tr('nav.conjugator')} subtitle="먹다 → 먹어요" />
+        <CardLink href={l('/tools/pronunciation')} title={tr('nav.pronunciation')} subtitle="한국어 → [한구거]" />
+        <CardLink href={l('/tools/romanizer')} title={tr('nav.romanizer')} subtitle="한글 → hangeul" />
+        <CardLink href={l('/flashcards')} title={tr('nav.flashcards')} subtitle="학생 · 학교 · 공부" />
+      </div>
+    </div>
+  </section>
+
+  {hasHanja(lang) && (
+    <section class="border-t border-dashed border-line">
+      <div class="container-page py-16 md:py-20">
+        <h2 class="text-2xl font-bold">{tr('home.hanjaTitle')}</h2>
+        <p class="mt-4 max-w-2xl text-fg-muted">{tr('home.hanjaLead')}</p>
+        <a href={l('/hanja')} class="link-underline mt-6 inline-block">{tr('nav.hanja')} →</a>
+      </div>
+    </section>
+  )}
+</BaseLayout>

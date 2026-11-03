@@ -1,0 +1,151 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/PageHeader.astro';
+import SpeechNotice from '../../components/SpeechNotice.astro';
+import { type Key, getLang, linker, translator } from '../../i18n';
+import { FORM_KEYS, type Irregular } from '../../lib/hangul/conjugate';
+import { irregularLabel } from '../../data/words';
+
+const lang = getLang(Astro);
+const l = linker(lang);
+const tr = translator(lang);
+const IRREGULARS: Irregular[] = ['regular', '여', 'ㅂ', 'ㄷ', 'ㅅ', '르', '러', 'ㅎ', '우'];
+const strings = {
+  forms: Object.fromEntries(FORM_KEYS.map((k) => [k, tr(`form.${k}` as Key)])),
+  irr: Object.fromEntries(IRREGULARS.map((i) => [i, irregularLabel(i, lang)])),
+  kind: { verb: tr('pos.verb'), adj: tr('pos.adjective') },
+  notVerb: tr('conj.notVerb'),
+  fromDict: tr('conj.fromDict'),
+  guessed: tr('conj.guessed'),
+  openWord: tr('conj.openWord'),
+  wordBase: l('/word/'),
+  loadError: tr('common.loadError'),
+};
+const examples = ['먹다', '가다', '듣다', '돕다', '모르다', '살다', '예쁘다', '그렇다', '공부하다'];
+---
+<BaseLayout title={tr('conj.title')} description={tr('conj.lead')}>
+  <script is:inline type="application/json" id="page-strings" set:html={JSON.stringify(strings)} />
+  <PageHeader title={tr('conj.title')} crumbs={[{ label: tr('nav.tools') }, { label: tr('nav.conjugator') }]} lead={tr('conj.lead')} />
+  <section class="container-page py-10">
+    <form id="conj-form" class="grid max-w-3xl gap-4 sm:grid-cols-[1fr_auto_auto]">
+      <label class="sr-only" for="conj-q">{tr('conj.placeholder')}</label>
+      <input id="conj-q" lang="ko" autocomplete="off" placeholder={tr('conj.placeholder')} class="h-12 rounded-xl border border-line bg-surface px-4 text-lg focus:border-brand focus:outline-none" />
+      <label class="flex items-center gap-2 text-sm">
+        <span class="sr-only sm:not-sr-only">{tr('conj.kind')}</span>
+        <select id="conj-kind" class="h-12 rounded-xl border border-line bg-surface px-3">
+          <option value="auto">{tr('conj.auto')}</option>
+          <option value="verb">{tr('pos.verb')}</option>
+          <option value="adj">{tr('pos.adjective')}</option>
+        </select>
+      </label>
+      <label class="flex items-center gap-2 text-sm">
+        <span class="sr-only sm:not-sr-only">{tr('conj.irregular')}</span>
+        <select id="conj-irr" class="h-12 rounded-xl border border-line bg-surface px-3">
+          <option value="auto">{tr('conj.auto')}</option>
+          {IRREGULARS.map((i) => <option value={i}>{irregularLabel(i, lang)}</option>)}
+        </select>
+      </label>
+    </form>
+    <p class="mt-3 text-sm text-fg-muted">
+      {tr('tools.try')}{' '}
+      {examples.map((w, i) => <>{i > 0 && ' · '}<button type="button" data-example={w} lang="ko" class="link-underline">{w}</button></>)}
+    </p>
+    <div class="mt-4 max-w-3xl"><SpeechNotice /></div>
+
+    <div id="conj-out" class="mt-8 max-w-3xl" aria-live="polite"></div>
+  </section>
+</BaseLayout>
+
+<script>
+  import { type Irregular, type Kind, conjugate, guessIrregular } from '../../lib/hangul/conjugate';
+  import { speak } from '../../scripts/speech';
+
+  const S = JSON.parse(document.getElementById('page-strings')!.textContent!);
+  const $ = <T extends HTMLElement>(id: string) => document.getElementById(id) as T;
+  const input = $<HTMLInputElement>('conj-q');
+  const kindSel = $<HTMLSelectElement>('conj-kind');
+  const irrSel = $<HTMLSelectElement>('conj-irr');
+  const out = $('conj-out');
+  let verbs: Record<string, [string, Irregular]> = {};
+
+  const el = (tag: string, cls = '', text?: string) => {
+    const e = document.createElement(tag);
+    e.className = cls;
+    if (text !== undefined) e.textContent = text;
+    return e;
+  };
+
+  function render() {
+    const q = input.value.trim();
+    const url = new URL(location.href);
+    q ? url.searchParams.set('q', q) : url.searchParams.delete('q');
+    history.replaceState(null, '', url);
+    out.replaceChildren();
+    if (!q) return;
+    if (!/^[가-힣]+다$/.test(q) || q.length < 2) {
+      out.append(el('p', 'text-accent', S.notVerb));
+      return;
+    }
+    const known = verbs[q];
+    const kind: Kind = kindSel.value !== 'auto' ? (kindSel.value as Kind) : known?.[0] === 'a' ? 'adj' : 'verb';
+    const irr: Irregular = irrSel.value !== 'auto' ? (irrSel.value as Irregular) : known?.[1] ?? guessIrregular(q, kind);
+    let forms: Record<string, string>;
+    try {
+      forms = conjugate(q, kind, irr) as Record<string, string>;
+    } catch {
+      out.append(el('p', 'text-accent', S.notVerb));
+      return;
+    }
+
+    const head = el('div', 'flex flex-wrap items-baseline gap-3');
+    const title = el('h2', 'text-3xl font-bold', q);
+    title.lang = 'ko';
+    head.append(title, el('span', 'rounded-full bg-brand-soft px-3 py-1 text-sm font-semibold text-brand-ink', S.kind[kind]), el('span', 'text-sm text-fg-muted', S.irr[irr]));
+    if (known) {
+      const a = el('a', 'link-underline text-sm', S.openWord) as HTMLAnchorElement;
+      a.href = S.wordBase + q;
+      head.append(a);
+    }
+    const note = el('p', 'mt-2 text-sm ' + (known ? 'text-fg-muted' : 'text-accent'), known ? S.fromDict : S.guessed);
+
+    const table = el('table', 'mt-6 w-full text-left');
+    const body = el('tbody');
+    for (const [key, value] of Object.entries(forms)) {
+      const tr = el('tr', 'border-t border-line');
+      const label = el('td', 'py-2 pr-4 text-sm text-fg-muted', S.forms[key]);
+      const td = el('td', 'py-2 text-right');
+      const btn = el('button', 'text-lg font-semibold hover:text-brand', value) as HTMLButtonElement;
+      btn.type = 'button';
+      btn.lang = 'ko';
+      btn.addEventListener('click', () => speak(value));
+      td.append(btn);
+      tr.append(label, td);
+      body.append(tr);
+    }
+    table.append(body);
+    out.append(head, note, table);
+  }
+
+  $('conj-form').addEventListener('submit', (e) => e.preventDefault());
+  input.addEventListener('input', render);
+  kindSel.addEventListener('change', render);
+  irrSel.addEventListener('change', render);
+  document.querySelectorAll<HTMLButtonElement>('[data-example]').forEach((b) =>
+    b.addEventListener('click', () => {
+      input.value = b.dataset.example!;
+      kindSel.value = irrSel.value = 'auto';
+      render();
+    }),
+  );
+  input.value = new URLSearchParams(location.search).get('q') ?? '';
+  fetch('/data/lexicon.json')
+    .then((r) => r.json())
+    .then((d) => {
+      verbs = d.verbs;
+      render();
+    })
+    .catch(() => {
+      render();
+      out.append(el('p', 'text-accent', S.loadError)); // sau render() để không bị xoá
+    });
+</script>

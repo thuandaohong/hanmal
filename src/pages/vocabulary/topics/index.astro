@@ -1,0 +1,22 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHeader from '../../../components/PageHeader.astro';
+import CardLink from '../../../components/CardLink.astro';
+import { TOPICS, WORDS, topicOf } from '../../../data/words';
+import { getLang, linker, translator } from '../../../i18n';
+
+const lang = getLang(Astro);
+const l = linker(lang);
+const tr = translator(lang);
+const count = (slug: string) => WORDS.filter((w) => topicOf(w)?.topic.slug === slug).length;
+---
+<BaseLayout title={tr('vocab.topicsTitle')} description={tr('vocab.topicsLead')}>
+  <PageHeader title={tr('vocab.topicsTitle')} crumbs={[{ label: tr('nav.vocabulary'), href: l('/vocabulary') }, { label: tr('nav.byTopic') }]} lead={tr('vocab.topicsLead')} />
+  <section class="container-page py-10">
+    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {TOPICS.map((tp) => (
+        <CardLink href={l(`/vocabulary/topics/${tp.slug}`)} title={tp.name[lang]} subtitle={`${tp.ko} · ${tr('common.words', { n: count(tp.slug) })} · ${tp.subs.slice(0, 3).map((s) => s.name[lang]).join(', ')}…`} />
+      ))}
+    </div>
+  </section>
+</BaseLayout>

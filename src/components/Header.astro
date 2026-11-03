@@ -1,0 +1,167 @@
+---
+import { nav } from '../data/site';
+import { type Lang, getLang, t as tr } from '../i18n';
+import LangMenu from './LangMenu.astro';
+import Logo from './Logo.astro';
+import SearchBox from './SearchBox.astro';
+import ThemeToggle from './ThemeToggle.astro';
+
+const lang = getLang(Astro);
+interface Props { locales?: readonly Lang[] }
+const { locales } = Astro.props;
+const NAV = nav(lang);
+
+const chevron = 'm6 9 6 6 6-6';
+---
+<header class="sticky top-0 z-40 border-b border-line bg-bg/90 backdrop-blur">
+  <div class="container-page flex h-16 items-center gap-4 xl:gap-6">
+    <Logo />
+
+    <!-- Menu desktop -->
+    <nav id="main-nav" class="hidden items-center gap-1 lg:flex" aria-label={tr(lang, 'nav.main')}>
+      {NAV.map((menu, i) => menu.href ? (
+        <a href={menu.href} class="nav-link whitespace-nowrap rounded-md px-3 py-2 text-[15px] font-semibold hover:bg-bg-muted">{menu.label}</a>
+      ) : (
+        <div class="dropdown relative">
+          <button
+            type="button"
+            class="inline-flex items-center gap-1 whitespace-nowrap rounded-md px-3 py-2 text-[15px] font-semibold hover:bg-bg-muted"
+            aria-expanded="false"
+            aria-controls={`menu-${i}`}
+          >
+            {menu.label}
+            <svg viewBox="0 0 24 24" class="size-4 transition-transform" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d={chevron} /></svg>
+          </button>
+          <div
+            id={`menu-${i}`}
+            hidden
+            class="absolute top-full left-0 mt-2 flex min-w-56 gap-6 rounded-xl border border-line bg-surface p-4 shadow-lg"
+          >
+            {menu.groups.map((g) => (
+              <div class="min-w-44">
+                {g.title && <p class="mb-2 px-2 text-xs font-semibold tracking-wide text-fg-muted uppercase">{g.title}</p>}
+                <ul>
+                  {g.links.map((l) => (
+                    <li><a href={l.href} class="block rounded-md px-2 py-1.5 text-sm hover:bg-bg-muted hover:text-brand">{l.label}</a></li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </nav>
+
+    <SearchBox class="ml-auto hidden w-72 md:block lg:w-52 xl:w-72" id="q-header" />
+
+    <div class="ml-auto hidden items-center gap-2 md:ml-0 lg:flex">
+      <ThemeToggle />
+      <LangMenu locales={locales} id="lang-desktop" compact />
+    </div>
+
+    <!-- Nút menu mobile -->
+    <button
+      type="button"
+      id="mobile-toggle"
+      class="ml-auto grid size-10 place-items-center rounded-md hover:bg-bg-muted md:ml-0 lg:hidden"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+      aria-label={tr(lang, 'nav.openMenu')}
+      data-label-open={tr(lang, 'nav.openMenu')}
+      data-label-close={tr(lang, 'nav.closeMenu')}
+    >
+      <svg viewBox="0 0 24 24" class="size-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+        <path class="icon-open" d="M4 7h16M4 12h16M4 17h16" />
+        <path class="icon-close hidden" d="M6 6l12 12M18 6 6 18" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Menu mobile -->
+  <div id="mobile-menu" hidden class="max-h-[calc(100dvh-4rem)] overflow-y-auto border-t border-line bg-bg lg:hidden">
+    <div class="container-page space-y-6 py-5">
+      <SearchBox class="md:hidden" id="q-mobile" />
+      <!-- Danh sách link được dựng từ menu desktop khi mở lần đầu (không lặp lại HTML trên mọi trang). -->
+      <div id="mobile-nav" class="space-y-6"></div>
+      <div class="flex items-center justify-between border-t border-line pt-4">
+        <LangMenu locales={locales} id="lang-mobile" up />
+        <ThemeToggle />
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  // Dropdown desktop: mở bằng click, đóng khi click ra ngoài hoặc nhấn Esc.
+  const dropdowns = [...document.querySelectorAll<HTMLElement>('.dropdown')];
+
+  function close(except?: HTMLElement) {
+    dropdowns.forEach((d) => {
+      if (d === except) return;
+      d.querySelector('button')!.setAttribute('aria-expanded', 'false');
+      d.querySelector<HTMLElement>('[id^="menu-"]')!.hidden = true;
+      d.querySelector('svg')!.classList.remove('rotate-180');
+    });
+  }
+
+  dropdowns.forEach((d) => {
+    const btn = d.querySelector('button')!;
+    const panel = d.querySelector<HTMLElement>('[id^="menu-"]')!;
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const open = btn.getAttribute('aria-expanded') !== 'true';
+      close(d);
+      btn.setAttribute('aria-expanded', String(open));
+      panel.hidden = !open;
+      btn.querySelector('svg')!.classList.toggle('rotate-180', open);
+    });
+  });
+  document.addEventListener('click', (e) => {
+    if (!(e.target as HTMLElement).closest('.dropdown')) close();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') close();
+  });
+
+  // Menu mobile
+  const toggle = document.getElementById('mobile-toggle')!;
+  const menu = document.getElementById('mobile-menu')!;
+  const mobileNav = document.getElementById('mobile-nav')!;
+  function buildMobileNav() {
+    if (mobileNav.childElementCount) return;
+    for (const item of document.getElementById('main-nav')!.children) {
+      // Mục không có menu con (ví dụ Hán tự): một link riêng.
+      if (item instanceof HTMLAnchorElement) {
+        const link = item.cloneNode(true) as HTMLAnchorElement;
+        link.className = 'block font-semibold hover:text-brand';
+        mobileNav.append(link);
+        continue;
+      }
+      const d = item as HTMLElement;
+      const section = document.createElement('section');
+      const h = document.createElement('h2');
+      h.className = 'mb-2 font-sans text-sm font-semibold tracking-wide text-fg-muted uppercase';
+      h.textContent = d.querySelector('button')!.textContent!.trim();
+      const ul = document.createElement('ul');
+      ul.className = 'grid grid-cols-2 gap-1';
+      for (const a of d.querySelectorAll<HTMLAnchorElement>('[id^="menu-"] a')) {
+        const li = document.createElement('li');
+        const link = a.cloneNode(true) as HTMLAnchorElement;
+        link.className = 'block rounded-md px-2 py-2 hover:bg-bg-muted';
+        li.append(link);
+        ul.append(li);
+      }
+      section.append(h, ul);
+      mobileNav.append(section);
+    }
+  }
+  toggle.addEventListener('click', () => {
+    buildMobileNav();
+    const open = menu.hidden;
+    menu.hidden = !open;
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', (open ? toggle.dataset.labelClose : toggle.dataset.labelOpen)!);
+    toggle.querySelector('.icon-open')!.classList.toggle('hidden', open);
+    toggle.querySelector('.icon-close')!.classList.toggle('hidden', !open);
+  });
+</script>

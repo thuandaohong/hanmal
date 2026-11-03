@@ -1,0 +1,44 @@
+---
+import ProseLayout from '../layouts/ProseLayout.astro';
+import { SITE } from '../data/site';
+import { getLang, linker, t } from '../i18n';
+import { WORDS } from '../data/words';
+import { GRAMMAR } from '../data/grammar';
+const lang = getLang(Astro);
+const l = linker(lang);
+const n = { words: WORDS.length.toLocaleString(lang), grammar: GRAMMAR.length };
+
+const TEXT = {
+  vi: {
+    intro: `${SITE.name} là trang học tiếng Hàn miễn phí cho người nói tiếng Việt, tiếng Nhật, tiếng Anh và tiếng Indonesia, từ bảng chữ cái Hangul đến trình độ trung cấp (TOPIK II).`,
+    what: 'Có gì ở đây?',
+    items: [`${n.words} từ vựng sơ cấp và trung cấp, kèm cách đọc chuẩn, câu ví dụ và âm Hán Việt cho từ gốc Hán.`, `${n.grammar} điểm ngữ pháp với bảng cách kết hợp và câu ví dụ.`, 'Bảng chữ Hangul có thứ tự nét và bài luyện tập.', 'Công cụ chia động từ, phân tích phát âm, phiên âm Latin, bàn phím Hangul và flashcards.'],
+    note: 'Phát âm dùng giọng đọc tiếng Hàn có sẵn trên thiết bị của bạn. Các công cụ phân tích chạy hoàn toàn trên trình duyệt.',
+  },
+  ja: {
+    intro: `${SITE.name} は、日本語・ベトナム語・英語・インドネシア語の話者のための無料の韓国語学習サイトです。ハングルから中級（TOPIK II）までをカバーします。`,
+    what: '主な内容',
+    items: [`初級・中級の単語${n.words}語（標準発音、例文、漢字語の漢字表記付き）。`, `文法${n.grammar}項目（接続の仕方と例文付き）。`, '書き順と練習問題付きのハングル表。', '活用ツール、発音分析、ローマ字変換、ハングルキーボード、単語カード。'],
+    note: '音声はお使いの端末の韓国語音声を利用します。分析ツールはすべてブラウザ上で動作します。',
+  },
+  en: {
+    intro: `${SITE.name} is a free Korean learning site for speakers of English, Vietnamese, Japanese and Indonesian, from the Hangul alphabet up to intermediate level (TOPIK II).`,
+    what: "What's here?",
+    items: [`${n.words} beginner and intermediate words with standard pronunciation and example sentences.`, `${n.grammar} grammar points with formation tables and example sentences.`, 'A Hangul chart with stroke order and a quiz.', 'A verb conjugator, pronunciation analyzer, romanizer, Hangul keyboard and flashcards.'],
+    note: "Audio uses your device's built-in Korean voice. All analysis tools run entirely in your browser.",
+  },
+  id: {
+    intro: `${SITE.name} adalah situs belajar bahasa Korea gratis untuk penutur bahasa Indonesia, Vietnam, Jepang, dan Inggris, dari huruf Hangeul hingga tingkat menengah (TOPIK II).`,
+    what: 'Apa saja isinya?',
+    items: [`${n.words} kosakata tingkat pemula dan menengah dengan pelafalan baku dan contoh kalimat.`, `${n.grammar} pola tata bahasa dengan tabel pembentukan dan contoh kalimat.`, 'Tabel Hangeul dengan urutan goresan dan kuis.', 'Alat konjugasi, analisis pelafalan, romanisasi, papan ketik Hangeul, dan kartu hafalan.'],
+    note: 'Audio menggunakan suara bahasa Korea bawaan perangkat Anda. Semua alat analisis berjalan sepenuhnya di peramban.',
+  },
+}[lang];
+const SEE = { vi: [' Xem thêm tại ', '.'], ja: ['詳しくは', 'をご覧ください。'], en: [' See ', '.'], id: [' Lihat ', '.'] };
+---
+<ProseLayout title={t(lang, 'footer.about')} description={TEXT.intro}>
+  <p>{TEXT.intro}</p>
+  <h2>{TEXT.what}</h2>
+  <ul>{TEXT.items.map((x) => <li>{x}</li>)}</ul>
+  <p>{TEXT.note}{SEE[lang][0]}<a href={l('/credits')}>{t(lang, 'footer.credits')}</a>{SEE[lang][1]}</p>
+</ProseLayout>

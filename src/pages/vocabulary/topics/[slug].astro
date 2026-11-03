@@ -1,0 +1,46 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHeader from '../../../components/PageHeader.astro';
+import WordList from '../../../components/WordList.astro';
+import ListFilter from '../../../components/ListFilter.astro';
+import { TOPICS, type Topic, wordsInTopic } from '../../../data/words';
+import { getLang, linker, translator } from '../../../i18n';
+
+export function getStaticPaths() {
+  return TOPICS.map((topic) => ({ params: { slug: topic.slug }, props: { topic } }));
+}
+const { topic } = Astro.props as { topic: Topic };
+const lang = getLang(Astro);
+const l = linker(lang);
+const tr = translator(lang);
+const groups = wordsInTopic(topic);
+const total = groups.reduce((n, g) => n + g.words.length, 0);
+const name = topic.name[lang];
+const subs = groups.map((g) => g.sub?.name[lang]).filter(Boolean).slice(0, 6);
+const description = lang === 'ja'
+  ? `${name}（${topic.ko}）：${tr('common.words', { n: total })}。${subs.join('、')}…`
+  : `${name} (${topic.ko}): ${tr('common.words', { n: total })}. ${subs.join(', ')}…`;
+---
+<BaseLayout title={`${name} – ${tr('vocab.topicsTitle')}`} description={description}>
+  <PageHeader
+    title={name}
+    crumbs={[{ label: tr('nav.vocabulary'), href: l('/vocabulary') }, { label: tr('nav.byTopic'), href: l('/vocabulary/topics') }, { label: name }]}
+    lead={`${topic.ko} · ${tr('common.words', { n: total })}`}
+  >
+    <nav class="mt-6 flex flex-wrap gap-2 text-sm" aria-label={tr('vocab.jump')}>
+      {groups.map((g, i) => (
+        <a href={`#s-${i}`} class="rounded-full border border-line px-3 py-1 hover:border-brand">{g.sub?.name[lang] ?? tr('vocab.other')}</a>
+      ))}
+    </nav>
+    <div class="mt-4"><ListFilter /></div>
+  </PageHeader>
+  {groups.map((g, i) => (
+    <section id={`s-${i}`} data-filter-section class="container-page scroll-mt-20 py-8">
+      <h2 class="mb-4 text-xl font-bold">
+        {g.sub?.name[lang] ?? tr('vocab.other')}
+        {g.sub && <span lang="ko" class="ml-2 text-base font-normal text-fg-muted">{g.sub.ko}</span>}
+      </h2>
+      <WordList words={g.words} />
+    </section>
+  ))}
+</BaseLayout>

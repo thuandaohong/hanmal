@@ -1,0 +1,43 @@
+---
+// Danh sách từ của một trình độ theo phụ âm đầu (ㄱ gồm cả ㄲ…): tách khỏi trang trình độ cho nhẹ.
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHeader from '../../../components/PageHeader.astro';
+import WordList from '../../../components/WordList.astro';
+import ListFilter from '../../../components/ListFilter.astro';
+import InitialNav from '../../../components/InitialNav.astro';
+import { LEVELS, TENSE_OF, byLevel, groupByInitial } from '../../../data/words';
+import { getLang, linker, translator } from '../../../i18n';
+
+export function getStaticPaths() {
+  return LEVELS.flatMap((lv) =>
+    groupByInitial(byLevel(lv.level)).map((g) => ({ params: { level: lv.slug, initial: g.initial }, props: { lv, initial: g.initial } })),
+  );
+}
+const { lv, initial } = Astro.props as { lv: (typeof LEVELS)[number]; initial: string };
+const lang = getLang(Astro);
+const l = linker(lang);
+const tr = translator(lang);
+const groups = groupByInitial(byLevel(lv.level));
+const words = groups.find((g) => g.initial === initial)!.words;
+const levelName = tr(lv.key);
+const levelLower = lang === 'ja' ? levelName : levelName.toLowerCase();
+const tense = TENSE_OF[initial];
+const n = words.length.toLocaleString(lang);
+const lead = tense
+  ? tr('vocab.initialLead', { n, level: levelLower, initial, tense })
+  : tr('vocab.initialLeadPlain', { n, level: levelLower, initial });
+const title = tr('vocab.initialTitle', { level: lang === 'en' ? levelName : levelLower, initial });
+---
+<BaseLayout title={title} description={lead}>
+  <PageHeader
+    title={title}
+    crumbs={[{ label: tr('nav.vocabulary'), href: l('/vocabulary') }, { label: levelName, href: l(`/vocabulary/${lv.slug}`) }, { label: initial }]}
+    lead={lead}
+  >
+    <InitialNav level={lv.slug} initials={groups.map((g) => g.initial)} current={initial} />
+    <div class="mt-4"><ListFilter /></div>
+  </PageHeader>
+  <section data-filter-section class="container-page py-8">
+    <WordList words={words} />
+  </section>
+</BaseLayout>

@@ -1,0 +1,23 @@
+---
+// Lưới thẻ từ vựng: từ, phiên âm, nghĩa theo ngôn ngữ của trang.
+import { type Word, gloss, wordUrl } from '../data/words';
+import { getLang } from '../i18n';
+import { romanize } from '../lib/hangul/romanize';
+interface Props { words: Word[] }
+const { words } = Astro.props;
+const lang = getLang(Astro);
+---
+<ul class="word-list grid gap-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+  {words.map((w) => {
+    const g = gloss(w, lang);
+    const r = romanize(w.w);
+    return (
+      <li class="min-w-0" data-filter={`${w.w} ${r} ${g}`.toLowerCase()}>
+        <a href={wordUrl(w.w, lang)} class="flex h-full min-w-0 items-baseline gap-2 rounded-lg border border-line bg-surface px-3 py-2.5 transition hover:border-brand/60">
+          <span lang="ko" class="shrink-0 text-lg font-semibold">{w.w}</span>
+          <span class="min-w-0 truncate text-sm text-fg-muted" title={g}>{g}</span>
+        </a>
+      </li>
+    );
+  })}
+</ul>

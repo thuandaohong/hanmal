@@ -1,0 +1,25 @@
+---
+// Cloudflare Pages dùng 404.html gần nhất (/ja/404.html cho /ja/…, nếu không có thì /404.html).
+// Mỗi ngôn ngữ có một bản; thông báo hiện đủ 4 ngôn ngữ, ngôn ngữ của trang đứng đầu.
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { LANGS, LANG_META, getLang, localize, t } from '../i18n';
+const lang = getLang(Astro);
+const order = [lang, ...LANGS.filter((l) => l !== lang)];
+---
+<BaseLayout title={t(lang, 'notFound.title')} noindex>
+  <section class="container-page grid place-items-center py-24 text-center">
+    <p lang="ko" class="text-8xl font-bold text-brand">길?</p>
+    <ul class="mt-8 space-y-2">
+      {order.map((l) => (
+        <li lang={l} class={l === lang ? 'text-2xl font-bold' : 'text-fg-muted'}>{t(l, 'notFound.title')}</li>
+      ))}
+    </ul>
+    <div class="mt-8 flex flex-wrap justify-center gap-3">
+      {LANGS.map((l) => (
+        <a href={localize('/', l)} lang={l} class="rounded-lg border border-line px-4 py-2 font-semibold hover:border-brand">
+          {LANG_META[l].label}
+        </a>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

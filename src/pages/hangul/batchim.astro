@@ -1,0 +1,60 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/PageHeader.astro';
+import SpeechNotice from '../../components/SpeechNotice.astro';
+import { BATCHIM } from '../../data/jamo';
+import { getLang, linker, translator } from '../../i18n';
+import { pronounceText } from '../../lib/hangul/pronounce';
+import { romanize } from '../../lib/hangul/romanize';
+
+const lang = getLang(Astro);
+const l = linker(lang);
+const tr = translator(lang);
+const linking = ['음악', '한국어', '옷이', '닭이', '읽어요'];
+---
+<BaseLayout title={tr('batchim.title')} description={tr('batchim.lead')}>
+  <PageHeader title={tr('batchim.title')} crumbs={[{ label: tr('nav.hangul'), href: l('/hangul') }, { label: tr('nav.batchim') }]} lead={tr('batchim.lead')} />
+  <section class="container-page py-10">
+    <SpeechNotice />
+    <div class="mt-4 overflow-x-auto rounded-xl border border-line">
+      <table class="w-full min-w-[36rem] text-left">
+        <thead class="bg-bg-muted text-sm text-fg-muted">
+          <tr>
+            <th class="px-4 py-3 font-semibold">{tr('batchim.sound')}</th>
+            <th class="px-4 py-3 font-semibold">{tr('batchim.finals')}</th>
+            <th class="px-4 py-3 font-semibold">{tr('batchim.example')}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {BATCHIM.map((b) => (
+            <tr class="border-t border-line">
+              <td class="px-4 py-3"><span lang="ko" class="text-2xl font-bold text-brand">{b.sound}</span> <span class="text-fg-muted">[{b.roman}]</span></td>
+              <td class="px-4 py-3" lang="ko"><span class="text-xl tracking-widest">{b.finals.join(' ')}</span></td>
+              <td class="px-4 py-3">
+                <button type="button" data-speak={b.example} class="rounded-md px-1 hover:text-brand">
+                  <span lang="ko" class="text-lg">{b.example}</span>
+                  <span lang="ko" class="text-fg-muted">[{pronounceText(b.example, { stemEnd: b.example.endsWith('다') ? b.example.length - 2 : undefined })}]</span>
+                </button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <h2 class="mt-12 text-2xl font-bold">{tr('batchim.linkingTitle')}</h2>
+    <p class="mt-3 max-w-2xl text-fg-muted">{tr('batchim.linkingLead')}</p>
+    <ul class="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+      {linking.map((w) => (
+        <li>
+          <button type="button" data-speak={w} class="w-full rounded-xl border border-line bg-surface px-4 py-3 text-left hover:border-brand/60">
+            <span lang="ko" class="block text-xl font-semibold">{w}</span>
+            <span lang="ko" class="block text-brand">[{pronounceText(w)}]</span>
+            <span class="block text-sm text-fg-muted">{romanize(w)}</span>
+          </button>
+        </li>
+      ))}
+    </ul>
+    <a href={l('/tools/pronunciation')} class="link-underline mt-8 inline-block">{tr('batchim.tryTool')} →</a>
+  </section>
+</BaseLayout>
