@@ -7,7 +7,7 @@ import { join, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const DIST = fileURLToPath(new URL('../dist/', import.meta.url));
-const SITE = (process.env.SITE_URL || 'https://learnhanmal.com').replace(/\/$/, '');
+const SITE = (process.env.SITE_URL || 'https://learhanmal.com').replace(/\/$/, '');
 const all = new Set();
 for (const e of await readdir(DIST, { recursive: true, withFileTypes: true })) {
   if (e.isFile()) all.add('/' + relative(DIST, join(e.parentPath, e.name)).split(/[\\/]/).join('/'));

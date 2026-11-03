@@ -4,7 +4,7 @@ import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
 
 // Đặt SITE_URL trong biến môi trường của Cloudflare Pages khi có domain thật.
-const site = process.env.SITE_URL || 'https://learnhanmal.com';
+const site = process.env.SITE_URL || 'https://learhanmal.com';
 
 export default defineConfig({
   site,
