@@ -71,7 +71,7 @@ MAX_FILES=95000 npm run build
 3. Preset **Astro**; build command **`npm run build`** (bắt buộc: bước này sinh route ja/en/id và chạy kiểm tra; `astro build` trực tiếp chỉ ra bản tiếng Việt); thư mục output `dist`.
 4. Biến môi trường:
    - `NODE_VERSION=22.22.0` (repo đã có `.node-version`, Cloudflare tự đọc)
-   - `SITE_URL=https://ten-mien-cua-ban` (canonical, sitemap, ảnh chia sẻ; mặc định `https://hanmal.pages.dev`)
+   - `SITE_URL=https://ten-mien-cua-ban` (canonical, sitemap, ảnh chia sẻ; mặc định `https://learnhanmal.com`)
    - `PUBLIC_CF_BEACON_TOKEN=…` (tuỳ chọn, Cloudflare Web Analytics)
 
 ## SEO
